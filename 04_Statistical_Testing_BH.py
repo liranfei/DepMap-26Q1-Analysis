@@ -5,7 +5,7 @@ from statsmodels.stats.multitest import multipletests
 import os
 
 # === 路径锁定 ===
-desktop_path = "/Users/lrf15336328932/Desktop"
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
 INPUT_DATA = os.path.join(desktop_path, "standardized_matrix.csv")
 INPUT_CAND = os.path.join(desktop_path, "candidate_pairs.csv")
 OUTPUT_04 = os.path.join(desktop_path, "significant_pairs.csv")
