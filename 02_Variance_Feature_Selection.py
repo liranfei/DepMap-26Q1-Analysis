@@ -4,8 +4,9 @@ import time
 
 # === 路径锁定 ===
 # 我们直接硬编码你刚才成功的路径，确保万无一失
-INPUT_01 = "/Users/lrf15336328932/Desktop/standardized_matrix.csv"
-OUTPUT_02 = "/Users/lrf15336328932/Desktop/variance_rank.csv"
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+INPUT_01 = os.path.join(desktop_path, "standardized_matrix.csv")
+OUTPUT_02 = os.path.join(desktop_path, "variance_rank.csv")
 
 print("--- 正在执行 02: 方差特征筛选 ---")
 
