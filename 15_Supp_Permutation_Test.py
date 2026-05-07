@@ -7,11 +7,24 @@ import os
 from tqdm import tqdm
 
 # === 路径配置 ===
-desktop_path = "/Users/lrf15336328932/Desktop"
+# 已修改：使用 "." [span_1](start_span)代表当前文件夹，保护隐私并确保代码在任何电脑上都能运行[span_1](end_span)
+desktop_path = "." 
+
 INPUT_DATA  = os.path.join(desktop_path, "standardized_matrix.csv")
 INPUT_VAR   = os.path.join(desktop_path, "variance_rank.csv")
 OUTPUT_FIG  = os.path.join(desktop_path, "Fig_Supp_Permutation_Final.png")
 OUTPUT_DIST = os.path.join(desktop_path, "permutation_distribution_1000.csv")
+
+# === 数据加载 ===
+# 检查文件是否存在，防止运行报错
+if not os.path.exists(INPUT_DATA) or not os.path.exists(INPUT_VAR):
+    print(f"错误：在当前目录下找不到输入文件！")
+    print(f"请确保 '{os.path.basename(INPUT_DATA)}' 和 '{os.path.basename(INPUT_VAR)}' 已放入代码所在的文件夹。")
+else:
+    # 读取数据
+    data = pd.read_csv(INPUT_DATA)
+    var_rank = pd.read_csv(INPUT_VAR)
+    print("数据加载成功，开始执行后续分析...")
 
 # === 数据加载 ===
 var_df     = pd.read_csv(INPUT_VAR)
