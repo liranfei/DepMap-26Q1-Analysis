@@ -4,14 +4,14 @@ from openpyxl import Workbook
 from openpyxl.styles import (PatternFill, Font, Alignment, Border, Side)
 import os
 
-# === 路径修正：自动获取桌面路径 ===
+# ===自动获取桌面路径 ===
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 final_path = os.path.join(desktop, "final_targets.csv")
 sig_all_path = os.path.join(desktop, "significant_pairs.csv")
 
 # 检查文件是否存在
 if not os.path.exists(final_path) or not os.path.exists(sig_all_path):
-    print("❌ 错误：桌面上缺少 final_targets.csv 或 significant_pairs.csv")
+    print("错误：桌面上缺少 final_targets.csv 或 significant_pairs.csv")
 else:
     final = pd.read_csv(final_path)
     sig_all = pd.read_csv(sig_all_path)
@@ -104,6 +104,6 @@ else:
     output_path = os.path.join(desktop, "Table_S1_Final_Targets.xlsx")
     wb.save(output_path)
 
-    print(f"--- ✅ Table S1 制作完成 ---")
+    print(f"---  Table S1 制作完成 ---")
     print(f"保存路径: {output_path}")
     print(f"包含数据: {len(table_s1)} 条高置信度依赖项")
