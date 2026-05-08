@@ -5,7 +5,7 @@ from statsmodels.stats.multitest import multipletests
 import matplotlib.pyplot as plt
 import os
 
-# === 路径修正：自动获取桌面路径 ===
+# === 自动获取桌面路径 ===
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 input_file = os.path.join(desktop, "standardized_matrix.csv")
 
