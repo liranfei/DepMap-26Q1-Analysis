@@ -7,7 +7,7 @@ INPUT_GENE = os.path.join(desktop_path, "gene_effect.csv")
 INPUT_META = os.path.join(desktop_path, "sample_info.csv")
 OUTPUT_01 = os.path.join(desktop_path, "standardized_matrix.csv")
 
-print("--- 正在重新执行 01: 深度对齐标准化 ---")
+print("--- 01: 深度对齐标准化 ---")
 
 # 1. 加载基因数据
 print("读取基因文件...")
