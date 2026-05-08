@@ -3,7 +3,6 @@ import os
 import time
 
 # === 路径锁定 ===
-# 我们直接硬编码你刚才成功的路径，确保万无一失
 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
 INPUT_01 = os.path.join(desktop_path, "standardized_matrix.csv")
 OUTPUT_02 = os.path.join(desktop_path, "variance_rank.csv")
