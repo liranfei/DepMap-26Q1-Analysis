@@ -4,7 +4,7 @@ import matplotlib
 import numpy as np
 import os
 
-# --- 核心修复：自动获取桌面路径 ---
+# --- 自动获取桌面路径 ---
 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
 input_file = os.path.join(desktop_path, "final_targets.csv")
 
@@ -15,7 +15,7 @@ if not os.path.exists(input_file):
 else:
     final = pd.read_csv(input_file)
 
-    # ============ 图3：Top 20 靶点 ============
+    # ============ 图：Top 20 靶点 ============
     top20 = final.nsmallest(20, "Selectivity")
 
     cancer_list = top20["Cancer"].unique().tolist()
@@ -43,7 +43,7 @@ else:
     plt.savefig(fig3_path, dpi=300, bbox_inches="tight")
     plt.show()
 
-    # ============ 图4：癌种分布 ============
+    # ============ 图：癌种分布 ============
     cancer_counts = final["Cancer"].value_counts().sort_values()
     n_cancers = len(cancer_counts)
     cmap = matplotlib.colormaps["viridis"]
