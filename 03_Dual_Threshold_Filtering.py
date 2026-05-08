@@ -41,7 +41,7 @@ skipped_missing = 0
 
 print(f"开始分析: {len(top_genes)} 基因 × {len(cancer_types)} 癌种")
 
-# === 4. 主循环 (保留你的核心逻辑) ===
+# === 4. 主循环 (保留核心逻辑) ===
 for idx, gene in enumerate(top_genes):
     if idx % 50 == 0:
         print(f"进度: {idx}/{len(top_genes)}")
