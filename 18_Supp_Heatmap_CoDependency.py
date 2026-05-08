@@ -5,7 +5,6 @@ from scipy.cluster.hierarchy import linkage, dendrogram
 from scipy.spatial.distance import squareform
 import os
 
-# === 路径修正 ===
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 input_file = os.path.join(desktop, "standardized_matrix.csv")
 final_file = os.path.join(desktop, "final_targets.csv")
