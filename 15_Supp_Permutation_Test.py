@@ -7,7 +7,7 @@ import os
 from tqdm import tqdm
 
 # === 路径配置 ===
-# 已修改：使用 "." [span_1](start_span)代表当前文件夹，保护隐私并确保代码在任何电脑上都能运行[span_1](end_span)
+# 使用 "." [span_1](start_span)代表当前文件夹，保护隐私并确保代码在任何电脑上都能运行[span_1](end_span)
 desktop_path = "." 
 
 INPUT_DATA  = os.path.join(desktop_path, "standardized_matrix.csv")
