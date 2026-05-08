@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
 import os
 
-# === 路径修正：自动获取桌面路径，避免数字输错 ===
+# === 自动获取桌面路径，避免数字输错 ===
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 final_path = os.path.join(desktop, "final_targets.csv")
 
@@ -66,7 +66,7 @@ else:
 
     plt.tight_layout()
     
-    # 保存路径修正
+    # 保存
     save_path = os.path.join(desktop, "Fig08_Scatter.png")
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     plt.show()
