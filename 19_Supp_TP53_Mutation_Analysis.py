@@ -16,7 +16,7 @@ df = pd.read_csv(os.path.join(desktop, "standardized_matrix.csv"))
 # 读取突变文件 (智能识别 OmicsSomaticMutations.csv)
 mut_path = os.path.join(desktop, "OmicsSomaticMutations.csv")
 if not os.path.exists(mut_path):
-    print(f"❌ 错误：在桌面找不到 OmicsSomaticMutations.csv")
+    print(f" 错误：在桌面找不到 OmicsSomaticMutations.csv")
     exit()
 
 mut = pd.read_csv(mut_path, low_memory=False)
@@ -71,4 +71,4 @@ save_path = os.path.join(desktop, "Fig19_TP53_MDM2_Validation.png")
 plt.savefig(save_path, dpi=300, bbox_inches="tight")
 plt.show()
 
-print(f"🎉 脚本 19 运行成功！图片已保存至桌面。")
+print(f" 脚本 19 运行成功！图片已保存至桌面。")
