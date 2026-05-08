@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# === 路径修正：自动获取桌面路径 ===
+# === 自动获取桌面路径 ===
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 final_path = os.path.join(desktop, "final_targets.csv")
 
