@@ -4,7 +4,6 @@ import numpy as np
 import os
 
 # --- 自动处理路径 ---
-# 这样无论你的用户 ID 是 3 还是 4，代码都能自动找到桌面
 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
 save_path = os.path.join(desktop_path, "Fig_Pipeline_v2.png")
 
@@ -43,7 +42,7 @@ ax.tick_params(axis='x', labelsize=11)
 
 plt.tight_layout()
 
-# --- 核心修复点：使用自动生成的路径保存 ---
+# --- 使用自动生成的路径保存 ---
 try:
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     print(f"✅ 图2已成功保存至桌面: {save_path}")
