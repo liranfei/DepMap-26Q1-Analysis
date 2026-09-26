@@ -1,10 +1,9 @@
-import os
 from figlib import *
 import textwrap
 from lifelines import KaplanMeierFitter
 from matplotlib.patches import Patch
 import run_pipeline as rp
-F,T,lc=load_all(); SS=json.load(open(O+"sensitivity_summary.json")); TT=json.load(open(O+"ttest_alt_summary.json")); D=os.environ.get("DEPMAP_DIR",".")
+F,T,lc=load_all(); SS=json.load(open(O+"sensitivity_summary.json")); TT=json.load(open(O+"ttest_alt_summary.json")); D="/Users/lrf15336328932/Desktop"
 def letters(axs,dx=-0.02,dy=1.02):
     for a,l in zip(axs,"ABCDEFGH"): a.text(dx,dy,l,transform=a.transAxes,fontsize=12,fontweight="bold",va="bottom",ha="right")
 def bars(ax,labels,vals,colors,ylabel,fmt="{:,}"):
@@ -12,7 +11,7 @@ def bars(ax,labels,vals,colors,ylabel,fmt="{:,}"):
     for i,v in enumerate(vals): ax.text(i,v+max(vals)*0.02,fmt.format(v),ha="center",va="bottom",fontsize=8)
     ax.set_ylim(0,max(vals)*1.15)
 # ================= Fig 6 sensitivity
-fig,axs=plt.subplots(2,2,figsize=(7.3,6.0)); a,b,c,d=axs.ravel()
+fig,axs=plt.subplots(3,2,figsize=(7.3,8.6)); a,b,c,d,e,f=axs.ravel()
 m=[SS["multiplicity_BH"]["n_final"],SS["multiplicity_BY"]["n_final"],SS["multiplicity_Holm"]["n_final"]]; bars(a,["BH\n(primary)","BY","Holm"],m,[BLUE,SKY,GREY],"Candidate pairs")
 sel=[SS["selectivity<-0.3"]["n_final"],SS["selectivity<-0.5"]["n_final"],SS["selectivity<-0.7"]["n_final"],SS["selectivity<-1.0"]["n_final"]]
 bars(b,["−0.3","−0.5\n(primary)","−0.7","−1.0"],sel,[SKY,BLUE,SKY,SKY],"Candidate pairs"); b.set_xlabel("Selectivity threshold")
@@ -40,7 +39,7 @@ for ax,lib,title in zip(axs,["GO_Biological_Process_2023","KEGG_2021_Human"],["G
 letters(axs,-0.02); fig.tight_layout(pad=0.6,w_pad=1.2); save(fig,"Fig7")
 # ================= data for Fig 8-9
 df=rp.load(D); df=df[df.primary_disease!="Non-Cancerous"].reset_index(drop=True); genes=[c for c in df.columns if c not in ("DepMap_ID","lineage","primary_disease")]
-col=lambda s:[c for c in genes if c.startswith(s+" (")][0]; mut=pd.read_csv(os.environ.get("RESULTS_DIR","results")+"/mut_3genes.csv"); mut=mut[mut.IsDefaultEntryForModel=="Yes"]
+col=lambda s:[c for c in genes if c.startswith(s+" (")][0]; mut=pd.read_csv("mut_3genes.csv"); mut=mut[mut.IsDefaultEntryForModel=="Yes"]
 def grp(sym):
     m=mut[mut.HugoSymbol==sym]; hot=set(m[m.Hotspot==True].ModelID); pa=set(m[m.VepImpact.isin(["HIGH","MODERATE"])].ModelID)
     return np.where(df.DepMap_ID.isin(hot),"Hotspot",np.where(df.DepMap_ID.isin(pa),"Other\nprotein-altering","None"))
@@ -76,7 +75,7 @@ def km(ax,tab,label,key):
     r=P3[key]; txt=f"Log-rank p = {r['logrank_p_mediansplit']:.3f}\nCox HR per SD = {r['cox_continuous_HR_per_SD']:.2f}\n(p = {r['cox_continuous_p']:.3f})"
     if key=="TCGA_KIRC_HNF1B": ax.legend(frameon=False,loc="lower left",fontsize=8); ax.text(0.98,0.97,txt,transform=ax.transAxes,ha="right",va="top",fontsize=8)
     else: ax.legend(frameon=False,loc="upper right",fontsize=8,bbox_to_anchor=(1.0,1.0)); ax.text(0.98,0.74,txt,transform=ax.transAxes,ha="right",va="top",fontsize=8)
-for row,(sym,lin,ens,path,tabf,key) in enumerate([("HNF1B","kidney","ENSG00000275410",os.environ.get("TCGA_DIR",".")+"/TCGA-KIRC.star_counts.tsv","tcga_KIRC_HNF1B_survival_table.csv","TCGA_KIRC_HNF1B"),("KRAS","pancreas","ENSG00000133703",os.environ.get("TCGA_DIR",".")+"/TCGA-PAAD.star_counts.tsv","tcga_PAAD_KRAS_survival_table.csv","TCGA_PAAD_KRAS")]):
+for row,(sym,lin,ens,path,tabf,key) in enumerate([("HNF1B","kidney","ENSG00000275410","../kirc_data/TCGA-KIRC.star_counts.tsv","tcga_KIRC_HNF1B_survival_table.csv","TCGA_KIRC_HNF1B"),("KRAS","pancreas","ENSG00000133703","../paad_data/paad.tsv","tcga_PAAD_KRAS_survival_table.csv","TCGA_PAAD_KRAS")]):
     y=pd.to_numeric(df[col(sym)],errors="coerce"); a=y[(df.lineage==lin)&y.notna()].values; o=y[(df.lineage!=lin)&y.notna()].values
     box(axs[row,0],[o,a],[f"Other\nlineages\n(n = {len(o):,})",f"{nm(lin)}\n(n = {len(a)})"],[GREY,VERM],f"{sym} Chronos"); axs[row,0].axhline(-1,color="#555555",ls="--",lw=0.8)
     t,nrm=expr_groups(path,ens); r=P3[key]; box(axs[row,1],[nrm,t],[f"Normal\n(n = {len(nrm)})",f"Tumor\n(n = {len(t)})"],[BLUE,VERM],f"{sym} log$_2$(count + 1)")
@@ -86,7 +85,7 @@ axs[0,0].set_title("DepMap",fontsize=9); axs[0,2].set_title("TCGA-KIRC",fontsize
 letters(axs.ravel(),-0.12); fig.tight_layout(pad=0.6,h_pad=1.0,w_pad=0.8); save(fig,"Fig9")
 # ================= Fig 10 robustness of biology
 B=pd.read_csv(O+"batch_library_adjusted_pairs.csv"); H=pd.read_csv(O+"heme_background_sensitivity.csv"); S=pd.read_csv(O+"subsampling_power.csv"); ST=pd.read_csv(O+"subtype_sensitivity.csv")
-fig,axs=plt.subplots(2,2,figsize=(7.3,6.0)); a,b,c,d=axs.ravel()
+fig,axs=plt.subplots(3,2,figsize=(7.3,8.6)); a,b,c,d,e,f=axs.ravel()
 a.scatter(B.coef_unadj,B.coef_adj,s=12,color=BLUE,edgecolor="white",linewidth=0.3); lim=[min(B.coef_unadj.min(),B.coef_adj.min())-0.05,-0.2]; a.plot(lim,lim,color="#555555",ls="--",lw=0.8); a.set_xlim(lim); a.set_ylim(lim)
 a.set_xlabel("Lineage effect, unadjusted"); a.set_ylabel("Lineage effect, batch-adjusted")
 w=H.pivot_table(index=["Gene","Lineage"],columns="background",values="selectivity"); b.scatter(w.all_others,w.exclude_other_heme,s=14,color=VERM,edgecolor="white",linewidth=0.3); l2=[w.min().min()-0.05,-0.3]; b.plot(l2,l2,color="#555555",ls="--",lw=0.8)
@@ -95,5 +94,11 @@ vs=[S[S.k==k_].frac_retained.values for k_ in (10,20)]; c.hist(vs,bins=np.linspa
 c.set_xlabel("Fraction of subsamples retaining the candidate"); c.set_ylabel("Candidate pairs"); c.legend(frameon=False,loc="upper left")
 g=ST.groupby("Subtype").agg(n=("selectivity","size"),med=("selectivity","median")).sort_values("med"); yv=np.arange(len(g))
 d.barh(yv,g.med,color=[VERM if s_ in set(ST[ST.Lineage=="lymphoid"].Subtype) else ORANGE for s_ in g.index],height=0.7); d.set_yticks(yv); d.set_yticklabels(["\n".join(textwrap.wrap(str(s_),24)) for s_ in g.index])
-d.axvline(-0.5,color=BLUE,ls=":",lw=1); d.set_xlabel("Median selectivity of candidate pairs"); [d.text(m-0.02,i,f"n = {n_}",va="center",ha="right",fontsize=8) for i,(m,n_) in enumerate(zip(g.med,g.n))]; d.set_xlim(min(g.med)-0.35,0); d.legend(handles=[Patch(color=VERM,label="Lymphoid subtypes"),Patch(color=ORANGE,label="Myeloid subtypes")],frameon=False,loc="lower left",bbox_to_anchor=(0.0,0.0))
+d.axvline(-0.5,color=BLUE,ls=":",lw=1); d.set_xlabel("Median selectivity of candidate pairs"); [d.text(m-0.02,i,f"n = {n_}",va="center",ha="right",fontsize=8) for i,(m,n_) in enumerate(zip(g.med,g.n))]; d.set_xlim(min(g.med)-0.35,0); d.legend(handles=[Patch(color=VERM,label="Lymphoid subtypes"),Patch(color=ORANGE,label="Myeloid subtypes")],frameon=False,loc="lower center",bbox_to_anchor=(0.5,1.0),ncol=2)
+GC=pd.read_csv(O+"growth_confound_pairs.csv"); GC["heme"]=GC.Lineage.isin(["lymphoid","myeloid"]); FT=pd.read_csv(O+"final_targets.csv")[["Gene","Lineage","Selectivity"]]; GC=GC.merge(FT,on=["Gene","Lineage"])
+for flag,col,lab in ((False,SKY,"Non-blood lineages"),(True,VERM,"Lymphoid and myeloid")):
+    q=GC[GC.heme==flag]; e.scatter(q.coef_unadjusted,q.coef_growth_adjusted,s=12,color=col,edgecolor="white",linewidth=0.3,label=lab)
+lim=[GC[["coef_unadjusted","coef_growth_adjusted"]].min().min()-0.05,0.0]; e.plot(lim,lim,color="#555555",ls="--",lw=0.8); e.set_xlim(lim); e.set_ylim(lim); e.set_xlabel("Lineage effect, unadjusted"); e.set_ylabel("Lineage effect, growth-pattern-adjusted"); e.legend(frameon=False,loc="upper left")
+q=GC[GC.heme]; f.scatter(q.Selectivity,q.median_diff_vs_suspension,s=14,color=VERM,edgecolor="white",linewidth=0.3); l3=[min(q.Selectivity.min(),q.median_diff_vs_suspension.min())-0.05,0.0]; f.plot(l3,l3,color="#555555",ls="--",lw=0.8); f.axhline(-0.5,color=BLUE,ls=":",lw=1)
+f.set_xlim(l3); f.set_ylim(l3); f.set_xlabel("Selectivity, all other lineages"); f.set_ylabel("Selectivity, non-blood suspension\nlines only")
 letters(axs.ravel(),-0.16); fig.tight_layout(pad=0.6,h_pad=1.6,w_pad=1.0); save(fig,"Fig10")
