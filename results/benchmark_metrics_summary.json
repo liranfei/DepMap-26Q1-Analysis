@@ -1,0 +1,42 @@
+{
+ "n_prioritised": 94,
+ "n_tests": 467091,
+ "meyers_style_q<0.05_negative_meandiff": 10818,
+ "meyers_style_with_effect_rule(median<-1, meandiff<-0.5)": 76,
+ "topK_comparison": {
+  "selectivity (difference in medians)": {
+   "overlap_with_prioritised": 94,
+   "jaccard": 1.0,
+   "median_rank_of_prioritised_among_sig": 47.5,
+   "n_sig_pool": 1072
+  },
+  "difference in means": {
+   "overlap_with_prioritised": 73,
+   "jaccard": 0.6347826086956522,
+   "median_rank_of_prioritised_among_sig": 50.5,
+   "n_sig_pool": 1072
+  },
+  "Cohen's d": {
+   "overlap_with_prioritised": 61,
+   "jaccard": 0.48031496062992124,
+   "median_rank_of_prioritised_among_sig": 60.5,
+   "n_sig_pool": 1072
+  },
+  "AUC (target lower)": {
+   "overlap_with_prioritised": 60,
+   "jaccard": 0.46875,
+   "median_rank_of_prioritised_among_sig": 58.5,
+   "n_sig_pool": 1072
+  }
+ },
+ "spearman_all_tests": {
+  "mean_diff": 0.830687448957904,
+  "cohens_d": 0.8239663548799212,
+  "auc_lower": -0.898108101135039
+ },
+ "prioritised_cohens_d_median": -1.038139634295446,
+ "prioritised_frac_d_le_-0.8": 0.6914893617021277,
+ "prioritised_auc_median": 0.7829862165280224,
+ "prioritised_frac_auc_ge_0.8": 0.4148936170212766,
+ "prioritised_in_meyers_style": 93
+}

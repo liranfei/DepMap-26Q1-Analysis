@@ -16,4 +16,5 @@ if [ -n "${DEPMAP22_DIR:-}" ]; then export DEPMAP22_DIR="$(cd "$DEPMAP22_DIR" &&
 if [ -n "${SANGER_DIR:-}" ]; then export SANGER_DIR="$(cd "$SANGER_DIR" && pwd)"; $PY independent_sanger.py; $PY figs_sanger.py; fi   # optional: Sanger Project Score comparison (figshare 10.6084/m9.figshare.14461980)
 $PY annotate_lit_drug.py; $PY make_tables_ext.py   # optional; needs internet (PubMed, DGIdb); results are date-dependent, the stored versions are in results/
 if [ -n "${TCGA_CDR:-}" ]; then $PY clinical_extra.py; fi   # optional: TCGA-CDR file (Survival_SupplementalTable_S1_20171025_xena_sp) for PFI and adjusted Cox models
+$PY benchmark_metrics.py   # comparison with other lineage-selectivity measures (Table 3, S9 Table)
 echo "ALL DONE"
