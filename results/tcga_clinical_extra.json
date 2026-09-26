@@ -1,0 +1,62 @@
+{
+ "KIRC_HNF1B": {
+  "n": 529,
+  "os_agrees_with_cdr": 0.9905482041587902,
+  "median_OS_months_high": 116.76386036960986,
+  "n_high": 265,
+  "events_high": 87,
+  "median_OS_months_low": 85.45379876796714,
+  "n_low": 264,
+  "events_low": 86,
+  "n_pfi": 527,
+  "events_pfi": 159,
+  "logrank_p_pfi": 0.004116439100803672,
+  "cox_pfi_HR": 0.7879285839898852,
+  "cox_pfi_CI": [
+   0.6927972226892474,
+   0.8961228959007794
+  ],
+  "cox_pfi_p": 0.00028273370639650804,
+  "n_adjusted": 529,
+  "events_adjusted": 173,
+  "adj_z_HR": 0.8542599873261948,
+  "adj_z_CI": [
+   0.7428479289840256,
+   0.9823815850770762
+  ],
+  "adj_z_p": 0.027155768482396897,
+  "adj_stage_HR": 3.7318473061501267,
+  "adj_age10_HR": 1.3533712546131929,
+  "stage_definition": "stage III-IV vs I-II (AJCC pathologic); patients without stage excluded"
+ },
+ "PAAD_KRAS": {
+  "n": 177,
+  "os_agrees_with_cdr": 0.9943502824858758,
+  "median_OS_months_high": 17.478439425051334,
+  "n_high": 89,
+  "events_high": 56,
+  "median_OS_months_low": 23.06365503080082,
+  "n_low": 88,
+  "events_low": 37,
+  "n_pfi": 177,
+  "events_pfi": 104,
+  "logrank_p_pfi": 0.12242496783345562,
+  "cox_pfi_HR": 1.181562260468878,
+  "cox_pfi_CI": [
+   0.9661754144364119,
+   1.4449647077582592
+  ],
+  "cox_pfi_p": 0.10419589915462633,
+  "n_adjusted": 176,
+  "events_adjusted": 93,
+  "adj_z_HR": 1.3402252279559987,
+  "adj_z_CI": [
+   1.08579313130057,
+   1.6542779742014067
+  ],
+  "adj_z_p": 0.006405645685040059,
+  "adj_stage_HR": 0.730800127571916,
+  "adj_age10_HR": 1.3475892724508294,
+  "stage_definition": "stage III-IV vs I-II (AJCC pathologic); patients without stage excluded"
+ }
+}
