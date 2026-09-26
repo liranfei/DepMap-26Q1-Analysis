@@ -1,0 +1,56 @@
+{
+ "models_22Q1_raw": 1070,
+ "models_unmatched_in_Model_csv": 5,
+ "non_cancerous_removed": 17,
+ "cancer_models_22Q1": 1048,
+ "models_shared_with_26Q1_cohort": 1036,
+ "genes_22Q1": 17386,
+ "eligible_lineages_22Q1": 24,
+ "n_tests_22Q1": 417264,
+ "n_q_lt_0_05_22Q1": 10790,
+ "n_candidates_22Q1": 34,
+ "genes_22Q1_candidates": 27,
+ "lineages_22Q1_candidates": 13,
+ "shared_tests": 410139,
+ "spearman_selectivity_all_shared": 0.6156551225789666,
+ "c26_testable_in_22": 90,
+ "c26_q_lt_0_05_negative_in_22": 84,
+ "c26_also_candidates_in_22": 23,
+ "c26_median_selectivity_26": -0.6708757422041992,
+ "c26_median_selectivity_22": -0.499331714352077,
+ "spearman_selectivity_candidates": 0.7458780919455076,
+ "c22_also_candidates_in_26": 23,
+ "c22_total": 34,
+ "c26_not_testable_in_22": [
+  [
+   "FOXA1 (3169)",
+   "prostate"
+  ],
+  [
+   "DCAF7 (10238)",
+   "myeloid"
+  ],
+  [
+   "DHFR (1719)",
+   "lymphoid"
+  ],
+  [
+   "CKS1B (1163)",
+   "cervix"
+  ]
+ ],
+ "c26_categories": {
+  "significant, below rule": 61,
+  "meets rule": 23,
+  "not significant": 6,
+  "not testable": 4
+ },
+ "c22_only_in26_sig_negative": 4,
+ "c22_only_count": 11,
+ "shared_models_fraction": 0.9885496183206107,
+ "c26_signeg_fail_only_median_rule": 22,
+ "c26_signeg_fail_only_selectivity": 24,
+ "c26_signeg_fail_both": 15,
+ "median_chronos_c26_26Q1": -1.290387675243859,
+ "median_chronos_c26_22Q1": -1.0197913834694883
+}

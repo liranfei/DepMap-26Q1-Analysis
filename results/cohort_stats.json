@@ -1,0 +1,54 @@
+{
+ "absolute_rank_baseline": {
+  "n": 58,
+  "frac_common_essential": 1.0,
+  "overlap_with_candidates": 0,
+  "median_of_median_chronos": -2.902013412469241
+ },
+ "recurrent_genes": {
+  "FERMT2": 6,
+  "FAM50A": 4,
+  "MDM2": 4,
+  "CCND1": 4,
+  "ADSL": 3,
+  "SEPHS2": 3,
+  "SNAP23": 3,
+  "GRB2": 3
+ },
+ "genes_single_lineage": 36,
+ "missing_values": 874371,
+ "missing_fraction": 0.039584087103815516,
+ "genes_with_missing": 1444,
+ "genes_tested": 18435,
+ "genes_total": 18531,
+ "frac_selectivity_within_0_2": 0.9871502555176614,
+ "frac_selectivity_lt_minus0_5": 0.00045601392448152504,
+ "median_selectivity": 6.548564076475083e-05,
+ "heme_pairs": 42,
+ "heme_genes": 30,
+ "n_pairs": 94,
+ "tf_genes": [
+  "SOX10",
+  "HNF1B",
+  "PAX8",
+  "IRF4",
+  "MYB",
+  "CBFB",
+  "FOXA1"
+ ],
+ "metabolic_genes": [
+  "ADSL",
+  "PAICS",
+  "UMPS",
+  "CTPS1",
+  "DHFR",
+  "NMNAT1",
+  "NAMPT",
+  "FPGS",
+  "TYMS",
+  "SDHB",
+  "UROD"
+ ],
+ "median_abs_r_tf_vs_metabolic": 0.0929961334408365,
+ "median_abs_r_within_metabolic": 0.468823228837729
+}
