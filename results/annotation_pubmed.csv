@@ -1,0 +1,95 @@
+Symbol,Lineage,pubmed_records,pubmed_category
+KRAS,pancreas,2756,>=5
+SOX10,skin,197,>=5
+HNF1B,kidney,6,>=5
+FOXA1,prostate,165,>=5
+MDM2,eye,289,>=5
+CTNNB1,bowel,161,>=5
+CFLAR,kidney,2,1-4
+MYB,myeloid,303,>=5
+CBFB,myeloid,88,>=5
+TUBB4B,ampulla of vater,0,none
+PAX8,kidney,72,>=5
+BRAF,skin,6281,>=5
+ZER1,cervix,2,1-4
+NMNAT1,lymphoid,1,1-4
+IRF4,lymphoid,329,>=5
+CCND1,peripheral nervous system,50,>=5
+FERMT2,kidney,1,1-4
+SKP2,cervix,17,>=5
+MDM2,kidney,58,>=5
+MDM2,pleura,24,>=5
+NHLRC2,thyroid,0,none
+MDM2,skin,171,>=5
+ATP1B3,lymphoid,1,1-4
+UMPS,myeloid,2,1-4
+DCAF7,myeloid,0,none
+NAMPT,lymphoid,48,>=5
+SNAP23,bowel,5,>=5
+UMPS,lymphoid,0,none
+SEPHS2,kidney,0,none
+SEPHS2,lymphoid,2,1-4
+FERMT2,skin,1,1-4
+TFRC,lymphoid,9,>=5
+NAMPT,myeloid,37,>=5
+SDHB,lymphoid,5,>=5
+ADSL,myeloid,0,none
+CCND1,skin,65,>=5
+SUMO2,lymphoid,9,>=5
+CDAN1,lymphoid,0,none
+EP300,lymphoid,73,>=5
+BCL2L1,bowel,26,>=5
+KRAS,bowel,3111,>=5
+SOX10,eye,10,>=5
+ADSL,lymphoid,0,none
+SNAP23,pleura,0,none
+SCAP,bowel,10,>=5
+WDR36,myeloid,0,none
+FAM50A,bowel,1,1-4
+FPGS,lymphoid,28,>=5
+PAICS,lymphoid,1,1-4
+TYMS,myeloid,7,>=5
+FERMT2,soft tissue,0,none
+FAM50A,lymphoid,0,none
+GRB2,liver,34,>=5
+DNAJC9,lymphoid,1,1-4
+TRPM7,myeloid,7,>=5
+CHMP4B,peripheral nervous system,3,1-4
+CTPS1,lymphoid,12,>=5
+CFL1,lymphoid,3,1-4
+FERMT2,cns/brain,1,1-4
+TFRC,myeloid,9,>=5
+FAM50A,bladder/urinary tract,0,none
+SEPHS2,myeloid,3,1-4
+FERMT2,pleura,0,none
+INTS6,skin,0,none
+CCND1,esophagus/stomach,127,>=5
+UROD,lymphoid,1,1-4
+GRB2,head and neck,17,>=5
+SDHB,myeloid,1,1-4
+AP2S1,myeloid,0,none
+GRB2,kidney,4,1-4
+CHMP4B,soft tissue,1,1-4
+CCND1,pancreas,91,>=5
+CTPS1,myeloid,0,none
+SNAP23,esophagus/stomach,1,1-4
+CDAN1,myeloid,0,none
+FAM50A,myeloid,1,1-4
+MED1,myeloid,6,>=5
+DHFR,lymphoid,58,>=5
+CKS1B,cervix,1,1-4
+PAICS,myeloid,1,1-4
+ELOB,cervix,0,none
+FERMT2,ovary/fallopian tube,0,none
+SCAP,pancreas,9,>=5
+DNM2,myeloid,2,1-4
+PTK2,liver,19,>=5
+CFLAR,pancreas,7,>=5
+CUL2,cervix,6,>=5
+CDK6,lymphoid,269,>=5
+DNM2,lymphoid,5,>=5
+UROD,myeloid,1,1-4
+SCD,bowel,30,>=5
+MYC,pancreas,827,>=5
+NCAPD3,eye,1,1-4
+ADSL,breast,3,1-4

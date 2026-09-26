@@ -4,7 +4,7 @@ from adjustText import adjust_text
 from matplotlib import cm
 F,T,lc=load_all(); S=json.load(open(O+"summary.json")); lc=lc[lc.n>=5]
 # ================= Fig 1 workflow
-fig,ax=plt.subplots(figsize=(7.5,5.6)); ax.set_xlim(0,100); ax.set_ylim(0,100); ax.axis("off")
+fig,ax=plt.subplots(figsize=(7.3,5.6)); ax.set_xlim(0,100); ax.set_ylim(0,100); ax.axis("off")
 def box(x,y,w,h,txt,fc="#f2f2f2",ec="#444444",fs=8,bold=False):
     ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.4,rounding_size=1.2",fc=fc,ec=ec,lw=0.9)); ax.text(x+w/2,y+h/2,txt,ha="center",va="center",fontsize=fs,fontweight="bold" if bold else "normal",linespacing=1.25)
 def arrow(x1,y1,x2,y2): ax.annotate("",xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(arrowstyle="-|>",color="#444444",lw=0.9))
@@ -21,7 +21,7 @@ for x in (16.5,50,83.5): arrow(50,31.6,x,24.6)
 save(fig,"Fig1")
 # ================= Fig 2 lineages
 D=lc.set_index("lineage").join(F.groupby("Lineage").size().rename("pairs")).fillna(0).astype(int).sort_values(["pairs","n"])
-fig,(a1,a2)=plt.subplots(1,2,figsize=(7.5,6.4),sharey=True,gridspec_kw={"width_ratios":[1,1.1]}); y=np.arange(len(D)); low=(D.n<10).values
+fig,(a1,a2)=plt.subplots(1,2,figsize=(7.3,6.4),sharey=True,gridspec_kw={"width_ratios":[1,1.1]}); y=np.arange(len(D)); low=(D.n<10).values
 a1.barh(y,D.n,color=GREY,height=0.75); [a1.text(n+2,i,str(n),va="center",fontsize=8) for i,n in enumerate(D.n)]
 a1.set_yticks(y); a1.set_yticklabels([nm(i)+(" *" if l else "") for i,l in zip(D.index,low)]); a1.set_xlabel("Cancer cell lines per lineage"); a1.set_xlim(0,145)
 cols=cm.cividis(np.linspace(0.1,0.95,len(D))); a2.barh(y,D.pairs,color=cols,height=0.75); [a2.text(p+0.3,i,str(p),va="center",fontsize=8) for i,p in enumerate(D.pairs)]
@@ -30,7 +30,7 @@ for a,l,x in ((a1,"A",-0.62),(a2,"B",-0.02)): a.text(x,1.01,l,transform=a.transA
 fig.tight_layout(pad=0.6); save(fig,"Fig2")
 # ================= Fig 3 volcano
 T["nlq"]=-np.log10(T.q_value.clip(lower=1e-300)); fin=set(zip(F.Gene,F.Lineage)); T["final"]=[(g,l) in fin for g,l in zip(T.Gene,T.Lineage)]
-fig,ax=plt.subplots(figsize=(7.5,5.3)); g=T[~T.final]; r=T[T.final]
+fig,ax=plt.subplots(figsize=(7.3,5.3)); g=T[~T.final]; r=T[T.final]
 ax.scatter(g.Selectivity,g.nlq,s=3,c="#c8c8c8",alpha=0.6,linewidths=0,rasterized=True,label=f"Other tested pairs (n = {len(g):,})")
 ax.scatter(r.Selectivity,r.nlq,s=16,c=VERM,edgecolor="white",linewidth=0.3,label=f"Candidate pairs (n = {len(r)})")
 ax.axvline(-0.5,color=BLUE,ls="--",lw=1,label="Selectivity = −0.5"); ax.axhline(-np.log10(0.05),color="#555555",ls=":",lw=1,label="q = 0.05")
@@ -41,7 +41,7 @@ adjust_text(tx,x=lab.Selectivity.values,y=lab.nlq.values,ax=ax,arrowprops=dict(a
 ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target lineage − all other lineages)"); ax.set_ylabel("−log$_{10}$ (BH-adjusted q)"); ax.legend(loc="upper right",frameon=False)
 fig.tight_layout(pad=0.6); save(fig,"Fig3")
 # ================= Fig 4 efficacy vs selectivity
-fig,ax=plt.subplots(figsize=(7.5,5.3)); h=F[F.Lineage.isin(HEME)]; s=F[~F.Lineage.isin(HEME)]
+fig,ax=plt.subplots(figsize=(7.3,5.3)); h=F[F.Lineage.isin(HEME)]; s=F[~F.Lineage.isin(HEME)]
 ax.scatter(s.Selectivity,s.Chronos_median,s=22,c=BLUE,edgecolor="white",linewidth=0.3,label="Solid-tumor lineages")
 ax.scatter(h.Selectivity,h.Chronos_median,s=22,c=VERM,edgecolor="white",linewidth=0.3,label="Lymphoid / myeloid")
 lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Lineage with n < 10")
@@ -52,7 +52,7 @@ adjust_text(tx,x=lab.Selectivity.values,y=lab.Chronos_median.values,ax=ax,arrowp
 ax.set_xlabel("Selectivity (target lineage − other lineages, median Chronos)"); ax.set_ylabel("Median Chronos, target lineage"); ax.legend(frameon=False,loc="lower center",bbox_to_anchor=(0.42,0.0))
 fig.tight_layout(pad=0.6); save(fig,"Fig4")
 # ================= Fig 5 top 20
-t=F.sort_values("Selectivity").head(20).iloc[::-1]; fig,ax=plt.subplots(figsize=(7.5,5.6)); y=np.arange(len(t))
+t=F.sort_values("Selectivity").head(20).iloc[::-1]; fig,ax=plt.subplots(figsize=(7.3,5.6)); y=np.arange(len(t))
 ax.barh(y,-t.Selectivity,color=[VERM if l in HEME else BLUE for l in t.Lineage],height=0.72)
 ax.set_yticks(y); ax.set_yticklabels([f"{a} ({nm(b)})"+(" *" if n<10 else "") for a,b,n in zip(t.sym,t.Lineage,t.n_target)])
 for i,(s_,q_) in enumerate(zip(t.Selectivity,t.q_value)): ax.text(-s_+0.02,i,f"{s_:.2f}".replace("-","−"),va="center",fontsize=8)

@@ -1,0 +1,322 @@
+{
+ "models_sanger_raw": 318,
+ "models_unmatched_in_Model_csv": 0,
+ "non_cancerous_removed": 2,
+ "cancer_models_sanger": 316,
+ "models_shared_with_26Q1_cohort": 313,
+ "genes_sanger": 17458,
+ "eligible_lineages_sanger": 12,
+ "lineages_sanger": {
+  "lung": 39,
+  "esophagus/stomach": 39,
+  "head and neck": 34,
+  "cns/brain": 33,
+  "bowel": 30,
+  "ovary/fallopian tube": 29,
+  "breast": 25,
+  "pancreas": 23,
+  "peripheral nervous system": 17,
+  "bone": 13,
+  "lymphoid": 10,
+  "uterus": 8
+ },
+ "n_tests_sanger": 209496,
+ "n_q_lt_0_05_sanger": 13862,
+ "n_candidates_sanger": 44,
+ "shared_tests": 202668,
+ "spearman_selectivity_all_shared": 0.4335870584980796,
+ "c26_testable": 41,
+ "c26_negative_direction": 41,
+ "c26_nominal_p_lt_0_05_negative": 39,
+ "c26_q_lt_0_05_negative": 35,
+ "c26_also_candidates": 16,
+ "c26_median_selectivity_26": -0.6693869314954697,
+ "c26_median_selectivity_S": -0.5655240926018783,
+ "spearman_selectivity_candidates": 0.560452961672474,
+ "baseline_noncandidate_sig_pairs": 7152,
+ "baseline_n_testable_in_sanger": 7152,
+ "baseline_frac_q_lt_0_05_negative": 0.378076062639821,
+ "baseline_frac_nominal_negative": 0.6364653243847874,
+ "cand_frac_q_lt_0_05_negative_of_testable": 0.8536585365853658,
+ "cand_frac_nominal_negative_of_testable": 0.9512195121951219,
+ "c26_not_testable": [
+  [
+   "SOX10 (6663)",
+   "skin"
+  ],
+  [
+   "HNF1B (6928)",
+   "kidney"
+  ],
+  [
+   "FOXA1 (3169)",
+   "prostate"
+  ],
+  [
+   "MDM2 (4193)",
+   "eye"
+  ],
+  [
+   "CFLAR (8837)",
+   "kidney"
+  ],
+  [
+   "MYB (4602)",
+   "myeloid"
+  ],
+  [
+   "CBFB (865)",
+   "myeloid"
+  ],
+  [
+   "TUBB4B (10383)",
+   "ampulla of vater"
+  ],
+  [
+   "PAX8 (7849)",
+   "kidney"
+  ],
+  [
+   "BRAF (673)",
+   "skin"
+  ],
+  [
+   "ZER1 (10444)",
+   "cervix"
+  ],
+  [
+   "FERMT2 (10979)",
+   "kidney"
+  ],
+  [
+   "SKP2 (6502)",
+   "cervix"
+  ],
+  [
+   "MDM2 (4193)",
+   "kidney"
+  ],
+  [
+   "MDM2 (4193)",
+   "pleura"
+  ],
+  [
+   "NHLRC2 (374354)",
+   "thyroid"
+  ],
+  [
+   "MDM2 (4193)",
+   "skin"
+  ],
+  [
+   "UMPS (7372)",
+   "myeloid"
+  ],
+  [
+   "DCAF7 (10238)",
+   "myeloid"
+  ],
+  [
+   "SEPHS2 (22928)",
+   "kidney"
+  ],
+  [
+   "FERMT2 (10979)",
+   "skin"
+  ],
+  [
+   "NAMPT (10135)",
+   "myeloid"
+  ],
+  [
+   "ADSL (158)",
+   "myeloid"
+  ],
+  [
+   "CCND1 (595)",
+   "skin"
+  ],
+  [
+   "SOX10 (6663)",
+   "eye"
+  ],
+  [
+   "SNAP23 (8773)",
+   "pleura"
+  ],
+  [
+   "WDR36 (134430)",
+   "myeloid"
+  ],
+  [
+   "TYMS (7298)",
+   "myeloid"
+  ],
+  [
+   "FERMT2 (10979)",
+   "soft tissue"
+  ],
+  [
+   "GRB2 (2885)",
+   "liver"
+  ],
+  [
+   "TRPM7 (54822)",
+   "myeloid"
+  ],
+  [
+   "TFRC (7037)",
+   "myeloid"
+  ],
+  [
+   "FAM50A (9130)",
+   "bladder/urinary tract"
+  ],
+  [
+   "SEPHS2 (22928)",
+   "myeloid"
+  ],
+  [
+   "FERMT2 (10979)",
+   "pleura"
+  ],
+  [
+   "INTS6 (26512)",
+   "skin"
+  ],
+  [
+   "SDHB (6390)",
+   "myeloid"
+  ],
+  [
+   "AP2S1 (1175)",
+   "myeloid"
+  ],
+  [
+   "GRB2 (2885)",
+   "kidney"
+  ],
+  [
+   "CHMP4B (128866)",
+   "soft tissue"
+  ],
+  [
+   "CTPS1 (1503)",
+   "myeloid"
+  ],
+  [
+   "CDAN1 (146059)",
+   "myeloid"
+  ],
+  [
+   "FAM50A (9130)",
+   "myeloid"
+  ],
+  [
+   "MED1 (5469)",
+   "myeloid"
+  ],
+  [
+   "DHFR (1719)",
+   "lymphoid"
+  ],
+  [
+   "CKS1B (1163)",
+   "cervix"
+  ],
+  [
+   "PAICS (10606)",
+   "myeloid"
+  ],
+  [
+   "ELOB (6923)",
+   "cervix"
+  ],
+  [
+   "DNM2 (1785)",
+   "myeloid"
+  ],
+  [
+   "PTK2 (5747)",
+   "liver"
+  ],
+  [
+   "CUL2 (8453)",
+   "cervix"
+  ],
+  [
+   "UROD (7389)",
+   "myeloid"
+  ],
+  [
+   "NCAPD3 (23310)",
+   "eye"
+  ]
+ ],
+ "c26_replicating_rule": [
+  [
+   "ADSL (158)",
+   "lymphoid"
+  ],
+  [
+   "CCND1 (595)",
+   "peripheral nervous system"
+  ],
+  [
+   "CFL1 (1072)",
+   "lymphoid"
+  ],
+  [
+   "CHMP4B (128866)",
+   "peripheral nervous system"
+  ],
+  [
+   "FPGS (2356)",
+   "lymphoid"
+  ],
+  [
+   "IRF4 (3662)",
+   "lymphoid"
+  ],
+  [
+   "KRAS (3845)",
+   "bowel"
+  ],
+  [
+   "KRAS (3845)",
+   "pancreas"
+  ],
+  [
+   "NAMPT (10135)",
+   "lymphoid"
+  ],
+  [
+   "PAICS (10606)",
+   "lymphoid"
+  ],
+  [
+   "SCAP (22937)",
+   "bowel"
+  ],
+  [
+   "SCD (6319)",
+   "bowel"
+  ],
+  [
+   "SNAP23 (8773)",
+   "bowel"
+  ],
+  [
+   "SNAP23 (8773)",
+   "esophagus/stomach"
+  ],
+  [
+   "TFRC (7037)",
+   "lymphoid"
+  ],
+  [
+   "UROD (7389)",
+   "lymphoid"
+  ]
+ ]
+}

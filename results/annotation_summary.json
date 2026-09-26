@@ -1,0 +1,152 @@
+{
+ "n_pairs": 94,
+ "pubmed_none": 20,
+ "pubmed_1_4": 27,
+ "pubmed_ge5": 47,
+ "pubmed_failed": 0,
+ "n_genes": 58,
+ "genes_with_any_interaction": 33,
+ "genes_with_approved_drug": 30,
+ "genes_druggable_category": 36,
+ "approved_drug_genes": [
+  "ATP1B3",
+  "BCL2L1",
+  "BRAF",
+  "CBFB",
+  "CCND1",
+  "CDK6",
+  "CFL1",
+  "CFLAR",
+  "CTNNB1",
+  "CTPS1",
+  "DHFR",
+  "EP300",
+  "FPGS",
+  "GRB2",
+  "HNF1B",
+  "KRAS",
+  "MDM2",
+  "MYB",
+  "MYC",
+  "NAMPT",
+  "PAX8",
+  "PTK2",
+  "SCAP",
+  "SCD",
+  "SDHB",
+  "SOX10",
+  "SUMO2",
+  "TUBB4B",
+  "TYMS",
+  "UMPS"
+ ],
+ "no_interaction_genes": [
+  "ADSL",
+  "AP2S1",
+  "CDAN1",
+  "CHMP4B",
+  "CKS1B",
+  "CUL2",
+  "DCAF7",
+  "DNAJC9",
+  "DNM2",
+  "ELOB",
+  "FAM50A",
+  "FERMT2",
+  "FOXA1",
+  "INTS6",
+  "IRF4",
+  "MED1",
+  "NCAPD3",
+  "NHLRC2",
+  "NMNAT1",
+  "PAICS",
+  "SEPHS2",
+  "SNAP23",
+  "UROD",
+  "WDR36",
+  "ZER1"
+ ],
+ "no_pubmed_pairs": [
+  [
+   "TUBB4B",
+   "ampulla of vater"
+  ],
+  [
+   "NHLRC2",
+   "thyroid"
+  ],
+  [
+   "DCAF7",
+   "myeloid"
+  ],
+  [
+   "UMPS",
+   "lymphoid"
+  ],
+  [
+   "SEPHS2",
+   "kidney"
+  ],
+  [
+   "ADSL",
+   "myeloid"
+  ],
+  [
+   "CDAN1",
+   "lymphoid"
+  ],
+  [
+   "ADSL",
+   "lymphoid"
+  ],
+  [
+   "SNAP23",
+   "pleura"
+  ],
+  [
+   "WDR36",
+   "myeloid"
+  ],
+  [
+   "FERMT2",
+   "soft tissue"
+  ],
+  [
+   "FAM50A",
+   "lymphoid"
+  ],
+  [
+   "FAM50A",
+   "bladder/urinary tract"
+  ],
+  [
+   "FERMT2",
+   "pleura"
+  ],
+  [
+   "INTS6",
+   "skin"
+  ],
+  [
+   "AP2S1",
+   "myeloid"
+  ],
+  [
+   "CTPS1",
+   "myeloid"
+  ],
+  [
+   "CDAN1",
+   "myeloid"
+  ],
+  [
+   "ELOB",
+   "cervix"
+  ],
+  [
+   "FERMT2",
+   "ovary/fallopian tube"
+  ]
+ ]
+}

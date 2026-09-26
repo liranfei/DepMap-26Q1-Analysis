@@ -4,7 +4,7 @@ from figlib import *
 T22 = pd.read_csv(O + "all_tests_22Q1.csv.gz"); T26 = pd.read_csv(O + ("all_tests.csv" if os.path.exists(O + "all_tests.csv") else "all_tests.csv.gz")); C = pd.read_csv(O + "cross_release_candidates.csv"); R = json.load(open(O + "cross_release_summary.json"))
 M = T26.merge(T22, on=["Gene", "Lineage"], suffixes=("_26", "_22"))
 cat = np.where(C.q_value_22.isna(), "not testable", np.where((C.q_value_22 < 0.05) & (C.Selectivity_22 < 0), np.where((C.q_value_22 < 0.05) & (C.Chronos_median_22 < -1) & (C.Selectivity_22 < -0.5), "meets rule", "significant, below rule"), "not significant"))
-fig, axs = plt.subplots(1, 2, figsize=(7.5, 3.9), gridspec_kw={"width_ratios": [1.25, 1]}); a, b = axs
+fig, axs = plt.subplots(1, 2, figsize=(7.3, 3.9), gridspec_kw={"width_ratios": [1.25, 1]}); a, b = axs
 a.hexbin(M.Selectivity_26, M.Selectivity_22, gridsize=90, bins="log", cmap="Greys", mincnt=1, extent=(-1.8, 0.8, -1.8, 0.8), linewidths=0)
 cc = C[C.q_value_22.notna()]; a.scatter(cc.Selectivity_26, cc.Selectivity_22, s=14, color=VERM, edgecolor="white", linewidth=0.3, zorder=3, label="26Q1 candidates")
 a.plot([-1.8, 0.8], [-1.8, 0.8], color="#555555", ls="--", lw=0.8); a.axhline(-0.5, color=BLUE, ls=":", lw=1); a.axvline(-0.5, color=BLUE, ls=":", lw=1)

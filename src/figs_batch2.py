@@ -12,7 +12,7 @@ def bars(ax,labels,vals,colors,ylabel,fmt="{:,}"):
     for i,v in enumerate(vals): ax.text(i,v+max(vals)*0.02,fmt.format(v),ha="center",va="bottom",fontsize=8)
     ax.set_ylim(0,max(vals)*1.15)
 # ================= Fig 6 sensitivity
-fig,axs=plt.subplots(2,2,figsize=(7.5,6.0)); a,b,c,d=axs.ravel()
+fig,axs=plt.subplots(2,2,figsize=(7.3,6.0)); a,b,c,d=axs.ravel()
 m=[SS["multiplicity_BH"]["n_final"],SS["multiplicity_BY"]["n_final"],SS["multiplicity_Holm"]["n_final"]]; bars(a,["BH\n(primary)","BY","Holm"],m,[BLUE,SKY,GREY],"Candidate pairs")
 sel=[SS["selectivity<-0.3"]["n_final"],SS["selectivity<-0.5"]["n_final"],SS["selectivity<-0.7"]["n_final"],SS["selectivity<-1.0"]["n_final"]]
 bars(b,["−0.3","−0.5\n(primary)","−0.7","−1.0"],sel,[SKY,BLUE,SKY,SKY],"Candidate pairs"); b.set_xlabel("Selectivity threshold")
@@ -31,7 +31,7 @@ d.legend(handles=[Patch(color=BLUE,label=f"Median rule only (n = {n94-both})"),P
 d.spines["left"].set_visible(False)
 letters(axs.ravel(),-0.16); fig.tight_layout(pad=0.6,h_pad=1.6); save(fig,"Fig6")
 # ================= Fig 7 enrichment (formal over-representation only)
-E=pd.read_csv(O+"enrichment_custom_background.csv"); fig,axs=plt.subplots(1,2,figsize=(7.5,5.4))
+E=pd.read_csv(O+"enrichment_custom_background.csv"); fig,axs=plt.subplots(1,2,figsize=(7.3,5.4))
 for ax,lib,title in zip(axs,["GO_Biological_Process_2023","KEGG_2021_Human"],["GO Biological Process","KEGG pathways"]):
     e=E[(E.library==lib)&(E.q<0.05)].sort_values("q").head(8).iloc[::-1]; y=np.arange(len(e))
     ax.scatter(-np.log10(e.q),y,s=e.n_hits*22,color=BLUE if lib.startswith("GO") else VERM,edgecolor="white",linewidth=0.5,zorder=3); ax.hlines(y,0,-np.log10(e.q),color="#cccccc",lw=1,zorder=1)
@@ -52,7 +52,7 @@ def box(ax,data,labels,colors,ylabel=None,pos=None):
     ax.set_xticks(pos); ax.set_xticklabels(labels)
     if ylabel: ax.set_ylabel(ylabel)
 # ================= Fig 8 genotype
-fig,axs=plt.subplots(1,3,figsize=(7.5,3.6)); P2=json.load(open(O+"part2_summary.json"))
+fig,axs=plt.subplots(1,3,figsize=(7.3,3.6)); P2=json.load(open(O+"part2_summary.json"))
 for ax,sym in zip(axs[:2],["KRAS","CTNNB1"]):
     y=pd.to_numeric(df[col(sym)],errors="coerce"); g=grp(sym); names=["Hotspot","Other\nprotein-altering","None"]; dat=[y[(g==n)&y.notna()].values for n in names]
     box(ax,dat,[f"{n}\n(n = {len(v)})" for n,v in zip(names,dat)],[VERM,ORANGE,GREY],f"{sym} Chronos" if sym=="KRAS" else None); ax.set_title(f"{sym}\nHotspot vs. none: p = {P2[sym+'_genotype']['hotspot_vs_none_p']:.1e}",fontsize=9); ax.tick_params(axis="x",labelsize=8)
@@ -61,7 +61,7 @@ t53=set(mut[(mut.HugoSymbol=="TP53")&mut.VepImpact.isin(["HIGH","MODERATE"])].Mo
 dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"TP53\nwild-type\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nWild-type vs. mutant: p = {P2['MDM2_TP53_protein_altering']['p_one_sided']:.0e}",fontsize=9)
 letters(axs,-0.05); fig.tight_layout(pad=0.6,w_pad=0.8); save(fig,"Fig8")
 # ================= Fig 9 TCGA + DepMap
-P3=json.load(open(O+"part3_summary.json")); fig,axs=plt.subplots(2,3,figsize=(7.5,5.6))
+P3=json.load(open(O+"part3_summary.json")); fig,axs=plt.subplots(2,3,figsize=(7.3,5.6))
 def expr_groups(path,ens):
     with open(path) as f:
         hdr=next(f).rstrip("\n").split("\t")
@@ -86,7 +86,7 @@ axs[0,0].set_title("DepMap",fontsize=9); axs[0,2].set_title("TCGA-KIRC",fontsize
 letters(axs.ravel(),-0.12); fig.tight_layout(pad=0.6,h_pad=1.0,w_pad=0.8); save(fig,"Fig9")
 # ================= Fig 10 robustness of biology
 B=pd.read_csv(O+"batch_library_adjusted_pairs.csv"); H=pd.read_csv(O+"heme_background_sensitivity.csv"); S=pd.read_csv(O+"subsampling_power.csv"); ST=pd.read_csv(O+"subtype_sensitivity.csv")
-fig,axs=plt.subplots(2,2,figsize=(7.5,6.0)); a,b,c,d=axs.ravel()
+fig,axs=plt.subplots(2,2,figsize=(7.3,6.0)); a,b,c,d=axs.ravel()
 a.scatter(B.coef_unadj,B.coef_adj,s=12,color=BLUE,edgecolor="white",linewidth=0.3); lim=[min(B.coef_unadj.min(),B.coef_adj.min())-0.05,-0.2]; a.plot(lim,lim,color="#555555",ls="--",lw=0.8); a.set_xlim(lim); a.set_ylim(lim)
 a.set_xlabel("Lineage effect, unadjusted"); a.set_ylabel("Lineage effect, batch-adjusted")
 w=H.pivot_table(index=["Gene","Lineage"],columns="background",values="selectivity"); b.scatter(w.all_others,w.exclude_other_heme,s=14,color=VERM,edgecolor="white",linewidth=0.3); l2=[w.min().min()-0.05,-0.3]; b.plot(l2,l2,color="#555555",ls="--",lw=0.8)

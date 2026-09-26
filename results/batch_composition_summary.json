@@ -1,0 +1,41 @@
+{
+ "n_lineages": 21,
+ "n_chi2_p_lt_0_05": 14,
+ "n_chi2_p_lt_0_05_bonferroni": 9,
+ "lymphoid": {
+  "Lineage": "lymphoid",
+  "n": 94,
+  "chi2_p": 0.02576557973452006,
+  "largest_batch": "Avana-3",
+  "share_in_lineage": 0.5,
+  "share_in_all_cancer_lines": 0.4865771812080537
+ },
+ "myeloid": {
+  "Lineage": "myeloid",
+  "n": 43,
+  "chi2_p": 0.07811466773099152,
+  "largest_batch": "Avana-3",
+  "share_in_lineage": 0.5581395348837209,
+  "share_in_all_cancer_lines": 0.4865771812080537
+ },
+ "models_without_batch": 53,
+ "intogen": {
+  "n_driver_genes": 633,
+  "n_candidate_genes": 58,
+  "n_candidates_in_intogen": 11,
+  "genes": [
+   "BRAF",
+   "CBFB",
+   "CCND1",
+   "CTNNB1",
+   "EP300",
+   "FOXA1",
+   "IRF4",
+   "KRAS",
+   "MDM2",
+   "MYC",
+   "TFRC"
+  ],
+  "pairs_with_driver_gene": 19
+ }
+}
