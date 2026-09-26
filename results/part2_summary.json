@@ -1,0 +1,272 @@
+{
+ "batch_library_coverage": {
+  "n": 1192,
+  "with_batch": 1139,
+  "library_counts": {
+   "Avana": 905,
+   "KY": 233,
+   "unknown": 53,
+   "Brunello": 1
+  }
+ },
+ "batch_library": {
+  "n_pairs": 94,
+  "median_R2": 0.017742872269933818,
+  "max_R2": 0.1358499391292517,
+  "n_q05_after_adj": 94,
+  "n_retained_coef_lt_-0.3": 92,
+  "median_ratio": 0.9967897593316941,
+  "min_ratio": 0.7457724124520911,
+  "weakened": [
+   [
+    "FAM50A (9130)",
+    "bladder/urinary tract",
+    -0.27,
+    -0.221,
+    0.023
+   ],
+   [
+    "ADSL (158)",
+    "breast",
+    -0.336,
+    -0.263,
+    0.005
+   ]
+  ]
+ },
+ "KRAS_genotype": {
+  "n": {
+   "none": 1009,
+   "hotspot": 175,
+   "other_protein_altering": 8
+  },
+  "median": {
+   "hotspot": -1.874,
+   "none": -0.466,
+   "other_protein_altering": -0.587
+  },
+  "hotspot_vs_none_p": 4.282305396968712e-87,
+  "any_protein_altering_vs_none_p": 5.192110251277157e-84,
+  "hotspot_adj_lineage_coef": -1.2138245388190336,
+  "hotspot_adj_lineage_p_two_sided": 5.978364694168146e-140,
+  "any_adj_lineage_coef": -1.148226865660798,
+  "any_adj_lineage_p_two_sided": 1.2439654977453572e-129,
+  "within_lineage": {
+   "pancreas": {
+    "n": {
+     "hotspot": 45,
+     "none": 3
+    },
+    "median": {
+     "hotspot": -2.176,
+     "none": -0.422
+    }
+   }
+  },
+  "excluding_lineage_hotspot_vs_none_p": 6.709653225776411e-67
+ },
+ "CTNNB1_genotype": {
+  "n": {
+   "none": 1133,
+   "hotspot": 31,
+   "other_protein_altering": 28
+  },
+  "median": {
+   "hotspot": -0.943,
+   "none": -0.134,
+   "other_protein_altering": -0.181
+  },
+  "hotspot_vs_none_p": 1.3000541102424608e-12,
+  "any_protein_altering_vs_none_p": 3.0183404215637557e-10,
+  "hotspot_adj_lineage_coef": -0.6242882376788484,
+  "hotspot_adj_lineage_p_two_sided": 1.2889572560109303e-26,
+  "any_adj_lineage_coef": -0.3778959841948482,
+  "any_adj_lineage_p_two_sided": 7.293325162864515e-18,
+  "within_lineage": {
+   "bowel": {
+    "n": {
+     "none": 55,
+     "hotspot": 4,
+     "other_protein_altering": 4
+    },
+    "median": {
+     "hotspot": -1.764,
+     "none": -1.201,
+     "other_protein_altering": -1.757
+    }
+   }
+  },
+  "excluding_lineage_hotspot_vs_none_p": 1.311674575337892e-11
+ },
+ "KRAS_pancreas": {
+  "n_pancreas": 48,
+  "n_other": 1144,
+  "med_pancreas": -2.086661855015164,
+  "med_other": -0.5027912706731148,
+  "p": 4.094102258496908e-22
+ },
+ "MDM2_TP53_protein_altering": {
+  "n_wt": 399,
+  "n_mut": 793,
+  "med_wt": -1.2307825403349535,
+  "med_mut": -0.3528355938531002,
+  "p_one_sided": 1.216375331860588e-95,
+  "adj_lineage_coef": 0.7786447213589704,
+  "adj_lineage_p": 6.521628318527959e-146
+ },
+ "MDM2_TP53_hotspot_or_LoF": {
+  "n_wt": 404,
+  "n_mut": 788,
+  "med_wt": -1.2306128176545754,
+  "med_mut": -0.35175352041569086,
+  "p_one_sided": 2.3630384057224827e-97,
+  "adj_lineage_coef": 0.7833381065976701,
+  "adj_lineage_p": 1.3088581855815138e-147
+ },
+ "HNF1B_kidney": {
+  "n_kidney": 34,
+  "n_other": 1158,
+  "med_kidney": -1.4251331032839876,
+  "med_other": -0.1599547715406944,
+  "p": 9.36384620401341e-11
+ },
+ "common_essential_annotation": {
+  "n_list": 1827,
+  "n_target_genes": 58,
+  "n_overlap": 30,
+  "frac": 0.5172413793103449,
+  "pairs_with_CE_gene": 48,
+  "n_pairs": 94,
+  "tested_genes_frac_CE": 0.09823704909140223,
+  "overlap_genes": [
+   "ADSL (158)",
+   "AP2S1 (1175)",
+   "BCL2L1 (598)",
+   "CCND1 (595)",
+   "CDAN1 (146059)",
+   "CFL1 (1072)",
+   "CHMP4B (128866)",
+   "CKS1B (1163)",
+   "CTPS1 (1503)",
+   "CUL2 (8453)",
+   "DCAF7 (10238)",
+   "DHFR (1719)",
+   "DNAJC9 (23234)",
+   "DNM2 (1785)",
+   "ELOB (6923)",
+   "FPGS (2356)",
+   "INTS6 (26512)",
+   "KRAS (3845)",
+   "MDM2 (4193)",
+   "MYC (4609)",
+   "NCAPD3 (23310)",
+   "PAICS (10606)",
+   "SCD (6319)",
+   "SEPHS2 (22928)",
+   "SKP2 (6502)",
+   "SUMO2 (6613)",
+   "TFRC (7037)",
+   "TRPM7 (54822)",
+   "UROD (7389)",
+   "WDR36 (134430)"
+  ]
+ },
+ "codependency": {
+  "n_genes": 58,
+  "n_pairs_r_gt_0.5": 39,
+  "top10": [
+   [
+    "ADSL (158)",
+    "PAICS (10606)",
+    0.781
+   ],
+   [
+    "FPGS (2356)",
+    "PAICS (10606)",
+    0.705
+   ],
+   [
+    "SCAP (22937)",
+    "SCD (6319)",
+    0.677
+   ],
+   [
+    "ADSL (158)",
+    "SDHB (6390)",
+    0.668
+   ],
+   [
+    "ADSL (158)",
+    "FPGS (2356)",
+    0.668
+   ],
+   [
+    "FERMT2 (10979)",
+    "PTK2 (5747)",
+    0.652
+   ],
+   [
+    "PAICS (10606)",
+    "SDHB (6390)",
+    0.633
+   ],
+   [
+    "CKS1B (1163)",
+    "SKP2 (6502)",
+    0.631
+   ],
+   [
+    "ADSL (158)",
+    "TFRC (7037)",
+    0.629
+   ],
+   [
+    "PAICS (10606)",
+    "TFRC (7037)",
+    0.626
+   ]
+  ],
+  "random_pair_mean_r": 0.0015720767057245627,
+  "random_pair_sd_r": 0.09991494978377098,
+  "NMNAT1_NAMPT": 0.5388873023037964,
+  "ADSL_PAICS": 0.7805559590039463,
+  "UMPS_CTPS1": 0.6205823937844613,
+  "SOX10_HNF1B": -0.06027421001847863
+ },
+ "skewness_descriptive": {
+  "median_targets": -0.9974683165914233,
+  "median_background": -0.18008456011470267,
+  "p": 1.7890356925870696e-19,
+  "pct_rank_target_median": 6.788624467109169,
+  "spearman_rho": 0.6920237472699868,
+  "spearman_p": 1.7858311455113654e-09
+ },
+ "heme_background": {
+  "n_pairs": 42,
+  "median_selectivity_all_others": -0.6627928109861613,
+  "median_selectivity_excl_other_heme": -0.6834582773821322,
+  "n_still_lt_-0.5": 42
+ },
+ "subsampling": {
+  "n_pairs": 75,
+  "by_k": {
+   "10": {
+    "mean": 0.69,
+    "median": 0.697,
+    "min": 0.353
+   },
+   "20": {
+    "mean": 0.785,
+    "median": 0.81,
+    "min": 0.43
+   }
+  }
+ },
+ "subtype": {
+  "n_tests": 166,
+  "n_pairs": 42,
+  "frac_sel_lt_-0.5": 0.8253012048192772,
+  "frac_p_lt_0.05": 0.9457831325301205,
+  "n_subtypes": 8
+ }
+}

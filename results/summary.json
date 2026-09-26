@@ -1,0 +1,14 @@
+{
+  "n_cell_lines_analysed": 1192,
+  "n_noncancerous_in_1208": 16,
+  "excluded_noncancerous": true,
+  "top_n": 18531,
+  "n_genes_total": 18531,
+  "n_lineages_n_ge_5": 26,
+  "n_tests": 467091,
+  "n_q_lt_0_05": 9805,
+  "n_final_pairs": 94,
+  "n_final_genes": 58,
+  "n_final_lineages": 21,
+  "n_low_confidence_pairs": 3
+}

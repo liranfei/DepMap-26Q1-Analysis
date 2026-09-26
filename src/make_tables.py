@@ -1,0 +1,23 @@
+"""Supporting tables S1-S5 (xlsx) from the result files."""
+import os, json, pandas as pd
+import run_pipeline as rp
+D = os.environ.get("DEPMAP_DIR", "."); O = os.environ.get("RESULTS_DIR", "results") + "/"; OUT = os.environ.get("FIG_DIR", "figures") + "/supporting_information/"; os.makedirs(OUT, exist_ok=True)
+F0 = pd.read_csv(O + "final_targets.csv"); ce = set(pd.read_csv(os.path.join(D, "CRISPRInferredCommonEssentials.csv")).iloc[:, 0])
+_df = rp.load(D); _df = _df[_df.primary_disease != "Non-Cancerous"].reset_index(drop=True)
+F0["n_other"] = [int((pd.to_numeric(_df[g], errors="coerce").notna() & (_df.lineage != l)).sum()) for g, l in zip(F0.Gene, F0.Lineage)]
+F0["Gene_symbol"] = F0.Gene.str.extract(r"^(.+?)\s*\(")[0]; F0["in_official_common_essential_list"] = F0.Gene.isin(ce); F0["confidence_flag"] = ["low sample size (n<10)" if n < 10 else "n>=10" for n in F0.n_target]
+F0 = F0.rename(columns={"Gene": "Gene (Entrez)", "Chronos_median": "Median Chronos, target lineage", "n_target": "n target (non-missing)", "n_other": "n other (non-missing)", "p_value": "p (one-sided MWU)", "q_value": "q (BH, full family)"})
+F0[["Gene_symbol", "Gene (Entrez)", "Lineage", "n target (non-missing)", "n other (non-missing)", "Median Chronos, target lineage", "Selectivity", "p (one-sided MWU)", "q (BH, full family)", "in_official_common_essential_list", "confidence_flag"]].sort_values("Selectivity").to_csv(O + "Table_S1_candidates.csv", index=False)
+F = pd.read_csv(O + "Table_S1_candidates.csv"); E = pd.read_csv(O + "enrichment_custom_background.csv").sort_values("q")
+lc = pd.read_csv(O + "lineage_counts.csv"); lc.columns = ["Lineage", "Cancer cell lines"]; LT = lc.set_index("Lineage").join(F.groupby("Lineage").size().rename("Candidate pairs")).fillna(0).astype(int).reset_index(); LT["Eligible (n >= 5)"] = LT["Cancer cell lines"] >= 5
+df = rp.load(D); nc = df[df.primary_disease == "Non-Cancerous"][["DepMap_ID", "lineage"]].rename(columns={"lineage": "Lineage"})
+mo = pd.read_csv(os.path.join(D, "Model.csv"))[["ModelID", "CellLineName", "OncotreeSubtype"]].rename(columns={"ModelID": "DepMap_ID", "CellLineName": "Cell line", "OncotreeSubtype": "Subtype"}); nc = nc.merge(mo, on="DepMap_ID").drop(columns="DepMap_ID")
+S = json.load(open(O + "sensitivity_summary.json")); rows = []
+for k in [x for x in S if x.startswith(("multiplicity_", "selectivity<", "chronos_median<", "min_n_target"))]: rows.append({"Analysis": k, **S[k]})
+for r in S["topN"]: rows.append({"Analysis": f"Top-{r['top_n']} genes by variance", "n_significant": r["n_q05"], "n_final": r["n_final"], "n_genes": r["n_genes"], "n_lineages": r["n_lineages"]})
+with pd.ExcelWriter(OUT + "S1_Table.xlsx") as w: LT.to_excel(w, index=False, sheet_name="Lineages"); nc.to_excel(w, index=False, sheet_name="Excluded non-cancerous")
+with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
+with pd.ExcelWriter(OUT + "S3_Table.xlsx") as w: pd.DataFrame(rows).to_excel(w, index=False, sheet_name="Sensitivity analyses")
+with pd.ExcelWriter(OUT + "S4_Table.xlsx") as w: E.to_excel(w, index=False, sheet_name="Enrichment")
+with pd.ExcelWriter(OUT + "S5_Table.xlsx") as w:
+    for tag, sheet in [("KIRC_HNF1B", "TCGA-KIRC (HNF1B)"), ("PAAD_KRAS", "TCGA-PAAD (KRAS)")]: pd.read_csv(O + f"tcga_{tag}_survival_table.csv").to_excel(w, index=False, sheet_name=sheet)

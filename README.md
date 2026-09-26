@@ -1,40 +1,51 @@
-DepMap-26Q1-Analysis Repository for CBC Submission
+# Lineage-specific cancer dependencies from DepMap 26Q1 (analysis code, version 2)
 
-这个仓库包含了针对 DepMap (26Q1) 数据集进行谱系特异性依赖 (Lineage-Specific Dependency) 筛选的完整分析工作流。
+Code, intermediate results and figures for the manuscript *"A selectivity-based analytical strategy for identifying lineage-specific cancer dependencies from DepMap data"*.
 
-1. 运行环境 (Environment)
-语言: Python 3.9.13+
-核心依赖: 
-    * `pandas`, `numpy` (数据处理)
-    * `scipy`, `statsmodels` (统计检验与多重校正)
-    * `matplotlib`, `matplotlib-venn` (数据可视化)
-    * `openpyxl` (Excel 报表生成)
-安装方法: `pip install -r requirements.txt`
+## Important note on versions
 
-2. 数据来源 (Data Source)
-本项目整合了来自两大权威癌症基因组数据库的数据，用于验证关键基因的生物学意义：
-A. DepMap Portal (依赖性验证)
-• 来源: DepMap Portal (Public 26Q1)
-• 涉及文件:
-1.	standardized_matrix.csv: 存储了全基因组规模的标准化 Chronos 效应评分（Dependency Score），用于评估基因敲除对癌细胞活性的影响。
-2.	sample_info.csv: 提供了癌细胞系的癌症谱系（Lineage）、原发部位（Primary Disease）等元数据标注。
-B. UCSC Xena / TCGA (临床相关性验证)
-• 来源: UCSC Xena - TCGA Pan-Cancer (PANCAN)
-• 涉及文件:
-1.	TCGA-PAAD.star_counts.tsv: 胰腺腺癌 (PAAD) 队列的转录组原始表达定量数据（HTSeq - Counts），用于对比肿瘤组织与正常组织的表达差异。
-2.	PAAD_survival.txt: 对应的胰腺癌临床生存数据，包含总生存期 (Overall Survival, OS) 及生存状态，用于构建 Kaplan-Meier 生存曲线及预后分析。
+Version 1 of this repository (scripts `01_*` to `23_*`, now in `legacy_v1/`) produced the results of the first manuscript version. While revising the manuscript we found that the gene-effect matrix and the sample annotation had been merged with an inner join that silently dropped 348 of the 1,208 cell lines (the analysis used 860 lines), and that the multiple-testing correction had been applied only to pairs that had already passed an effect-size filter. **The scripts in `legacy_v1/` are superseded and must not be used to reproduce the current results; they are kept only for transparency.** Version 2 (`src/`) analyses all 1,208 models, excludes 16 models annotated as non-cancerous (1,192 cancer cell lines), tests every gene in every eligible lineage and applies Benjamini-Hochberg adjustment over the whole test family before the effect-size rule is applied. The merge in `src/run_pipeline.py` stops with an error if any cell line is lost or lacks a lineage annotation.
 
-3. 脚本执行顺序 (Workflow)
-请按以下顺序运行脚本以复现论文中的结果：
-[01-04]: 预处理与高方差特征筛选 (Top 500 Genes).
-[05-09]: 核心筛选算法与 Wilcoxon 秩和检验，生成 `final_targets.csv`.
-[07-10]: 生成火山图、散点图及通路富集气泡图.
-[14-15]: 敏感性分析 (Robustness Check) 与实验流程图绘制.
-[17-19]: 靶点必需性验证 (Essentiality) 与协同依赖热图分析.
-[20]: 导出符合要求的 Table S1 附表.
+## Analysis in brief
 
-4. 可复现性声明 (Reproducibility)
-所有脚本均已处理路径依赖（采用 `os.path` 自动识别环境）。用户只需将原始数据置于指定目录，依次运行脚本，即可完全复现论文中 Figure 1 及其相关补充材料的所有结果与数值。
+1. Merge DepMap 26Q1 `CRISPRGeneEffect` (saved as `gene_effect.csv`) with `Model.csv` on ModelID (all 1,208 IDs must match); remove models with `OncotreePrimaryDisease == "Non-Cancerous"`.
+2. Lineage = `OncotreeLineage`; lineages with at least 5 cancer cell lines are eligible (26).
+3. For every gene (18,531) and eligible lineage: one-sided Mann-Whitney U test (target lineage lower than all other cancer lines; asymptotic, tie and continuity corrected); missing values removed per gene; at least 5 non-missing target values (467,091 tests).
+4. Benjamini-Hochberg over all tests; candidate pairs have q < 0.05, target median Chronos < -1 and selectivity (target median minus median of all other lineages) < -0.5 (94 pairs, 58 genes, 21 lineages).
+5. Permutation test (1,000 label shuffles, complete procedure repeated), sensitivity analyses, genotype, TCGA, enrichment, batch/library, co-dependency and other analyses (see `src/`).
 
----
-如有任何疑问，请通过论文第一作者邮箱liranfei6@gmail.com或仓库Issue提交。
+Adjusted p-values refer to the whole family of significant pairs; the effect-size thresholds are a prioritisation rule and do not guarantee an FDR below 5% for the prioritised subset.
+
+## Reproducing the results
+
+Requirements: Python 3.13 (tested), packages in `requirements.txt` (numpy 2.4.4, pandas 2.3.3, scipy 1.17.1, statsmodels 0.14.6, lifelines 0.30.3, matplotlib 3.10.8).
+
+Input data (not included; public): download from the DepMap portal (release DepMap Public 26Q1) the files `CRISPRGeneEffect.csv` (rename to `gene_effect.csv`), `Model.csv`, `ScreenSequenceMap.csv`, `CRISPRInferredCommonEssentials.csv` and `OmicsSomaticMutations.csv`, and from the UCSC Xena GDC hub the files `TCGA-KIRC.star_counts.tsv.gz`, `TCGA-KIRC.survival.tsv.gz`, `TCGA-PAAD.star_counts.tsv.gz` and `TCGA-PAAD.survival.tsv.gz` (unzipped). SHA-256 checksums of the files that were used are in `checksums/input_files_sha256.txt`; they could not be compared with official checksums. Note that the Xena expression values are already log2(count + 1) and must not be transformed again.
+
+```bash
+pip install -r requirements.txt
+DEPMAP_DIR=/path/to/depmap_files TCGA_DIR=/path/to/xena_files bash run_all.sh
+```
+
+Outputs are written to `results/` (tables, JSON summaries) and `figures/` (TIFF files and supporting tables). The main analysis takes roughly 5 minutes and the permutation test roughly 10 minutes on a laptop. `results/` in this repository contains the results reported in the manuscript.
+
+## Verification
+
+The primary analysis (467,091 tests; 9,805 pairs with q < 0.05; 94 candidate pairs; 1,000 permutations) was re-implemented independently from a written specification and gave identical numbers; downstream analyses were cross-checked with a second implementation (`src/cross_check.py`, `results/cross_check_results.csv`) and re-implemented independently from a written specification.
+
+## Files
+
+| Path | Content |
+|---|---|
+| `src/run_pipeline.py` | merge, cohort, testing, BH, candidate selection |
+| `src/genome_perm.py` | fast genome-wide permutation test (validated against `run_pipeline.py`) |
+| `src/sens_primary.py`, `src/ttest_alt.py` | multiplicity, threshold, top-N, minimum-n sensitivity; Student t-test screen |
+| `src/part2_depmap.py`, `src/part3_tcga_enrich.py` | genotype, TP53-MDM2, batch/library, co-dependency, subsampling, subtypes; TCGA and enrichment |
+| `src/cross_check.py` | second implementation of the downstream analyses |
+| `src/figlib.py`, `src/figs_*.py`, `src/make_tables.py` | figures (PLOS ONE format) and supporting tables |
+| `results/` | result tables (`all_tests.csv.gz` contains all 467,091 tests) |
+| `checksums/` | SHA-256 checksums of input files |
+
+## License
+
+MIT (see `LICENSE`).

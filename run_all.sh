@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Reproduce all results, tables and figures.
+# Usage: DEPMAP_DIR=<dir with DepMap files> TCGA_DIR=<dir with Xena files> bash run_all.sh   (optional: RESULTS_DIR, FIG_DIR)
+set -euo pipefail
+: "${DEPMAP_DIR:?set DEPMAP_DIR}"; : "${TCGA_DIR:?set TCGA_DIR}"
+mkdir -p "${RESULTS_DIR:-results}" "${FIG_DIR:-figures}"
+export RESULTS_DIR="$(cd "${RESULTS_DIR:-results}" && pwd)" FIG_DIR="$(cd "${FIG_DIR:-figures}" && pwd)" DEPMAP_DIR="$(cd "$DEPMAP_DIR" && pwd)" TCGA_DIR="$(cd "$TCGA_DIR" && pwd)"
+cd "$(dirname "$0")/src"
+PY=${PYTHON:-python3}
+$PY run_pipeline.py --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --top-n 0 --exclude-noncancerous     # primary analysis (about 5 min)
+$PY genome_perm.py  --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --n 1000 --exclude-noncancerous       # permutation test of the whole pipeline
+$PY prepare_mutations.py
+$PY sens_primary.py; $PY ttest_alt.py; $PY part2_depmap.py; $PY part3_tcga_enrich.py; $PY cross_check.py
+$PY make_tables.py; $PY figs_batch1.py; $PY figs_batch2.py; $PY figs_supp.py
+echo "ALL DONE"

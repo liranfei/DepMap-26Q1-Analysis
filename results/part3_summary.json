@@ -1,0 +1,150 @@
+{
+ "TCGA_KIRC_HNF1B": {
+  "n_tumor_samples": 537,
+  "n_normal_samples": 72,
+  "median_tumor": 12.765493308065638,
+  "median_normal": 13.341024309217007,
+  "p_tumor_vs_normal_two_sided": 2.5312101710412376e-07,
+  "p_tumor_lt_normal": 1.2656050855206188e-07,
+  "p_tumor_gt_normal": 0.9999998739204012,
+  "n_survival": 529,
+  "n_events": 173,
+  "n_high": 265,
+  "logrank_p_mediansplit": 0.8018028655644894,
+  "cox_binary_HR": 0.9624031149197975,
+  "cox_binary_CI": [
+   0.7142095434675952,
+   1.2968459523942961
+  ],
+  "cox_binary_p": 0.8011739220294457,
+  "cox_continuous_HR_per_SD": 0.8521986301623131,
+  "cox_continuous_CI": [
+   0.7381234461987676,
+   0.9839038564491756
+  ],
+  "cox_continuous_p": 0.02916296230651786
+ },
+ "TCGA_PAAD_KRAS": {
+  "n_tumor_samples": 178,
+  "n_normal_samples": 4,
+  "median_tumor": 11.224291835947954,
+  "median_normal": 10.978542339238468,
+  "p_tumor_vs_normal_two_sided": 0.40106640650129377,
+  "p_tumor_lt_normal": 0.80214697632307,
+  "p_tumor_gt_normal": 0.20053320325064689,
+  "n_survival": 177,
+  "n_events": 93,
+  "n_high": 89,
+  "logrank_p_mediansplit": 0.014402172092823847,
+  "cox_binary_HR": 1.6728979637873795,
+  "cox_binary_CI": [
+   1.1029579634292788,
+   2.537347469293108
+  ],
+  "cox_binary_p": 0.015476046827601916,
+  "cox_continuous_HR_per_SD": 1.3075426419122456,
+  "cox_continuous_CI": [
+   1.0620722778578415,
+   1.609747091664221
+  ],
+  "cox_continuous_p": 0.01148360798810748
+ },
+ "enrichment": {
+  "universe": 18435,
+  "n_hit_genes": 58,
+  "by_library_n_q05": {
+   "GO_Biological_Process_2023": 8,
+   "KEGG_2021_Human": 70
+  },
+  "top": {
+   "GO_Biological_Process_2023": [
+    [
+     "Negative Regulation Of Programmed Cell Death (GO:0043069)",
+     10,
+     374,
+     0.001228,
+     "BCL2L1;BRAF;CFL1;CFLAR;CTNNB1;MDM2;MED1;MYC;PTK2;TFRC"
+    ],
+    [
+     "Negative Regulation Of Apoptotic Process (GO:0043066)",
+     10,
+     460,
+     0.004051,
+     "BCL2L1;BRAF;CFL1;CFLAR;CTNNB1;MDM2;MED1;MYC;PTK2;TFRC"
+    ],
+    [
+     "Positive Regulation Of Ubiquitin-Dependent Protein Catabolic Process (GO:2000060)",
+     5,
+     80,
+     0.009248,
+     "ELOB;MDM2;PTK2;SUMO2;ZER1"
+    ],
+    [
+     "Cell Cycle G1/S Phase Transition (GO:0044843)",
+     4,
+     52,
+     0.022887,
+     "CCND1;CDK6;CUL2;MYC"
+    ],
+    [
+     "Positive Regulation Of Multicellular Organismal Process (GO:0051240)",
+     8,
+     384,
+     0.022887,
+     "CFL1;CTNNB1;FERMT2;IRF4;MED1;PAX8;PTK2;SCD"
+    ],
+    [
+     "Mitotic Cell Cycle Phase Transition (GO:0044772)",
+     5,
+     111,
+     0.022887,
+     "CCND1;CDK6;CUL2;DNM2;MYC"
+    ]
+   ],
+   "KEGG_2021_Human": [
+    [
+     "Chronic myeloid leukemia",
+     8,
+     76,
+     0.0,
+     "BCL2L1;BRAF;CCND1;CDK6;GRB2;KRAS;MDM2;MYC"
+    ],
+    [
+     "Thyroid cancer",
+     6,
+     37,
+     0.0,
+     "BRAF;CCND1;CTNNB1;KRAS;MYC;PAX8"
+    ],
+    [
+     "Thyroid hormone signaling pathway",
+     8,
+     121,
+     0.0,
+     "ATP1B3;CCND1;CTNNB1;EP300;KRAS;MDM2;MED1;MYC"
+    ],
+    [
+     "Small cell lung cancer",
+     7,
+     92,
+     1e-06,
+     "BCL2L1;CCND1;CDK6;CKS1B;MYC;PTK2;SKP2"
+    ],
+    [
+     "Endometrial cancer",
+     6,
+     58,
+     1e-06,
+     "BRAF;CCND1;CTNNB1;GRB2;KRAS;MYC"
+    ],
+    [
+     "Hepatitis C",
+     8,
+     155,
+     1e-06,
+     "BRAF;CCND1;CDK6;CFLAR;CTNNB1;GRB2;KRAS;MYC"
+    ]
+   ]
+  }
+ }
+}

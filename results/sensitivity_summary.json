@@ -1,0 +1,136 @@
+{
+ "families": {
+  "n_tests": 467091,
+  "BH_q<0.05": 9805,
+  "final": 94
+ },
+ "multiplicity_BH": {
+  "n_significant": 9805,
+  "n_final": 94,
+  "n_genes": 58,
+  "n_lineages": 21
+ },
+ "multiplicity_BY": {
+  "n_significant": 2840,
+  "n_final": 71,
+  "n_genes": 48,
+  "n_lineages": 14
+ },
+ "multiplicity_Holm": {
+  "n_significant": 984,
+  "n_final": 58,
+  "n_genes": 44,
+  "n_lineages": 11
+ },
+ "multiplicity_Bonferroni": {
+  "n_significant": 984,
+  "n_final": 58,
+  "n_genes": 44,
+  "n_lineages": 11
+ },
+ "selectivity<-0.3": {
+  "n_final": 238,
+  "n_genes": 155,
+  "n_lineages": 24
+ },
+ "selectivity<-0.5": {
+  "n_final": 94,
+  "n_genes": 58,
+  "n_lineages": 21
+ },
+ "selectivity<-0.7": {
+  "n_final": 43,
+  "n_genes": 32,
+  "n_lineages": 13
+ },
+ "selectivity<-1.0": {
+  "n_final": 12,
+  "n_genes": 12,
+  "n_lineages": 8
+ },
+ "chronos_median<-0.5": {
+  "n_final": 138,
+  "n_genes": 93
+ },
+ "chronos_median<-1.0": {
+  "n_final": 94,
+  "n_genes": 58
+ },
+ "chronos_median<-1.5": {
+  "n_final": 31,
+  "n_genes": 21
+ },
+ "min_n_target>=5": {
+  "n_final": 94,
+  "n_genes": 58,
+  "n_lineages": 21
+ },
+ "min_n_target>=10": {
+  "n_final": 91,
+  "n_genes": 55,
+  "n_lineages": 19
+ },
+ "min_n_target>=20": {
+  "n_final": 80,
+  "n_genes": 46,
+  "n_lineages": 16
+ },
+ "topN": [
+  {
+   "top_n": 300,
+   "n_tests": 7094,
+   "n_q05": 626,
+   "n_final": 85,
+   "n_genes": 45,
+   "n_lineages": 22
+  },
+  {
+   "top_n": 500,
+   "n_tests": 12117,
+   "n_q05": 942,
+   "n_final": 92,
+   "n_genes": 52,
+   "n_lineages": 22
+  },
+  {
+   "top_n": 1000,
+   "n_tests": 24864,
+   "n_q05": 1831,
+   "n_final": 98,
+   "n_genes": 58,
+   "n_lineages": 23
+  },
+  {
+   "top_n": 2000,
+   "n_tests": 50035,
+   "n_q05": 3333,
+   "n_final": 101,
+   "n_genes": 61,
+   "n_lineages": 23
+  },
+  {
+   "top_n": 3000,
+   "n_tests": 74473,
+   "n_q05": 4609,
+   "n_final": 101,
+   "n_genes": 61,
+   "n_lineages": 23
+  },
+  {
+   "top_n": 5000,
+   "n_tests": 122323,
+   "n_q05": 6092,
+   "n_final": 99,
+   "n_genes": 61,
+   "n_lineages": 22
+  },
+  {
+   "top_n": "all",
+   "n_tests": 467091,
+   "n_q05": 9805,
+   "n_final": 94,
+   "n_genes": 58,
+   "n_lineages": 21
+  }
+ ]
+}
