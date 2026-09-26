@@ -1,0 +1,22 @@
+{
+ "n_pairs": 94,
+ "growth_pattern_counts": {
+  "Adherent": 923,
+  "Suspension": 163,
+  "Mixed": 65,
+  "Unknown": 41
+ },
+ "n_engineered_or_drug_adapted": 10,
+ "adj_coef_lt_minus0_3": 73,
+ "adj_p_lt_0_05": 88,
+ "adj_p_lt_0_05_and_negative": 88,
+ "median_ratio_adjusted_to_unadjusted": 0.8445723422101481,
+ "heme_pairs": 42,
+ "n_susp_nonblood": 41,
+ "heme_vs_suspension_sel_lt_minus0_5": 27,
+ "heme_vs_suspension_sel_lt_0": 39,
+ "heme_vs_suspension_p_lt_0_05": 38,
+ "heme_vs_suspension_median_diff": -0.6252251687994282,
+ "excl_eng_sel_lt_minus0_5": 94,
+ "excl_eng_p_lt_0_05": 94
+}
