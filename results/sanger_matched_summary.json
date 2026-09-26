@@ -1,0 +1,66 @@
+{
+ "n_candidates_testable": 41,
+ "n_noncand_pool": 7152,
+ "cand_rep": 35,
+ "cand_rate": 0.8536585365853658,
+ "n_matched": 205,
+ "matched_rep": 141,
+ "matched_rate": 0.6878048780487804,
+ "smd_selectivity": -3.1479643942079565,
+ "smd_median": -0.49754607841645093,
+ "cand_mean_sel": -0.7011954765591716,
+ "matched_mean_sel": -0.40667401701741046,
+ "cand_mean_med": -1.398359544252586,
+ "matched_mean_med": -1.1424159483996281,
+ "diff_rate": 0.1658536585365854,
+ "diff_CI95": [
+  0.06341463414634152,
+  0.2634146341463415
+ ],
+ "logit_OR_prioritised": 0.582405768942385,
+ "logit_OR_CI": [
+  0.2188870263442953,
+  1.5496417734865493
+ ],
+ "logit_p": 0.27894617889641393,
+ "logit_n": 7193,
+ "unadjusted_OR": 9.595660749506905,
+ "bands": [
+  {
+   "band": "[-9,-0.7)",
+   "n": 20,
+   "n_prioritised": 18,
+   "replication_rate": 1.0
+  },
+  {
+   "band": "[-0.7,-0.5)",
+   "n": 46,
+   "n_prioritised": 23,
+   "replication_rate": 0.8043478260869565
+  },
+  {
+   "band": "[-0.5,-0.4)",
+   "n": 60,
+   "n_prioritised": 0,
+   "replication_rate": 0.65
+  },
+  {
+   "band": "[-0.4,-0.3)",
+   "n": 152,
+   "n_prioritised": 0,
+   "replication_rate": 0.6447368421052632
+  },
+  {
+   "band": "[-0.3,-0.2)",
+   "n": 524,
+   "n_prioritised": 0,
+   "replication_rate": 0.49236641221374045
+  },
+  {
+   "band": "[-0.2,0)",
+   "n": 6391,
+   "n_prioritised": 0,
+   "replication_rate": 0.3578469723048036
+  }
+ ]
+}
