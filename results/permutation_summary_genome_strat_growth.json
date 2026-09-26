@@ -1,0 +1,20 @@
+{
+ "validation": {
+  "n_valid": 467091,
+  "n_ref": 467091,
+  "max_abs_log10p_diff": 4.2232883856740955e-13,
+  "n_q_lt_0_05": 9805,
+  "n_q_ref": 9805,
+  "n_final": 94,
+  "n_final_ref": 94
+ },
+ "observed_final": 94,
+ "observed_q_lt_0_05": 9805,
+ "n_perm": 1000,
+ "null_final_mean": 11.305,
+ "null_final_max": 25,
+ "null_q_mean": 527.075,
+ "null_q_max": 839,
+ "empirical_p_final": 0.000999000999000999,
+ "empirical_p_q": 0.000999000999000999
+}

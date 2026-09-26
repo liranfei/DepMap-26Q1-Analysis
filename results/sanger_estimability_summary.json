@@ -1,0 +1,16 @@
+{
+ "testable": {
+  "n": 41,
+  "median_selectivity": -0.6693869314954697,
+  "median_chronos": -1.2553392074922876,
+  "median_n_target": 91.0,
+  "lineages": 9
+ },
+ "not_testable": {
+  "n": 53,
+  "median_selectivity": -0.6764773540686089,
+  "median_chronos": -1.2947899519478274,
+  "median_n_target": 43.0,
+  "lineages": 13
+ }
+}

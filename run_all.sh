@@ -18,4 +18,5 @@ $PY annotate_lit_drug.py; $PY make_tables_ext.py   # optional; needs internet (P
 if [ -n "${TCGA_CDR:-}" ]; then $PY clinical_extra.py; fi   # optional: TCGA-CDR file (Survival_SupplementalTable_S1_20171025_xena_sp) for PFI and adjusted Cox models
 $PY benchmark_metrics.py   # comparison with other lineage-selectivity measures (Table 3, S9 Table)
 $PY growth_confound.py; $PY sanger_matched.py   # culture-format checks (S10 Table); effect-size adjusted Sanger comparison (needs independent_sanger.py output)
+for ST in growth batch growth_batch; do $PY genome_perm_strat.py --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --n 1000 --exclude-noncancerous --strata $ST; done   # permutation within growth-pattern / batch strata
 echo "ALL DONE"
