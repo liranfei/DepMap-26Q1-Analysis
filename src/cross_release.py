@@ -27,4 +27,6 @@ R.update(c26_signeg_fail_only_median_rule=int((_a & ~_b).sum()), c26_signeg_fail
 k26s = set(zip(T26.Gene[(T26.q_value < 0.05) & (T26.Chronos_median < -1) & (T26.Selectivity < -0.5)], T26.Lineage[(T26.q_value < 0.05) & (T26.Chronos_median < -1) & (T26.Selectivity < -0.5)]))
 _o=f[[ (g, l) not in k26 for g, l in zip(f.Gene, f.Lineage)]].merge(T26, on=["Gene", "Lineage"], how="left", suffixes=("_22", "_26"))
 R.update(c22_only_count=len(_o), c22_only_in26_sig_negative=int(((_o.q_value_26 < 0.05) & (_o.Selectivity_26 < 0)).sum()), shared_models_fraction=R["models_shared_with_26Q1_cohort"] / R["cancer_models_22Q1"])
+_st = ["not testable" if pd.isna(q) else ("meets rule" if (q < rp.Q_MAX and m < rp.CHRONOS_MAX and s_ < rp.SEL_MAX) else ("significant, below rule" if (q < rp.Q_MAX and s_ < 0) else "not significant")) for q, m, s_ in zip(c26.q_value_22, c26.Chronos_median_22, c26.Selectivity_22)]
+R["c26_categories"] = pd.Series(_st).value_counts().to_dict()   # status in 22Q1 of the 26Q1 candidates (Fig 11B)
 json.dump(R, open(O + "cross_release_summary.json", "w"), indent=1); print(json.dumps(R, indent=1))

@@ -6,3 +6,4 @@ results/*.log
 results/all_tests_*_sharedlines.csv.gz
 results/all_tests_onepatient.csv.gz
 results/all_tests_noKY.csv.gz
+results/part3_summary_tcga_only.json
