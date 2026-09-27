@@ -57,7 +57,7 @@ t=F.sort_values("Selectivity").head(20).iloc[::-1]; fig,ax=plt.subplots(figsize=
 ax.barh(y,-t.Selectivity,color=[VERM if l in HEME else BLUE for l in t.Lineage],height=0.72)
 ax.set_yticks(y); ax.set_yticklabels([f"{a} ({nm(b)})"+(" *" if n<10 else "") for a,b,n in zip(t.sym,t.Lineage,t.n_target)])
 for i,(s_,q_) in enumerate(zip(t.Selectivity,t.q_value)): ax.text(-s_+0.02,i,f"{s_:.2f}".replace("-","−"),va="center",fontsize=8)
-ax.set_xlabel("−Selectivity (larger = more lineage-restricted)"); ax.set_xlim(0,1.9)
+ax.set_xlabel("−Selectivity (larger = more lineage-selective)"); ax.set_xlim(0,1.9)
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color=BLUE,label="Solid-tumor lineage"),Patch(color=VERM,label="Lymphoid / myeloid")],frameon=False,loc="lower right")
 fig.tight_layout(pad=0.6); save(fig,"Fig5")
