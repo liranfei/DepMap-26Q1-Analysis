@@ -57,7 +57,7 @@ for ax,sym in zip(axs[:2],["KRAS","CTNNB1"]):
     box(ax,dat,[f"{n}\n(n = {len(v)})" for n,v in zip(names,dat)],[VERM,ORANGE,GREY],f"{sym} Chronos" if sym=="KRAS" else None); ax.set_title(f"{sym}\nHotspot vs. none: p = {P2[sym+'_genotype']['hotspot_vs_none_p']:.1e}",fontsize=9); ax.tick_params(axis="x",labelsize=8)
 axs[0].set_ylabel("Chronos gene effect")
 t53=set(mut[(mut.HugoSymbol=="TP53")&mut.VepImpact.isin(["HIGH","MODERATE"])].ModelID); yy=pd.to_numeric(df[col("MDM2")],errors="coerce"); mm=df.DepMap_ID.isin(t53)
-dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"TP53\nwild-type\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nWild-type vs. mutant: p = {P2['MDM2_TP53_protein_altering']['p_one_sided']:.0e}",fontsize=9)
+dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"No TP53\nvariant\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nNo variant vs. mutant: p = {P2['MDM2_TP53_protein_altering']['p_one_sided']:.0e}",fontsize=9)
 letters(axs,-0.05); fig.tight_layout(pad=0.6,w_pad=0.8); save(fig,"Fig8")
 # ================= Fig 9 TCGA + DepMap
 P3=json.load(open(O+"part3_summary.json")); HAVE_TCGA=all(os.path.exists(O+f"tcga_{c}_expression_samples.csv") for c in ("KIRC_HNF1B","PAAD_KRAS"))
