@@ -60,15 +60,11 @@ t53=set(mut[(mut.HugoSymbol=="TP53")&mut.VepImpact.isin(["HIGH","MODERATE"])].Mo
 dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"TP53\nwild-type\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nWild-type vs. mutant: p = {P2['MDM2_TP53_protein_altering']['p_one_sided']:.0e}",fontsize=9)
 letters(axs,-0.05); fig.tight_layout(pad=0.6,w_pad=0.8); save(fig,"Fig8")
 # ================= Fig 9 TCGA + DepMap
-P3=json.load(open(O+"part3_summary.json")); HAVE_TCGA=all(os.path.exists(TD+f"/TCGA-{c}.star_counts.tsv") for c in ("KIRC","PAAD"))
-if not HAVE_TCGA: print("TCGA expression files not found in TCGA_DIR - Fig 9 skipped")
+P3=json.load(open(O+"part3_summary.json")); HAVE_TCGA=all(os.path.exists(O+f"tcga_{c}_expression_samples.csv") for c in ("KIRC_HNF1B","PAAD_KRAS"))
+if not HAVE_TCGA: print("normalised TCGA expression tables not found - Fig 9 skipped")
 fig,axs=plt.subplots(2,3,figsize=(7.3,5.6))
-def expr_groups(path,ens):
-    with open(path) as f:
-        hdr=next(f).rstrip("\n").split("\t")
-        for line in f:
-            if line.split("\t",1)[0].startswith(ens): v=np.array(line.rstrip("\n").split("\t")[1:],float); break
-    code=np.array([h.split("-")[3][:2] for h in hdr[1:]]); return v[code=="01"],v[code=="11"]
+def expr_groups(label):
+    E=pd.read_csv(O+f"tcga_{label}_expression_samples.csv"); code=E["sample"].str.split("-").str[3].str[:2]; return E.log2_cpm[code=="01"].values,E.log2_cpm[code=="11"].values
 def km(ax,tab,label,key):
     kmf=KaplanMeierFitter(); tab=tab.copy(); tab["m"]=tab["OS.time"]/30.44
     for hi,cc,nm_ in [(1,VERM,"High"),(0,BLUE,"Low")]:
@@ -80,8 +76,9 @@ def km(ax,tab,label,key):
 for row,(sym,lin,ens,path,tabf,key) in enumerate([] if not HAVE_TCGA else [("HNF1B","kidney","ENSG00000275410",TD+"/TCGA-KIRC.star_counts.tsv","tcga_KIRC_HNF1B_survival_table.csv","TCGA_KIRC_HNF1B"),("KRAS","pancreas","ENSG00000133703",TD+"/TCGA-PAAD.star_counts.tsv","tcga_PAAD_KRAS_survival_table.csv","TCGA_PAAD_KRAS")]):
     y=pd.to_numeric(df[col(sym)],errors="coerce"); a=y[(df.lineage==lin)&y.notna()].values; o=y[(df.lineage!=lin)&y.notna()].values
     box(axs[row,0],[o,a],[f"Other\nlineages\n(n = {len(o):,})",f"{nm(lin)}\n(n = {len(a)})"],[GREY,VERM],f"{sym} Chronos"); axs[row,0].axhline(-1,color="#555555",ls="--",lw=0.8)
-    t,nrm=expr_groups(path,ens); r=P3[key]; box(axs[row,1],[nrm,t],[f"Normal\n(n = {len(nrm)})",f"Tumor\n(n = {len(t)})"],[BLUE,VERM],f"{sym} log$_2$(count + 1)")
-    axs[row,1].set_title(f"{'TCGA-KIRC' if row==0 else 'TCGA-PAAD'}\nMann–Whitney p = {r['p_tumor_vs_normal_two_sided']:.1e}",fontsize=9)
+    t,nrm=expr_groups(tabf.replace("tcga_","").replace("_survival_table.csv","")); r=P3[key]; box(axs[row,1],[nrm,t],[f"Normal\n(n = {len(nrm)})",f"Tumor\n(n = {len(t)})"],[BLUE,VERM],f"{sym} log$_2$(CPM + 1)")
+    if row==0: KP=json.load(open(O+"kirc_paired.json")); axs[row,1].set_title(f"TCGA-KIRC\nMann–Whitney p = {r['p_tumor_vs_normal_two_sided']:.1e}; paired p = {KP['wilcoxon_p_two_sided']:.3f}",fontsize=9)
+    else: axs[row,1].set_title("TCGA-PAAD\n4 normal samples (descriptive)",fontsize=9)
     km(axs[row,2],pd.read_csv(O+tabf),sym,key)
 axs[0,0].set_title("DepMap",fontsize=9); axs[0,2].set_title("TCGA-KIRC",fontsize=9); axs[1,2].set_title("TCGA-PAAD",fontsize=9); axs[1,0].set_title("DepMap",fontsize=9)
 if HAVE_TCGA: letters(axs.ravel(),-0.12); fig.tight_layout(pad=0.6,h_pad=1.0,w_pad=0.8); save(fig,"Fig9")

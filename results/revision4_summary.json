@@ -1,0 +1,117 @@
+{
+ "welch": {
+  "n_tests": 467091,
+  "q_lt_0_05_negative": 7811,
+  "primary94_q_lt_0_05_negative": 85,
+  "primary94_max_q": 0.30901938319764727
+ },
+ "low_n_permutation": [
+  {
+   "Gene": "FOXA1 (3169)",
+   "Lineage": "prostate",
+   "n_target": 5,
+   "p_asymptotic": 0.000775972634077,
+   "p_permutation": 0.0005999400059994001
+  },
+  {
+   "Gene": "TUBB4B (10383)",
+   "Lineage": "ampulla of vater",
+   "n_target": 5,
+   "p_asymptotic": 0.0010434897053429,
+   "p_permutation": 0.0006999300069993001
+  },
+  {
+   "Gene": "DCAF7 (10238)",
+   "Lineage": "myeloid",
+   "n_target": 7,
+   "p_asymptotic": 0.000844888389828,
+   "p_permutation": 0.0004999500049995
+  }
+ ],
+ "batch_ci": {
+  "n_pairs": 94,
+  "adj_ci_excludes_0": 94,
+  "min_ratio": 0.7457724124520911,
+  "models_per_fit": 1192,
+  "batch_unknown_models": 53
+ },
+ "DCAF7_coverage": {
+  "non_missing": 74,
+  "by_library_non_missing": {
+   "none": 43,
+   "Avana": 21,
+   "Avana+KY": 7,
+   "Avana+Brunello+KY": 1,
+   "Brunello+KY": 1,
+   "Avana+TKOv3": 1
+  },
+  "myeloid_non_missing": 7,
+  "myeloid_total": 43
+ },
+ "engineered_median_check": {
+  "n_removed": 10,
+  "target_median_lt_-1_after_removal": 94,
+  "n_pairs": 94
+ },
+ "TCGA_KIRC_HNF1B": {
+  "OS_spline": {
+   "n": 529,
+   "events": 173,
+   "LR_nonlinear_p": 0.34062907031950806
+  },
+  "PFI_spline": {
+   "n": 527,
+   "events": 159,
+   "LR_nonlinear_p": 0.24711495901719424
+  },
+  "median_of_ratios_OS": {
+   "HR": 0.8482175218869707,
+   "CI": [
+    0.7313037313269892,
+    0.9838223621949145
+   ],
+   "p": 0.029592114222063242,
+   "spearman_with_cpm": 0.9797314911788643
+  },
+  "median_of_ratios_paired": {
+   "n": 72,
+   "median_difference": -0.22888726854551322,
+   "p": 0.0017072300632207382
+  }
+ },
+ "TCGA_PAAD_KRAS": {
+  "OS_spline": {
+   "n": 177,
+   "events": 93,
+   "LR_nonlinear_p": 0.6071878659849963
+  },
+  "PFI_spline": {
+   "n": 177,
+   "events": 104,
+   "LR_nonlinear_p": 0.5876679030443341
+  },
+  "median_of_ratios_OS": {
+   "HR": 1.3952156340320856,
+   "CI": [
+    1.1686153345892525,
+    1.6657548534837252
+   ],
+   "p": 0.000230361771510334,
+   "spearman_with_cpm": 0.9532383442114922
+  }
+ },
+ "replication_ci": {
+  "candidates": [
+   24,
+   32,
+   0.5659506250777573,
+   0.8853839948974118
+  ],
+  "reference": [
+   557,
+   2261,
+   0.22870718537914847,
+   0.2646547864565245
+  ]
+ }
+}

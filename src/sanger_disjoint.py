@@ -21,6 +21,11 @@ ky_models = set(used.loc[used.Library == "KY", "ModelID"])
 df = rp.load(D); df = df[df.primary_disease != "Non-Cancerous"].reset_index(drop=True)
 assert df.DepMap_ID.isin(set(used.ModelID)).all(), "cohort model without screen annotation"
 n_cohort = len(df); dfd = df[~df.DepMap_ID.isin(ky_models)].reset_index(drop=True)
+# also exclude discovery models derived from the same patient as any Project Score model (PatientID in Model.csv), so that the two sets share no patients
+_pm = pd.read_csv(os.path.join(D, "Model.csv"))[["ModelID", "PatientID"]].set_index("ModelID").PatientID
+_sg_ids = pd.read_csv(os.path.join(DS, "gene_effect.csv"), usecols=[0]).iloc[:, 0].astype(str).str.strip()
+_sg_patients = set(_pm.reindex(_sg_ids).dropna()); _shared = dfd.DepMap_ID.map(_pm).isin(_sg_patients)
+n_excluded_shared_patient = int(_shared.sum()); dfd = dfd[~_shared].reset_index(drop=True)
 genes = [c for c in dfd.columns if c not in ("DepMap_ID", "lineage", "primary_disease")]
 td = rp.test_all(dfd, genes, dfd.lineage.values); fd = rp.select(td).sort_values("Selectivity")
 
@@ -29,6 +34,7 @@ ge = pd.read_csv(os.path.join(DS, "gene_effect.csv")); ge = ge.rename(columns={g
 meta = pd.read_csv(os.path.join(D, "Model.csv"))[["ModelID", "OncotreeLineage", "OncotreePrimaryDisease"]]; meta.columns = ["DepMap_ID", "lineage", "primary_disease"]
 ds = ge.merge(meta, on="DepMap_ID", how="left"); ds = ds[ds.lineage.notna() & (ds.primary_disease != "Non-Cancerous")].reset_index(drop=True); ds["lineage"] = ds.lineage.str.strip().str.lower()
 shared_lines = int(ds.DepMap_ID.isin(set(dfd.DepMap_ID)).sum()); assert shared_lines == 0, "discovery and replication cohorts share cell lines"
+shared_patients = len(set(dfd.DepMap_ID.map(_pm).dropna()) & set(ds.DepMap_ID.map(_pm).dropna())); assert shared_patients == 0, "discovery and replication cohorts share patients"
 gs = [c for c in ds.columns if c not in ("DepMap_ID", "lineage", "primary_disease")]
 ts = rp.test_all(ds, gs, ds.lineage.values); fs = rp.select(ts)
 
@@ -54,7 +60,7 @@ p["candidate_disc"] = pd.MultiIndex.from_frame(p[["Gene", "Lineage"]]).isin(keys
 tS = p.q_value_S.notna(); pc = p[p.candidate_disc & tS]
 
 lcd = dfd.lineage.value_counts(); lcs = ds.lineage.value_counts()
-R = dict(cohort_26Q1=n_cohort, cohort_models_with_KY_screen=int(df.DepMap_ID.isin(ky_models).sum()), discovery_models=len(dfd), discovery_eligible_lineages=int((lcd >= rp.MIN_N).sum()),
+R = dict(discovery_models_excluded_shared_patient=n_excluded_shared_patient, cohort_26Q1=n_cohort, cohort_models_with_KY_screen=int(df.DepMap_ID.isin(ky_models).sum()), discovery_models=len(dfd), discovery_eligible_lineages=int((lcd >= rp.MIN_N).sum()),
          discovery_tests=len(td), discovery_q_lt_0_05=int((td.q_value < rp.Q_MAX).sum()), discovery_candidates=len(fd), discovery_candidate_genes=int(fd.Gene.nunique()), discovery_candidate_lineages=int(fd.Lineage.nunique()),
          sanger_models=len(ds), sanger_models_shared_with_discovery=shared_lines, sanger_eligible_lineages=int((lcs >= rp.MIN_N).sum()), sanger_tests=len(ts), sanger_q_lt_0_05=int((ts.q_value < rp.Q_MAX).sum()),
          disc_testable_in_sanger=int(testable.sum()), disc_negative_direction=int((testable & (c.Selectivity_S < 0)).sum()), disc_nominal=int((testable & (c.p_value_S < 0.05) & (c.Selectivity_S < 0)).sum()),

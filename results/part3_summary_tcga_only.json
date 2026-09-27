@@ -1,0 +1,52 @@
+{
+ "TCGA_KIRC_HNF1B": {
+  "n_tumor_samples": 537,
+  "n_normal_samples": 72,
+  "median_tumor": 6.920209268545285,
+  "median_normal": 7.347801830195781,
+  "p_tumor_vs_normal_two_sided": 9.3323840997206e-06,
+  "p_tumor_lt_normal": 4.6661920498603e-06,
+  "p_tumor_gt_normal": 0.9999953492242547,
+  "n_survival": 529,
+  "n_events": 173,
+  "n_high": 265,
+  "logrank_p_mediansplit": 0.6503823182410282,
+  "cox_binary_HR": 0.9332199432748812,
+  "cox_binary_CI": [
+   0.6925618324192805,
+   1.2575042714723634
+  ],
+  "cox_binary_p": 0.6496860275977019,
+  "cox_continuous_HR_per_SD": 0.87740692274581,
+  "cox_continuous_CI": [
+   0.7548082506846245,
+   1.0199185122632277
+  ],
+  "cox_continuous_p": 0.08854436641418593
+ },
+ "TCGA_PAAD_KRAS": {
+  "n_tumor_samples": 178,
+  "n_normal_samples": 4,
+  "median_tumor": 5.797793831210873,
+  "median_normal": 5.567080002931901,
+  "p_tumor_vs_normal_two_sided": 0.2626520264101671,
+  "p_tumor_lt_normal": 0.8707329071229192,
+  "p_tumor_gt_normal": 0.13132601320508355,
+  "n_survival": 177,
+  "n_events": 93,
+  "n_high": 89,
+  "logrank_p_mediansplit": 0.029378453193379544,
+  "cox_binary_HR": 1.5788537846773543,
+  "cox_binary_CI": [
+   1.043386750680365,
+   2.389122989883214
+  ],
+  "cox_binary_p": 0.03070115238211179,
+  "cox_continuous_HR_per_SD": 1.39286165457053,
+  "cox_continuous_CI": [
+   1.1230020119996833,
+   1.7275691121143788
+  ],
+  "cox_continuous_p": 0.002563530061515565
+ }
+}

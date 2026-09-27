@@ -1,35 +1,36 @@
 {
+ "discovery_models_excluded_shared_patient": 22,
  "cohort_26Q1": 1192,
  "cohort_models_with_KY_screen": 314,
- "discovery_models": 878,
+ "discovery_models": 856,
  "discovery_eligible_lineages": 25,
  "discovery_tests": 447579,
- "discovery_q_lt_0_05": 3908,
- "discovery_candidates": 79,
- "discovery_candidate_genes": 52,
+ "discovery_q_lt_0_05": 3714,
+ "discovery_candidates": 76,
+ "discovery_candidate_genes": 50,
  "discovery_candidate_lineages": 16,
  "sanger_models": 316,
  "sanger_models_shared_with_discovery": 0,
  "sanger_eligible_lineages": 12,
  "sanger_tests": 209496,
  "sanger_q_lt_0_05": 13862,
- "disc_testable_in_sanger": 35,
- "disc_negative_direction": 33,
- "disc_nominal": 31,
- "disc_replicated": 26,
+ "disc_testable_in_sanger": 32,
+ "disc_negative_direction": 30,
+ "disc_nominal": 28,
+ "disc_replicated": 24,
  "disc_meet_rule_in_sanger": 12,
- "spearman_selectivity_all_shared": 0.1248979079723377,
+ "spearman_selectivity_all_shared": 0.12108885943149086,
  "shared_tests": 201465,
- "spearman_selectivity_candidates": 0.5411764705882354,
- "median_sel_candidates_disc": -0.6447502905518621,
- "median_sel_candidates_S": -0.5127810681254248,
- "baseline_noncandidate_sig_testable": 2394,
- "baseline_frac_replicated": 0.24812030075187969,
+ "spearman_selectivity_candidates": 0.4226539589442815,
+ "median_sel_candidates_disc": -0.6684384158062908,
+ "median_sel_candidates_S": -0.5201837953666409,
+ "baseline_noncandidate_sig_testable": 2261,
+ "baseline_frac_replicated": 0.24635117204776646,
  "primary94_in_discovery_tested": 92,
- "primary94_candidates_in_discovery": 69,
+ "primary94_candidates_in_discovery": 67,
  "primary94_q05_neg_in_discovery": 78,
- "primary94_disc_candidates_testable_in_sanger": 26,
- "primary94_disc_candidates_replicated": 25,
+ "primary94_disc_candidates_testable_in_sanger": 24,
+ "primary94_disc_candidates_replicated": 23,
  "primary94_disc_candidates_meet_rule_in_sanger": 12,
  "sanger_lineages": {
   "lung": 39,
@@ -55,10 +56,6 @@
    "lymphoid"
   ],
   [
-   "CTNNB1 (1499)",
-   "bowel"
-  ],
-  [
    "ATP1B3 (483)",
    "lymphoid"
   ],
@@ -67,11 +64,11 @@
    "lymphoid"
   ],
   [
-   "NAMPT (10135)",
+   "SDHB (6390)",
    "lymphoid"
   ],
   [
-   "SDHB (6390)",
+   "NAMPT (10135)",
    "lymphoid"
   ],
   [
@@ -83,12 +80,12 @@
    "lymphoid"
   ],
   [
-   "BCL2L1 (598)",
-   "bowel"
-  ],
-  [
    "CDAN1 (146059)",
    "lymphoid"
+  ],
+  [
+   "BCL2L1 (598)",
+   "bowel"
   ],
   [
    "SEPHS2 (22928)",
@@ -135,37 +132,33 @@
    "lymphoid"
   ],
   [
-   "UROD (7389)",
-   "lymphoid"
-  ],
-  [
    "SCAP (22937)",
    "bowel"
   ],
   [
-   "FERMT2 (10979)",
-   "ovary/fallopian tube"
+   "UROD (7389)",
+   "lymphoid"
   ],
   [
-   "GRB2 (2885)",
-   "head and neck"
+   "FERMT2 (10979)",
+   "ovary/fallopian tube"
   ]
  ],
  "not_replicated_testable": [
   [
-   "KIF18A (81930)",
-   "head and neck"
+   "CRKL (1399)",
+   "pancreas"
   ],
   [
    "ATP1A1 (476)",
    "breast"
   ],
   [
-   "RAB6A (5870)",
-   "pancreas"
+   "KIF18A (81930)",
+   "head and neck"
   ],
   [
-   "CRKL (1399)",
+   "RAB6A (5870)",
    "pancreas"
   ],
   [
@@ -173,16 +166,12 @@
    "head and neck"
   ],
   [
-   "MYH9 (4627)",
-   "pancreas"
-  ],
-  [
    "CCND1 (595)",
    "head and neck"
   ],
   [
-   "PPP1R15B (84919)",
-   "breast"
+   "MYH9 (4627)",
+   "pancreas"
   ],
   [
    "DNM2 (1785)",

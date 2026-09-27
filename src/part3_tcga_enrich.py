@@ -8,7 +8,10 @@ O=os.environ.get("RESULTS_DIR","results")+"/"; R={}
 mw=lambda x,y,alt="two-sided": float(mannwhitneyu(x,y,alternative=alt)[1])
 def tcga(expr_path,surv_path,ensg,label):
     X=pd.read_csv(expr_path,sep="\t",index_col=0); row=[i for i in X.index if ensg in str(i)][0]
-    e=pd.to_numeric(X.loc[row],errors="coerce");  # Xena star_counts are already log2(count+1)
+    # Xena GDC "STAR - Counts" are log2(raw count + 1) without between-sample normalisation: convert back to counts and normalise to
+    # counts per million (library size = sum of counts over all genes of the sample), then log2(CPM + 1)
+    C=np.power(2.0,X.apply(pd.to_numeric,errors="coerce"))-1; lib=C.sum(axis=0); e=np.log2(C.loc[row]/lib*1e6+1)
+    pd.DataFrame({"sample":e.index,"log2_cpm":e.values,"log2_count_raw":pd.to_numeric(X.loc[row],errors="coerce").values,"library_size":lib.values}).to_csv(O+f"tcga_{label}_expression_samples.csv",index=False)
     code=lambda c:c.split("-")[3][:2]
     tum=e[[c for c in e.index if code(c)=="01"]].dropna(); nor=e[[c for c in e.index if code(c)=="11"]].dropna()
     out={"n_tumor_samples":len(tum),"n_normal_samples":len(nor),"median_tumor":float(tum.median()),"median_normal":float(nor.median()),"p_tumor_vs_normal_two_sided":mw(tum,nor),
@@ -25,6 +28,7 @@ def tcga(expr_path,surv_path,ensg,label):
     m.to_csv(O+f"tcga_{label}_survival_table.csv",index=False); return out
 R["TCGA_KIRC_HNF1B"]=tcga(os.environ.get("TCGA_DIR",".")+"/TCGA-KIRC.star_counts.tsv",os.environ.get("TCGA_DIR",".")+"/TCGA-KIRC.survival.tsv","ENSG00000275410","KIRC_HNF1B")
 R["TCGA_PAAD_KRAS"]=tcga(os.environ.get("TCGA_DIR",".")+"/TCGA-PAAD.star_counts.tsv",os.environ.get("TCGA_DIR",".")+"/TCGA-PAAD.survival.tsv","ENSG00000133703","PAAD_KRAS")
+if os.environ.get("SKIP_ENRICH"): json.dump(R,open(O+"part3_summary_tcga_only.json","w"),indent=1,default=float); print(json.dumps(R,indent=1,default=float)); raise SystemExit
 # ---- enrichment with the tested-gene universe as background (own Fisher test + BH)
 T=pd.read_csv(O+"all_tests.csv"); F=pd.read_csv(O+"final_targets.csv"); sym=lambda s:s.split(" (")[0]
 universe=set(T.Gene.map(sym)); hits=set(F.Gene.map(sym)); res=[]

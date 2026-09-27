@@ -2,52 +2,52 @@
  "TCGA_KIRC_HNF1B": {
   "n_tumor_samples": 537,
   "n_normal_samples": 72,
-  "median_tumor": 12.765493308065638,
-  "median_normal": 13.341024309217007,
-  "p_tumor_vs_normal_two_sided": 2.5312101710412376e-07,
-  "p_tumor_lt_normal": 1.2656050855206188e-07,
-  "p_tumor_gt_normal": 0.9999998739204012,
+  "median_tumor": 6.920209268545285,
+  "median_normal": 7.347801830195781,
+  "p_tumor_vs_normal_two_sided": 9.3323840997206e-06,
+  "p_tumor_lt_normal": 4.6661920498603e-06,
+  "p_tumor_gt_normal": 0.9999953492242547,
   "n_survival": 529,
   "n_events": 173,
   "n_high": 265,
-  "logrank_p_mediansplit": 0.8018028655644894,
-  "cox_binary_HR": 0.9624031149197975,
+  "logrank_p_mediansplit": 0.6503823182410282,
+  "cox_binary_HR": 0.9332199432748812,
   "cox_binary_CI": [
-   0.7142095434675952,
-   1.2968459523942961
+   0.6925618324192805,
+   1.2575042714723634
   ],
-  "cox_binary_p": 0.8011739220294457,
-  "cox_continuous_HR_per_SD": 0.8521986301623131,
+  "cox_binary_p": 0.6496860275977019,
+  "cox_continuous_HR_per_SD": 0.87740692274581,
   "cox_continuous_CI": [
-   0.7381234461987676,
-   0.9839038564491756
+   0.7548082506846245,
+   1.0199185122632277
   ],
-  "cox_continuous_p": 0.02916296230651786
+  "cox_continuous_p": 0.08854436641418593
  },
  "TCGA_PAAD_KRAS": {
   "n_tumor_samples": 178,
   "n_normal_samples": 4,
-  "median_tumor": 11.224291835947954,
-  "median_normal": 10.978542339238468,
-  "p_tumor_vs_normal_two_sided": 0.40106640650129377,
-  "p_tumor_lt_normal": 0.80214697632307,
-  "p_tumor_gt_normal": 0.20053320325064689,
+  "median_tumor": 5.797793831210873,
+  "median_normal": 5.567080002931901,
+  "p_tumor_vs_normal_two_sided": 0.2626520264101671,
+  "p_tumor_lt_normal": 0.8707329071229192,
+  "p_tumor_gt_normal": 0.13132601320508355,
   "n_survival": 177,
   "n_events": 93,
   "n_high": 89,
-  "logrank_p_mediansplit": 0.014402172092823847,
-  "cox_binary_HR": 1.6728979637873795,
+  "logrank_p_mediansplit": 0.029378453193379544,
+  "cox_binary_HR": 1.5788537846773543,
   "cox_binary_CI": [
-   1.1029579634292788,
-   2.537347469293108
+   1.043386750680365,
+   2.389122989883214
   ],
-  "cox_binary_p": 0.015476046827601916,
-  "cox_continuous_HR_per_SD": 1.3075426419122456,
+  "cox_binary_p": 0.03070115238211179,
+  "cox_continuous_HR_per_SD": 1.39286165457053,
   "cox_continuous_CI": [
-   1.0620722778578415,
-   1.609747091664221
+   1.1230020119996833,
+   1.7275691121143788
   ],
-  "cox_continuous_p": 0.01148360798810748
+  "cox_continuous_p": 0.002563530061515565
  },
  "enrichment": {
   "universe": 18435,

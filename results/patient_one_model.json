@@ -1,0 +1,45 @@
+{
+ "models": 1192,
+ "patients": 1146,
+ "multi_model_patients": 41,
+ "models_in_multi": 87,
+ "models_after": 1146,
+ "tests": 467091,
+ "q_lt_0_05": 8912,
+ "candidates": 89,
+ "candidate_genes": 55,
+ "candidate_lineages": 19,
+ "primary94_retained": 87,
+ "primary94_q05_negative": 90,
+ "new_candidates": 2,
+ "primary94_lost": [
+  [
+   "CUL2 (8453)",
+   "cervix"
+  ],
+  [
+   "FAM50A (9130)",
+   "bladder/urinary tract"
+  ],
+  [
+   "NCAPD3 (23310)",
+   "eye"
+  ],
+  [
+   "SCD (6319)",
+   "bowel"
+  ],
+  [
+   "SDHB (6390)",
+   "myeloid"
+  ],
+  [
+   "SOX10 (6663)",
+   "eye"
+  ],
+  [
+   "TUBB4B (10383)",
+   "ampulla of vater"
+  ]
+ ]
+}

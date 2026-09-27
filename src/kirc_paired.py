@@ -1,14 +1,11 @@
 """HNF1B expression in TCGA-KIRC tumours versus solid tissue normal samples of the same patients (paired, two-sided Wilcoxon signed-rank test).
 Most normal samples come from patients who also have a tumour sample, so the unpaired Mann-Whitney comparison treats dependent samples as independent.
-Input: TCGA_DIR/TCGA-KIRC.star_counts.tsv (UCSC Xena GDC hub; values are log2(count + 1)).  Output: kirc_paired.json."""
+Input: results/tcga_KIRC_HNF1B_expression_samples.csv (library-size normalised, log2(CPM + 1)).  Output: kirc_paired.json."""
 import os, json, numpy as np, pandas as pd
 from scipy.stats import wilcoxon, mannwhitneyu
 O = os.environ.get("RESULTS_DIR", "results") + "/"; TD = os.environ.get("TCGA_DIR", "."); ENSG = "ENSG00000275410"   # HNF1B
-with open(os.path.join(TD, "TCGA-KIRC.star_counts.tsv")) as f:
-    hdr = next(f).rstrip("\n").split("\t")
-    for line in f:
-        if line.split("\t", 1)[0].startswith(ENSG): v = np.array(line.rstrip("\n").split("\t")[1:], float); break
-s = pd.DataFrame({"sample": hdr[1:], "x": v}); s["pid"] = s["sample"].str[:12]; s["type"] = s["sample"].str.split("-").str[3].str[:2]
+E = pd.read_csv(O + "tcga_KIRC_HNF1B_expression_samples.csv")   # written by part3_tcga_enrich.py (log2 CPM + 1)
+s = pd.DataFrame({"sample": E["sample"], "x": E.log2_cpm}); s["pid"] = s["sample"].str[:12]; s["type"] = s["sample"].str.split("-").str[3].str[:2]
 tum = s[s.type == "01"].groupby("pid").x.mean(); nor = s[s.type == "11"].groupby("pid").x.mean(); both = tum.index.intersection(nor.index)
 d = tum[both] - nor[both]; w = wilcoxon(tum[both], nor[both])
 R = dict(n_tumour_patients=len(tum), n_normal_patients=len(nor), n_paired=len(both), normals_without_tumour=int(len(nor.index.difference(tum.index))),

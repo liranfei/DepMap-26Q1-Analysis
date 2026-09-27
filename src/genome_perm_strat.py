@@ -9,7 +9,7 @@ from scipy.stats import norm
 import run_pipeline as rp
 
 ap = argparse.ArgumentParser(); ap.add_argument("--data-dir", default="."); ap.add_argument("--out", default="out")
-ap.add_argument("--n", type=int, default=1000); ap.add_argument("--strata", default="growth", choices=["growth", "batch", "growth_batch"]); ap.add_argument("--exclude-noncancerous", action="store_true"); a = ap.parse_args()
+ap.add_argument("--n", type=int, default=1000); ap.add_argument("--strata", default="growth", choices=["growth", "batch", "growth_batch", "patient"]); ap.add_argument("--exclude-noncancerous", action="store_true"); a = ap.parse_args()
 df = rp.load(a.data_dir)
 if a.exclude_noncancerous:
     df = df[df.primary_disease != "Non-Cancerous"].reset_index(drop=True)
@@ -24,9 +24,18 @@ for j in range(X.shape[1]):
 m_ = pd.read_csv(os.path.join(a.data_dir, "Model.csv"))[["ModelID", "GrowthPattern"]]; df = df.merge(m_, left_on="DepMap_ID", right_on="ModelID", how="left", validate="one_to_one"); df["GrowthPattern"] = df.GrowthPattern.fillna("Unknown")
 s_ = pd.read_csv(os.path.join(a.data_dir, "ScreenSequenceMap.csv")); s_ = s_[(s_.ScreenType == "2DS") & (s_.PassesQC == True) & (s_.DrugTreated == False) & (s_.IsEngineered == False) & (s_.ExcludeFromCRISPRCombined == False)]
 bm_ = s_.groupby("ModelID").pDNABatch.agg(lambda x: x.value_counts().index[0]); df["batch"] = df.DepMap_ID.map(bm_).fillna("unknown")
-strat = {"growth": df.GrowthPattern.astype(str), "batch": df.batch.astype(str), "growth_batch": df.GrowthPattern.astype(str) + "|" + df.batch.astype(str)}[a.strata].values
+pm_ = pd.read_csv(os.path.join(a.data_dir, "Model.csv"))[["ModelID", "PatientID"]].set_index("ModelID").PatientID; df["patient"] = df.DepMap_ID.map(pm_)
+if a.strata == "patient":
+    # block permutation: lineage labels are permuted between patients, and all models of a patient receive the same (permuted) label.
+    # All models of a patient share one lineage in the observed data, so the observed labelling is one of the permutations.
+    assert df.patient.notna().all() and (df.groupby("patient").lineage.nunique() == 1).all()
+    pat_codes, pat_idx = np.unique(df.patient.values, return_inverse=True); pat_lin = df.groupby("patient").lineage.first().reindex(pat_codes).values
+    strat = np.array(["all"] * len(df))
+else:
+    strat = {"growth": df.GrowthPattern.astype(str), "batch": df.batch.astype(str), "growth_batch": df.GrowthPattern.astype(str) + "|" + df.batch.astype(str)}[a.strata].values
 groups_ = [np.where(strat == g)[0] for g in np.unique(strat)]; print("strata:", a.strata, "n strata", len(groups_), "sizes", sorted(map(len, groups_), reverse=True)[:12], "singletons", sum(len(g) == 1 for g in groups_), flush=True)
 def strat_perm(rng, labels):
+    if a.strata == "patient": return pat_lin[rng.permutation(len(pat_lin))][pat_idx]
     out = labels.copy()
     for g in groups_: out[g] = labels[g][rng.permutation(len(g))]
     return out

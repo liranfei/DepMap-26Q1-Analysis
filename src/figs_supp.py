@@ -15,7 +15,7 @@ for ax,col_,obs,lab,cc in [(a,"n_q_lt_0_05",PP["observed_q_lt_0_05"],"Pairs with
 letters(axs,-0.16); fig.tight_layout(pad=0.6,w_pad=1.5); save(fig,"S1_Fig")
 # ---------- S2 Fig co-dependency
 C=pd.read_csv(O+"codependency_corr.csv",index_col=0); sym=[g.split(" (")[0] for g in C.index]; C.index=sym; C.columns=sym
-d=1-C.values; np.fill_diagonal(d,0); d=(d+d.T)/2; order=leaves_list(linkage(squareform(np.clip(d,0,None),checks=False),"ward")); Cc=C.iloc[order,order]
+d=1-C.values; np.fill_diagonal(d,0); d=(d+d.T)/2; order=leaves_list(linkage(squareform(np.clip(d,0,None),checks=False),"average")); Cc=C.iloc[order,order]  # average linkage on correlation distance 1-r (Ward requires Euclidean distances)
 fig,ax=plt.subplots(figsize=(7.3,7.0)); im=ax.imshow(Cc.values,cmap="RdBu_r",vmin=-1,vmax=1); ax.set_xticks(range(len(Cc))); ax.set_yticks(range(len(Cc)))
 ax.set_xticklabels(Cc.columns,rotation=90,fontsize=8); ax.set_yticklabels(Cc.index,fontsize=8); cb=fig.colorbar(im,ax=ax,fraction=0.035,pad=0.02); cb.set_label("Pearson r"); cb.ax.tick_params(labelsize=8)
 for s_ in ax.spines.values(): s_.set_visible(True)
@@ -32,7 +32,7 @@ X=df[[g for g in genes if g.split(" (")[0] in set(tg)]].apply(pd.to_numeric,erro
 b.hist([fr[[not i for i in isce]]*100,fr[isce]*100],bins=np.linspace(0,100,11),color=[BLUE,VERM],label=["Not in list","In list"],edgecolor="white"); b.set_xlabel("Cancer cell lines with Chronos < −1 (%)"); b.set_ylabel("Candidate genes"); b.legend(frameon=False)
 letters(axs,-0.16); fig.tight_layout(pad=0.6,w_pad=1.5); save(fig,"S3_Fig")
 # ---------- S4 Fig Mann-Whitney vs t-test on the 94
-A=pd.read_csv(O+"ttest_alt_all_tests.csv"); K=F.merge(A,on=["Gene","Lineage"],how="left")
+A=pd.read_csv(O+"ttest_alt_all_tests.csv.gz"); K=F.merge(A,on=["Gene","Lineage"],how="left")
 fig,axs=plt.subplots(1,2,figsize=(7.3,3.6)); a,b=axs
 a.scatter(-np.log10(K.q_value.clip(lower=1e-300)),-np.log10(K.q.clip(lower=1e-300)),s=14,color=BLUE,edgecolor="white",linewidth=0.3); a.plot([0,40],[0,40],color="#555555",ls="--",lw=0.8); a.set_xlim(0,40); a.set_ylim(0,160)
 a.axhline(-np.log10(0.05),color=VERM,ls=":",lw=1); a.set_xlabel("−log$_{10}$ q, Mann–Whitney (primary)"); a.set_ylabel("−log$_{10}$ q, Student t-test")
