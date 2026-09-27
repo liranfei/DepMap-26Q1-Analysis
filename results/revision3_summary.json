@@ -1,0 +1,193 @@
+{
+ "MDM2_TP53wt": [
+  {
+   "Lineage": "eye",
+   "cohort": "all lines",
+   "n_target": 10,
+   "n_target_TP53_mut": 1,
+   "n_other": 1182,
+   "median_target": -1.5543,
+   "median_other": -0.42,
+   "selectivity": -1.1343,
+   "p": 0.0
+  },
+  {
+   "Lineage": "eye",
+   "cohort": "TP53 wild-type only",
+   "n_target": 9,
+   "n_target_TP53_mut": 0,
+   "n_other": 390,
+   "median_target": -1.5872,
+   "median_other": -1.2282,
+   "selectivity": -0.3589,
+   "p": 0.0207
+  },
+  {
+   "Lineage": "kidney",
+   "cohort": "all lines",
+   "n_target": 34,
+   "n_target_TP53_mut": 9,
+   "n_other": 1158,
+   "median_target": -1.286,
+   "median_other": -0.4161,
+   "selectivity": -0.8699,
+   "p": 0.0
+  },
+  {
+   "Lineage": "kidney",
+   "cohort": "TP53 wild-type only",
+   "n_target": 25,
+   "n_target_TP53_mut": 0,
+   "n_other": 374,
+   "median_target": -1.443,
+   "median_other": -1.2073,
+   "selectivity": -0.2357,
+   "p": 0.0029
+  },
+  {
+   "Lineage": "pleura",
+   "cohort": "all lines",
+   "n_target": 21,
+   "n_target_TP53_mut": 4,
+   "n_other": 1171,
+   "median_target": -1.2784,
+   "median_other": -0.4186,
+   "selectivity": -0.8597,
+   "p": 0.0
+  },
+  {
+   "Lineage": "pleura",
+   "cohort": "TP53 wild-type only",
+   "n_target": 17,
+   "n_target_TP53_mut": 0,
+   "n_other": 382,
+   "median_target": -1.3684,
+   "median_other": -1.2264,
+   "selectivity": -0.142,
+   "p": 0.1293
+  },
+  {
+   "Lineage": "skin",
+   "cohort": "all lines",
+   "n_target": 75,
+   "n_target_TP53_mut": 28,
+   "n_other": 1117,
+   "median_target": -1.23,
+   "median_other": -0.4147,
+   "selectivity": -0.8154,
+   "p": 0.0
+  },
+  {
+   "Lineage": "skin",
+   "cohort": "TP53 wild-type only",
+   "n_target": 47,
+   "n_target_TP53_mut": 0,
+   "n_other": 352,
+   "median_target": -1.7207,
+   "median_other": -1.175,
+   "selectivity": -0.5457,
+   "p": 0.0
+  }
+ ],
+ "codep_null": {
+  "observed_median_abs_r_residual": 0.3900881179916093,
+  "null_mean": 0.050198313184645044,
+  "null_95pct": 0.07528618793564187,
+  "null_max": 0.1190891862512579,
+  "empirical_p": 0.000999000999000999,
+  "pool_size": 1704,
+  "matched_neighbours": 30
+ },
+ "splithalf": {
+  "n_splits": 20,
+  "half_size": 439,
+  "spearman_median": 0.21299004629221208,
+  "spearman_min": 0.20493435004871816,
+  "spearman_max": 0.2244814322885631,
+  "median_n_tests": 409734
+ },
+ "growth_bh": {
+  "heme": {
+   "n": 42,
+   "q_lt_0.05_negative": 36,
+   "median_ratio": 0.5569182575802031,
+   "ratio_lt_0.5": 16,
+   "min_ratio": 0.06682859126725146
+  },
+  "nonheme": {
+   "n": 52,
+   "q_lt_0.05_negative": 52,
+   "median_ratio": 0.9898702841056869,
+   "ratio_lt_0.5": 0,
+   "min_ratio": 0.7251634404951219
+  },
+  "all": {
+   "n": 94,
+   "q_lt_0.05_negative": 88,
+   "median_ratio": 0.8445723422101481,
+   "ratio_lt_0.5": 16,
+   "min_ratio": 0.06682859126725146
+  }
+ },
+ "batch_ratio": {
+  "min": 0.7457724124520911,
+  "median": 0.9967897593316941,
+  "q_lt_0.05": 94
+ },
+ "mean_rule_columns": {
+  "ttest_alt": [
+   "Gene",
+   "Lineage",
+   "mean_target",
+   "mean_diff",
+   "p_two_sided",
+   "q",
+   "n_target"
+  ],
+  "benchmark": [
+   "Gene",
+   "Lineage",
+   "mean_diff",
+   "p_t2",
+   "cohens_d",
+   "auc_lower",
+   "q_t"
+  ]
+ },
+ "kegg_restricted": {
+  "n_pathways": 88,
+  "n_distinct_genes": 35,
+  "genes_in_ge_10_pathways": {
+   "KRAS": 63,
+   "GRB2": 43,
+   "CCND1": 38,
+   "BRAF": 34,
+   "MYC": 29,
+   "CTNNB1": 22,
+   "CDK6": 20,
+   "MDM2": 19,
+   "EP300": 17,
+   "PTK2": 17,
+   "BCL2L1": 16
+  }
+ },
+ "kidney_subtypes_in_cohort": {
+  "Renal Clear Cell Carcinoma": 16,
+  "Renal Cell Carcinoma": 11,
+  "Rhabdoid Cancer": 5,
+  "Papillary Renal Cell Carcinoma": 1,
+  "Renal Medullary Carcinoma": 1
+ },
+ "HNF1B_clear_cell": {
+  "n": 16,
+  "median": -1.7133445257324666,
+  "selectivity": -1.5533897541917723,
+  "p": 7.53818064202343e-11
+ },
+ "PAX8_clear_cell": {
+  "n": 16,
+  "median": -1.427703085221314,
+  "selectivity": -1.3219547415224764,
+  "p": 4.421145328214789e-11
+ }
+}
