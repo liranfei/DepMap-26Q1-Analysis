@@ -16,7 +16,7 @@ with np.errstate(all="ignore"):
 li,gj=np.where(valid); p=p_two[li,gj]; d=(m1-m2)[li,gj]; mt=m1[li,gj]
 o=np.argsort(p); m=len(p); q=np.empty(m); r=p[o]*m/(np.arange(m)+1); q[o]=np.minimum.accumulate(r[::-1])[::-1]; q=np.minimum(q,1)
 A=pd.DataFrame({"Gene":np.array(genes)[gj],"Lineage":np.array(elig)[li],"mean_target":mt,"mean_diff":d,"p_two_sided":p,"q":q,"n_target":n1[li,gj]})
-A.to_csv(RD+"/ttest_alt_all_tests.csv",index=False)
+A.to_csv(RD+"/ttest_alt_all_tests.csv.gz",index=False)
 F=pd.read_csv(RD+"/final_targets.csv"); k=F.merge(A,on=["Gene","Lineage"],how="left")
 R={"n_tests":int(m),"q_lt_0.05_negative_effect":int(((A.q<0.05)&(A.mean_diff<0)).sum()),
    "meyers_style_calls(q<0.05,mean_diff<0)":int(((A.q<0.05)&(A.mean_diff<0)).sum()),

@@ -44,13 +44,13 @@ for r in Bt.sort_values("coef_unadj").head(5).itertuples():
     beta=np.linalg.lstsq(M,y[ok],rcond=None)[0][0]; rec(f"batch/library adj coef {r.Gene} {r.Lineage}",float(beta),float(r.coef_adj),1e-6)
 # ---- TCGA: hand-written log-rank + statsmodels PHReg vs stored (lifelines)
 def tcga(expr,surv,ensg,label):
-    H=pd.read_csv(expr,sep="\t",usecols=lambda c:True,index_col=0) if False else None
-    import csv
+    # independent route: stream the file, accumulate library sizes (sum of 2^x - 1 over all genes) and normalise to log2(CPM + 1)
     with open(expr) as f:
-        hdr=next(f).rstrip("\n").split("\t")
+        hdr=next(f).rstrip("\n").split("\t"); lib=np.zeros(len(hdr)-1); vals=None
         for line in f:
-            if ensg in line.split("\t",1)[0]: vals=np.array(line.rstrip("\n").split("\t")[1:],float); break
-    e=vals;  # already log2(count+1) per Xena metadata
+            parts=line.rstrip("\n").split("\t"); cnt=np.exp2(np.array(parts[1:],float))-1; lib+=cnt
+            if ensg in parts[0]: vals=cnt
+    e=np.log2(vals/lib*1e6+1)
     names=np.array(hdr[1:]); code=np.array([n.split("-")[3][:2] for n in names]); tum=code=="01"
     d=pd.DataFrame({"pid":[n[:12] for n in names[tum]],"x":e[tum]}).groupby("pid",as_index=False).x.mean()
     s=pd.read_csv(surv,sep="\t"); s=s[s["sample"].str.split("-").str[3].str[:2]=="01"].drop_duplicates(subset="sample"); s["pid"]=s["sample"].str[:12]; s=s.drop_duplicates("pid")
