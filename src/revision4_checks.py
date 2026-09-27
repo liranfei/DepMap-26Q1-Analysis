@@ -54,6 +54,15 @@ for r in F.itertuples():
     rows.append(dict(Gene=r.Gene, Lineage=r.Lineage, n=len(d), coef_unadj=m0.params.tgt, ci_unadj_low=m0.conf_int().loc["tgt", 0], ci_unadj_high=m0.conf_int().loc["tgt", 1],
                      coef_adj=m1.params.tgt, ci_adj_low=m1.conf_int().loc["tgt", 0], ci_adj_high=m1.conf_int().loc["tgt", 1]))
 BC = pd.DataFrame(rows); BC.to_csv(O + "batch_coef_ci.csv", index=False)
+# tie-breaking sensitivity: the primary analysis takes the first category in file order when two categories are equally frequent (pandas value_counts);
+# here the last category in file order is taken instead
+mode_last = lambda x: x.iloc[::-1].value_counts().index[0]
+bt2 = s.groupby("ModelID").pDNABatch.agg(mode_last); lb2 = s.groupby("ModelID").Library.agg(mode_last)
+n_tie_b = int((bt2 != bt).sum()); n_tie_l = int((lb2 != lb).sum()); d2b = pd.DataFrame({"batch": df.DepMap_ID.map(bt2).fillna("unknown"), "library": df.DepMap_ID.map(lb2).fillna("unknown")}); rat2 = []
+for r in F.itertuples():
+    d = pd.DataFrame({"y": df[r.Gene].astype(float), "tgt": (lin == r.Lineage).astype(int), "batch": d2b.batch, "library": d2b.library}).dropna()
+    rat2.append(smf.ols("y~tgt+C(batch)+C(library)", d).fit().params.tgt / smf.ols("y~tgt", d).fit().params.tgt)
+R["batch_tie_sensitivity"] = {"models_with_changed_batch": n_tie_b, "models_with_changed_library": n_tie_l, "min_ratio": float(np.min(rat2)), "median_ratio": float(np.median(rat2))}
 R["batch_ci"] = {"n_pairs": len(BC), "adj_ci_excludes_0": int((BC.ci_adj_high < 0).sum()), "min_ratio": float((BC.coef_adj / BC.coef_unadj).min()), "models_per_fit": int(BC.n.max()), "batch_unknown_models": int((dfb.batch == "unknown").sum())}
 
 # ---- 4. DCAF7 coverage; engineered removal and the median criterion

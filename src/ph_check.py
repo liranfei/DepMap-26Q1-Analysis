@@ -14,6 +14,8 @@ for label, ct in [("KIRC_HNF1B", "KIRC"), ("PAAD_KRAS", "PAAD")]:
     m = pd.read_csv(O + f"tcga_{label}_survival_table.csv"); out = {}
     c = CoxPHFitter().fit(m[["OS.time", "OS", "z"]], "OS.time", "OS"); t = proportional_hazard_test(c, m[["OS.time", "OS", "z"]], time_transform="rank")
     out["unadjusted_z_p"] = float(t.summary.loc["z", "p"])
+    pf = m.merge(cdr[cdr["cancer type abbreviation"] == ct][["pid", "PFI", "PFI.time"]], on="pid", how="left").dropna(subset=["PFI", "PFI.time"]); pf = pf[pf["PFI.time"] > 0][["PFI.time", "PFI", "z"]]
+    cp = CoxPHFitter().fit(pf, "PFI.time", "PFI"); out["pfi_unadjusted_z_p"] = float(proportional_hazard_test(cp, pf, time_transform="rank").summary.loc["z", "p"])
     a = m.merge(cdr[cdr["cancer type abbreviation"] == ct][["pid", "age_at_initial_pathologic_diagnosis", "gender", "ajcc_pathologic_tumor_stage"]], on="pid", how="left", validate="one_to_one")
     a = a.assign(age10=pd.to_numeric(a.age_at_initial_pathologic_diagnosis, errors="coerce") / 10, male=(a.gender == "MALE").astype(float), adv=a.ajcc_pathologic_tumor_stage.map(stage)).dropna(subset=["age10", "adv"])
     a = a[a["OS.time"] > 0][["OS.time", "OS", "z", "age10", "male", "adv"]]; c2 = CoxPHFitter().fit(a, "OS.time", "OS"); t2 = proportional_hazard_test(c2, a, time_transform="rank")

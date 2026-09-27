@@ -28,6 +28,12 @@
    "p_permutation": 0.0004999500049995
   }
  ],
+ "batch_tie_sensitivity": {
+  "models_with_changed_batch": 70,
+  "models_with_changed_library": 60,
+  "min_ratio": 0.6991290585341264,
+  "median_ratio": 1.0010371119976664
+ },
  "batch_ci": {
   "n_pairs": 94,
   "adj_ci_excludes_0": 94,
