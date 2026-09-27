@@ -44,6 +44,7 @@ Downstream analyses were cross-checked with a second implementation (`src/cross_
 | `src/part2_depmap.py`, `src/part3_tcga_enrich.py` | genotype, TP53-MDM2, batch/library, co-dependency, subsampling, subtypes; TCGA and enrichment |
 | `src/cross_check.py` | second implementation of the downstream analyses |
 | `src/sanger_disjoint.py`, `src/figs_sanger_disjoint.py` | separated Broad/Sanger replication (Fig 12, S7 Table) |
+| `src/paad_pdac_subset.py` | KRAS expression and survival in the 150 curated PDAC samples (Table S1 of Raphael et al. 2017; set `PAAD_S1`) |
 | `src/cross_release_decomp.py` | 22Q1 versus 26Q1 on the same 1,036 lines: composition versus data/processing |
 | `src/revision3_checks.py`, `src/ph_check.py` | MDM2 in TP53 wild-type lines, matched null for co-dependency, split-half reference correlation, BH over pairs for growth-adjusted models; proportional-hazards tests of the TCGA Cox models |
 | `src/revision2_checks.py` | within-lineage co-dependency, restricted enrichment background, HNF1B/PAX8 in renal cell carcinoma lines, subsampling at the BH threshold |

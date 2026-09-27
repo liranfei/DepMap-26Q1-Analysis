@@ -15,7 +15,7 @@ $PY cohort_stats.py; $PY batch_composition.py; $PY make_tables.py; $PY figs_batc
 if [ -n "${DEPMAP22_DIR:-}" ]; then export DEPMAP22_DIR="$(cd "$DEPMAP22_DIR" && pwd)"; $PY cross_release.py; $PY figs_crossrelease.py; $PY cross_release_decomp.py; fi   # optional: DepMap 22Q1 comparison
 if [ -n "${SANGER_DIR:-}" ]; then export SANGER_DIR="$(cd "$SANGER_DIR" && pwd)"; $PY independent_sanger.py; $PY sanger_disjoint.py; $PY figs_sanger_disjoint.py; fi   # independent_sanger.py: earlier, non-independent comparison (S7 Table, last sheet); sanger_disjoint.py: separated design (Fig 12, S7 Table)   # optional: Sanger Project Score comparison (figshare 10.6084/m9.figshare.14461980)
 $PY annotate_lit_drug.py; $PY make_tables_ext.py   # optional; needs internet (PubMed, DGIdb); results are date-dependent, the stored versions are in results/
-if [ -n "${TCGA_CDR:-}" ]; then $PY clinical_extra.py; $PY ph_check.py; fi   # optional: TCGA-CDR file (Survival_SupplementalTable_S1_20171025_xena_sp) for PFI and adjusted Cox models
+if [ -n "${TCGA_CDR:-}" ]; then $PY clinical_extra.py; $PY ph_check.py; [ -n "${PAAD_S1:-}" ] && $PY paad_pdac_subset.py; fi   # PAAD_S1: Table S1 of Raphael et al. 2017 (curated PDAC samples)   # optional: TCGA-CDR file (Survival_SupplementalTable_S1_20171025_xena_sp) for PFI and adjusted Cox models
 $PY benchmark_metrics.py   # comparison with other lineage-selectivity measures (Table 3, S9 Table)
 $PY revision2_checks.py   # within-lineage co-dependency, restricted enrichment background, HNF1B/PAX8 in RCC lines, subsampling at the BH threshold
 $PY growth_confound.py; $PY sanger_matched.py   # culture-format checks (S10 Table); effect-size adjusted Sanger comparison (needs independent_sanger.py output)
