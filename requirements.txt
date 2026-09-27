@@ -4,8 +4,7 @@ scipy==1.17.1
 statsmodels==0.14.6
 lifelines==0.30.3
 matplotlib==3.10.8
-adjustText
-openpyxl
-requests
-python-docx
-Pillow
+adjustText==1.4.0
+openpyxl==3.1.5
+requests==2.33.1
+Pillow==12.3.0
