@@ -1,0 +1,192 @@
+{
+ "cohort_26Q1": 1192,
+ "cohort_models_with_KY_screen": 314,
+ "discovery_models": 878,
+ "discovery_eligible_lineages": 25,
+ "discovery_tests": 447579,
+ "discovery_q_lt_0_05": 3908,
+ "discovery_candidates": 79,
+ "discovery_candidate_genes": 52,
+ "discovery_candidate_lineages": 16,
+ "sanger_models": 316,
+ "sanger_models_shared_with_discovery": 0,
+ "sanger_eligible_lineages": 12,
+ "sanger_tests": 209496,
+ "sanger_q_lt_0_05": 13862,
+ "disc_testable_in_sanger": 35,
+ "disc_negative_direction": 33,
+ "disc_nominal": 31,
+ "disc_replicated": 26,
+ "disc_meet_rule_in_sanger": 12,
+ "spearman_selectivity_all_shared": 0.1248979079723377,
+ "shared_tests": 201465,
+ "spearman_selectivity_candidates": 0.5411764705882354,
+ "median_sel_candidates_disc": -0.6447502905518621,
+ "median_sel_candidates_S": -0.5127810681254248,
+ "baseline_noncandidate_sig_testable": 2394,
+ "baseline_frac_replicated": 0.24812030075187969,
+ "primary94_in_discovery_tested": 92,
+ "primary94_candidates_in_discovery": 69,
+ "primary94_q05_neg_in_discovery": 78,
+ "primary94_disc_candidates_testable_in_sanger": 26,
+ "primary94_disc_candidates_replicated": 25,
+ "primary94_disc_candidates_meet_rule_in_sanger": 12,
+ "sanger_lineages": {
+  "lung": 39,
+  "esophagus/stomach": 39,
+  "head and neck": 34,
+  "cns/brain": 33,
+  "bowel": 30,
+  "ovary/fallopian tube": 29,
+  "breast": 25,
+  "pancreas": 23,
+  "peripheral nervous system": 17,
+  "bone": 13,
+  "lymphoid": 10,
+  "uterus": 8
+ },
+ "replicated_pairs": [
+  [
+   "KRAS (3845)",
+   "pancreas"
+  ],
+  [
+   "NMNAT1 (64802)",
+   "lymphoid"
+  ],
+  [
+   "CTNNB1 (1499)",
+   "bowel"
+  ],
+  [
+   "ATP1B3 (483)",
+   "lymphoid"
+  ],
+  [
+   "UMPS (7372)",
+   "lymphoid"
+  ],
+  [
+   "NAMPT (10135)",
+   "lymphoid"
+  ],
+  [
+   "SDHB (6390)",
+   "lymphoid"
+  ],
+  [
+   "CCND1 (595)",
+   "peripheral nervous system"
+  ],
+  [
+   "TFRC (7037)",
+   "lymphoid"
+  ],
+  [
+   "BCL2L1 (598)",
+   "bowel"
+  ],
+  [
+   "CDAN1 (146059)",
+   "lymphoid"
+  ],
+  [
+   "SEPHS2 (22928)",
+   "lymphoid"
+  ],
+  [
+   "KRAS (3845)",
+   "bowel"
+  ],
+  [
+   "RAB10 (10890)",
+   "pancreas"
+  ],
+  [
+   "DNAJC9 (23234)",
+   "lymphoid"
+  ],
+  [
+   "ADSL (158)",
+   "lymphoid"
+  ],
+  [
+   "PAICS (10606)",
+   "lymphoid"
+  ],
+  [
+   "SNAP23 (8773)",
+   "bowel"
+  ],
+  [
+   "CTPS1 (1503)",
+   "lymphoid"
+  ],
+  [
+   "CFL1 (1072)",
+   "lymphoid"
+  ],
+  [
+   "FPGS (2356)",
+   "lymphoid"
+  ],
+  [
+   "FAM50A (9130)",
+   "lymphoid"
+  ],
+  [
+   "UROD (7389)",
+   "lymphoid"
+  ],
+  [
+   "SCAP (22937)",
+   "bowel"
+  ],
+  [
+   "FERMT2 (10979)",
+   "ovary/fallopian tube"
+  ],
+  [
+   "GRB2 (2885)",
+   "head and neck"
+  ]
+ ],
+ "not_replicated_testable": [
+  [
+   "KIF18A (81930)",
+   "head and neck"
+  ],
+  [
+   "ATP1A1 (476)",
+   "breast"
+  ],
+  [
+   "RAB6A (5870)",
+   "pancreas"
+  ],
+  [
+   "CRKL (1399)",
+   "pancreas"
+  ],
+  [
+   "BUB3 (9184)",
+   "head and neck"
+  ],
+  [
+   "MYH9 (4627)",
+   "pancreas"
+  ],
+  [
+   "CCND1 (595)",
+   "head and neck"
+  ],
+  [
+   "PPP1R15B (84919)",
+   "breast"
+  ],
+  [
+   "DNM2 (1785)",
+   "lymphoid"
+  ]
+ ]
+}

@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .DS_Store
+results/all_tests.csv
+results/*.log

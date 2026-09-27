@@ -18,6 +18,8 @@ for r in S["topN"]: rows.append({"Analysis": f"Top-{r['top_n']} genes by varianc
 with pd.ExcelWriter(OUT + "S1_Table.xlsx") as w: LT.to_excel(w, index=False, sheet_name="Lineages"); nc.to_excel(w, index=False, sheet_name="Excluded non-cancerous")
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 with pd.ExcelWriter(OUT + "S3_Table.xlsx") as w: pd.DataFrame(rows).to_excel(w, index=False, sheet_name="Sensitivity analyses")
-with pd.ExcelWriter(OUT + "S4_Table.xlsx") as w: E.to_excel(w, index=False, sheet_name="Enrichment")
+with pd.ExcelWriter(OUT + "S4_Table.xlsx") as w:
+    E.to_excel(w, index=False, sheet_name="Background all tested genes")
+    if os.path.exists(O + "enrichment_restricted_background.csv"): pd.read_csv(O + "enrichment_restricted_background.csv").to_excel(w, index=False, sheet_name="Background median below -1")
 with pd.ExcelWriter(OUT + "S5_Table.xlsx") as w:
     for tag, sheet in [("KIRC_HNF1B", "TCGA-KIRC (HNF1B)"), ("PAAD_KRAS", "TCGA-PAAD (KRAS)")]: pd.read_csv(O + f"tcga_{tag}_survival_table.csv").to_excel(w, index=False, sheet_name=sheet)

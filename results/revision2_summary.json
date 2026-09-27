@@ -1,0 +1,184 @@
+{
+ "codependency_residual": {
+  "n_gene_pairs_r_gt_0.5_raw": 39,
+  "n_gene_pairs_r_gt_0.5_residual": 15,
+  "median_abs_r_raw": 0.0920212634255472,
+  "median_abs_r_residual": 0.05068550650173782,
+  "random_median_abs_r_raw": 0.03935756066721907,
+  "random_median_abs_r_residual": 0.037960120695592306,
+  "metabolic_within_raw": 0.4972805990983104,
+  "metabolic_within_residual": 0.3900881179916093,
+  "TF_vs_metabolic_raw": 0.09034042328946824,
+  "TF_vs_metabolic_residual": 0.04211896461426977,
+  "ADSL_PAICS_raw": 0.7805559590039463,
+  "ADSL_PAICS_residual": 0.7144378464198421,
+  "UMPS_CTPS1_raw": 0.6205823937844613,
+  "UMPS_CTPS1_residual": 0.5253326042652826,
+  "NMNAT1_NAMPT_raw": 0.5388873023037964,
+  "NMNAT1_NAMPT_residual": 0.41193404279781193,
+  "SOX10_HNF1B_raw": -0.06027421001847863,
+  "SOX10_HNF1B_residual": 0.01836689774484199
+ },
+ "enrichment_restricted": {
+  "background_genes": 1186,
+  "hit_genes": 58,
+  "n_q05": {
+   "GO_Biological_Process_2023": 1,
+   "KEGG_2021_Human": 88
+  },
+  "top": {
+   "KEGG_2021_Human": [
+    [
+     "Chronic myeloid leukemia",
+     8,
+     11,
+     0.0
+    ],
+    [
+     "Prostate cancer",
+     7,
+     8,
+     0.0
+    ],
+    [
+     "Endometrial cancer",
+     6,
+     6,
+     0.0
+    ],
+    [
+     "Human cytomegalovirus infection",
+     8,
+     12,
+     0.0
+    ],
+    [
+     "Small cell lung cancer",
+     7,
+     9,
+     0.0
+    ],
+    [
+     "Breast cancer",
+     7,
+     9,
+     0.0
+    ],
+    [
+     "Hepatocellular carcinoma",
+     8,
+     14,
+     0.0
+    ],
+    [
+     "PI3K-Akt signaling pathway",
+     9,
+     19,
+     0.0
+    ]
+   ],
+   "GO_Biological_Process_2023": [
+    [
+     "Positive Regulation Of Multicellular Organismal Process (GO:0051240)",
+     8,
+     23,
+     0.02973
+    ],
+    [
+     "Negative Regulation Of Programmed Cell Death (GO:0043069)",
+     10,
+     45,
+     0.0803
+    ],
+    [
+     "Negative Regulation Of Apoptotic Process (GO:0043066)",
+     10,
+     47,
+     0.08047
+    ],
+    [
+     "Purine Nucleotide Biosynthetic Process (GO:0006164)",
+     3,
+     3,
+     0.08497
+    ],
+    [
+     "Receptor-Mediated Endocytosis (GO:0006898)",
+     4,
+     6,
+     0.08497
+    ],
+    [
+     "Branching Morphogenesis Of An Epithelial Tube (GO:0048754)",
+     3,
+     3,
+     0.08497
+    ],
+    [
+     "Positive Regulation Of Ubiquitin-Dependent Protein Catabolic Process (GO:2000060)",
+     5,
+     11,
+     0.08497
+    ],
+    [
+     "Regulation Of Epithelial To Mesenchymal Transition (GO:0010717)",
+     4,
+     7,
+     0.10821
+    ]
+   ]
+  }
+ },
+ "kidney_composition": {
+  "Renal Cell Carcinoma": 29,
+  "Rhabdoid Cancer": 5
+ },
+ "HNF1B_kidney_RCC_only": {
+  "n_rcc": 29,
+  "median_rcc": -1.568244101909252,
+  "selectivity_rcc": -1.4082893303685575,
+  "p_rcc": 1.4312004031126627e-14,
+  "n_non_rcc_kidney": 5,
+  "median_non_rcc_kidney": -0.0507056321076069
+ },
+ "PAX8_kidney_RCC_only": {
+  "n_rcc": 29,
+  "median_rcc": -1.2660359534808248,
+  "selectivity_rcc": -1.1602876097819872,
+  "p_rcc": 7.815845223570329e-16,
+  "n_non_rcc_kidney": 5,
+  "median_non_rcc_kidney": -0.1324654320789215
+ },
+ "CFLAR_kidney_RCC_only": {
+  "n_rcc": 29,
+  "median_rcc": -1.8877678605158992,
+  "selectivity_rcc": -1.3313924940391768,
+  "p_rcc": 1.0149489729955672e-11,
+  "n_non_rcc_kidney": 5,
+  "median_non_rcc_kidney": -0.5751966515894668
+ },
+ "MDM2_kidney_RCC_only": {
+  "n_rcc": 29,
+  "median_rcc": -1.2902200098276717,
+  "selectivity_rcc": -0.87414928583071,
+  "p_rcc": 1.1576147164538647e-07,
+  "n_non_rcc_kidney": 5,
+  "median_non_rcc_kidney": -1.28175078725211
+ },
+ "subsampling_bh": {
+  "p_star": 0.0010494907064857,
+  "n_pairs": 75,
+  "by_k": {
+   "10": {
+    "mean": 0.415,
+    "median": 0.43,
+    "min": 0.007
+   },
+   "20": {
+    "mean": 0.674,
+    "median": 0.76,
+    "min": 0.09
+   }
+  }
+ }
+}

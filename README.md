@@ -13,6 +13,7 @@ Version 1 of this repository (scripts `01_*` to `23_*`, now in `legacy_v1/`) pro
 3. For every gene (18,531) and eligible lineage: one-sided Mann-Whitney U test (target lineage lower than all other cancer lines; asymptotic, tie and continuity corrected); missing values removed per gene; at least 5 non-missing target values (467,091 tests).
 4. Benjamini-Hochberg over all tests; candidate pairs have q < 0.05, target median Chronos < -1 and selectivity (target median minus median of all other lineages) < -0.5 (94 pairs, 58 genes, 21 lineages).
 5. Permutation test (1,000 label shuffles, complete procedure repeated), sensitivity analyses, genotype, TCGA, enrichment, batch/library, co-dependency and other analyses (see `src/`).
+6. Replication in Sanger Project Score screens with the two data sets separated (`src/sanger_disjoint.py`): the 26Q1 `CRISPRGeneEffect` matrix is estimated from the combined Broad (Avana) and Sanger (KY) screens, so for the 314 cancer lines with a KY screen the 26Q1 values are partly derived from the Project Score data. Candidates are therefore re-derived from the 878 lines without a KY screen (identified from `ScreenSequenceMap.csv`) and tested in the Project Score data, which then share no screens and no cell lines with the discovery data. The earlier direct comparison (`src/independent_sanger.py`) is not independent and is kept for transparency only.
 
 Adjusted p-values refer to the whole family of significant pairs; the effect-size thresholds are a prioritisation rule and do not guarantee an FDR below 5% for the prioritised subset.
 
@@ -31,7 +32,7 @@ Outputs are written to `results/` (tables, JSON summaries) and `figures/` (TIFF 
 
 ## Verification
 
-The primary analysis (467,091 tests; 9,805 pairs with q < 0.05; 94 candidate pairs; 1,000 permutations) was re-implemented independently from a written specification and gave identical numbers; downstream analyses were cross-checked with a second implementation (`src/cross_check.py`, `results/cross_check_results.csv`) and re-implemented independently from a written specification.
+Downstream analyses were cross-checked with a second implementation (`src/cross_check.py`, `results/cross_check_results.csv`). In addition, the primary analysis (467,091 tests; 9,805 pairs with q < 0.05; 94 candidate pairs; 1,000 permutations) and the TCGA secondary analyses were re-implemented by ChatGPT (OpenAI) from a written specification, without our code, and gave identical numbers. Analysis code in this repository was written with the help of Claude (Anthropic) and reviewed by the authors.
 
 ## Files
 
@@ -42,6 +43,8 @@ The primary analysis (467,091 tests; 9,805 pairs with q < 0.05; 94 candidate pai
 | `src/sens_primary.py`, `src/ttest_alt.py` | multiplicity, threshold, top-N, minimum-n sensitivity; Student t-test screen |
 | `src/part2_depmap.py`, `src/part3_tcga_enrich.py` | genotype, TP53-MDM2, batch/library, co-dependency, subsampling, subtypes; TCGA and enrichment |
 | `src/cross_check.py` | second implementation of the downstream analyses |
+| `src/sanger_disjoint.py`, `src/figs_sanger_disjoint.py` | separated Broad/Sanger replication (Fig 12, S7 Table) |
+| `src/revision2_checks.py` | within-lineage co-dependency, restricted enrichment background, HNF1B/PAX8 in renal cell carcinoma lines, subsampling at the BH threshold |
 | `src/figlib.py`, `src/figs_*.py`, `src/make_tables.py` | figures (PLOS ONE format) and supporting tables |
 | `results/` | result tables (`all_tests.csv.gz` contains all 467,091 tests) |
 | `checksums/` | SHA-256 checksums of input files |
