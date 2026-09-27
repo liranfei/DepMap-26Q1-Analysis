@@ -27,8 +27,9 @@ a1.barh(y,D.n,color=GREY,height=0.75); [a1.text(n+2,i,str(n),va="center",fontsiz
 a1.set_yticks(y); a1.set_yticklabels([nm(i)+(" *" if l else "") for i,l in zip(D.index,low)]); a1.set_xlabel("Cancer cell lines per lineage"); a1.set_xlim(0,145)
 cols=cm.cividis(np.linspace(0.1,0.95,len(D))); a2.barh(y,D.pairs,color=cols,height=0.75); [a2.text(p+0.3,i,str(p),va="center",fontsize=8) for i,p in enumerate(D.pairs)]
 a2.set_xlabel("Candidate gene–lineage pairs"); a2.set_xlim(0,26)
-for a,l,x in ((a1,"A",-0.62),(a2,"B",-0.02)): a.text(x,1.01,l,transform=a.transAxes,fontsize=12,fontweight="bold")
-fig.tight_layout(pad=0.6); save(fig,"Fig2")
+fig.tight_layout(pad=0.6,rect=(0,0,1,0.97))
+for a,l,x in ((a1,"A",0.01),(a2,"B",a2.get_position().x0-0.02)): fig.text(x,0.975,l,fontsize=12,fontweight="bold",va="bottom")   # panel letters in figure coordinates (inside the canvas)
+save(fig,"Fig2")
 # ================= Fig 3 volcano
 T["nlq"]=-np.log10(T.q_value.clip(lower=1e-300)); fin=set(zip(F.Gene,F.Lineage)); T["final"]=[(g,l) in fin for g,l in zip(T.Gene,T.Lineage)]
 fig,ax=plt.subplots(figsize=(7.3,5.3)); g=T[~T.final]; r=T[T.final]
@@ -38,18 +39,18 @@ ax.axvline(-0.5,color=BLUE,ls="--",lw=1,label="Selectivity = −0.5"); ax.axhlin
 key={"KRAS","SOX10","CTNNB1","NMNAT1","NAMPT","HNF1B","CBFB","IRF4","MDM2","PAX8","BRAF","MYB"}
 lab=r[(r.sym.isin(key))|(r.nlq.rank(ascending=False)<=6)].sort_values("nlq",ascending=False).drop_duplicates("sym")
 tx=[ax.text(x,yv,s,fontsize=8) for x,yv,s in zip(lab.Selectivity,lab.nlq,lab.sym)]
-adjust_text(tx,x=lab.Selectivity.values,y=lab.nlq.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),expand=(1.4,1.6))
+adjust_text(tx,x=lab.Selectivity.values,y=lab.nlq.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),expand=(1.4,1.6),iter_lim=1000)   # fixed iteration count: the default (1 s time limit) makes label placement machine-dependent
 ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target lineage − all other lineages)"); ax.set_ylabel("−log$_{10}$ (BH-adjusted q)"); ax.legend(loc="upper right",frameon=False)
 fig.tight_layout(pad=0.6); save(fig,"Fig3")
 # ================= Fig 4 efficacy vs selectivity
 fig,ax=plt.subplots(figsize=(7.3,5.3)); h=F[F.Lineage.isin(HEME)]; s=F[~F.Lineage.isin(HEME)]
 ax.scatter(s.Selectivity,s.Chronos_median,s=22,c=BLUE,edgecolor="white",linewidth=0.3,label="Solid-tumor lineages")
 ax.scatter(h.Selectivity,h.Chronos_median,s=22,c=VERM,edgecolor="white",linewidth=0.3,label="Lymphoid / myeloid")
-lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Lineage with n < 10")
+lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Pair with < 10 target observations")
 ax.axvline(-0.5,color="#555555",ls="--",lw=0.9); ax.axhline(-1,color="#555555",ls="--",lw=0.9)
 lab=F[F.sym.isin({"KRAS","SOX10","HNF1B","MDM2","CTNNB1","CFLAR","MYB","CBFB","PAX8","NMNAT1","MYC","FOXA1","DHFR"})].drop_duplicates("sym")
 tx=[ax.text(x,yv,sy,fontsize=8) for x,yv,sy in zip(lab.Selectivity,lab.Chronos_median,lab.sym)]
-adjust_text(tx,x=lab.Selectivity.values,y=lab.Chronos_median.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5))
+adjust_text(tx,x=lab.Selectivity.values,y=lab.Chronos_median.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),iter_lim=1000)
 ax.set_xlabel("Selectivity (target lineage − other lineages, median Chronos)"); ax.set_ylabel("Median Chronos, target lineage"); ax.legend(frameon=False,loc="lower center",bbox_to_anchor=(0.42,0.0))
 fig.tight_layout(pad=0.6); save(fig,"Fig4")
 # ================= Fig 5 top 20

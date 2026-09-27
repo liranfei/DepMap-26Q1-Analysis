@@ -45,5 +45,5 @@ gen_all=[c for c in genes]; skew=df[gen_all].skew(); skew.index=[c.split(" (")[0
 fig,axs=plt.subplots(1,2,figsize=(7.3,3.6)); a,b=axs; bg=skew.drop(list(best.index),errors="ignore").dropna(); tv=skew[best.index].dropna()
 vp=a.violinplot([bg.values,tv.values],showmedians=True,widths=0.8); [ (p.set_facecolor(cc),p.set_alpha(0.6)) for p,cc in zip(vp["bodies"],[GREY,VERM]) ]
 a.set_xticks([1,2]); a.set_xticklabels([f"Other genes\n(n = {len(bg):,})",f"Candidate genes\n(n = {len(tv)})"]); a.set_ylabel("Skewness of gene effect across cell lines")
-b.scatter(best[tv.index],tv,s=16,color=VERM,edgecolor="white",linewidth=0.3); b.set_xlabel("Selectivity (most negative per gene)"); b.set_ylabel("Skewness"); b.text(0.03,0.05,f"Spearman ρ = {P2['skewness_descriptive']['spearman_rho']:.2f}",transform=b.transAxes,fontsize=8)
+b.scatter(best[tv.index],tv,s=16,color=VERM,edgecolor="white",linewidth=0.3); b.set_xlabel("Selectivity (most negative per gene)"); b.set_ylabel("Skewness"); b.text(0.03,0.93,f"Spearman ρ = {P2['skewness_descriptive']['spearman_rho']:.2f}",transform=b.transAxes,fontsize=8)
 letters(axs,-0.16); fig.tight_layout(pad=0.6,w_pad=1.5); save(fig,"S5_Fig")
