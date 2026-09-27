@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 results/all_tests.csv
 results/*.log
+results/all_tests_*_sharedlines.csv.gz

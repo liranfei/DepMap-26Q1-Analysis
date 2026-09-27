@@ -1,0 +1,36 @@
+{
+ "shared_cancer_lines": 1036,
+ "KY_only_models_26Q1": 118,
+ "KY_only_models_in_22Q1_matrix": 118,
+ "any_KY_models_26Q1": 317,
+ "any_KY_models_in_22Q1_matrix": 316,
+ "shared_lines_with_KY_screen_in_26Q1": 314,
+ "shared_run": {
+  "genes": 17135,
+  "tests": 409918,
+  "candidates_26Q1_shared_lines": 102,
+  "candidates_22Q1_shared_lines": 32,
+  "overlap_candidates": 23,
+  "primary94_testable_in_both": 90,
+  "primary94_meet_rule_26Q1_shared": 84,
+  "primary94_meet_rule_22Q1_shared": 23,
+  "primary94_median_sel_primary": -0.6708757422041992,
+  "primary94_median_sel_26shared": -0.6905772062584985,
+  "primary94_median_sel_22shared": -0.4975085189515813,
+  "primary94_median_chronos_26shared": -1.3599800918620208,
+  "primary94_median_chronos_22shared": -1.0197913834694883,
+  "reverse_22cands_meeting_rule_in_26shared": 23,
+  "reverse_22cands_total": 32,
+  "reverse_22cands_median_sel_22": -0.6499579091609965,
+  "reverse_22cands_median_sel_26": -0.7504128590459327
+ },
+ "scale": {
+  "sd_selectivity_26": 0.05538402560122419,
+  "sd_selectivity_22": 0.04666516066432862,
+  "slope_22_on_26": 0.621455573841254,
+  "slope_26_on_22": 0.8753739037096103,
+  "spearman": 0.6447739957498039,
+  "sig26_sel_lt_-0.3_median_ratio_22_to_26": 0.7194940571602594,
+  "sig22_sel_lt_-0.3_median_ratio_26_to_22": 1.1798907430971957
+ }
+}
