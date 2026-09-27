@@ -1,0 +1,12 @@
+{
+ "n_tumour_patients": 533,
+ "n_normal_patients": 72,
+ "n_paired": 72,
+ "normals_without_tumour": 0,
+ "median_tumour_paired": 13.086763469618846,
+ "median_normal_paired": 13.341024309217007,
+ "median_difference": -0.34068238494890934,
+ "frac_tumour_lower": 0.6666666666666666,
+ "wilcoxon_p_two_sided": 0.0012769420855711282,
+ "unpaired_mw_p_all_samples": 2.5312101710412376e-07
+}

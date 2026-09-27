@@ -129,6 +129,18 @@
    "min_ratio": 0.06682859126725146
   }
  },
+ "suspension_bh": {
+  "testable": 39,
+  "not_testable_lt10_comparators": 3,
+  "negative": 39,
+  "lt_-0.5": 27,
+  "q_lt_0.05": 38,
+  "median_diff": -0.6252251687994282
+ },
+ "excl_engineered_bh": {
+  "q_lt_0.05": 94,
+  "sel_lt_-0.5": 94
+ },
  "batch_ratio": {
   "min": 0.7457724124520911,
   "median": 0.9967897593316941,

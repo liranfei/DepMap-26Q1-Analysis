@@ -13,7 +13,7 @@ lc = pd.read_csv(O + "lineage_counts.csv"); lc.columns = ["Lineage", "Cancer cel
 df = rp.load(D); nc = df[df.primary_disease == "Non-Cancerous"][["DepMap_ID", "lineage"]].rename(columns={"lineage": "Lineage"})
 mo = pd.read_csv(os.path.join(D, "Model.csv"))[["ModelID", "CellLineName", "OncotreeSubtype"]].rename(columns={"ModelID": "DepMap_ID", "CellLineName": "Cell line", "OncotreeSubtype": "Subtype"}); nc = nc.merge(mo, on="DepMap_ID").drop(columns="DepMap_ID")
 S = json.load(open(O + "sensitivity_summary.json")); rows = []
-for k in [x for x in S if x.startswith(("multiplicity_", "selectivity<", "chronos_median<", "min_n_target"))]: rows.append({"Analysis": k, **S[k]})
+for k in [x for x in S if x.startswith(("multiplicity_", "selectivity<", "chronos_median<", "min_n_target"))]: rows.append({"Analysis": k.replace("multiplicity_", "Multiplicity procedure: "), **S[k]})
 for r in S["topN"]: rows.append({"Analysis": f"Top-{r['top_n']} genes by variance", "n_significant": r["n_q05"], "n_final": r["n_final"], "n_genes": r["n_genes"], "n_lineages": r["n_lineages"]})
 with pd.ExcelWriter(OUT + "S1_Table.xlsx") as w: LT.to_excel(w, index=False, sheet_name="Lineages"); nc.to_excel(w, index=False, sheet_name="Excluded non-cancerous")
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
@@ -21,5 +21,6 @@ with pd.ExcelWriter(OUT + "S3_Table.xlsx") as w: pd.DataFrame(rows).to_excel(w, 
 with pd.ExcelWriter(OUT + "S4_Table.xlsx") as w:
     E.to_excel(w, index=False, sheet_name="Background all tested genes")
     if os.path.exists(O + "enrichment_restricted_background.csv"): pd.read_csv(O + "enrichment_restricted_background.csv").to_excel(w, index=False, sheet_name="Background median below -1")
+S5COLS = {"pid": "Patient (TCGA barcode, 12 characters)", "x": "Tumour expression, log2(count+1) (mean per patient)", "OS.time": "Overall survival time (days)", "OS": "Death (1 = yes)", "hi": "High expression (>= median)=1", "z": "Standardised expression (z-score)"}
 with pd.ExcelWriter(OUT + "S5_Table.xlsx") as w:
-    for tag, sheet in [("KIRC_HNF1B", "TCGA-KIRC (HNF1B)"), ("PAAD_KRAS", "TCGA-PAAD (KRAS)")]: pd.read_csv(O + f"tcga_{tag}_survival_table.csv").to_excel(w, index=False, sheet_name=sheet)
+    for tag, sheet in [("KIRC_HNF1B", "TCGA-KIRC (HNF1B)"), ("PAAD_KRAS", "TCGA-PAAD (KRAS)")]: pd.read_csv(O + f"tcga_{tag}_survival_table.csv").rename(columns=S5COLS).to_excel(w, index=False, sheet_name=sheet)

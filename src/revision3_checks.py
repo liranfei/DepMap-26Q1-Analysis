@@ -79,6 +79,9 @@ G = pd.read_csv(O + "growth_confound_pairs.csv"); G["q_growth_adjusted"] = multi
 G["ratio"] = G.coef_growth_adjusted / G.coef_unadjusted; G["heme"] = G.Lineage.isin(["lymphoid", "myeloid"]); G.to_csv(O + "growth_confound_pairs.csv", index=False)
 R["growth_bh"] = {k: {"n": int(len(g)), "q_lt_0.05_negative": int(((g.q_growth_adjusted < 0.05) & (g.coef_growth_adjusted < 0)).sum()), "median_ratio": float(g.ratio.median()),
                       "ratio_lt_0.5": int((g.ratio < 0.5).sum()), "min_ratio": float(g.ratio.min())} for k, g in (("heme", G[G.heme]), ("nonheme", G[~G.heme]), ("all", G))}
+hs = G[G.heme].dropna(subset=["p_vs_suspension_one_sided"]); qs = multipletests(hs.p_vs_suspension_one_sided, method="fdr_bh")[1]
+R["suspension_bh"] = {"testable": len(hs), "not_testable_lt10_comparators": int(G.heme.sum() - len(hs)), "negative": int((hs.median_diff_vs_suspension < 0).sum()), "lt_-0.5": int((hs.median_diff_vs_suspension < -0.5).sum()), "q_lt_0.05": int((qs < 0.05).sum()), "median_diff": float(hs.median_diff_vs_suspension.median())}
+qe = multipletests(G.p_excl_engineered_one_sided, method="fdr_bh")[1]; R["excl_engineered_bh"] = {"q_lt_0.05": int((qe < 0.05).sum()), "sel_lt_-0.5": int((G.median_diff_excl_engineered < -0.5).sum())}
 B = pd.read_csv(O + "batch_library_adjusted_pairs.csv"); R["batch_ratio"] = {"min": float(B.ratio.min()), "median": float(B.ratio.median()), "q_lt_0.05": int((B.q_adj < 0.05).sum())}
 
 # ---- 5. the two mean-based rules

@@ -10,7 +10,7 @@ PY=${PYTHON:-python3}
 $PY run_pipeline.py --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --top-n 0 --exclude-noncancerous     # primary analysis (about 5 min)
 $PY genome_perm.py  --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --n 1000 --exclude-noncancerous       # permutation test of the whole pipeline
 $PY prepare_mutations.py
-$PY sens_primary.py; $PY ttest_alt.py; $PY part2_depmap.py; $PY part3_tcga_enrich.py; $PY cross_check.py
+$PY kirc_paired.py; $PY sens_primary.py; $PY ttest_alt.py; $PY part2_depmap.py; $PY part3_tcga_enrich.py; $PY cross_check.py
 $PY cohort_stats.py; $PY batch_composition.py; $PY make_tables.py; $PY figs_batch1.py; $PY figs_batch2.py; $PY figs_supp.py
 if [ -n "${DEPMAP22_DIR:-}" ]; then export DEPMAP22_DIR="$(cd "$DEPMAP22_DIR" && pwd)"; $PY cross_release.py; $PY figs_crossrelease.py; $PY cross_release_decomp.py; fi   # optional: DepMap 22Q1 comparison
 if [ -n "${SANGER_DIR:-}" ]; then export SANGER_DIR="$(cd "$SANGER_DIR" && pwd)"; $PY independent_sanger.py; $PY sanger_disjoint.py; $PY figs_sanger_disjoint.py; fi   # independent_sanger.py: earlier, non-independent comparison (S7 Table, last sheet); sanger_disjoint.py: separated design (Fig 12, S7 Table)   # optional: Sanger Project Score comparison (figshare 10.6084/m9.figshare.14461980)
