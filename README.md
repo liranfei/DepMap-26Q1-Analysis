@@ -52,6 +52,7 @@ Downstream analyses were cross-checked with a second implementation (`src/cross_
 | `src/revision3_checks.py`, `src/ph_check.py` | MDM2 in TP53 wild-type lines, matched null for co-dependency, split-half reference correlation, BH over pairs for growth-adjusted models; proportional-hazards tests of the TCGA Cox models |
 | `src/revision2_checks.py` | within-lineage co-dependency, restricted enrichment background, HNF1B/PAX8 in renal cell carcinoma lines, subsampling at the BH threshold |
 | `src/figlib.py`, `src/figs_*.py`, `src/make_tables.py` | figures (PLOS ONE format) and supporting tables |
+| `src/superseded/`, `results/superseded/` | scripts and outputs of the earlier, non-independent Sanger comparison (not run by `run_all.sh`) |
 | `results/` | result tables (`all_tests.csv.gz` contains all 467,091 tests) |
 | `checksums/` | SHA-256 checksums of input files |
 
