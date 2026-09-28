@@ -1,0 +1,131 @@
+{
+ "partially_measured": [
+  {
+   "Gene": "DCAF7 (10238)",
+   "Lineage": "myeloid",
+   "non_missing": 74,
+   "target_non_missing": 7,
+   "target_total": 43,
+   "libraries_with_data": {
+    "Humagne-CD": 43,
+    "Avana+Humagne-CD": 20,
+    "Avana+Humagne-CD+KY": 5,
+    "Avana+Brunello+KY": 2,
+    "Avana+Brunello+Humagne-CD+KY": 1,
+    "Brunello+KY": 1,
+    "Avana+Brunello": 1,
+    "Avana+Humagne-CD+TKOv3": 1
+   },
+   "libraries_missing": {
+    "Avana": 811,
+    "Avana+KY": 188,
+    "KY": 116,
+    "Avana+TKOv3": 2,
+    "Avana+KY+TKOv3": 1
+   }
+  },
+  {
+   "Gene": "SUMO2 (6613)",
+   "Lineage": "lymphoid",
+   "non_missing": 315,
+   "target_non_missing": 10,
+   "target_total": 94,
+   "libraries_with_data": {
+    "Avana+KY": 188,
+    "KY": 116,
+    "Avana+Humagne-CD+KY": 5,
+    "Avana+Brunello+KY": 2,
+    "Avana+Brunello+Humagne-CD+KY": 1,
+    "Avana+KY+TKOv3": 1,
+    "Brunello+KY": 1,
+    "Avana+Brunello": 1
+   },
+   "libraries_missing": {
+    "Avana": 811,
+    "Humagne-CD": 43,
+    "Avana+Humagne-CD": 20,
+    "Avana+TKOv3": 2,
+    "Avana+Humagne-CD+TKOv3": 1
+   }
+  },
+  {
+   "Gene": "WDR36 (134430)",
+   "Lineage": "myeloid",
+   "non_missing": 381,
+   "target_non_missing": 10,
+   "target_total": 43,
+   "libraries_with_data": {
+    "Avana+KY": 188,
+    "KY": 116,
+    "Humagne-CD": 43,
+    "Avana+Humagne-CD": 20,
+    "Avana+Humagne-CD+KY": 5,
+    "Avana+Brunello+KY": 2,
+    "Avana+TKOv3": 2,
+    "Avana+Brunello+Humagne-CD+KY": 1,
+    "Avana+KY+TKOv3": 1,
+    "Brunello+KY": 1,
+    "Avana+Brunello": 1,
+    "Avana+Humagne-CD+TKOv3": 1
+   },
+   "libraries_missing": {
+    "Avana": 811
+   }
+  },
+  {
+   "Gene": "DHFR (1719)",
+   "Lineage": "lymphoid",
+   "non_missing": 1076,
+   "target_non_missing": 89,
+   "target_total": 94,
+   "libraries_with_data": {
+    "Avana": 811,
+    "Avana+KY": 188,
+    "Humagne-CD": 43,
+    "Avana+Humagne-CD": 20,
+    "Avana+Humagne-CD+KY": 5,
+    "Avana+Brunello+KY": 2,
+    "Avana+TKOv3": 2,
+    "Avana+Brunello+Humagne-CD+KY": 1,
+    "Avana+KY+TKOv3": 1,
+    "Brunello+KY": 1,
+    "Avana+Brunello": 1,
+    "Avana+Humagne-CD+TKOv3": 1
+   },
+   "libraries_missing": {
+    "KY": 116
+   }
+  },
+  {
+   "Gene": "CKS1B (1163)",
+   "Lineage": "cervix",
+   "non_missing": 1076,
+   "target_non_missing": 18,
+   "target_total": 18,
+   "libraries_with_data": {
+    "Avana": 811,
+    "Avana+KY": 188,
+    "Humagne-CD": 43,
+    "Avana+Humagne-CD": 20,
+    "Avana+Humagne-CD+KY": 5,
+    "Avana+Brunello+KY": 2,
+    "Avana+TKOv3": 2,
+    "Avana+Brunello+Humagne-CD+KY": 1,
+    "Avana+KY+TKOv3": 1,
+    "Brunello+KY": 1,
+    "Avana+Brunello": 1,
+    "Avana+Humagne-CD+TKOv3": 1
+   },
+   "libraries_missing": {
+    "KY": 116
+   }
+  }
+ ],
+ "codep_growth": {
+  "residual_lineage": 0.3900881179916093,
+  "residual_lineage_x_growth": 0.39221409845330885,
+  "residual_lineage_x_growth_nonblood": 0.4023264415942476,
+  "residual_lineage_blood": 0.3553894741365996,
+  "ADSL_PAICS_lineage_x_growth": 0.7065986386805363
+ }
+}

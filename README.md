@@ -53,6 +53,7 @@ Downstream analyses were cross-checked with a second implementation (`src/cross_
 | `src/kirc_paired.py` | HNF1B in TCGA-KIRC tumour versus normal samples of the same patients (Wilcoxon signed-rank) |
 | `src/paad_pdac_subset.py` | KRAS expression and survival in the 150 curated PDAC samples (Table S1 of Raphael et al. 2017; set `PAAD_S1`) |
 | `src/cross_release_decomp.py` | 22Q1 versus 26Q1 on the same 1,036 lines: composition versus data/processing |
+| `src/revision5_checks.py` | partially measured candidate genes (libraries), co-dependency after removing lineage-by-growth-pattern means |
 | `src/revision3_checks.py`, `src/ph_check.py` | MDM2 in TP53 wild-type lines, matched null for co-dependency, split-half reference correlation, BH over pairs for growth-adjusted models; proportional-hazards tests of the TCGA Cox models |
 | `src/revision2_checks.py` | within-lineage co-dependency, restricted enrichment background, HNF1B/PAX8 in renal cell carcinoma lines, subsampling at the BH threshold |
 | `src/figlib.py`, `src/figs_*.py`, `src/make_tables.py` | figures (PLOS ONE format) and supporting tables |
