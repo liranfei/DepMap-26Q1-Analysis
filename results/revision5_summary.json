@@ -127,5 +127,156 @@
   "residual_lineage_x_growth_nonblood": 0.4023264415942476,
   "residual_lineage_blood": 0.3553894741365996,
   "ADSL_PAICS_lineage_x_growth": 0.7065986386805363
+ },
+ "lineage_size": {
+  "n_lineages": 26,
+  "size_vs_significant": {
+   "rho": 0.8433883074828098,
+   "p": 6.309925239676735e-08
+  },
+  "size_vs_prioritised": {
+   "rho": 0.11227559828056566,
+   "p": 0.5850170709050698
+  },
+  "size_vs_prioritised_nonblood": {
+   "rho": 0.012981743295236568,
+   "p": 0.9519927281996404
+  },
+  "size_vs_significant_nonblood": {
+   "rho": 0.8678627443821183,
+   "p": 3.959689170657216e-08
+  },
+  "per_lineage": {
+   "lung": {
+    "n": 126,
+    "significant": 407,
+    "prioritised": 0
+   },
+   "lymphoid": {
+    "n": 94,
+    "significant": 1746,
+    "prioritised": 22
+   },
+   "cns/brain": {
+    "n": 91,
+    "significant": 509,
+    "prioritised": 1
+   },
+   "head and neck": {
+    "n": 77,
+    "significant": 1129,
+    "prioritised": 1
+   },
+   "skin": {
+    "n": 75,
+    "significant": 609,
+    "prioritised": 6
+   },
+   "esophagus/stomach": {
+    "n": 69,
+    "significant": 529,
+    "prioritised": 2
+   },
+   "bowel": {
+    "n": 63,
+    "significant": 561,
+    "prioritised": 7
+   },
+   "ovary/fallopian tube": {
+    "n": 59,
+    "significant": 395,
+    "prioritised": 1
+   },
+   "bone": {
+    "n": 58,
+    "significant": 322,
+    "prioritised": 0
+   },
+   "breast": {
+    "n": 53,
+    "significant": 514,
+    "prioritised": 1
+   },
+   "soft tissue": {
+    "n": 49,
+    "significant": 232,
+    "prioritised": 2
+   },
+   "pancreas": {
+    "n": 48,
+    "significant": 517,
+    "prioritised": 5
+   },
+   "peripheral nervous system": {
+    "n": 47,
+    "significant": 653,
+    "prioritised": 2
+   },
+   "myeloid": {
+    "n": 43,
+    "significant": 642,
+    "prioritised": 20
+   },
+   "biliary tract": {
+    "n": 34,
+    "significant": 81,
+    "prioritised": 0
+   },
+   "uterus": {
+    "n": 34,
+    "significant": 230,
+    "prioritised": 0
+   },
+   "bladder/urinary tract": {
+    "n": 34,
+    "significant": 111,
+    "prioritised": 1
+   },
+   "kidney": {
+    "n": 34,
+    "significant": 221,
+    "prioritised": 7
+   },
+   "liver": {
+    "n": 25,
+    "significant": 69,
+    "prioritised": 2
+   },
+   "pleura": {
+    "n": 21,
+    "significant": 128,
+    "prioritised": 3
+   },
+   "cervix": {
+    "n": 18,
+    "significant": 62,
+    "prioritised": 5
+   },
+   "thyroid": {
+    "n": 11,
+    "significant": 14,
+    "prioritised": 1
+   },
+   "eye": {
+    "n": 10,
+    "significant": 74,
+    "prioritised": 3
+   },
+   "prostate": {
+    "n": 5,
+    "significant": 9,
+    "prioritised": 1
+   },
+   "ampulla of vater": {
+    "n": 5,
+    "significant": 2,
+    "prioritised": 1
+   },
+   "testis": {
+    "n": 5,
+    "significant": 39,
+    "prioritised": 0
+   }
+  }
  }
 }

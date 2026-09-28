@@ -4,6 +4,7 @@
    (for such genes the lineage comparison is confined to the lines screened with the libraries that measured the gene).
 2. Within-lineage co-dependency of the metabolic candidates after removing the means of lineage-by-growth-pattern groups instead of lineage means,
    and separately in blood and non-blood lines (checks whether growth pattern within lineages explains the residual correlation).
+3. Lineage size versus the number of pairs with q < 0.05 and of prioritised pairs per eligible lineage (Spearman correlation).
 Output: revision5_summary.json."""
 import os, json, numpy as np, pandas as pd
 import run_pipeline as rp
@@ -31,4 +32,11 @@ r1 = X - X.groupby(df.lineage).transform("mean"); r2 = X - X.groupby(df.lineage 
 med = lambda Z: float(np.median(np.abs(Z.corr().values[iu])))
 R["codep_growth"] = {"residual_lineage": med(r1), "residual_lineage_x_growth": med(r2), "residual_lineage_x_growth_nonblood": med(r2[~blood]), "residual_lineage_blood": med(r1[blood]),
                      "ADSL_PAICS_lineage_x_growth": float(r2.corr().loc[col("ADSL"), col("PAICS")])}
+# ---- 3. lineage size versus number of significant and prioritised pairs
+from scipy.stats import spearmanr
+n = df.lineage.value_counts(); n = n[n >= 5]; A = pd.read_csv(O + "all_tests.csv.gz")
+sig = A[A.q_value < 0.05].groupby("Lineage").size().reindex(n.index, fill_value=0); pri = F.groupby("Lineage").size().reindex(n.index, fill_value=0)
+nb = [x for x in n.index if x not in ("lymphoid", "myeloid")]; sp = lambda a, b: dict(rho=float(spearmanr(a, b)[0]), p=float(spearmanr(a, b)[1]))
+R["lineage_size"] = {"n_lineages": int(len(n)), "size_vs_significant": sp(n, sig), "size_vs_prioritised": sp(n, pri), "size_vs_prioritised_nonblood": sp(n[nb], pri[nb]),
+                     "size_vs_significant_nonblood": sp(n[nb], sig[nb]), "per_lineage": pd.DataFrame(dict(n=n, significant=sig, prioritised=pri)).to_dict("index")}
 json.dump(R, open(O + "revision5_summary.json", "w"), indent=1, default=float); print(json.dumps(R, indent=1, default=float))
