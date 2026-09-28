@@ -35,7 +35,8 @@ if _r4:
     _add.append({"Analysis": "Batch/library-adjusted coefficients (94 pairs, post-selection)", "Result": f"95% CI below 0 for {_r4['batch_ci']['adj_ci_excludes_0']} pairs; minimum ratio adjusted/unadjusted {_r4['batch_ci']['min_ratio']:.2f} (batch_coef_ci.csv)"})
 _r3 = _j("revision3_summary.json")
 if _r3:
-    for _x in _r3.get("MDM2_TP53wt", []):
+    _mp = O + "mdm2_tp53wt.csv"
+    for _x in (pd.read_csv(_mp).to_dict("records") if os.path.exists(_mp) else _r3.get("MDM2_TP53wt", [])):  # unrounded p-values (the JSON values are rounded)
         if _x["cohort"] != "all lines": _add.append({"Analysis": f"MDM2 {_x['Lineage']}, no detected TP53 variant only", "Result": f"n = {_x['n_target']}; selectivity {_x['selectivity']:.2f}; p = {_x['p']:.2g}"})
     _add.append({"Analysis": "Within-lineage co-dependency, matched null (1,000 sets)", "Result": f"observed median |r| {_r3['codep_null']['observed_median_abs_r_residual']:.2f}; null mean {_r3['codep_null']['null_mean']:.2f}, max {_r3['codep_null']['null_max']:.2f}"})
 _cd = _j("cross_release_decomp.json")

@@ -17,6 +17,16 @@
  "heme_vs_suspension_sel_lt_0": 39,
  "heme_vs_suspension_p_lt_0_05": 38,
  "heme_vs_suspension_median_diff": -0.6252251687994282,
+ "heme_median_ratio": 0.5569182575802031,
+ "heme_median_ratio_excl_other_blood": 0.8403248058622101,
+ "heme_median_ratio_shared_genes": 0.4230873240446137,
+ "heme_median_ratio_excl_other_blood_shared_genes": 0.7573718166072498,
+ "heme_median_ratio_other_genes": 0.6859595658160611,
+ "heme_median_ratio_excl_other_blood_other_genes": 0.9184691109440009,
+ "heme_n_shared_pairs": 24,
+ "heme_ratio_lt_0_5": 16,
+ "heme_ratio_lt_0_5_excl_other_blood": 1,
+ "heme_q_lt_0_05_excl_other_blood": 42,
  "excl_eng_sel_lt_minus0_5": 94,
  "excl_eng_p_lt_0_05": 94
 }

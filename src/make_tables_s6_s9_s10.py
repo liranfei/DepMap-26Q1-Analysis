@@ -30,10 +30,12 @@ df = rp.load(D); df = df[df.primary_disease != "Non-Cancerous"].reset_index(drop
 eng = df.DepMap_ID.map(pd.read_csv(os.path.join(D, "Model.csv")).set_index("ModelID").EngineeredModel).notna().values
 G["median_target_excl_engineered"] = [float(np.nanmedian(df.loc[(df.lineage == l).values & ~eng, g].astype(float))) for g, l in zip(G.Gene, G.Lineage)]
 cols = ["Gene", "Lineage", "coef_unadjusted", "coef_growth_adjusted", "p_growth_adjusted_two_sided", "q_growth_adjusted", "median_target_excl_engineered", "median_diff_excl_engineered", "p_excl_engineered_one_sided", "q_excl_engineered",
-        "n_target_excl_engineered", "n_suspension_comparator", "median_diff_vs_suspension", "p_vs_suspension_one_sided", "q_vs_suspension"]
+        "n_target_excl_engineered", "n_suspension_comparator", "median_diff_vs_suspension", "p_vs_suspension_one_sided", "q_vs_suspension",
+        "coef_unadjusted_excl_other_blood", "coef_growth_adjusted_excl_other_blood", "p_growth_adjusted_excl_other_blood", "q_growth_adjusted_excl_other_blood"]
 S10 = G[cols].copy(); S10["Gene_symbol"] = sym(S10.Gene)
 note = pd.DataFrame({"Note": ["Post-selection diagnostics of the 94 prioritised pairs; q-values are Benjamini-Hochberg adjusted within the 94 pairs (q_vs_suspension: within the 39 testable lymphoid/myeloid pairs) and are conditional on the selection.",
                               "Growth pattern (Model.csv GrowthPattern: adherent, suspension, mixed, unknown) added as a categorical covariate; engineered or drug-adapted models = EngineeredModel annotated in Model.csv (10 models).",
-                              "Suspension comparison: lymphoid/myeloid target lineage versus non-blood cell lines annotated as suspension cultures (41 lines); at least ten comparator lines with data required."]})
+                              "Suspension comparison: lymphoid/myeloid target lineage versus non-blood cell lines annotated as suspension cultures (41 lines); at least ten comparator lines with data required.",
+                              "*_excl_other_blood: lymphoid/myeloid pairs refitted without the other blood lineage (otherwise the suspension term also absorbs dependencies shared by the two blood lineages); q within the 42 blood pairs."]})
 with pd.ExcelWriter(OUT + "S10_Table.xlsx") as w: note.to_excel(w, index=False, sheet_name="Read me"); S10.to_excel(w, index=False, sheet_name="Growth pattern and model type")
 print("S6, S9, S10 written")

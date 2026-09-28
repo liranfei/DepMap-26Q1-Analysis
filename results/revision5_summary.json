@@ -278,5 +278,33 @@
     "prioritised": 0
    }
   }
+ },
+ "sanger_by_lineage": {
+  "lymphoid": {
+   "candidates_replicated": 16,
+   "candidates_testable": 17,
+   "ci": [
+    0.7131106033327794,
+    0.9985118256087334
+   ],
+   "reference_replicated": 294,
+   "reference_n": 1182
+  },
+  "other": {
+   "candidates_replicated": 8,
+   "candidates_testable": 15,
+   "ci": [
+    0.26586134727739663,
+    0.7873332704806921
+   ],
+   "reference_replicated": 263,
+   "reference_n": 1079
+  }
+ },
+ "sanger_fail_median_only": {
+  "replicated": 18,
+  "testable": 22,
+  "lymphoid_replicated": 12,
+  "lymphoid_n": 14
  }
 }

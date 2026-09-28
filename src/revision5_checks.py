@@ -5,6 +5,8 @@
 2. Within-lineage co-dependency of the metabolic candidates after removing the means of lineage-by-growth-pattern groups instead of lineage means,
    and separately in blood and non-blood lines (checks whether growth pattern within lineages explains the residual correlation).
 3. Lineage size versus the number of pairs with q < 0.05 and of prioritised pairs per eligible lineage (Spearman correlation).
+4. Sanger replication of the discovery candidates split into lymphoid and other lineages (with the reference rate of non-prioritised pairs),
+   and replication of discovery pairs that met the selectivity criterion but failed only the median-Chronos criterion.
 Output: revision5_summary.json."""
 import os, json, numpy as np, pandas as pd
 import run_pipeline as rp
@@ -39,4 +41,15 @@ sig = A[A.q_value < 0.05].groupby("Lineage").size().reindex(n.index, fill_value=
 nb = [x for x in n.index if x not in ("lymphoid", "myeloid")]; sp = lambda a, b: dict(rho=float(spearmanr(a, b)[0]), p=float(spearmanr(a, b)[1]))
 R["lineage_size"] = {"n_lineages": int(len(n)), "size_vs_significant": sp(n, sig), "size_vs_prioritised": sp(n, pri), "size_vs_prioritised_nonblood": sp(n[nb], pri[nb]),
                      "size_vs_significant_nonblood": sp(n[nb], sig[nb]), "per_lineage": pd.DataFrame(dict(n=n, significant=sig, prioritised=pri)).to_dict("index")}
+# ---- 4. Sanger replication by lineage group, and pairs failing only the median criterion
+from scipy.stats import beta
+ci = lambda k, n: [float(beta.ppf(0.025, k, n - k + 1)) if k > 0 else 0.0, float(beta.ppf(0.975, k + 1, n - k)) if k < n else 1.0]
+Dd = pd.read_csv(O + "all_tests_noKY.csv.gz"); Ss = pd.read_csv(O + "all_tests_sanger.csv.gz"); C = pd.read_csv(O + "sanger_disjoint_candidates.csv")
+M = Dd.merge(Ss, on=["Gene", "Lineage"], suffixes=("", "_S")); M["rep"] = (M.q_value_S < 0.05) & (M.Selectivity_S < 0)
+key = set(zip(C.Gene, C.Lineage)); M["cand"] = [k in key for k in zip(M.Gene, M.Lineage)]; lym = M.Lineage == "lymphoid"
+cand = M[M.cand]; ref = M[(M.q_value < 0.05) & (M.Selectivity < 0) & ~M.cand]; med = M[(M.q_value < 0.05) & (M.Selectivity < -0.5) & (M.Chronos_median >= -1)]
+R["sanger_by_lineage"] = {g: {"candidates_replicated": int(cand[m].rep.sum()), "candidates_testable": int(m.sum()), "ci": ci(int(cand[m].rep.sum()), int(m.sum())),
+                              "reference_replicated": int(ref[r_].rep.sum()), "reference_n": int(r_.sum())}
+                          for g, m, r_ in (("lymphoid", lym[M.cand], lym[ref.index]), ("other", ~lym[M.cand], ~lym[ref.index]))}
+R["sanger_fail_median_only"] = {"replicated": int(med.rep.sum()), "testable": int(len(med)), "lymphoid_replicated": int(med[med.Lineage == "lymphoid"].rep.sum()), "lymphoid_n": int((med.Lineage == "lymphoid").sum())}
 json.dump(R, open(O + "revision5_summary.json", "w"), indent=1, default=float); print(json.dumps(R, indent=1, default=float))
