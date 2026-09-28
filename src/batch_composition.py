@@ -1,4 +1,4 @@
-"""Screening-batch composition of each lineage that has candidate pairs (chi-square test target lineage vs. all other cancer cell lines) and IntOGen driver-gene annotation."""
+"""Screening-batch composition of each lineage that has candidate pairs (chi-square test target lineage vs. all other cancer cell lines; share of every batch in batch_share_by_lineage.csv) and IntOGen driver-gene annotation."""
 import os, json, numpy as np, pandas as pd
 from scipy.stats import chi2_contingency
 import run_pipeline as rp
@@ -11,6 +11,13 @@ for L in sorted(F.Lineage.unique()):
     tgt = df.lineage == L; ct = pd.crosstab(tgt, df.batch); p = chi2_contingency(ct)[1]; top = df[tgt].batch.value_counts(normalize=True)
     rows.append(dict(Lineage=L, n=int(tgt.sum()), chi2_p=p, largest_batch=top.index[0], share_in_lineage=float(top.iloc[0]), share_in_all_cancer_lines=float((df.batch == top.index[0]).mean())))
 B = pd.DataFrame(rows); B.to_csv(O + "batch_composition_by_lineage.csv", index=False)
+# share of each batch in the target lineage and in all other cancer cell lines (to show where the batch distributions differ)
+sh = []
+for L in sorted(F.Lineage.unique()):
+    tgt = df.lineage == L
+    for b in sorted(df.batch.unique()):
+        a, o = float((df[tgt].batch == b).mean()), float((df[~tgt].batch == b).mean()); sh.append(dict(Lineage=L, batch=b, share_in_lineage=a, share_in_other_lines=o, difference=a - o))
+pd.DataFrame(sh).to_csv(O + "batch_share_by_lineage.csv", index=False)
 R = dict(n_lineages=len(B), n_chi2_p_lt_0_05=int((B.chi2_p < 0.05).sum()), n_chi2_p_lt_0_05_bonferroni=int((B.chi2_p < 0.05 / len(B)).sum()),
          lymphoid=B[B.Lineage == "lymphoid"].iloc[0].to_dict(), myeloid=B[B.Lineage == "myeloid"].iloc[0].to_dict(), models_without_batch=int((df.batch == "unknown").sum()))
 f = os.path.join(D, "IntOGen-DriverGenes.tsv")
