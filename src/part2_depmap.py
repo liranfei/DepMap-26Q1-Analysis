@@ -20,7 +20,7 @@ df["batch"]=df.batch.fillna("unknown"); df["library"]=df.library.fillna("unknown
 rows=[]
 for r in F.itertuples():
     d=pd.DataFrame({"y":pd.to_numeric(df[r.Gene],errors="coerce"),"tgt":(df.lineage==r.Lineage).astype(int),"batch":df.batch,"library":df.library}).dropna()
-    m0=smf.ols("y~tgt",d).fit(); m1=smf.ols("y~tgt+C(batch)+C(library)",d).fit(); mb=smf.ols("y~C(batch)+C(library)",d).fit()
+    m0=smf.ols("y~tgt",d).fit(); m1=smf.ols("y~tgt+C(batch)+C(library)",d).fit(cov_type="HC3", use_t=True); mb=smf.ols("y~C(batch)+C(library)",d).fit()
     rows.append(dict(Gene=r.Gene,Lineage=r.Lineage,coef_unadj=m0.params["tgt"],coef_adj=m1.params["tgt"],p_adj=m1.pvalues["tgt"],batch_library_R2=mb.rsquared))
 B=pd.DataFrame(rows); B["q_adj"]=multipletests(B.p_adj,method="fdr_bh")[1]; B["ratio"]=B.coef_adj/B.coef_unadj; B["retained"]=(B.q_adj<0.05)&(B.coef_adj<-0.3)
 B.to_csv(O+"batch_library_adjusted_pairs.csv",index=False)
@@ -36,8 +36,8 @@ def geno(sym):
     out={"n":d.g.value_counts().to_dict(),"median":d.groupby("g").y.median().round(3).to_dict()}
     h=d[d.g=="hotspot"].y; n0=d[d.g=="none"].y; pa=d[d.g!="none"].y
     out["hotspot_vs_none_p"]=mw(h,n0); out["any_protein_altering_vs_none_p"]=mw(pa,n0)
-    d2=d[d.g!="other_protein_altering"].copy(); d2["mut"]=(d2.g=="hotspot").astype(int); m1=smf.ols("y~mut+C(lin)",d2).fit(); out["hotspot_adj_lineage_coef"]=float(m1.params["mut"]); out["hotspot_adj_lineage_p_two_sided"]=float(m1.pvalues["mut"])
-    d3=d.copy(); d3["mut"]=(d3.g!="none").astype(int); m2=smf.ols("y~mut+C(lin)",d3).fit(); out["any_adj_lineage_coef"]=float(m2.params["mut"]); out["any_adj_lineage_p_two_sided"]=float(m2.pvalues["mut"])
+    d2=d[d.g!="other_protein_altering"].copy(); d2["mut"]=(d2.g=="hotspot").astype(int); m1=smf.ols("y~mut+C(lin)",d2).fit(cov_type="HC3", use_t=True); out["hotspot_adj_lineage_coef"]=float(m1.params["mut"]); out["hotspot_adj_lineage_p_two_sided"]=float(m1.pvalues["mut"])
+    d3=d.copy(); d3["mut"]=(d3.g!="none").astype(int); m2=smf.ols("y~mut+C(lin)",d3).fit(cov_type="HC3", use_t=True); out["any_adj_lineage_coef"]=float(m2.params["mut"]); out["any_adj_lineage_p_two_sided"]=float(m2.pvalues["mut"])
     return out,d
 for sym,lin in [("KRAS","pancreas"),("CTNNB1","bowel")]:
     o,d=geno(sym); w=d[d.lin==lin]; o["within_lineage"]={lin:{"n":w.g.value_counts().to_dict(),"median":w.groupby("g").y.median().round(3).to_dict()}}
@@ -49,7 +49,7 @@ t=mut[mut.HugoSymbol=="TP53"]; pa=set(t[t.VepImpact.isin(["HIGH","MODERATE"])].M
 y=pd.to_numeric(df[col("MDM2")],errors="coerce")
 for name,S in [("protein_altering",pa),("hotspot_or_LoF",lof)]:
     mm=df.DepMap_ID.isin(S); d=pd.DataFrame({"y":y,"mut":mm.astype(int),"lin":df.lineage}).dropna(); a=d[d.mut==0].y; b=d[d.mut==1].y
-    m1=smf.ols("y~mut+C(lin)",d).fit(); R[f"MDM2_TP53_{name}"]={"n_wt":len(a),"n_mut":len(b),"med_wt":float(a.median()),"med_mut":float(b.median()),"p_one_sided":mw(a,b),"adj_lineage_coef":float(m1.params["mut"]),"adj_lineage_p":float(m1.pvalues["mut"])}
+    m1=smf.ols("y~mut+C(lin)",d).fit(cov_type="HC3", use_t=True); R[f"MDM2_TP53_{name}"]={"n_wt":len(a),"n_mut":len(b),"med_wt":float(a.median()),"med_mut":float(b.median()),"p_one_sided":mw(a,b),"adj_lineage_coef":float(m1.params["mut"]),"adj_lineage_p":float(m1.pvalues["mut"])}
 # HNF1B kidney
 h=df[["lineage",col("HNF1B")]].dropna(); hk=h[h.lineage=="kidney"].iloc[:,1]; ho=h[h.lineage!="kidney"].iloc[:,1]
 R["HNF1B_kidney"]={"n_kidney":len(hk),"n_other":len(ho),"med_kidney":float(hk.median()),"med_other":float(ho.median()),"p":mw(hk,ho)}

@@ -50,7 +50,7 @@ dfb = pd.DataFrame({"batch": df.DepMap_ID.map(bt).fillna("unknown"), "library": 
 rows = []
 for r in F.itertuples():
     d = pd.DataFrame({"y": df[r.Gene].astype(float), "tgt": (lin == r.Lineage).astype(int), "batch": dfb.batch, "library": dfb.library}).dropna()
-    m0 = smf.ols("y~tgt", d).fit(); m1 = smf.ols("y~tgt+C(batch)+C(library)", d).fit()
+    m0 = smf.ols("y~tgt", d).fit(cov_type="HC3", use_t=True); m1 = smf.ols("y~tgt+C(batch)+C(library)", d).fit(cov_type="HC3", use_t=True)
     rows.append(dict(Gene=r.Gene, Lineage=r.Lineage, n=len(d), coef_unadj=m0.params.tgt, ci_unadj_low=m0.conf_int().loc["tgt", 0], ci_unadj_high=m0.conf_int().loc["tgt", 1],
                      coef_adj=m1.params.tgt, ci_adj_low=m1.conf_int().loc["tgt", 0], ci_adj_high=m1.conf_int().loc["tgt", 1]))
 BC = pd.DataFrame(rows); BC.to_csv(O + "batch_coef_ci.csv", index=False)

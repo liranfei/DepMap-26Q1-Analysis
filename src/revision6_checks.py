@@ -69,7 +69,7 @@ apc = set(mu[(mu.HugoSymbol == "APC") & (mu.VepImpact == "HIGH")].ModelID); v600
 ctnnb1_hot = set(mu[(mu.HugoSymbol == "CTNNB1") & (mu.Hotspot == True)].ModelID); kras_hot = set(mu[(mu.HugoSymbol == "KRAS") & (mu.Hotspot == True)].ModelID)
 def geno(gene, carriers, excluded, lineage):
     d = pd.DataFrame({"y": X[col(gene)], "g": df.DepMap_ID.isin(carriers).astype(int), "lin": df.lineage, "id": df.DepMap_ID}).dropna(subset=["y"])
-    d = d[(d.g == 1) | ~d.id.isin(excluded)]; fit = smf.ols("y ~ g + C(lin)", d).fit(); w = d[d.lin == lineage]
+    d = d[(d.g == 1) | ~d.id.isin(excluded)]; fit = smf.ols("y ~ g + C(lin)", d).fit(cov_type="HC3", use_t=True); w = d[d.lin == lineage]
     return {"n_carrier": int(d.g.sum()), "n_other": int((1 - d.g).sum()), "median_carrier": float(d[d.g == 1].y.median()), "median_other": float(d[d.g == 0].y.median()),
             "p_one_sided": float(mannwhitneyu(d[d.g == 1].y, d[d.g == 0].y, alternative="less")[1]), "lineage_adjusted_diff": float(fit.params["g"]), "lineage_adjusted_p": float(fit.pvalues["g"]),
             f"in_{lineage}": {"n_carrier": int(w.g.sum()), "n_other": int((1 - w.g).sum()), "median_carrier": float(w[w.g == 1].y.median()) if w.g.sum() else None,
@@ -92,7 +92,7 @@ def lin_given_geno(gene, lineage, carriers, excluded, drop_engineered=False):
     d = pd.DataFrame({"y": X[col(gene)], "t": (df.lineage == lineage).astype(int), "g": df.DepMap_ID.isin(carriers).astype(int), "id": df.DepMap_ID, "eng": eng}).dropna(subset=["y"])
     d = d[(d.g == 1) | ~d.id.isin(excluded)]
     if drop_engineered: d = d[~d.eng]
-    b0 = smf.ols("y ~ t", d).fit().params["t"]; f1 = smf.ols("y ~ t + g", d).fit(); f2 = smf.ols("y ~ t * g", d).fit()
+    b0 = smf.ols("y ~ t", d).fit().params["t"]; f1 = smf.ols("y ~ t + g", d).fit(cov_type="HC3", use_t=True); f2 = smf.ols("y ~ t * g", d).fit(cov_type="HC3", use_t=True)
     return {"coef_unadjusted": float(b0), "coef_genotype_adjusted": float(f1.params["t"]), "ratio": float(f1.params["t"] / b0), "p_adjusted": float(f1.pvalues["t"]),
             "interaction_lineage_effect_in_noncarriers": float(f2.params["t"]), "interaction_lineage_effect_in_noncarriers_p": float(f2.pvalues["t"]),
             "interaction_term": float(f2.params["t:g"]), "interaction_term_p": float(f2.pvalues["t:g"]),

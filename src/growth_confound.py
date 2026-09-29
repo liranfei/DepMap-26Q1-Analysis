@@ -11,12 +11,12 @@ F = pd.read_csv(O + "final_targets.csv"); gp = pd.get_dummies(df.GrowthPattern.f
 susp_nonblood = (df.GrowthPattern == "Suspension") & ~df.lineage.isin(["lymphoid", "myeloid"]); eng = df.EngineeredModel.notna(); rows = []
 for _, r in F.iterrows():
     y = pd.to_numeric(df[r.Gene], errors="coerce"); ok = y.notna().values; t = (df.lineage == r.Lineage).astype(float).values
-    X0 = sm.add_constant(t[ok]); b0 = sm.OLS(y[ok].values, X0).fit(); X1 = sm.add_constant(np.column_stack([t[ok], gp.values[ok]])); b1 = sm.OLS(y[ok].values, X1).fit()
+    X0 = sm.add_constant(t[ok]); b0 = sm.OLS(y[ok].values, X0).fit(); X1 = sm.add_constant(np.column_stack([t[ok], gp.values[ok]])); b1 = sm.OLS(y[ok].values, X1).fit(cov_type="HC3", use_t=True)
     row = dict(Gene=r.Gene, Lineage=r.Lineage, coef_unadjusted=b0.params[1], coef_growth_adjusted=b1.params[1], p_growth_adjusted_two_sided=b1.pvalues[1])
     if r.Lineage in ("lymphoid", "myeloid"):
         # same fits without the other blood lineage (otherwise the suspension term also absorbs dependencies shared by the two blood lineages)
         k = ok & (df.lineage != ({"lymphoid": "myeloid", "myeloid": "lymphoid"}[r.Lineage])).values; Xg = gp.values[k]; Xg = Xg[:, Xg.std(0) > 0]
-        c0 = sm.OLS(y[k].values, sm.add_constant(t[k])).fit(); c1 = sm.OLS(y[k].values, sm.add_constant(np.column_stack([t[k], Xg]))).fit()
+        c0 = sm.OLS(y[k].values, sm.add_constant(t[k])).fit(); c1 = sm.OLS(y[k].values, sm.add_constant(np.column_stack([t[k], Xg]))).fit(cov_type="HC3", use_t=True)
         row.update(coef_unadjusted_excl_other_blood=c0.params[1], coef_growth_adjusted_excl_other_blood=c1.params[1], p_growth_adjusted_excl_other_blood=c1.pvalues[1])
         tg = y[ok & (df.lineage == r.Lineage).values]; cg = y[ok & susp_nonblood.values]; row.update(n_suspension_comparator=len(cg), median_diff_vs_suspension=float(tg.median() - cg.median()) if len(cg) >= 10 else np.nan,
             p_vs_suspension_one_sided=float(mannwhitneyu(tg, cg, alternative="less")[1]) if len(cg) >= 10 else np.nan)

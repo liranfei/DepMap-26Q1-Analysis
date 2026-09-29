@@ -23,14 +23,14 @@
     "bladder/urinary tract",
     -0.27,
     -0.221,
-    0.023
+    0.021
    ],
    [
     "ADSL (158)",
     "breast",
     -0.336,
     -0.263,
-    0.005
+    0.003
    ]
   ]
  },
@@ -48,9 +48,9 @@
   "hotspot_vs_none_p": 4.282305396968712e-87,
   "any_protein_altering_vs_none_p": 5.192110251277157e-84,
   "hotspot_adj_lineage_coef": -1.2138245388190336,
-  "hotspot_adj_lineage_p_two_sided": 5.978364694168146e-140,
+  "hotspot_adj_lineage_p_two_sided": 1.385442223545902e-61,
   "any_adj_lineage_coef": -1.148226865660798,
-  "any_adj_lineage_p_two_sided": 1.2439654977453572e-129,
+  "any_adj_lineage_p_two_sided": 3.7074624657307593e-54,
   "within_lineage": {
    "pancreas": {
     "n": {
@@ -79,9 +79,9 @@
   "hotspot_vs_none_p": 1.3000541102424608e-12,
   "any_protein_altering_vs_none_p": 3.0183404215637557e-10,
   "hotspot_adj_lineage_coef": -0.6242882376788484,
-  "hotspot_adj_lineage_p_two_sided": 1.2889572560109303e-26,
+  "hotspot_adj_lineage_p_two_sided": 1.2951827692671003e-10,
   "any_adj_lineage_coef": -0.3778959841948482,
-  "any_adj_lineage_p_two_sided": 7.293325162864515e-18,
+  "any_adj_lineage_p_two_sided": 7.128550995062169e-07,
   "within_lineage": {
    "bowel": {
     "n": {
@@ -112,7 +112,7 @@
   "med_mut": -0.3528355938531002,
   "p_one_sided": 1.216375331860588e-95,
   "adj_lineage_coef": 0.7786447213589704,
-  "adj_lineage_p": 6.521628318527959e-146
+  "adj_lineage_p": 3.6249372040580984e-95
  },
  "MDM2_TP53_hotspot_or_LoF": {
   "n_wt": 404,
@@ -121,7 +121,7 @@
   "med_mut": -0.35175352041569086,
   "p_one_sided": 2.3630384057224827e-97,
   "adj_lineage_coef": 0.7833381065976701,
-  "adj_lineage_p": 1.3088581855815138e-147
+  "adj_lineage_p": 1.9647184900163387e-97
  },
  "HNF1B_kidney": {
   "n_kidney": 34,

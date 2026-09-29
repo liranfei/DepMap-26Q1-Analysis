@@ -109,7 +109,7 @@
  "growth_bh": {
   "heme": {
    "n": 42,
-   "q_lt_0.05_negative": 36,
+   "q_lt_0.05_negative": 35,
    "median_ratio": 0.5569182575802031,
    "ratio_lt_0.5": 16,
    "min_ratio": 0.06682859126725146
@@ -123,7 +123,7 @@
   },
   "all": {
    "n": 94,
-   "q_lt_0.05_negative": 88,
+   "q_lt_0.05_negative": 87,
    "median_ratio": 0.8445723422101481,
    "ratio_lt_0.5": 16,
    "min_ratio": 0.06682859126725146

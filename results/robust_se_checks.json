@@ -1,0 +1,70 @@
+{
+ "batch_ci_below_0": {
+  "ols": 94,
+  "hc3": 94,
+  "n": 94
+ },
+ "growth": {
+  "all94_ols": 88,
+  "all94_hc3": 87,
+  "heme_ols": 36,
+  "heme_hc3": 35,
+  "nonheme_ols": 52,
+  "nonheme_hc3": 52,
+  "heme_excl_other_blood_ols": 42,
+  "heme_excl_other_blood_hc3": 42
+ },
+ "genotype_lineage_adjusted": {
+  "KRAS_hotspot": {
+   "coef": -1.2138245388190336,
+   "p_ols": 5.978364694168146e-140,
+   "p_hc3": 1.385442223545902e-61
+  },
+  "CTNNB1_hotspot": {
+   "coef": -0.6242882376788484,
+   "p_ols": 1.2889572560109303e-26,
+   "p_hc3": 1.2951827692671003e-10
+  },
+  "MDM2_by_TP53": {
+   "coef": -0.7786447213589687,
+   "p_ols": 6.521628318535393e-146,
+   "p_hc3": 3.624937204060469e-95
+  },
+  "CTNNB1_by_APC": {
+   "coef": -0.5381695779463098,
+   "p_ols": 5.713102501829363e-26,
+   "p_hc3": 8.926122774871252e-07
+  },
+  "BRAF_V600": {
+   "coef": -0.9721212305076862,
+   "p_ols": 4.214107551594338e-135,
+   "p_hc3": 6.704381738438026e-43
+  }
+ },
+ "lineage_given_genotype": {
+  "KRAS_pancreas": {
+   "lineage_p_ols": 6.884151091232985e-10,
+   "lineage_p_hc3": 0.0026255016876281347,
+   "noncarrier_lineage_p_ols": 0.9093114173413703,
+   "noncarrier_lineage_p_hc3": 0.9125703634879926,
+   "interaction_p_ols": 0.08154512170167232,
+   "interaction_p_hc3": 0.13508399837675159
+  },
+  "CTNNB1_bowel": {
+   "lineage_p_ols": 3.0519282894343303e-21,
+   "lineage_p_hc3": 2.5892433801074573e-05,
+   "noncarrier_lineage_p_ols": 3.265867773421955e-06,
+   "noncarrier_lineage_p_hc3": 0.10922246577746875,
+   "interaction_p_ols": 0.9314863599284763,
+   "interaction_p_hc3": 0.9752140374192413
+  },
+  "BRAF_skin": {
+   "lineage_p_ols": 2.7526701168558223e-08,
+   "lineage_p_hc3": 0.001180002718057941,
+   "noncarrier_lineage_p_ols": 0.2902405776735396,
+   "noncarrier_lineage_p_hc3": 0.16839314691591264,
+   "interaction_p_ols": 3.967742226967357e-06,
+   "interaction_p_hc3": 0.009621850876797712
+  }
+ }
+}
