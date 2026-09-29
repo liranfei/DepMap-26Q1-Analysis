@@ -15,8 +15,8 @@ box(12,46,76,9,"Benjamini–Hochberg correction over the whole test family\n9,80
 box(12,32,76,9,"Effect-size filter: target median Chronos < −1 and selectivity < −0.5\n94 candidate gene–lineage pairs (58 genes, 21 lineages)",fc="#fbe9dc",bold=False)
 for y in (88,74,60,46): arrow(50,y-0.4,50,y-4.2)
 box(1,3,22.5,22,"Permutation tests\n1,000 shuffles each,\nfull pipeline rerun;\nunrestricted and\npatient-block null:\n0 candidates",fc="#e9f5ef",fs=8)
-box(26,3,22.5,22,"Sensitivity\nBY / Holm, thresholds,\ntop-N genes, t-tests,\none model per patient;\npost-selection batch\nand growth checks",fc="#e9f5ef",fs=8)
-box(51,3,22.5,22,"Replication and\nstability\nSanger Project Score\n(separate models\nand patients);\nDepMap 22Q1",fc="#e9f5ef",fs=8)
+box(26,3,22.5,22,"Sensitivity\nBY / Holm, thresholds,\ntop-N genes, t-tests,\none model per patient,\nbootstrap; batch and\ngrowth checks",fc="#e9f5ef",fs=8)
+box(51,3,22.5,22,"Replication and\nstability\nSanger Project Score\n(separate models\nand patients);\nDepMap 22Q1;\nRNAi (DEMETER2)",fc="#e9f5ef",fs=8)
 box(76,3,22.5,22,"Exploratory\nannotation\ngenotype, TCGA,\nenrichment,\nco-dependency,\nliterature",fc="#f2f2f2",fs=8)
 for x in (12.25,37.25,62.25,87.25): arrow(50,31.6,x,25.6)
 save(fig,"Fig1")
@@ -40,7 +40,7 @@ key={"KRAS","SOX10","CTNNB1","NMNAT1","NAMPT","HNF1B","CBFB","IRF4","MDM2","PAX8
 lab=r[(r.sym.isin(key))|(r.nlq.rank(ascending=False)<=6)].sort_values("nlq",ascending=False).drop_duplicates("sym")
 tx=[ax.text(x,yv,s,fontsize=8) for x,yv,s in zip(lab.Selectivity,lab.nlq,lab.sym)]
 adjust_text(tx,x=lab.Selectivity.values,y=lab.nlq.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),expand=(1.4,1.6),iter_lim=1000)   # fixed iteration count: the default (1 s time limit) makes label placement machine-dependent
-ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target lineage − all other lineages)"); ax.set_ylabel("−log$_{10}$ (BH-adjusted q)"); ax.legend(loc="upper right",frameon=False)
+ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target lineage − all other cancer cell lines)"); ax.set_ylabel("−log$_{10}$ (BH-adjusted q)"); ax.legend(loc="upper right",frameon=False)
 fig.tight_layout(pad=0.6); save(fig,"Fig3")
 # ================= Fig 4 efficacy vs selectivity
 fig,ax=plt.subplots(figsize=(7.3,5.3)); h=F[F.Lineage.isin(HEME)]; s=F[~F.Lineage.isin(HEME)]
@@ -48,10 +48,10 @@ ax.scatter(s.Selectivity,s.Chronos_median,s=22,c=BLUE,edgecolor="white",linewidt
 ax.scatter(h.Selectivity,h.Chronos_median,s=22,c=VERM,edgecolor="white",linewidth=0.3,label="Lymphoid / myeloid")
 lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Pair with < 10 target observations")
 ax.axvline(-0.5,color="#555555",ls="--",lw=0.9); ax.axhline(-1,color="#555555",ls="--",lw=0.9)
-lab=F[F.sym.isin({"KRAS","SOX10","HNF1B","MDM2","CTNNB1","CFLAR","MYB","CBFB","PAX8","NMNAT1","MYC","FOXA1","DHFR"})].drop_duplicates("sym")
+lab=F[F.sym.isin({"KRAS","SOX10","HNF1B","MDM2","CTNNB1","CFLAR","MYB","CBFB","PAX8","NMNAT1","MYC","FOXA1","DHFR","TUBB4B","DCAF7"})].drop_duplicates("sym")
 tx=[ax.text(x,yv,sy,fontsize=8) for x,yv,sy in zip(lab.Selectivity,lab.Chronos_median,lab.sym)]
 adjust_text(tx,x=lab.Selectivity.values,y=lab.Chronos_median.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),iter_lim=1000)
-ax.set_xlabel("Selectivity (target lineage − other lineages, median Chronos)"); ax.set_ylabel("Median Chronos, target lineage"); ax.legend(frameon=False,loc="lower center",bbox_to_anchor=(0.42,0.0))
+ax.set_xlabel("Selectivity (target lineage − all other cancer cell lines, median Chronos)"); ax.set_ylabel("Median Chronos, target lineage"); ax.legend(frameon=False,loc="lower center",bbox_to_anchor=(0.42,0.0))
 fig.tight_layout(pad=0.6); save(fig,"Fig4")
 # ================= Fig 5 top 20
 t=F.sort_values("Selectivity").head(20).iloc[::-1]; fig,ax=plt.subplots(figsize=(7.3,5.6)); y=np.arange(len(t))
