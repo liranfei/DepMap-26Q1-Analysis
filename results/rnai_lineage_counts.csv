@@ -1,0 +1,25 @@
+lineage,n_lines
+lung,125
+breast,74
+cns/brain,55
+bowel,48
+esophagus/stomach,48
+skin,47
+ovary/fallopian tube,36
+lymphoid,35
+pancreas,32
+kidney,30
+myeloid,25
+uterus,21
+head and neck,20
+liver,18
+soft tissue,18
+bone,16
+bladder/urinary tract,13
+peripheral nervous system,9
+prostate,7
+pleura,6
+thyroid,4
+cervix,4
+eye,3
+biliary tract,1

@@ -31,14 +31,14 @@ if os.path.exists(_r6):   # descriptive columns added in revision 6 (bootstrap i
 _ct = O + "confidence_tiers.csv"
 if os.path.exists(_ct):   # confidence tiers (confidence_tiers.py)
     _t = pd.read_csv(_ct)[["Gene", "Lineage", "tier", "ev_threshold", "ev_one_model", "ev_release", "ev_culture", "ev_independent", "selectivity_without_suspension"]]
-    _t.columns = ["Gene (Entrez)", "Lineage", "Confidence tier", "Evidence: bootstrap interval below -0.5", "Evidence: one model per patient", "Evidence: 22Q1", "Evidence: culture format",
+    _t.columns = ["Gene (Entrez)", "Lineage", "Robustness tier", "Evidence: bootstrap interval below -0.5", "Evidence: one model per patient", "Evidence: 22Q1", "Evidence: culture format",
                   "Evidence: re-prioritised in the discovery cohort and replicated in Project Score", "Selectivity without suspension lines in the comparison group"]
     F = F.merge(_t, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 _rv = O + "rnai_validation.csv"
 if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
     _r = pd.read_csv(_rv)[["Gene", "Lineage", "n_target_RNAi", "Chronos_median_RNAi", "Selectivity_RNAi", "q_value_RNAi", "confirmed"]]
     _r["confirmed"] = _r.confirmed.where(_r.q_value_RNAi.notna(), "not testable")
-    _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: confirmed (q < 0.05, negative selectivity)"]
+    _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: supported (q < 0.05, negative selectivity)"]
     F = F.merge(_r, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 F = F.rename(columns={"confidence_flag": "Low-n flag (fewer than 10 target lines)"})
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
@@ -78,7 +78,7 @@ if _r6j:
     _q = _r6j["cross_release_quantile"]; _add.append({"Analysis": "22Q1 with quantile-matched thresholds (shared lines)", "Result": f"selectivity {_q['matched_threshold_22Q1']:.2f}, median {_q['matched_median_threshold_22Q1']:.2f}: {_q['meet_rule_both_matched']} of {_q['testable']} pairs meet the rule; selectivity only: {_q['meet_rule_matched_threshold']}; original thresholds: {_q['meet_rule_minus0_5']}"})
 _rvj = _j("rnai_validation_summary.json")
 if _rvj:
-    _bt = _rvj["by_tier"]; _add.append({"Analysis": "RNAi screens (DEMETER2), prioritised pairs", "Result": f"{_rvj['confirmed']} of {_rvj['testable']} testable pairs with q < 0.05 and negative selectivity; reference {_rvj['reference_confirmed']}/{_rvj['reference_testable']}; high/medium/low confidence {_bt['high']['confirmed']}/{_bt['high']['testable']}, {_bt['medium']['confirmed']}/{_bt['medium']['testable']}, {_bt['low']['confirmed']}/{_bt['low']['testable']}"})
+    _bt = _rvj["by_tier"]; _add.append({"Analysis": "RNAi screens (DEMETER2), prioritised pairs", "Result": f"{_rvj['confirmed']} of {_rvj['testable']} testable pairs with q < 0.05 and negative selectivity; reference {_rvj['reference_confirmed']}/{_rvj['reference_testable']}; high/medium/low robustness tier {_bt['high']['confirmed']}/{_bt['high']['testable']}, {_bt['medium']['confirmed']}/{_bt['medium']['testable']}, {_bt['low']['confirmed']}/{_bt['low']['testable']}"})
 _cd = _j("cross_release_decomp.json")
 if _cd: _add.append({"Analysis": "22Q1 vs 26Q1 on the same 1,036 models", "Result": f"primary pairs meeting the rule: {_cd['shared_run']['primary94_meet_rule_26Q1_shared']} (26Q1 data) vs {_cd['shared_run']['primary94_meet_rule_22Q1_shared']} (22Q1 data)"})
 with pd.ExcelWriter(OUT + "S3_Table.xlsx") as w:

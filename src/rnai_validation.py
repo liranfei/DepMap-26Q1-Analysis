@@ -9,7 +9,7 @@ Rules fixed before the analysis was run:
   because DEMETER2 scores are not scaled like Chronos scores;
 - reference: 26Q1 pairs with q < 0.05 and negative selectivity that were not prioritised; results also by confidence tier and lymphoid/other lineages.
 The RNAi screens share many cell lines with the CRISPR data, so this is an orthogonal check of the perturbation method, not a check in independent cell lines.
-Input: RNAI_DIR with D2_combined_gene_dep_scores.csv (sample_info.csv is not needed; cell lines are mapped with the 26Q1 Model.csv).  Output: rnai_validation.csv, rnai_all_tests.csv.gz, rnai_validation_summary.json."""
+Input: RNAI_DIR with D2_combined_gene_dep_scores.csv (sample_info.csv is not needed; cell lines are mapped with the 26Q1 Model.csv).  Output: rnai_validation.csv, rnai_all_tests.csv.gz, rnai_validation_summary.json, rnai_cell_line_mapping.csv, rnai_lineage_counts.csv."""
 import os, json, re, numpy as np, pandas as pd
 from scipy.stats import beta
 import run_pipeline as rp
@@ -24,10 +24,12 @@ for c in R2.index:
     if c in by_ccle.index: ids.append(by_ccle[c]); continue
     s = c.split("_")[0]; ids.append(strip[s] if s in strip.index else None)
 R2["DepMap_ID"] = ids; n_lines = len(R2); unmapped = [c for c, i in zip(R2.index, ids) if i is None]
+pd.DataFrame({"CCLE_name": R2.index, "DepMap_ID": ids}).to_csv(O + "rnai_cell_line_mapping.csv", index=False)   # mapping list (unmapped lines have no ID)
 R2 = R2[R2.DepMap_ID.notna()].drop_duplicates("DepMap_ID")
 meta = M.set_index("ModelID")[["OncotreeLineage", "OncotreePrimaryDisease"]]
 R2["lineage"] = R2.DepMap_ID.map(meta.OncotreeLineage).str.strip().str.lower(); R2["primary_disease"] = R2.DepMap_ID.map(meta.OncotreePrimaryDisease)
 R2 = R2[R2.lineage.notna() & (R2.primary_disease != "Non-Cancerous")].reset_index(drop=True)
+R2.lineage.value_counts().rename_axis("lineage").rename("n_lines").to_csv(O + "rnai_lineage_counts.csv")
 genes_all = [c for c in R2.columns if c not in ("DepMap_ID", "lineage", "primary_disease")]
 def ent(g):
     m = re.fullmatch(r".* \((\d+)\)", g); return m.group(1) if m else None   # entries mapped to several genes ("A&B") have no single Entrez id
