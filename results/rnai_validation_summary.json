@@ -1,0 +1,126 @@
+{
+ "rnai_lines_in_file": 712,
+ "unmapped": [
+  "184A1_BREAST",
+  "184B5_BREAST",
+  "COLO699_LUNG",
+  "KP1NL_PANCREAS",
+  "LY2_BREAST",
+  "MB157_BREAST",
+  "NCIH1339_LUNG",
+  "SKRC20_KIDNEY"
+ ],
+ "rnai_cancer_lines_analysed": 695,
+ "lines_shared_with_26Q1_crispr": 546,
+ "genes": 17309,
+ "multi_gene_entries": 286,
+ "tests_on_multi_gene_entries_excluded": 4253,
+ "eligible_lineages": 20,
+ "tests": 300284,
+ "q_lt_0_05": 7793,
+ "testable": 81,
+ "confirmed": 32,
+ "confirmed_ci": [
+  0.28813582777420105,
+  0.5098977334858689
+ ],
+ "negative_selectivity": 69,
+ "meets_rule_descriptive": 2,
+ "reference_confirmed": 749,
+ "reference_testable": 7871,
+ "by_tier": {
+  "high": {
+   "confirmed": 10,
+   "testable": 18
+  },
+  "low": {
+   "confirmed": 9,
+   "testable": 27
+  },
+  "medium": {
+   "confirmed": 13,
+   "testable": 36
+  }
+ },
+ "by_group": {
+  "lymphoid": {
+   "confirmed": 8,
+   "testable": 22
+  },
+  "myeloid": {
+   "confirmed": 6,
+   "testable": 19
+  },
+  "other": {
+   "confirmed": 18,
+   "testable": 40
+  }
+ },
+ "not_testable": [
+  "MDM2 eye",
+  "TUBB4B ampulla of vater",
+  "ZER1 cervix",
+  "SKP2 cervix",
+  "NHLRC2 thyroid",
+  "SOX10 eye",
+  "CHMP4B peripheral nervous system",
+  "FAM50A bladder/urinary tract",
+  "FAM50A myeloid",
+  "CKS1B cervix",
+  "ELOB cervix",
+  "CUL2 cervix",
+  "NCAPD3 eye"
+ ],
+ "not_confirmed": [
+  "CFLAR kidney",
+  "NMNAT1 lymphoid",
+  "MDM2 pleura",
+  "ATP1B3 lymphoid",
+  "DCAF7 myeloid",
+  "NAMPT lymphoid",
+  "SNAP23 bowel",
+  "UMPS lymphoid",
+  "SEPHS2 kidney",
+  "TFRC lymphoid",
+  "NAMPT myeloid",
+  "ADSL myeloid",
+  "SUMO2 lymphoid",
+  "CDAN1 lymphoid",
+  "BCL2L1 bowel",
+  "KRAS bowel",
+  "ADSL lymphoid",
+  "SNAP23 pleura",
+  "WDR36 myeloid",
+  "FAM50A bowel",
+  "FPGS lymphoid",
+  "TYMS myeloid",
+  "FERMT2 soft tissue",
+  "FAM50A lymphoid",
+  "GRB2 liver",
+  "DNAJC9 lymphoid",
+  "TRPM7 myeloid",
+  "CTPS1 lymphoid",
+  "FERMT2 cns/brain",
+  "TFRC myeloid",
+  "SEPHS2 myeloid",
+  "FERMT2 pleura",
+  "INTS6 skin",
+  "CCND1 esophagus/stomach",
+  "UROD lymphoid",
+  "SDHB myeloid",
+  "AP2S1 myeloid",
+  "GRB2 kidney",
+  "CHMP4B soft tissue",
+  "CCND1 pancreas",
+  "CTPS1 myeloid",
+  "SNAP23 esophagus/stomach",
+  "DHFR lymphoid",
+  "PAICS myeloid",
+  "FERMT2 ovary/fallopian tube",
+  "PTK2 liver",
+  "CFLAR pancreas",
+  "UROD myeloid",
+  "MYC pancreas"
+ ],
+ "spearman_selectivity_testable": 0.3814588979223126
+}

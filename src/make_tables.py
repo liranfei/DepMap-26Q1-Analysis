@@ -34,6 +34,11 @@ if os.path.exists(_ct):   # confidence tiers (confidence_tiers.py)
     _t.columns = ["Gene (Entrez)", "Lineage", "Confidence tier", "Evidence: bootstrap interval below -0.5", "Evidence: one model per patient", "Evidence: 22Q1", "Evidence: culture format",
                   "Evidence: independent replication (Project Score)", "Selectivity without suspension lines in the comparison group"]
     F = F.merge(_t, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
+_rv = O + "rnai_validation.csv"
+if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
+    _r = pd.read_csv(_rv)[["Gene", "Lineage", "n_target_RNAi", "Chronos_median_RNAi", "Selectivity_RNAi", "q_value_RNAi", "confirmed"]]
+    _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: confirmed (q < 0.05, negative selectivity)"]
+    F = F.merge(_r, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):
     return json.load(open(O + f)) if os.path.exists(O + f) else {}
@@ -69,6 +74,9 @@ if _r6j:
     for _k, _x in _r6j["lineage_given_genotype"].items():
         _add.append({"Analysis": f"Lineage coefficient adjusted for genotype, {_k.replace('_', ' ')}", "Result": f"ratio {_x['ratio']:.2f} (p = {_x['p_adjusted']:.2g}); interaction model: lineage effect in non-carriers {_x['interaction_lineage_effect_in_noncarriers']:.2f} (p = {_x['interaction_lineage_effect_in_noncarriers_p']:.2g}), lineage x genotype {_x['interaction_term']:.2f} (p = {_x['interaction_term_p']:.2g})"})
     _q = _r6j["cross_release_quantile"]; _add.append({"Analysis": "22Q1 with quantile-matched thresholds (shared lines)", "Result": f"selectivity {_q['matched_threshold_22Q1']:.2f}, median {_q['matched_median_threshold_22Q1']:.2f}: {_q['meet_rule_both_matched']} of {_q['testable']} pairs meet the rule; selectivity only: {_q['meet_rule_matched_threshold']}; original thresholds: {_q['meet_rule_minus0_5']}"})
+_rvj = _j("rnai_validation_summary.json")
+if _rvj:
+    _bt = _rvj["by_tier"]; _add.append({"Analysis": "RNAi screens (DEMETER2), prioritised pairs", "Result": f"{_rvj['confirmed']} of {_rvj['testable']} testable pairs with q < 0.05 and negative selectivity; reference {_rvj['reference_confirmed']}/{_rvj['reference_testable']}; high/medium/low confidence {_bt['high']['confirmed']}/{_bt['high']['testable']}, {_bt['medium']['confirmed']}/{_bt['medium']['testable']}, {_bt['low']['confirmed']}/{_bt['low']['testable']}"})
 _cd = _j("cross_release_decomp.json")
 if _cd: _add.append({"Analysis": "22Q1 vs 26Q1 on the same 1,036 models", "Result": f"primary pairs meeting the rule: {_cd['shared_run']['primary94_meet_rule_26Q1_shared']} (26Q1 data) vs {_cd['shared_run']['primary94_meet_rule_22Q1_shared']} (22Q1 data)"})
 with pd.ExcelWriter(OUT + "S3_Table.xlsx") as w:

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Reproduce all results, tables and figures, in dependency order.
 # Required: DEPMAP_DIR (DepMap 26Q1 files), TCGA_DIR (Xena TCGA-KIRC/PAAD star_counts and survival files, unzipped).
-# Optional: DEPMAP22_DIR (22Q1 CRISPR_gene_effect.csv), SANGER_DIR (Project Score Chronos gene_effect.csv), TCGA_CDR (TCGA-CDR table),
+# Optional: DEPMAP22_DIR (22Q1 CRISPR_gene_effect.csv), SANGER_DIR (Project Score Chronos gene_effect.csv), RNAI_DIR (DEMETER2 D2_combined_gene_dep_scores.csv, sample_info.csv), TCGA_CDR (TCGA-CDR table),
 #           PAAD_S1 (Table S1 of Raphael et al. 2017), RUN_ANNOTATION=1 (re-query PubMed/DGIdb; otherwise the stored results/annotation_* files are used),
 #           RESULTS_DIR, FIG_DIR.  Internet access is needed for the Enrichr gene-set libraries.
 set -euo pipefail
@@ -50,6 +50,7 @@ fi
 
 if [ -n "${SANGER_DIR:-}" ] && [ -n "${DEPMAP22_DIR:-}" ]; then
     $PY revision5_checks.py; $PY revision6_checks.py; $PY confidence_tiers.py                            # need the 22Q1 and Project Score outputs above
+    if [ -n "${RNAI_DIR:-}" ]; then export RNAI_DIR="$(cd "$RNAI_DIR" && pwd)"; $PY rnai_validation.py; fi   # DEMETER2 RNAi check
 fi
 
 # 4. literature annotation (date-dependent; stored versions are used unless RUN_ANNOTATION=1)
