@@ -10,7 +10,39 @@
  "bootstrap": {
   "ci_high_lt_minus0_5": 29,
   "ci_high_lt_0": 93,
-  "median_p_boot": 0.909
+  "median_p_boot": 0.909,
+  "ci_not_below_0": [
+   {
+    "Gene": "CUL2 (8453)",
+    "Lineage": "cervix",
+    "selectivity": -0.5237272087940176,
+    "sel_ci_low": -0.6098065088354274,
+    "sel_ci_high": 0.023187073858240783
+   }
+  ],
+  "low_n_pairs": [
+   {
+    "Gene": "FOXA1 (3169)",
+    "Lineage": "prostate",
+    "n_target": 5,
+    "sel_ci_low": -2.1361948488978064,
+    "sel_ci_high": -0.03406797157199179
+   },
+   {
+    "Gene": "TUBB4B (10383)",
+    "Lineage": "ampulla of vater",
+    "n_target": 5,
+    "sel_ci_low": -1.9552739963533752,
+    "sel_ci_high": -0.11966086107786772
+   },
+   {
+    "Gene": "DCAF7 (10238)",
+    "Lineage": "myeloid",
+    "n_target": 7,
+    "sel_ci_low": -1.016873625440496,
+    "sel_ci_high": -0.32717796903158747
+   }
+  ]
  },
  "comparison_median": {
   "gt_minus0_5": 40,
@@ -37,34 +69,79 @@
  ],
  "APC_trunc_CTNNB1": {
   "n_carrier": 78,
-  "n_other": 1114,
+  "n_other": 1023,
   "median_carrier": -1.04457766228734,
-  "median_other": -0.13094624478690992,
-  "p_one_sided": 2.4398666869817747e-29,
-  "lineage_adjusted_diff": -0.4523589870614445,
-  "lineage_adjusted_p": 1.992643239023579e-18,
+  "median_other": -0.1274358179993226,
+  "p_one_sided": 1.3966951654849966e-30,
+  "lineage_adjusted_diff": -0.5381695779463098,
+  "lineage_adjusted_p": 5.713102501829363e-26,
   "in_bowel": {
    "n_carrier": 49,
-   "n_other": 14,
+   "n_other": 9,
    "median_carrier": -1.3439805271044385,
-   "median_other": -0.7255577446947259,
-   "p_one_sided": 0.045077425892488726
+   "median_other": -0.524626161083553,
+   "p_one_sided": 0.010784045628731415
   }
  },
  "BRAF_V600_BRAF": {
   "n_carrier": 79,
-  "n_other": 1113,
+  "n_other": 1067,
   "median_carrier": -1.2007509501149751,
-  "median_other": -0.0825756661825281,
-  "p_one_sided": 1.842835265907762e-44,
-  "lineage_adjusted_diff": -0.9294634951815333,
-  "lineage_adjusted_p": 1.3875086910781362e-123,
+  "median_other": -0.0781783570494017,
+  "p_one_sided": 8.345725723023624e-45,
+  "lineage_adjusted_diff": -0.9721212305076862,
+  "lineage_adjusted_p": 4.214107551594338e-135,
   "in_skin": {
    "n_carrier": 49,
-   "n_other": 26,
+   "n_other": 23,
    "median_carrier": -1.2810113609279086,
-   "median_other": -0.16579073840075415,
-   "p_one_sided": 4.1348012140737396e-10
+   "median_other": -0.0943907082597959,
+   "p_one_sided": 4.791290034133693e-11
+  }
+ },
+ "bowel_CTNNB1_groups": {
+  "apc_trunc": {
+   "n": 49,
+   "median": -1.3439805271044385
+  },
+  "ctnnb1_hotspot_only": {
+   "n": 4,
+   "median": -1.764150201823293
+  },
+  "neither": {
+   "n": 8,
+   "median": -0.3577716012588157
+  },
+  "other_lineages_without_apc_trunc_or_ctnnb1_hotspot": {
+   "n": 1074,
+   "median": -0.12756400753648917
+  },
+  "neither_vs_other_lineages_p_one_sided": 0.10326297892149897
+ },
+ "lineage_given_genotype": {
+  "KRAS_pancreas": {
+   "coef_unadjusted": -1.4781374062452795,
+   "coef_genotype_adjusted": -0.4210344494933622,
+   "ratio": 0.2848412114560184,
+   "p_adjusted": 8.843652893021959e-10,
+   "carriers_in_lineage": 45,
+   "n_lineage": 48
+  },
+  "CTNNB1_bowel": {
+   "coef_unadjusted": -0.9930016847242861,
+   "coef_genotype_adjusted": -0.49466849362564835,
+   "ratio": 0.4981547375350089,
+   "p_adjusted": 6.148032376703397e-22,
+   "carriers_in_lineage": 53,
+   "n_lineage": 63
+  },
+  "BRAF_skin": {
+   "coef_unadjusted": -0.8514756042443251,
+   "coef_genotype_adjusted": -0.2490386852329673,
+   "ratio": 0.2924789436028367,
+   "p_adjusted": 6.936925669997905e-13,
+   "carriers_in_lineage": 49,
+   "n_lineage": 75
   }
  },
  "cross_release_quantile": {
@@ -72,11 +149,15 @@
   "matched_threshold_22Q1": -0.41331392136442946,
   "testable": 90,
   "meet_rule_matched_threshold": 37,
-  "meet_rule_minus0_5": 23
+  "meet_rule_minus0_5": 23,
+  "median_tail_fraction_26Q1": 0.04915617269795423,
+  "matched_median_threshold_22Q1": -1.0529338507160004,
+  "meet_rule_both_matched": 31
  },
  "nonblood_vs_adherent": {
   "n": 52,
   "lt_minus0_5": 42,
+  "q_lt_0_05": 52,
   "median_change": 0.008480504448052428,
   "max_change": 0.1821790831657366,
   "FERMT2": [

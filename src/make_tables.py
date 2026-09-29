@@ -25,7 +25,8 @@ if os.path.exists(_r6):   # descriptive columns added in revision 6 (bootstrap i
     _p6 = pd.read_csv(_r6).rename(columns={"Gene": "Gene (Entrez)", "sel_ci_low": "Selectivity, bootstrap 95% CI low", "sel_ci_high": "Selectivity, bootstrap 95% CI high",
         "p_boot_sel_lt_minus0_5": "Bootstrap fraction with selectivity < -0.5", "median_comparison": "Median Chronos, all other lines",
         "n_other_lineages_median_lt_minus1": "Other eligible lineages with median < -1", "coverage": "Fraction of cancer lines with data for the gene",
-        "selectivity_vs_adherent": "Selectivity against adherent lines of other lineages (non-blood pairs)"}).drop(columns="selectivity")
+        "selectivity_vs_adherent": "Selectivity against adherent lines of other lineages (non-blood pairs)",
+        "q_vs_adherent": "q against adherent lines (BH over 52 non-blood pairs)"}).drop(columns="selectivity")
     F = F.merge(_p6, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one"); F["Partial gene coverage (< 50% of lines)"] = F["Fraction of cancer lines with data for the gene"] < 0.5
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):

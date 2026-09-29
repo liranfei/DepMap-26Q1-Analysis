@@ -4,9 +4,9 @@
 2. Bootstrap 95% intervals of selectivity for the 94 prioritised pairs (1,000 resamples of target and comparison lines separately, seed 42).
 3. Median of the comparison group and number of other eligible lineages with median Chronos < -1, per prioritised pair.
 4. Coverage of the candidate genes (fraction of cancer lines with data).
-5. Genotype: CTNNB1 dependency by APC truncating (HIGH impact) variant; BRAF dependency by BRAF V600 variant (default entries).
-6. 22Q1 cross-release comparison with a quantile-matched selectivity threshold (same tail fraction as -0.5 in 26Q1, shared lines).
-7. Non-blood pairs: selectivity against adherent lines of other lineages only.
+5. Genotype: CTNNB1 dependency by APC truncating (HIGH impact) variant; BRAF dependency by BRAF V600 variant (default entries; lines with other protein-altering variants of the gene excluded,\n   as for KRAS); bowel CTNNB1 by APC/CTNNB1 group; lineage coefficient of KRAS/pancreas, CTNNB1/bowel and BRAF/skin before and after adjustment for genotype.
+6. 22Q1 cross-release comparison with quantile-matched thresholds (same tail fractions as -0.5 and -1 in 26Q1, shared lines).
+7. Non-blood pairs: selectivity against adherent lines of other lineages only (one-sided Mann-Whitney, BH over the 52 pairs).
 8. Number of non-blood suspension lines in the Project Score data.
 Output: revision6_summary.json, revision6_pairs.csv."""
 import os, json, numpy as np, pandas as pd, statsmodels.formula.api as smf
@@ -47,23 +47,45 @@ for _, r in F.iterrows():
                      coverage=float(v.notna().mean())))
 P = pd.DataFrame(rows)
 R["bootstrap"] = {"ci_high_lt_minus0_5": int((P.sel_ci_high < -0.5).sum()), "ci_high_lt_0": int((P.sel_ci_high < 0).sum()), "median_p_boot": float(P.p_boot_sel_lt_minus0_5.median())}
+R["bootstrap"]["ci_not_below_0"] = P[P.sel_ci_high >= 0][["Gene", "Lineage", "selectivity", "sel_ci_low", "sel_ci_high"]].to_dict("records")
+R["bootstrap"]["low_n_pairs"] = P.merge(F[["Gene", "Lineage", "n_target"]])[lambda x: x.n_target < 10][["Gene", "Lineage", "n_target", "sel_ci_low", "sel_ci_high"]].to_dict("records")
 R["comparison_median"] = {"gt_minus0_5": int((P.median_comparison > -0.5).sum()), "between_minus1_and_minus0_5": int(((P.median_comparison <= -0.5) & (P.median_comparison > -1)).sum()),
                           "le_minus1": int((P.median_comparison <= -1).sum()), "pairs_with_other_lineage_below_minus1": int((P.n_other_lineages_median_lt_minus1 > 0).sum())}
 R["coverage_lt_0_5"] = P[P.coverage < 0.5][["Gene", "Lineage", "coverage"]].to_dict("records")
 
-# ---- 5. genotype: APC truncating vs CTNNB1; BRAF V600 vs BRAF
-mu = pd.read_csv(os.path.join(D, "OmicsSomaticMutations.csv"), usecols=["ModelID", "HugoSymbol", "VepImpact", "ProteinChange", "IsDefaultEntryForModel"], low_memory=False)
-mu = mu[(mu.IsDefaultEntryForModel == "Yes") & mu.HugoSymbol.isin(["APC", "BRAF"])]
+# ---- 5. genotype: APC truncating vs CTNNB1; BRAF V600 vs BRAF (same framework as KRAS: carriers versus lines without a detected
+#      protein-altering variant of the gene; lines with other high/moderate-impact variants excluded)
+mu = pd.read_csv(os.path.join(D, "OmicsSomaticMutations.csv"), usecols=["ModelID", "HugoSymbol", "VepImpact", "ProteinChange", "Hotspot", "IsDefaultEntryForModel"], low_memory=False)
+mu = mu[(mu.IsDefaultEntryForModel == "Yes") & mu.HugoSymbol.isin(["APC", "BRAF", "CTNNB1", "KRAS"])]
+pa = lambda g: set(mu[(mu.HugoSymbol == g) & mu.VepImpact.isin(["HIGH", "MODERATE"])].ModelID)
 apc = set(mu[(mu.HugoSymbol == "APC") & (mu.VepImpact == "HIGH")].ModelID); v600 = set(mu[(mu.HugoSymbol == "BRAF") & mu.ProteinChange.astype(str).str.startswith("p.V600")].ModelID)
-def geno(gene, carriers, lineage):
-    d = pd.DataFrame({"y": X[col(gene)], "g": df.DepMap_ID.isin(carriers).astype(int), "lin": df.lineage}).dropna(); fit = smf.ols("y ~ g + C(lin)", d).fit()
-    w = d[d.lin == lineage]
+ctnnb1_hot = set(mu[(mu.HugoSymbol == "CTNNB1") & (mu.Hotspot == True)].ModelID); kras_hot = set(mu[(mu.HugoSymbol == "KRAS") & (mu.Hotspot == True)].ModelID)
+def geno(gene, carriers, excluded, lineage):
+    d = pd.DataFrame({"y": X[col(gene)], "g": df.DepMap_ID.isin(carriers).astype(int), "lin": df.lineage, "id": df.DepMap_ID}).dropna(subset=["y"])
+    d = d[(d.g == 1) | ~d.id.isin(excluded)]; fit = smf.ols("y ~ g + C(lin)", d).fit(); w = d[d.lin == lineage]
     return {"n_carrier": int(d.g.sum()), "n_other": int((1 - d.g).sum()), "median_carrier": float(d[d.g == 1].y.median()), "median_other": float(d[d.g == 0].y.median()),
             "p_one_sided": float(mannwhitneyu(d[d.g == 1].y, d[d.g == 0].y, alternative="less")[1]), "lineage_adjusted_diff": float(fit.params["g"]), "lineage_adjusted_p": float(fit.pvalues["g"]),
             f"in_{lineage}": {"n_carrier": int(w.g.sum()), "n_other": int((1 - w.g).sum()), "median_carrier": float(w[w.g == 1].y.median()) if w.g.sum() else None,
                               "median_other": float(w[w.g == 0].y.median()) if (1 - w.g).sum() else None,
                               "p_one_sided": float(mannwhitneyu(w[w.g == 1].y, w[w.g == 0].y, alternative="less")[1]) if w.g.sum() and (1 - w.g).sum() else None}}
-R["APC_trunc_CTNNB1"] = geno("CTNNB1", apc, "bowel"); R["BRAF_V600_BRAF"] = geno("BRAF", v600, "skin")
+R["APC_trunc_CTNNB1"] = geno("CTNNB1", apc, (pa("APC") - apc) | ctnnb1_hot, "bowel")          # CTNNB1 hotspot lines also removed from the comparison group
+R["BRAF_V600_BRAF"] = geno("BRAF", v600, pa("BRAF") - v600, "skin")
+# bowel lines in three groups for CTNNB1: APC truncating, CTNNB1 hotspot (without APC truncation), neither (no APC or CTNNB1 protein-altering variant)
+yb = X[col("CTNNB1")]; bw = (df.lineage == "bowel").values; ids = df.DepMap_ID
+g_apc = bw & ids.isin(apc).values; g_hot = bw & ids.isin(ctnnb1_hot).values & ~ids.isin(apc).values; g_nei = bw & ~ids.isin(pa("APC") | pa("CTNNB1")).values
+oth = (~bw) & ~ids.isin(apc | ctnnb1_hot).values
+R["bowel_CTNNB1_groups"] = {"apc_trunc": {"n": int(g_apc.sum()), "median": float(yb[g_apc].median())}, "ctnnb1_hotspot_only": {"n": int(g_hot.sum()), "median": float(yb[g_hot].median())},
+    "neither": {"n": int(g_nei.sum()), "median": float(yb[g_nei].median()) if g_nei.sum() else None},
+    "other_lineages_without_apc_trunc_or_ctnnb1_hotspot": {"n": int(oth.sum()), "median": float(yb[oth].median())},
+    "neither_vs_other_lineages_p_one_sided": float(mannwhitneyu(yb[g_nei].dropna(), yb[oth].dropna(), alternative="less")[1]) if g_nei.sum() >= 3 else None}
+# lineage coefficient before and after adjustment for genotype
+def lin_given_geno(gene, lineage, carriers):
+    d = pd.DataFrame({"y": X[col(gene)], "t": (df.lineage == lineage).astype(int), "g": df.DepMap_ID.isin(carriers).astype(int)}).dropna()
+    b0 = smf.ols("y ~ t", d).fit().params["t"]; f1 = smf.ols("y ~ t + g", d).fit()
+    return {"coef_unadjusted": float(b0), "coef_genotype_adjusted": float(f1.params["t"]), "ratio": float(f1.params["t"] / b0), "p_adjusted": float(f1.pvalues["t"]),
+            "carriers_in_lineage": int(d[d.t == 1].g.sum()), "n_lineage": int(d.t.sum())}
+R["lineage_given_genotype"] = {"KRAS_pancreas": lin_given_geno("KRAS", "pancreas", kras_hot), "CTNNB1_bowel": lin_given_geno("CTNNB1", "bowel", apc | ctnnb1_hot),
+                               "BRAF_skin": lin_given_geno("BRAF", "skin", v600)}
 
 # ---- 6. 22Q1 with a quantile-matched selectivity threshold (shared lines and genes)
 s26 = pd.read_csv(O + "all_tests_26Q1_sharedlines.csv.gz"); s22 = pd.read_csv(O + "all_tests_22Q1_sharedlines.csv.gz")
@@ -72,14 +94,19 @@ k = F[["Gene", "Lineage"]].merge(s22, on=["Gene", "Lineage"])
 R["cross_release_quantile"] = {"tail_fraction_26Q1": frac, "matched_threshold_22Q1": thr, "testable": len(k),
                                "meet_rule_matched_threshold": int(((k.q_value < 0.05) & (k.Chronos_median < -1) & (k.Selectivity < thr)).sum()),
                                "meet_rule_minus0_5": int(((k.q_value < 0.05) & (k.Chronos_median < -1) & (k.Selectivity < -0.5)).sum())}
+fm = float((s26.Chronos_median < -1).mean()); thm = float(s22.Chronos_median.quantile(fm))
+R["cross_release_quantile"].update(median_tail_fraction_26Q1=fm, matched_median_threshold_22Q1=thm,
+    meet_rule_both_matched=int(((k.q_value < 0.05) & (k.Chronos_median < thm) & (k.Selectivity < thr)).sum()))
 
 # ---- 7. non-blood pairs against adherent lines only
 rows = []
 for _, r in F[~F.Lineage.isin(["lymphoid", "myeloid"])].iterrows():
     v = X[r.Gene]; m = (df.lineage == r.Lineage).values; o = ~m & (gp == "Adherent")
-    rows.append(dict(Gene=r.Gene, Lineage=r.Lineage, selectivity=r.Selectivity, selectivity_vs_adherent=float(v[m].median() - v[o].median())))
-A = pd.DataFrame(rows); P = P.merge(A[["Gene", "Lineage", "selectivity_vs_adherent"]], on=["Gene", "Lineage"], how="left")
-R["nonblood_vs_adherent"] = {"n": len(A), "lt_minus0_5": int((A.selectivity_vs_adherent < -0.5).sum()), "median_change": float((A.selectivity_vs_adherent - A.selectivity).median()),
+    rows.append(dict(Gene=r.Gene, Lineage=r.Lineage, selectivity=r.Selectivity, selectivity_vs_adherent=float(v[m].median() - v[o].median()),
+                     p_vs_adherent=float(mannwhitneyu(v[m].dropna(), v[o].dropna(), alternative="less")[1])))
+from statsmodels.stats.multitest import multipletests
+A = pd.DataFrame(rows); A["q_vs_adherent"] = multipletests(A.p_vs_adherent, method="fdr_bh")[1]; P = P.merge(A[["Gene", "Lineage", "selectivity_vs_adherent", "q_vs_adherent"]], on=["Gene", "Lineage"], how="left")
+R["nonblood_vs_adherent"] = {"n": len(A), "lt_minus0_5": int((A.selectivity_vs_adherent < -0.5).sum()), "q_lt_0_05": int((A.q_vs_adherent < 0.05).sum()), "median_change": float((A.selectivity_vs_adherent - A.selectivity).median()),
                              "max_change": float((A.selectivity_vs_adherent - A.selectivity).max()),
                              "FERMT2": A[A.Gene.str.startswith("FERMT2")][["Lineage", "selectivity", "selectivity_vs_adherent"]].round(3).to_dict("records"),
                              "not_below_minus0_5": A[A.selectivity_vs_adherent >= -0.5][["Gene", "Lineage", "selectivity", "selectivity_vs_adherent"]].round(3).to_dict("records")}
