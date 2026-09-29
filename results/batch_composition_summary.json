@@ -2,10 +2,15 @@
  "n_lineages": 21,
  "n_chi2_p_lt_0_05": 14,
  "n_chi2_p_lt_0_05_bonferroni": 9,
+ "n_mc_p_lt_0_05": 12,
+ "n_mc_p_lt_0_05_bonferroni": 6,
  "lymphoid": {
   "Lineage": "lymphoid",
   "n": 94,
   "chi2_p": 0.02576557973452006,
+  "chi2_p_monte_carlo": 0.08445777111444278,
+  "min_expected": 0.07885906040268456,
+  "share_expected_lt_5": 0.2857142857142857,
   "largest_batch": "Avana-3",
   "share_in_lineage": 0.5,
   "share_in_all_cancer_lines": 0.4865771812080537
@@ -14,6 +19,9 @@
   "Lineage": "myeloid",
   "n": 43,
   "chi2_p": 0.07811466773099152,
+  "chi2_p_monte_carlo": 0.09645177411294353,
+  "min_expected": 0.03607382550335571,
+  "share_expected_lt_5": 0.35714285714285715,
   "largest_batch": "Avana-3",
   "share_in_lineage": 0.5581395348837209,
   "share_in_all_cancer_lines": 0.4865771812080537

@@ -6,10 +6,14 @@ D = os.environ.get("DEPMAP_DIR", "."); O = os.environ.get("RESULTS_DIR", "result
 df = rp.load(D); df = df[df.primary_disease != "Non-Cancerous"].reset_index(drop=True); F = pd.read_csv(O + "final_targets.csv")
 s = pd.read_csv(os.path.join(D, "ScreenSequenceMap.csv")); s = s[(s.ScreenType == "2DS") & (s.PassesQC == True) & (s.DrugTreated == False) & (s.IsEngineered == False) & (s.ExcludeFromCRISPRCombined == False)]
 bm = s.groupby("ModelID").pDNABatch.agg(lambda x: x.value_counts().index[0]); df["batch"] = df.DepMap_ID.map(bm).fillna("unknown")
-rows = []
+rows = []; rng = np.random.default_rng(42)
 for L in sorted(F.Lineage.unique()):
-    tgt = df.lineage == L; ct = pd.crosstab(tgt, df.batch); p = chi2_contingency(ct)[1]; top = df[tgt].batch.value_counts(normalize=True)
-    rows.append(dict(Lineage=L, n=int(tgt.sum()), chi2_p=p, largest_batch=top.index[0], share_in_lineage=float(top.iloc[0]), share_in_all_cancer_lines=float((df.batch == top.index[0]).mean())))
+    tgt = df.lineage == L; ct = pd.crosstab(tgt, df.batch); chi, p, _, ex = chi2_contingency(ct); top = df[tgt].batch.value_counts(normalize=True)
+    # Monte Carlo p-value (target membership permuted, 2,000 permutations), because expected counts are small for small lineages
+    t = tgt.values; bcodes = pd.factorize(df.batch)[0]; stat = lambda tt: chi2_contingency(pd.crosstab(tt, bcodes))[0]
+    null = np.array([stat(rng.permutation(t)) for _ in range(2000)]); p_mc = float((1 + (null >= chi).sum()) / (1 + len(null)))
+    rows.append(dict(Lineage=L, n=int(tgt.sum()), chi2_p=p, chi2_p_monte_carlo=p_mc, min_expected=float(ex.min()), share_expected_lt_5=float((ex < 5).mean()), largest_batch=top.index[0],
+                     share_in_lineage=float(top.iloc[0]), share_in_all_cancer_lines=float((df.batch == top.index[0]).mean())))
 B = pd.DataFrame(rows); B.to_csv(O + "batch_composition_by_lineage.csv", index=False)
 # share of each batch in the target lineage and in all other cancer cell lines (to show where the batch distributions differ)
 sh = []
@@ -18,7 +22,7 @@ for L in sorted(F.Lineage.unique()):
     for b in sorted(df.batch.unique()):
         a, o = float((df[tgt].batch == b).mean()), float((df[~tgt].batch == b).mean()); sh.append(dict(Lineage=L, batch=b, share_in_lineage=a, share_in_other_lines=o, difference=a - o))
 pd.DataFrame(sh).to_csv(O + "batch_share_by_lineage.csv", index=False)
-R = dict(n_lineages=len(B), n_chi2_p_lt_0_05=int((B.chi2_p < 0.05).sum()), n_chi2_p_lt_0_05_bonferroni=int((B.chi2_p < 0.05 / len(B)).sum()),
+R = dict(n_lineages=len(B), n_chi2_p_lt_0_05=int((B.chi2_p < 0.05).sum()), n_chi2_p_lt_0_05_bonferroni=int((B.chi2_p < 0.05 / len(B)).sum()), n_mc_p_lt_0_05=int((B.chi2_p_monte_carlo < 0.05).sum()), n_mc_p_lt_0_05_bonferroni=int((B.chi2_p_monte_carlo < 0.05 / len(B)).sum()),
          lymphoid=B[B.Lineage == "lymphoid"].iloc[0].to_dict(), myeloid=B[B.Lineage == "myeloid"].iloc[0].to_dict(), models_without_batch=int((df.batch == "unknown").sum()))
 f = os.path.join(D, "IntOGen-DriverGenes.tsv")
 if os.path.exists(f):
