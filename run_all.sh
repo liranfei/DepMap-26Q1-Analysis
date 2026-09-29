@@ -49,7 +49,7 @@ if [ -n "${TCGA_CDR:-}" ] && [ -n "${SANGER_DIR:-}" ]; then
 fi
 
 if [ -n "${SANGER_DIR:-}" ] && [ -n "${DEPMAP22_DIR:-}" ]; then
-    $PY revision5_checks.py; $PY revision6_checks.py; $PY confidence_tiers.py                            # need the 22Q1 and Project Score outputs above
+    $PY revision5_checks.py; $PY revision6_checks.py; $PY confidence_tiers.py; $PY robust_se_checks.py     # need the 22Q1 and Project Score outputs above
     if [ -n "${RNAI_DIR:-}" ]; then export RNAI_DIR="$(cd "$RNAI_DIR" && pwd)"; $PY rnai_validation.py; fi   # DEMETER2 RNAi check
 fi
 
