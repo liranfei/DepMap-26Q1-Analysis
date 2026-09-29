@@ -7,6 +7,7 @@
 3. Lineage size versus the number of pairs with q < 0.05 and of prioritised pairs per eligible lineage (Spearman correlation).
 4. Sanger replication of the discovery candidates split into lymphoid and other lineages (with the reference rate of non-prioritised pairs),
    and replication of discovery pairs that met the selectivity criterion but failed only the median-Chronos criterion.
+5. Size of the comparison group (non-missing lines outside the target lineage) across all tests and among the prioritised pairs.
 Output: revision5_summary.json."""
 import os, json, numpy as np, pandas as pd
 import run_pipeline as rp
@@ -52,4 +53,7 @@ R["sanger_by_lineage"] = {g: {"candidates_replicated": int(cand[m].rep.sum()), "
                               "reference_replicated": int(ref[r_].rep.sum()), "reference_n": int(r_.sum())}
                           for g, m, r_ in (("lymphoid", lym[M.cand], lym[ref.index]), ("other", ~lym[M.cand], ~lym[ref.index]))}
 R["sanger_fail_median_only"] = {"replicated": int(med.rep.sum()), "testable": int(len(med)), "lymphoid_replicated": int(med[med.Lineage == "lymphoid"].rep.sum()), "lymphoid_n": int((med.Lineage == "lymphoid").sum())}
+# ---- 5. comparison-group size
+nn = df[genes].notna().sum(); A["n_other"] = A.Gene.map(nn) - A.n_target; F2 = F.merge(A[["Gene", "Lineage", "n_other"]], on=["Gene", "Lineage"])
+R["comparator_size"] = {"min_all_tests": int(A.n_other.min()), "min_prioritised": int(F2.n_other.min())}
 json.dump(R, open(O + "revision5_summary.json", "w"), indent=1, default=float); print(json.dumps(R, indent=1, default=float))

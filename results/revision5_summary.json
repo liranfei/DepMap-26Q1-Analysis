@@ -306,5 +306,9 @@
   "testable": 22,
   "lymphoid_replicated": 12,
   "lymphoid_n": 14
+ },
+ "comparator_size": {
+  "min_all_tests": 52,
+  "min_prioritised": 67
  }
 }
