@@ -1,0 +1,178 @@
+{
+ "codep_null_all_genes_median_sd": {
+  "observed": 0.3900881179916093,
+  "null_mean": 0.05018077323016238,
+  "null_95pct": 0.07380137502871786,
+  "null_max": 0.10081475604570861,
+  "empirical_p": 0.000999000999000999,
+  "pool_size": 17152
+ },
+ "bootstrap": {
+  "ci_high_lt_minus0_5": 29,
+  "ci_high_lt_0": 93,
+  "median_p_boot": 0.909
+ },
+ "comparison_median": {
+  "gt_minus0_5": 40,
+  "between_minus1_and_minus0_5": 41,
+  "le_minus1": 13,
+  "pairs_with_other_lineage_below_minus1": 74
+ },
+ "coverage_lt_0_5": [
+  {
+   "Gene": "DCAF7 (10238)",
+   "Lineage": "myeloid",
+   "coverage": 0.06208053691275168
+  },
+  {
+   "Gene": "SUMO2 (6613)",
+   "Lineage": "lymphoid",
+   "coverage": 0.26426174496644295
+  },
+  {
+   "Gene": "WDR36 (134430)",
+   "Lineage": "myeloid",
+   "coverage": 0.3196308724832215
+  }
+ ],
+ "APC_trunc_CTNNB1": {
+  "n_carrier": 78,
+  "n_other": 1114,
+  "median_carrier": -1.04457766228734,
+  "median_other": -0.13094624478690992,
+  "p_one_sided": 2.4398666869817747e-29,
+  "lineage_adjusted_diff": -0.4523589870614445,
+  "lineage_adjusted_p": 1.992643239023579e-18,
+  "in_bowel": {
+   "n_carrier": 49,
+   "n_other": 14,
+   "median_carrier": -1.3439805271044385,
+   "median_other": -0.7255577446947259,
+   "p_one_sided": 0.045077425892488726
+  }
+ },
+ "BRAF_V600_BRAF": {
+  "n_carrier": 79,
+  "n_other": 1113,
+  "median_carrier": -1.2007509501149751,
+  "median_other": -0.0825756661825281,
+  "p_one_sided": 1.842835265907762e-44,
+  "lineage_adjusted_diff": -0.9294634951815333,
+  "lineage_adjusted_p": 1.3875086910781362e-123,
+  "in_skin": {
+   "n_carrier": 49,
+   "n_other": 26,
+   "median_carrier": -1.2810113609279086,
+   "median_other": -0.16579073840075415,
+   "p_one_sided": 4.1348012140737396e-10
+  }
+ },
+ "cross_release_quantile": {
+  "tail_fraction_26Q1": 0.0005098580691748106,
+  "matched_threshold_22Q1": -0.41331392136442946,
+  "testable": 90,
+  "meet_rule_matched_threshold": 37,
+  "meet_rule_minus0_5": 23
+ },
+ "nonblood_vs_adherent": {
+  "n": 52,
+  "lt_minus0_5": 42,
+  "median_change": 0.008480504448052428,
+  "max_change": 0.1821790831657366,
+  "FERMT2": [
+   {
+    "Lineage": "kidney",
+    "selectivity": -0.92,
+    "selectivity_vs_adherent": -0.779
+   },
+   {
+    "Lineage": "skin",
+    "selectivity": -0.741,
+    "selectivity_vs_adherent": -0.608
+   },
+   {
+    "Lineage": "soft tissue",
+    "selectivity": -0.657,
+    "selectivity_vs_adherent": -0.51
+   },
+   {
+    "Lineage": "cns/brain",
+    "selectivity": -0.621,
+    "selectivity_vs_adherent": -0.482
+   },
+   {
+    "Lineage": "pleura",
+    "selectivity": -0.591,
+    "selectivity_vs_adherent": -0.449
+   },
+   {
+    "Lineage": "ovary/fallopian tube",
+    "selectivity": -0.545,
+    "selectivity_vs_adherent": -0.407
+   }
+  ],
+  "not_below_minus0_5": [
+   {
+    "Gene": "FERMT2 (10979)",
+    "Lineage": "cns/brain",
+    "selectivity": -0.621,
+    "selectivity_vs_adherent": -0.482
+   },
+   {
+    "Gene": "FERMT2 (10979)",
+    "Lineage": "pleura",
+    "selectivity": -0.591,
+    "selectivity_vs_adherent": -0.449
+   },
+   {
+    "Gene": "CCND1 (595)",
+    "Lineage": "esophagus/stomach",
+    "selectivity": -0.589,
+    "selectivity_vs_adherent": -0.407
+   },
+   {
+    "Gene": "GRB2 (2885)",
+    "Lineage": "head and neck",
+    "selectivity": -0.587,
+    "selectivity_vs_adherent": -0.484
+   },
+   {
+    "Gene": "GRB2 (2885)",
+    "Lineage": "kidney",
+    "selectivity": -0.574,
+    "selectivity_vs_adherent": -0.474
+   },
+   {
+    "Gene": "CCND1 (595)",
+    "Lineage": "pancreas",
+    "selectivity": -0.572,
+    "selectivity_vs_adherent": -0.405
+   },
+   {
+    "Gene": "FERMT2 (10979)",
+    "Lineage": "ovary/fallopian tube",
+    "selectivity": -0.545,
+    "selectivity_vs_adherent": -0.407
+   },
+   {
+    "Gene": "PTK2 (5747)",
+    "Lineage": "liver",
+    "selectivity": -0.529,
+    "selectivity_vs_adherent": -0.454
+   },
+   {
+    "Gene": "SCD (6319)",
+    "Lineage": "bowel",
+    "selectivity": -0.51,
+    "selectivity_vs_adherent": -0.5
+   },
+   {
+    "Gene": "NCAPD3 (23310)",
+    "Lineage": "eye",
+    "selectivity": -0.508,
+    "selectivity_vs_adherent": -0.483
+   }
+  ]
+ },
+ "sanger_nonblood_suspension": 7
+}

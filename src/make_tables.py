@@ -20,6 +20,13 @@ S = json.load(open(O + "sensitivity_summary.json")); rows = []
 for k in [x for x in S if x.startswith(("multiplicity_", "selectivity<", "chronos_median<", "min_n_target"))]: rows.append({"Analysis": k.replace("multiplicity_", "Multiplicity procedure: "), **S[k]})
 for r in S["topN"]: rows.append({"Analysis": f"Top-{r['top_n']} genes by variance", "n_significant": r["n_q05"], "n_final": r["n_final"], "n_genes": r["n_genes"], "n_lineages": r["n_lineages"]})
 with pd.ExcelWriter(OUT + "S1_Table.xlsx") as w: LT.to_excel(w, index=False, sheet_name="Lineages"); nc.to_excel(w, index=False, sheet_name="Excluded non-cancerous")
+_r6 = O + "revision6_pairs.csv"
+if os.path.exists(_r6):   # descriptive columns added in revision 6 (bootstrap interval, comparison-group median, coverage, adherent-only comparison)
+    _p6 = pd.read_csv(_r6).rename(columns={"Gene": "Gene (Entrez)", "sel_ci_low": "Selectivity, bootstrap 95% CI low", "sel_ci_high": "Selectivity, bootstrap 95% CI high",
+        "p_boot_sel_lt_minus0_5": "Bootstrap fraction with selectivity < -0.5", "median_comparison": "Median Chronos, all other lines",
+        "n_other_lineages_median_lt_minus1": "Other eligible lineages with median < -1", "coverage": "Fraction of cancer lines with data for the gene",
+        "selectivity_vs_adherent": "Selectivity against adherent lines of other lineages (non-blood pairs)"}).drop(columns="selectivity")
+    F = F.merge(_p6, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one"); F["Partial gene coverage (< 50% of lines)"] = F["Fraction of cancer lines with data for the gene"] < 0.5
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):
     return json.load(open(O + f)) if os.path.exists(O + f) else {}

@@ -28,7 +28,7 @@ $PY cross_check.py; $PY cohort_stats.py; $PY batch_composition.py
 $PY benchmark_metrics.py                                                                                 # Table 3, S9 Table
 $PY revision2_checks.py                                                                                  # co-dependency, restricted enrichment background, RCC subsets, subsampling
 $PY growth_confound.py                                                                                   # culture-format checks (S10 Table)
-$PY revision3_checks.py; $PY revision5_checks.py                                                                                  # MDM2 without TP53 variant, co-dependency null, split-half reference, BH for growth models
+$PY revision3_checks.py; $PY revision5_checks.py; $PY revision6_checks.py                                                                                  # MDM2 without TP53 variant, co-dependency null, split-half reference, BH for growth models
 if [ -n "${TCGA_CDR:-}" ]; then
     $PY clinical_extra.py; $PY ph_check.py                                                               # PFI, adjusted Cox, proportional hazards
     if [ -n "${PAAD_S1:-}" ]; then $PY paad_pdac_subset.py; fi                                           # curated PDAC samples
