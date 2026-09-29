@@ -28,6 +28,12 @@ if os.path.exists(_r6):   # descriptive columns added in revision 6 (bootstrap i
         "selectivity_vs_adherent": "Selectivity against adherent lines of other lineages (non-blood pairs)",
         "q_vs_adherent": "q against adherent lines (BH over 52 non-blood pairs)"}).drop(columns="selectivity")
     F = F.merge(_p6, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one"); F["Partial gene coverage (< 50% of lines)"] = F["Fraction of cancer lines with data for the gene"] < 0.5
+_ct = O + "confidence_tiers.csv"
+if os.path.exists(_ct):   # confidence tiers (confidence_tiers.py)
+    _t = pd.read_csv(_ct)[["Gene", "Lineage", "tier", "ev_threshold", "ev_one_model", "ev_release", "ev_culture", "ev_independent", "selectivity_without_suspension"]]
+    _t.columns = ["Gene (Entrez)", "Lineage", "Confidence tier", "Evidence: bootstrap interval below -0.5", "Evidence: one model per patient", "Evidence: 22Q1", "Evidence: culture format",
+                  "Evidence: independent replication (Project Score)", "Selectivity without suspension lines in the comparison group"]
+    F = F.merge(_t, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):
     return json.load(open(O + f)) if os.path.exists(O + f) else {}

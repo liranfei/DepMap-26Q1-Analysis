@@ -1,0 +1,66 @@
+{
+ "tier_counts": {
+  "medium": 40,
+  "low": 34,
+  "high": 20
+ },
+ "evidence_counts": {
+  "threshold": {
+   "fail": 65,
+   "pass": 29
+  },
+  "one_model": {
+   "pass": 87,
+   "fail": 7
+  },
+  "release": {
+   "pass": 84,
+   "fail": 6,
+   "uninformative": 4
+  },
+  "culture": {
+   "pass": 72,
+   "fail": 19,
+   "uninformative": 3
+  },
+  "independent": {
+   "uninformative": 54,
+   "pass": 23,
+   "fail": 17
+  }
+ },
+ "high": [
+  "KRAS pancreas",
+  "SOX10 skin",
+  "HNF1B kidney",
+  "MDM2 eye",
+  "CFLAR kidney",
+  "MYB myeloid",
+  "CBFB myeloid",
+  "BRAF skin",
+  "ZER1 cervix",
+  "NMNAT1 lymphoid",
+  "CCND1 peripheral nervous system",
+  "ATP1B3 lymphoid",
+  "SNAP23 bowel",
+  "UMPS lymphoid",
+  "FERMT2 skin",
+  "TFRC lymphoid",
+  "SDHB lymphoid",
+  "ADSL myeloid",
+  "KRAS bowel",
+  "CFL1 lymphoid"
+ ],
+ "tier_by_blood": {
+  "blood": {
+   "high": 9,
+   "low": 11,
+   "medium": 22
+  },
+  "non-blood": {
+   "high": 11,
+   "low": 23,
+   "medium": 18
+  }
+ }
+}
