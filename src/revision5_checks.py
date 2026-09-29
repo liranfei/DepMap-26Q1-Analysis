@@ -37,7 +37,7 @@ R["codep_growth"] = {"residual_lineage": med(r1), "residual_lineage_x_growth": m
                      "ADSL_PAICS_lineage_x_growth": float(r2.corr().loc[col("ADSL"), col("PAICS")])}
 # ---- 3. lineage size versus number of significant and prioritised pairs
 from scipy.stats import spearmanr
-n = df.lineage.value_counts(); n = n[n >= 5]; A = pd.read_csv(O + "all_tests.csv.gz")
+n = df.lineage.value_counts(); n = n[n >= 5]; A = pd.read_csv(O + "all_tests.csv")
 sig = A[A.q_value < 0.05].groupby("Lineage").size().reindex(n.index, fill_value=0); pri = F.groupby("Lineage").size().reindex(n.index, fill_value=0)
 nb = [x for x in n.index if x not in ("lymphoid", "myeloid")]; sp = lambda a, b: dict(rho=float(spearmanr(a, b)[0]), p=float(spearmanr(a, b)[1]))
 R["lineage_size"] = {"n_lineages": int(len(n)), "size_vs_significant": sp(n, sig), "size_vs_prioritised": sp(n, pri), "size_vs_prioritised_nonblood": sp(n[nb], pri[nb]),

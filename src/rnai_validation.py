@@ -44,7 +44,7 @@ P["confirmed"] = P.testable & (P.q_value_RNAi < 0.05) & (P.Selectivity_RNAi < 0)
 P["meets_rule_RNAi"] = P.testable & (P.q_value_RNAi < 0.05) & (P.Chronos_median_RNAi < -1) & (P.Selectivity_RNAi < -0.5)
 P.to_csv(O + "rnai_validation.csv", index=False)
 # reference: significant, negative, non-prioritised 26Q1 pairs
-A = pd.read_csv(O + "all_tests.csv.gz"); A["entrez"] = A.Gene.map(ent); key = set(zip(F.Gene, F.Lineage))
+A = pd.read_csv(O + "all_tests.csv"); A["entrez"] = A.Gene.map(ent); key = set(zip(F.Gene, F.Lineage))
 ref = A[(A.q_value < 0.05) & (A.Selectivity < 0) & ~pd.Series([k in key for k in zip(A.Gene, A.Lineage)], index=A.index)]
 ref = ref[["entrez", "Lineage"]].merge(T[["entrez", "Lineage", "q_value", "Selectivity"]], on=["entrez", "Lineage"])
 ref_conf = int(((ref.q_value < 0.05) & (ref.Selectivity < 0)).sum())
