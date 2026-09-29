@@ -37,6 +37,7 @@ if os.path.exists(_ct):   # confidence tiers (confidence_tiers.py)
 _rv = O + "rnai_validation.csv"
 if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
     _r = pd.read_csv(_rv)[["Gene", "Lineage", "n_target_RNAi", "Chronos_median_RNAi", "Selectivity_RNAi", "q_value_RNAi", "confirmed"]]
+    _r["confirmed"] = _r.confirmed.where(_r.q_value_RNAi.notna(), "not testable")
     _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: confirmed (q < 0.05, negative selectivity)"]
     F = F.merge(_r, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
