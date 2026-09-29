@@ -80,10 +80,10 @@ R["BRAF_V600_BRAF"] = geno("BRAF", v600, pa("BRAF") - v600, "skin")
 # bowel lines in three groups for CTNNB1: APC truncating, CTNNB1 hotspot (without APC truncation), neither (no APC or CTNNB1 protein-altering variant)
 yb = X[col("CTNNB1")]; bw = (df.lineage == "bowel").values; ids = df.DepMap_ID
 g_apc = bw & ids.isin(apc).values; g_hot = bw & ids.isin(ctnnb1_hot).values & ~ids.isin(apc).values; g_nei = bw & ~ids.isin(pa("APC") | pa("CTNNB1")).values
-oth = (~bw) & ~ids.isin(apc | ctnnb1_hot).values
+oth = (~bw) & ~ids.isin(pa("APC") | pa("CTNNB1")).values   # same definition as the bowel "neither" group and the non-carriers of the interaction model
 R["bowel_CTNNB1_groups"] = {"apc_trunc": {"n": int(g_apc.sum()), "median": float(yb[g_apc].median())}, "ctnnb1_hotspot_only": {"n": int(g_hot.sum()), "median": float(yb[g_hot].median())},
     "neither": {"n": int(g_nei.sum()), "median": float(yb[g_nei].median()) if g_nei.sum() else None},
-    "other_lineages_without_apc_trunc_or_ctnnb1_hotspot": {"n": int(oth.sum()), "median": float(yb[oth].median())},
+    "other_lineages_without_apc_or_ctnnb1_variant": {"n": int(oth.sum()), "median": float(yb[oth].median())},
     "neither_vs_other_lineages_p_one_sided": float(mannwhitneyu(yb[g_nei].dropna(), yb[oth].dropna(), alternative="less")[1]) if g_nei.sum() >= 3 else None}
 # lineage coefficient before and after adjustment for genotype (lines with other protein-altering variants of the gene excluded, as in the carrier
 # comparisons); additive model, plus an interaction model giving the lineage effect among non-carriers

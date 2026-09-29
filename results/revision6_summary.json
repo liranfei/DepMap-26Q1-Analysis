@@ -117,11 +117,11 @@
    "n": 8,
    "median": -0.3577716012588157
   },
-  "other_lineages_without_apc_trunc_or_ctnnb1_hotspot": {
-   "n": 1074,
-   "median": -0.12756400753648917
+  "other_lineages_without_apc_or_ctnnb1_variant": {
+   "n": 991,
+   "median": -0.1256818383795014
   },
-  "neither_vs_other_lineages_p_one_sided": 0.10326297892149897
+  "neither_vs_other_lineages_p_one_sided": 0.1016207031965947
  },
  "lineage_given_genotype": {
   "KRAS_pancreas": {
