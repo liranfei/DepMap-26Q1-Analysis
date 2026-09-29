@@ -1,0 +1,27 @@
+{
+ "lines_by_library": {
+  "Avana": 1032,
+  "Brunello": 5,
+  "Humagne-CD": 70,
+  "KY": 314,
+  "TKOv3": 4
+ },
+ "library_combinations": {
+  "Avana": 811,
+  "Avana+KY": 188,
+  "KY": 116,
+  "Humagne-CD": 43,
+  "Avana+Humagne-CD": 20,
+  "Avana+Humagne-CD+KY": 5,
+  "Avana+Brunello+KY": 2,
+  "Avana+TKOv3": 2,
+  "Avana+Brunello+Humagne-CD+KY": 1,
+  "Avana+KY+TKOv3": 1,
+  "Brunello+KY": 1,
+  "Avana+Brunello": 1,
+  "Avana+Humagne-CD+TKOv3": 1
+ },
+ "missing_values": 874371,
+ "missing_share_structural": 0.9999588275457443,
+ "genes_with_missing": 1444
+}

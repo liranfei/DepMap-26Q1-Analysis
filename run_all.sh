@@ -24,7 +24,7 @@ $PY prepare_mutations.py
 $PY sens_primary.py; $PY ttest_alt.py; $PY part2_depmap.py
 $PY part3_tcga_enrich.py                                                                                 # TCGA (log2 CPM) and enrichment (Enrichr, internet)
 $PY kirc_paired.py
-$PY cross_check.py; $PY cohort_stats.py; $PY batch_composition.py
+$PY cross_check.py; $PY cohort_stats.py; $PY batch_composition.py; $PY data_description.py
 $PY benchmark_metrics.py                                                                                 # Table 3, S9 Table
 $PY revision2_checks.py                                                                                  # co-dependency, restricted enrichment background, RCC subsets, subsampling
 $PY growth_confound.py                                                                                   # culture-format checks (S10 Table)
