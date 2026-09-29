@@ -32,7 +32,7 @@ _ct = O + "confidence_tiers.csv"
 if os.path.exists(_ct):   # confidence tiers (confidence_tiers.py)
     _t = pd.read_csv(_ct)[["Gene", "Lineage", "tier", "ev_threshold", "ev_one_model", "ev_release", "ev_culture", "ev_independent", "selectivity_without_suspension"]]
     _t.columns = ["Gene (Entrez)", "Lineage", "Confidence tier", "Evidence: bootstrap interval below -0.5", "Evidence: one model per patient", "Evidence: 22Q1", "Evidence: culture format",
-                  "Evidence: independent replication (Project Score)", "Selectivity without suspension lines in the comparison group"]
+                  "Evidence: re-prioritised in the discovery cohort and replicated in Project Score", "Selectivity without suspension lines in the comparison group"]
     F = F.merge(_t, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
 _rv = O + "rnai_validation.csv"
 if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
@@ -40,6 +40,7 @@ if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
     _r["confirmed"] = _r.confirmed.where(_r.q_value_RNAi.notna(), "not testable")
     _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: confirmed (q < 0.05, negative selectivity)"]
     F = F.merge(_r, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
+F = F.rename(columns={"confidence_flag": "Low-n flag (fewer than 10 target lines)"})
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):
     return json.load(open(O + f)) if os.path.exists(O + f) else {}

@@ -12,12 +12,11 @@
  ],
  "rnai_cancer_lines_analysed": 695,
  "lines_shared_with_26Q1_crispr": 546,
- "genes": 17309,
- "multi_gene_entries": 286,
- "tests_on_multi_gene_entries_excluded": 4253,
+ "genes": 17023,
+ "multi_gene_entries_excluded": 286,
  "eligible_lineages": 20,
  "tests": 300284,
- "q_lt_0_05": 7793,
+ "q_lt_0_05": 7817,
  "testable": 81,
  "confirmed": 32,
  "confirmed_ci": [
@@ -26,8 +25,9 @@
  ],
  "negative_selectivity": 69,
  "meets_rule_descriptive": 2,
- "reference_confirmed": 749,
+ "reference_confirmed": 750,
  "reference_testable": 7871,
+ "fisher_high_vs_others": 0.17097463521548542,
  "by_tier": {
   "high": {
    "confirmed": 10,
