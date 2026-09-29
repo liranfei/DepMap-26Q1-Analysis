@@ -11,6 +11,11 @@
   "ci_high_lt_minus0_5": 29,
   "ci_high_lt_0": 93,
   "median_p_boot": 0.909,
+  "ci_high_lt_minus0_5_other_seeds": {
+   "43": 28,
+   "44": 28,
+   "45": 28
+  },
   "ci_not_below_0": [
    {
     "Gene": "CUL2 (8453)",
@@ -120,29 +125,61 @@
  },
  "lineage_given_genotype": {
   "KRAS_pancreas": {
-   "coef_unadjusted": -1.4781374062452795,
-   "coef_genotype_adjusted": -0.4210344494933622,
-   "ratio": 0.2848412114560184,
-   "p_adjusted": 8.843652893021959e-10,
+   "coef_unadjusted": -1.4785996075915988,
+   "coef_genotype_adjusted": -0.4211725423529317,
+   "ratio": 0.2848455661630765,
+   "p_adjusted": 6.884151091232985e-10,
+   "interaction_lineage_effect_in_noncarriers": -0.0268959482353264,
+   "interaction_lineage_effect_in_noncarriers_p": 0.9093114173413703,
+   "interaction_term": -0.4295551864758182,
+   "interaction_term_p": 0.08154512170167232,
    "carriers_in_lineage": 45,
    "n_lineage": 48
   },
   "CTNNB1_bowel": {
-   "coef_unadjusted": -0.9930016847242861,
-   "coef_genotype_adjusted": -0.49466849362564835,
-   "ratio": 0.4981547375350089,
-   "p_adjusted": 6.148032376703397e-22,
+   "coef_unadjusted": -1.0176711719300502,
+   "coef_genotype_adjusted": -0.5117808482770299,
+   "ratio": 0.5028941198230259,
+   "p_adjusted": 3.0519282894343303e-21,
+   "interaction_lineage_effect_in_noncarriers": -0.5201882221967588,
+   "interaction_lineage_effect_in_noncarriers_p": 3.265867773421955e-06,
+   "interaction_term": 0.01087934686249889,
+   "interaction_term_p": 0.9314863599284763,
    "carriers_in_lineage": 53,
-   "n_lineage": 63
+   "n_lineage": 61
   },
   "BRAF_skin": {
-   "coef_unadjusted": -0.8514756042443251,
-   "coef_genotype_adjusted": -0.2490386852329673,
-   "ratio": 0.2924789436028367,
-   "p_adjusted": 6.936925669997905e-13,
+   "coef_unadjusted": -0.845021065636197,
+   "coef_genotype_adjusted": -0.19011098421627742,
+   "ratio": 0.22497780463395572,
+   "p_adjusted": 2.7526701168558223e-08,
+   "interaction_lineage_effect_in_noncarriers": -0.04815990404827733,
+   "interaction_lineage_effect_in_noncarriers_p": 0.2902405776735396,
+   "interaction_term": -0.3136281821084194,
+   "interaction_term_p": 3.967742226967357e-06,
    "carriers_in_lineage": 49,
-   "n_lineage": 75
+   "n_lineage": 72
+  },
+  "BRAF_skin_without_engineered": {
+   "coef_unadjusted": -0.8753697509123815,
+   "coef_genotype_adjusted": -0.23411174186366937,
+   "ratio": 0.2674432622553602,
+   "p_adjusted": 2.0558868124405353e-12,
+   "interaction_lineage_effect_in_noncarriers": -0.04786180317901078,
+   "interaction_lineage_effect_in_noncarriers_p": 0.2672328705476274,
+   "interaction_term": -0.42574415361090945,
+   "interaction_term_p": 9.867865864831864e-11,
+   "carriers_in_lineage": 42,
+   "n_lineage": 65
   }
+ },
+ "BRAF_V600_skin_without_engineered": {
+  "n_carrier": 42,
+  "n_other": 23,
+  "median_carrier": -1.369655147849972,
+  "median_other": -0.0943907082597959,
+  "p_one_sided": 1.9766863917356358e-11,
+  "engineered_skin_models": 7
  },
  "cross_release_quantile": {
   "tail_fraction_26Q1": 0.0005098580691748106,
@@ -153,6 +190,16 @@
   "median_tail_fraction_26Q1": 0.04915617269795423,
   "matched_median_threshold_22Q1": -1.0529338507160004,
   "meet_rule_both_matched": 31
+ },
+ "nonblood_comparator_variants": {
+  "adherent_only": 42,
+  "without_suspension": 45,
+  "without_blood": 45,
+  "lost_only_with_adherent_only": [
+   "FERMT2 cns/brain",
+   "GRB2 head and neck",
+   "SCD bowel"
+  ]
  },
  "nonblood_vs_adherent": {
   "n": 52,
