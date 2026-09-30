@@ -28,12 +28,12 @@ ren = {"n_target_disc": "n target (discovery)", "Chronos_median_disc": "Median C
 P = pd.read_csv(O + "sanger_disjoint_primary94.csv"); P.insert(0, "Gene_symbol", sym(P.Gene))
 P = P.rename(columns={"Selectivity": "Selectivity (primary)", "Chronos_median": "Median Chronos (primary)", "n_target": "n target (primary)", "q_value": "q (primary)", "candidate_disc": "Candidate in discovery cohort",
                       **{k.replace("_disc", "_disc"): v for k, v in ren.items()}})
-O_old = pd.read_csv(O + "independent_sanger_candidates.csv"); O_old.insert(0, "Gene_symbol", sym(O_old.Gene))
+O_old = pd.read_csv(O + "independent_sanger_candidates.csv").rename(columns={"confidence": "Low-n flag (fewer than 10 target lines)"}); O_old.insert(0, "Gene_symbol", sym(O_old.Gene))
 readme = pd.DataFrame({"Note": [
-    "Discovery cohort: the 878 DepMap 26Q1 cancer cell lines without any Sanger (KY-library) screen in the combined 26Q1 data set; the complete procedure (one-sided Mann-Whitney, BH over all tests, q < 0.05, median Chronos < -1, selectivity < -0.5) was applied to it.",
-    "Replication: the same procedure applied to the Sanger Project Score Chronos data (316 cancer models); discovery and replication share no screens and no cell lines.",
+    "Discovery cohort: the 856 DepMap 26Q1 cancer cell lines without any Sanger (KY-library) screen in the combined 26Q1 data set, after excluding 22 models derived from the same patient as a Project Score model; the complete procedure (one-sided Mann-Whitney, BH over all tests, q < 0.05, median Chronos < -1, selectivity < -0.5) was applied to it.",
+    "Replication: the same procedure applied to the Sanger Project Score Chronos data (316 cancer models); discovery and replication share no screens, models or patients.",
     "Sheet 'Primary 94 pairs': the 94 candidate pairs of the primary analysis (all 1,192 lines) with their results in the discovery cohort and in the Sanger data.",
-    "Sheet 'Overlapping comparison (not independent)': earlier comparison of the primary candidates with the Sanger data. For the shared cell lines the 26Q1 gene effects include the same Sanger screens, so this comparison is not independent; shown for transparency only."]})
+    "Sheet 'Overlapping (not independent)': earlier comparison of the primary candidates with the Sanger data. For the shared cell lines the 26Q1 gene effects include the same Sanger screens, so this comparison is not independent; shown for transparency only."]})
 with pd.ExcelWriter(SI + "S7_Table.xlsx") as w:
     readme.to_excel(w, index=False, sheet_name="Read me"); C.rename(columns=ren).to_excel(w, index=False, sheet_name="Discovery candidates vs Sanger")
     P.to_excel(w, index=False, sheet_name="Primary 94 pairs"); O_old.to_excel(w, index=False, sheet_name="Overlapping (not independent)")
