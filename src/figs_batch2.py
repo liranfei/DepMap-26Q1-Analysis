@@ -34,8 +34,8 @@ E=pd.read_csv(O+"enrichment_custom_background.csv"); fig,axs=plt.subplots(1,2,fi
 for ax,lib,title in zip(axs,["GO_Biological_Process_2023","KEGG_2021_Human"],["GO Biological Process","KEGG pathways"]):
     e=E[(E.library==lib)&(E.q<0.05)].sort_values("q").head(8).iloc[::-1]; y=np.arange(len(e))
     ax.scatter(-np.log10(e.q),y,s=e.n_hits*22,color=BLUE if lib.startswith("GO") else VERM,edgecolor="white",linewidth=0.5,zorder=3); ax.hlines(y,0,-np.log10(e.q),color="#cccccc",lw=1,zorder=1)
-    ax.set_yticks(y); ax.set_yticklabels(["\n".join(textwrap.wrap(t.split(" (GO")[0],26)) for t in e.term]); ax.set_xlabel("−log$_{10}$ (BH-adjusted q)"); ax.set_xlim(0,max(-np.log10(e.q))*1.4); ax.margins(y=0.08)
-    ax.set_title(title,fontsize=9,loc="center"); [ax.annotate(f"{h}/{s_}",(-np.log10(q),i),xytext=(np.sqrt(h*22)/2+3,0),textcoords="offset points",va="center",ha="left",fontsize=8) for i,(q,h,s_) in enumerate(zip(e.q,e.n_hits,e.set_size))]
+    ax.set_yticks(y); ax.set_yticklabels(["\n".join(textwrap.wrap(t.split(" (GO")[0],26)) for t in e.term]); ax.set_xlabel("−log$_{10}$ (BH-adjusted q)"); ax.set_xlim(0,max(-np.log10(e.q))*1.55); ax.margins(y=0.08)
+    ax.set_title(title,fontsize=9,loc="center"); [ax.annotate(f"{h}/{s_}",(-np.log10(q),i),xytext=(np.sqrt(h*22)/2+7,0),textcoords="offset points",va="center",ha="left",fontsize=8) for i,(q,h,s_) in enumerate(zip(e.q,e.n_hits,e.set_size))]
 letters(axs,-0.02); fig.tight_layout(pad=0.6,w_pad=1.2); save(fig,"Fig7")
 # ================= data for Fig 8-9
 df=rp.load(D); df=df[df.primary_disease!="Non-Cancerous"].reset_index(drop=True); genes=[c for c in df.columns if c not in ("DepMap_ID","lineage","primary_disease")]
