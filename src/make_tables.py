@@ -40,6 +40,16 @@ if os.path.exists(_rv):   # RNAi check (rnai_validation.py)
     _r["confirmed"] = _r.confirmed.where(_r.q_value_RNAi.notna(), "not testable")
     _r.columns = ["Gene (Entrez)", "Lineage", "RNAi: n target", "RNAi: median DEMETER2 score, target lineage", "RNAi: selectivity", "RNAi: q (BH over all RNAi tests)", "RNAi: supported (q < 0.05, negative selectivity)"]
     F = F.merge(_r, on=["Gene (Entrez)", "Lineage"], how="left", validate="one_to_one")
+_nonlin = {("KRAS", "pancreas"): "KRAS hotspot mutation (lineage coefficient reduced to 28% after adjustment for genotype)",
+           ("KRAS", "bowel"): "KRAS hotspot mutation (frequent in this lineage; see Genotype-associated dependencies)",
+           ("BRAF", "skin"): "BRAF V600 mutation (lineage coefficient reduced to 22% after adjustment for genotype)",
+           ("CTNNB1", "bowel"): "APC truncating or CTNNB1 hotspot mutation (lineage coefficient reduced to 50% after adjustment for genotype)",
+           ("MDM2", "eye"): "TP53 status (selectivity -0.36 among lines without a detected TP53 variant)",
+           ("MDM2", "kidney"): "TP53 status (selectivity -0.24 among lines without a detected TP53 variant)",
+           ("MDM2", "pleura"): "TP53 status (selectivity -0.14 among lines without a detected TP53 variant)",
+           ("MDM2", "skin"): "TP53 status, partly (selectivity -0.55 among lines without a detected TP53 variant)"}
+F["Possible genotype explanation of the lineage signal"] = [_nonlin.get((g, l), "") for g, l in zip(F.Gene_symbol, F.Lineage)]
+assert (F["Possible genotype explanation of the lineage signal"] != "").sum() == 8
 F = F.rename(columns={"confidence_flag": "Low-n flag (fewer than 10 target lines)"})
 with pd.ExcelWriter(OUT + "S2_Table.xlsx") as w: F.to_excel(w, index=False, sheet_name="Candidate pairs")
 def _j(f):
