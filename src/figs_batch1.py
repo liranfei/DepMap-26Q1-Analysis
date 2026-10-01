@@ -38,8 +38,13 @@ ax.scatter(r.Selectivity,r.nlq,s=16,c=VERM,edgecolor="white",linewidth=0.3,label
 ax.axvline(-0.5,color=BLUE,ls="--",lw=1,label="Selectivity = −0.5"); ax.axhline(-np.log10(0.05),color="#555555",ls=":",lw=1,label="q = 0.05")
 key={"KRAS","SOX10","CTNNB1","NMNAT1","NAMPT","HNF1B","CBFB","IRF4","MDM2","PAX8","BRAF","MYB"}
 lab=r[(r.sym.isin(key))|(r.nlq.rank(ascending=False)<=6)].sort_values("nlq",ascending=False).drop_duplicates("sym")
-tx=[ax.text(x,yv,s + (f" ({l})" if s=="MDM2" else ""),fontsize=8) for x,yv,s,l in zip(lab.Selectivity,lab.nlq,lab.sym,lab.Lineage)]   # MDM2 is a candidate in four lineages: name the one labelled
-adjust_text(tx,x=lab.Selectivity.values,y=lab.nlq.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),expand=(1.4,1.6),iter_lim=1000)   # fixed iteration count: the default (1 s time limit) makes label placement machine-dependent
+# fixed label positions (data coordinates, horizontal alignment), chosen so that no label touches a point or a threshold line
+P3={"ATP1B3":(-0.86,36.9,"right"),"NMNAT1":(-1.12,34.7,"right"),"EP300":(-0.88,31.2,"right"),"NAMPT":(-1.04,29.4,"right"),"PAICS":(-1.20,27.6,"right"),"CFL1":(-1.20,25.9,"right"),
+    "SOX10":(-1.45,22.6,"right"),"IRF4":(-1.18,23.6,"right"),"MYB":(-0.90,21.9,"left"),"CTNNB1":(-1.26,21.4,"right"),"BRAF":(-1.18,18.4,"right"),"KRAS":(-1.50,15.6,"left"),
+    "CBFB":(-1.20,16.0,"right"),"PAX8":(-1.18,11.4,"right"),"HNF1B":(-1.40,8.8,"right"),"MDM2":(-1.00,4.2,"right")}
+for x,yv,sy,l in zip(lab.Selectivity,lab.nlq,lab.sym,lab.Lineage):   # MDM2 is a candidate in four lineages: name the one labelled
+    tx_,ty_,ha_=P3[sy]; ax.annotate(sy+(f" ({l})" if sy=="MDM2" else ""),(x,yv),xytext=(tx_,ty_),ha=ha_,va="center",fontsize=8,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5,shrinkA=1,shrinkB=3))
+ax.set_ylim(top=38.5)
 ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target lineage − all other cancer cell lines)"); ax.set_ylabel("−log$_{10}$ (BH-adjusted q)"); ax.legend(loc="upper right",frameon=False)
 fig.tight_layout(pad=0.6); save(fig,"Fig3")
 # ================= Fig 4 efficacy vs selectivity
@@ -49,8 +54,12 @@ ax.scatter(h.Selectivity,h.Chronos_median,s=22,c=VERM,edgecolor="white",linewidt
 lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Pair with < 10 target observations")
 ax.axvline(-0.5,color="#555555",ls="--",lw=0.9); ax.axhline(-1,color="#555555",ls="--",lw=0.9)
 lab=F[F.sym.isin({"KRAS","SOX10","HNF1B","MDM2","CTNNB1","CFLAR","MYB","CBFB","PAX8","NMNAT1","MYC","FOXA1","DHFR","TUBB4B","DCAF7"})].drop_duplicates("sym")
-tx=[ax.text(x,yv,sy + (f" ({l})" if sy=="MDM2" else ""),fontsize=8) for x,yv,sy,l in zip(lab.Selectivity,lab.Chronos_median,lab.sym,lab.Lineage)]
-adjust_text(tx,x=lab.Selectivity.values,y=lab.Chronos_median.values,ax=ax,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5),iter_lim=1000)
+P4={"KRAS":(-1.555,-2.04,"left"),"SOX10":(-1.345,-1.63,"left"),"HNF1B":(-1.245,-1.45,"left"),"FOXA1":(-1.215,-1.31,"left"),"MDM2":(-1.105,-1.52,"left"),
+    "CTNNB1":(-1.15,-1.215,"right"),"CFLAR":(-1.045,-1.60,"left"),"MYB":(-1.09,-1.33,"right"),"TUBB4B":(-1.02,-1.42,"left"),"CBFB":(-1.09,-1.19,"right"),
+    "PAX8":(-1.045,-1.11,"right"),"NMNAT1":(-0.935,-1.165,"left"),"DCAF7":(-0.83,-1.345,"right"),"DHFR":(-0.485,-1.25,"left"),"MYC":(-0.485,-2.50,"left")}
+for x,yv,sy,l in zip(lab.Selectivity,lab.Chronos_median,lab.sym,lab.Lineage):
+    tx_,ty_,ha_=P4[sy]; ax.annotate(sy+(f" ({l})" if sy=="MDM2" else ""),(x,yv),xytext=(tx_,ty_),ha=ha_,va="center",fontsize=8,arrowprops=dict(arrowstyle="-",color="0.4",lw=0.5,shrinkA=1,shrinkB=3))
+ax.set_xlim(right=-0.40)
 ax.set_xlabel("Selectivity (target lineage − all other cancer cell lines, median Chronos)"); ax.set_ylabel("Median Chronos, target lineage"); ax.legend(frameon=False,loc="lower center",bbox_to_anchor=(0.42,0.0))
 fig.tight_layout(pad=0.6); save(fig,"Fig4")
 # ================= Fig 5 top 20
