@@ -16,7 +16,7 @@ b.bar(range(4), vals, color=[VERM, ORANGE, GREY, "#cccccc"], width=0.7); b.set_x
 labs = ["< −0.7", "−0.7 to −0.5", "−0.5 to −0.4", "−0.4 to −0.3", "−0.3 to −0.2", "−0.2 to 0"]
 c.bar(range(len(B)), B.frac * 100, color=[VERM if n > 0 else GREY for n in B.n_candidates], width=0.7); c.set_xticks(range(len(B))); c.set_xticklabels(labs[:len(B)])
 c.set_xlabel("Selectivity in 26Q1 lines without Sanger screen"); c.set_ylabel("Replicated in Sanger (%)"); c.set_ylim(0, 118)
-[c.text(i, f * 100 + 2, f"{int(k)} of {int(n):,} prioritised", ha="center", fontsize=8) for i, (f, k, n) in enumerate(zip(B.frac, B.n_candidates, B.n))]
+[c.text(i, f * 100 + 2, f"n = {int(n):,} ({int(k)} prioritised)", ha="center", fontsize=8) for i, (f, k, n) in enumerate(zip(B.frac, B.n_candidates, B.n))]
 for ax, l, x in ((a, "A", -0.16), (b, "B", -0.2), (c, "C", -0.07)): ax.text(x, 1.02, l, transform=ax.transAxes, fontsize=12, fontweight="bold")
 fig.tight_layout(pad=0.6, w_pad=1.5); save(fig, "Fig12"); print(dict(zip(order, vals)))
 
