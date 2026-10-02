@@ -1,0 +1,30 @@
+{
+  "title": "Analysis code and results for lineage-selective cancer dependencies from DepMap 26Q1",
+  "version": "2.0.0",
+  "creators": [
+    {
+      "name": "Li, Ranfei",
+      "affiliation": "Independent Researcher, Zaozhuang, China"
+    },
+    {
+      "name": "Liu, Yanxun",
+      "affiliation": "Zaozhuang Maternal and Child Health Hospital, Zaozhuang, China"
+    },
+    {
+      "name": "Li, Shanshan",
+      "affiliation": "Zaozhuang Mining Group Central Hospital, Zaozhuang, China"
+    }
+  ],
+  "description": "Code, intermediate results, figures and supporting tables for the manuscript 'A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data'. The current analysis uses DepMap 26Q1, 1,192 cancer cell lines and 467,091 gene-lineage tests, yielding 94 prioritised pairs. Input datasets are public but are not included in this archive; download instructions and input-file checksums are in the README.",
+  "keywords": [
+    "DepMap",
+    "CRISPR-Cas9",
+    "cancer dependencies",
+    "lineage selectivity",
+    "reproducible analysis"
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng",
+  "access_right": "open"
+}
