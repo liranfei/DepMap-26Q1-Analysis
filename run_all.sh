@@ -60,4 +60,11 @@ $PY make_tables_ext.py                                                          
 # 5. tables and figures
 $PY make_tables.py; $PY make_tables_s6_s9_s10.py                                                         # S1-S6, S9, S10 Tables
 $PY figs_batch1.py; $PY figs_batch2.py; $PY figs_supp.py                                                 # Figs 1-10, S1-S5 Figs
+
+# 6. focused validation of one candidate (SNAP23 in bowel); needs SANGER_DIR and RNAI_DIR and the
+#    DepMap expression file. Criteria were fixed in prespecified_plan_snap23.md before these were run.
+if [ -n "${SANGER_DIR:-}" ] && [ -n "${RNAI_DIR:-}" ]; then
+    $PY snap23_validation.py; $PY snap23_posthoc.py; $PY make_table_s11.py; $PY figs_snap23.py       # Fig 13, S11 Table
+fi
+
 echo "ALL DONE"

@@ -1,0 +1,332 @@
+{
+ "cohort": {
+  "n_cancer_lines": 1192,
+  "n_with_SNAP23_data": 1192,
+  "n_bowel": 63,
+  "n_other": 1129
+ },
+ "V1_primary": {
+  "median_bowel": -1.5225916153772128,
+  "median_other": -0.7422117172167758,
+  "selectivity": -0.780379898160437,
+  "p_one_sided": 3.8742883466092995e-11,
+  "bootstrap_CI": [
+   -0.9540301473628451,
+   -0.5996884309448026
+  ],
+  "published_q_from_S2_Table": 4.971552796994737e-08,
+  "published_bootstrap_CI_S2_Table": [
+   -0.9467674591839504,
+   -0.6161600962252058
+  ],
+  "pass": true
+ },
+ "V2_genotype": {
+  "coef_unadjusted": -0.6270907297664987,
+  "p_unadjusted": 2.426739871988839e-10,
+  "coef_adjusted": -0.6145815213061406,
+  "p_adjusted": 6.303939757722084e-08,
+  "ratio_adj_over_unadj": 0.9800519958810171,
+  "genotype_coefficients": {
+   "KRAS": -0.042,
+   "APC": 0.029,
+   "TP53": -0.048,
+   "BRAF": 0.196,
+   "PIK3CA": -0.202
+  },
+  "n_bowel_mutated": {
+   "KRAS": 34,
+   "APC": 52,
+   "TP53": 51,
+   "BRAF": 13,
+   "PIK3CA": 17
+  },
+  "pass": true
+ },
+ "V3_culture_format": {
+  "n_adherent_other": 870,
+  "median_adherent_other": -0.7034711397790121,
+  "selectivity_vs_adherent": -0.8191204755982007,
+  "p_one_sided": 3.950153363519533e-11,
+  "pass": true
+ },
+ "V4_subtype": {
+  "subtypes": {
+   "Colon Adenocarcinoma": {
+    "n": 48,
+    "median": -1.5584832711892904,
+    "selectivity": -0.8162715539725146,
+    "p_one_sided": 2.9234179697031737e-10
+   },
+   "Rectal Adenocarcinoma": {
+    "n": 12,
+    "median": -1.286480679222824,
+    "selectivity": -0.5442689620060482,
+    "p_one_sided": 0.025888088810636613
+   }
+  },
+  "all_subtypes_below_-0.5": true,
+  "pass": true
+ },
+ "V8_expression": {
+  "n_lines_with_expression": 1126,
+  "median_log2TPM1_bowel": 5.7933993,
+  "median_log2TPM1_other": 5.968554,
+  "pass": true
+ },
+ "V5_paralogue_buffering": {
+  "SNAP25": {
+   "n": 1126,
+   "spearman_rho": 0.5092332349979953,
+   "p_two_sided": 2.519732454849378e-75,
+   "direction_as_predicted(positive)": true
+  },
+  "SNAP29": {
+   "n": 1126,
+   "spearman_rho": 0.32647874576504465,
+   "p_two_sided": 2.2409398014268357e-29,
+   "direction_as_predicted(positive)": true
+  },
+  "SNAP25_lineage_centred(post_hoc)": {
+   "n": 1126,
+   "spearman_rho": 0.39056536596079466,
+   "p_two_sided": 2.4281135139859665e-42
+  },
+  "SNAP29_lineage_centred(post_hoc)": {
+   "n": 1126,
+   "spearman_rho": 0.2910463960393022,
+   "p_two_sided": 2.018167522157811e-23
+  },
+  "SNAP23_own_expression(post_hoc)": {
+   "n": 1126,
+   "spearman_rho": -0.025410183278744888,
+   "p_two_sided": 0.3942958732102132
+  },
+  "pass": true
+ },
+ "V6_codependency": {
+  "top20_codependencies_positive_r": {
+   "STXBP3": 0.481,
+   "STX4": 0.477,
+   "RAB10": 0.22,
+   "DDX39B": 0.202,
+   "PIK3CA": 0.187,
+   "ITGA3": 0.179,
+   "TP63": 0.17,
+   "KLF5": 0.169,
+   "TIGD1": 0.169,
+   "ZNF365": 0.165,
+   "RABIF": 0.159,
+   "YKT6": 0.154,
+   "VPS45": 0.153,
+   "NXF1": 0.153,
+   "DNM2": 0.15,
+   "DENND4C": 0.145,
+   "DBF4": 0.144,
+   "CD151": 0.144,
+   "RBX1": 0.143,
+   "UAP1": 0.14
+  },
+  "prespecified_SNARE_partners_in_top20": [
+   "STX4",
+   "STXBP3"
+  ],
+  "top20_anticorrelated(post_hoc)": {
+   "FERMT2": -0.152,
+   "RCC1": -0.151,
+   "CCDC74A": -0.15,
+   "ITGAV": -0.146,
+   "CHMP4B": -0.144,
+   "NAT10": -0.143,
+   "NKAIN3": -0.14,
+   "TBCB": -0.139,
+   "HASPIN": -0.138,
+   "CDS2": -0.136,
+   "METTL5": -0.134,
+   "SRSF10": -0.134,
+   "HIC2": -0.134,
+   "PRXL2B": -0.131,
+   "RTN4R": -0.126,
+   "UTP25": -0.125,
+   "RIMBP3": -0.123,
+   "VPS4A": -0.122,
+   "PKP3": -0.122,
+   "LMNA": -0.121
+  },
+  "rank_of_prespecified_partners(post_hoc)": {
+   "NAPA": [
+    44,
+    0.123
+   ],
+   "NAPB": [
+    12965,
+    -0.022
+   ],
+   "NSF": [
+    17175,
+    -0.063
+   ],
+   "SNAP25": [
+    9048,
+    -0.002
+   ],
+   "SNAP29": [
+    8438,
+    0.001
+   ],
+   "STX1A": [
+    8978,
+    -0.002
+   ],
+   "STX2": [
+    9505,
+    -0.004
+   ],
+   "STX3": [
+    1315,
+    0.052
+   ],
+   "STX4": [
+    2,
+    0.477
+   ],
+   "STX7": [
+    2414,
+    0.039
+   ],
+   "STX8": [
+    6247,
+    0.012
+   ],
+   "STXBP1": [
+    10660,
+    -0.01
+   ],
+   "STXBP2": [
+    14318,
+    -0.031
+   ],
+   "STXBP3": [
+    1,
+    0.481
+   ],
+   "VAMP2": [
+    16057,
+    -0.046
+   ],
+   "VAMP3": [
+    10115,
+    -0.007
+   ],
+   "VAMP4": [
+    2743,
+    0.036
+   ],
+   "VAMP7": [
+    10899,
+    -0.011
+   ],
+   "VAMP8": [
+    4215,
+    0.024
+   ]
+  },
+  "n_genes_tested": 17930,
+  "pass": true
+ },
+ "V7_orthogonal": {
+  "sanger_project_score": {
+   "n_bowel": 30,
+   "n_other": 286,
+   "median_bowel": -1.3978639998295734,
+   "selectivity": -0.7623168675934182,
+   "p_one_sided": 2.7549128961368863e-06,
+   "pass": true
+  },
+  "rnai_demeter2": {
+   "n_bowel": 44,
+   "n_other": 542,
+   "median_bowel": -0.061038496264,
+   "selectivity": -0.05063221455227,
+   "p_one_sided": 0.03738940294916606,
+   "pass": true
+  },
+  "pass": true
+ },
+ "verdict": {
+  "core_V1_V4_all_pass": true,
+  "n_passed_of_V5_V7": 3,
+  "verdict": "validated"
+ },
+ "post_hoc_additions": {
+  "V6_enrichment_posthoc": {
+   "n_genes": 17930,
+   "n_prespecified_partners_present": 19,
+   "top_n": 20,
+   "partners_in_top_n": 2,
+   "hypergeometric_P_ge_k": 0.00019984881932863944,
+   "note": "STXBP3 and STX4 rank 1 and 2 of 17930 genes"
+  },
+  "V5_within_lineage_posthoc": {
+   "bowel_SNAP25": {
+    "n": 59,
+    "spearman_rho": 0.31244433921355647,
+    "p_two_sided": 0.015985997114204627
+   },
+   "bowel_SNAP29": {
+    "n": 59,
+    "spearman_rho": 0.22548217416715377,
+    "p_two_sided": 0.08596201028243382
+   },
+   "non-bowel_SNAP25": {
+    "n": 1067,
+    "spearman_rho": 0.5032212478949338,
+    "p_two_sided": 1.434543013620486e-69
+   },
+   "non-bowel_SNAP29": {
+    "n": 1067,
+    "spearman_rho": 0.3145732339043315,
+    "p_two_sided": 6.151395840023408e-26
+   }
+  },
+  "V7_with_q_criterion": {
+   "sanger_project_score": {
+    "p_value": 2.7549128961368863e-06,
+    "q_value": 0.000584153068916,
+    "selectivity": -0.7623168675934182,
+    "n_target": 30,
+    "supported_at_q<0.05": true
+   },
+   "rnai_demeter2": {
+    "p_value": 0.037389402949166,
+    "q_value": 0.3215658854459068,
+    "selectivity": -0.05063221455227,
+    "n_target": 44,
+    "supported_at_q<0.05": false
+   }
+  },
+  "module_partners_bowel_selectivity_posthoc": {
+   "SNAP23": {
+    "n_bowel": 63,
+    "median_bowel": -1.523,
+    "median_other": -0.742,
+    "selectivity": -0.78,
+    "p_one_sided": 3.8742883466092995e-11
+   },
+   "STX4": {
+    "n_bowel": 63,
+    "median_bowel": -0.651,
+    "median_other": -0.232,
+    "selectivity": -0.419,
+    "p_one_sided": 1.3131284803777212e-06
+   },
+   "STXBP3": {
+    "n_bowel": 63,
+    "median_bowel": -0.516,
+    "median_other": -0.248,
+    "selectivity": -0.268,
+    "p_one_sided": 6.3813010901003325e-06
+   }
+  }
+ }
+}
