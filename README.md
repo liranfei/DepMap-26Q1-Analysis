@@ -10,6 +10,10 @@ Version 1 of this repository (scripts `01_*` to `23_*`, now in `legacy_v1/`) pro
 
 `prespecified_plan_snap23.md` records eight checks of a single candidate, SNAP23 in the bowel lineage, **with their pass criteria written down before the analyses were run**. The scripts `src/snap23_validation.py`, `src/snap23_posthoc.py`, `src/make_table_s11.py` and `src/figs_snap23.py` reproduce them and write `results/snap23_validation_summary.json`, `results/snap23_codependency_all_genes.csv`, `results/S11_Table.xlsx` and `figures/Fig13.tif`. All eight checks were met; the analyses that failed or were inconclusive are reported as well (the pair is not supported in the RNAi screens, q = 0.32). Apart from the Project Score comparison, these checks use the same CRISPR screens as the primary analysis, so they are checks of internal consistency and of mechanism, not independent replication. Anything computed after the plan was written is labelled post hoc in the summary file. This step additionally requires `OmicsExpressionTPMLogp1HumanProteinCodingGenesStranded.csv` of the DepMap 26Q1 release in `DEPMAP_DIR`, and both `SANGER_DIR` and `RNAI_DIR`.
 
+## Hodges-Lehmann sensitivity analysis (added in version 2.2.0)
+
+`src/hodges_lehmann.py` computes the exact median of all target-minus-other pairwise differences for each of the 9,805 pairs with q < 0.05 in the primary analysis. It compares the original median-difference rule with an HL rule using the same -0.5 threshold and, separately, a post hoc quantile-matched threshold. The primary median-based rule is unchanged. Outputs are `results/hodges_lehmann_significant_pairs.csv`, two JSON summaries, and an additional sheet in `figures/supporting_information/S9_Table.xlsx`. The quantile-matched threshold is descriptive and was chosen after inspecting the data.
+
 ## Analysis in brief
 
 1. Merge DepMap 26Q1 `CRISPRGeneEffect` (saved as `gene_effect.csv`) with `Model.csv` on ModelID (all 1,208 IDs must match); remove models with `OncotreePrimaryDisease == "Non-Cancerous"`.
@@ -49,6 +53,7 @@ Downstream analyses were cross-checked with a second implementation (`src/cross_
 | `src/run_pipeline.py` | merge, cohort, testing, BH, candidate selection |
 | `src/genome_perm.py` | fast genome-wide permutation test (validated against `run_pipeline.py`) |
 | `src/sens_primary.py`, `src/ttest_alt.py` | multiplicity, threshold, top-N, minimum-n sensitivity; Student t-test screen |
+| `src/hodges_lehmann.py` | exact Hodges-Lehmann sensitivity analysis of all significant pairs; fixed and post hoc matched thresholds |
 | `src/part2_depmap.py`, `src/part3_tcga_enrich.py` | genotype, TP53-MDM2, batch/library, co-dependency, subsampling, subtypes; TCGA and enrichment |
 | `src/cross_check.py` | second implementation of the downstream analyses |
 | `src/sanger_disjoint.py`, `src/figs_sanger_disjoint.py` | separated Broad/Sanger replication (Fig 12, S7 Table) |

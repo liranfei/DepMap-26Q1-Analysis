@@ -1,6 +1,6 @@
 {
   "title": "Analysis code and results for lineage-selective cancer dependencies from DepMap 26Q1",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "creators": [
     {
       "name": "Li, Ranfei",
@@ -15,7 +15,7 @@
       "affiliation": "Zaozhuang Mining Group Central Hospital, Zaozhuang, China"
     }
   ],
-  "description": "Code, intermediate results, figures and supporting tables for the manuscript 'A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data'. The current analysis uses DepMap 26Q1, 1,192 cancer cell lines and 467,091 gene-lineage tests, yielding 94 prioritised pairs. Input datasets are public but are not included in this archive; download instructions and input-file checksums are in the README. Version 2.1.0 adds a focused validation of one candidate (SNAP23 in the bowel lineage): eight checks whose pass criteria were written down before they were run (prespecified_plan_snap23.md), producing Fig 13 and S11 Table.",
+  "description": "Code, intermediate results, figures and supporting tables for the manuscript 'A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data'. The current analysis uses DepMap 26Q1, 1,192 cancer cell lines and 467,091 gene-lineage tests, yielding 94 prioritised pairs. Input datasets are public but are not included in this archive; download instructions and input-file checksums are in the README. Version 2.2.0 adds a Hodges-Lehmann sensitivity analysis of all 9,805 significant gene-lineage pairs and an extended S9 Table. The median-based prioritisation rule remains the primary analysis; the matched HL threshold is post hoc.",
   "keywords": [
     "DepMap",
     "CRISPR-Cas9",

@@ -1,6 +1,6 @@
 """Supporting tables S6 (26Q1 candidates in 22Q1), S9 (alternative effect-size measures) and S10 (growth pattern and model type) as xlsx.
 Run after cross_release.py, benchmark_metrics.py, growth_confound.py and revision3_checks.py (which adds the BH q-values of the growth-adjusted models)."""
-import os, pandas as pd, numpy as np
+import os, json, pandas as pd, numpy as np
 from statsmodels.stats.multitest import multipletests
 import run_pipeline as rp
 D = os.environ.get("DEPMAP_DIR", "."); O = os.environ.get("RESULTS_DIR", "results") + "/"; OUT = os.environ.get("FIG_DIR", "figures") + "/supporting_information/"; os.makedirs(OUT, exist_ok=True)
@@ -19,7 +19,16 @@ S9 = F[["Gene", "Lineage", "n_target", "Chronos_median", "Selectivity"]].merge(B
 S9.insert(0, "Gene_symbol", sym(S9.Gene))
 S9 = S9[["Gene_symbol", "Gene", "Lineage", "n_target", "Chronos_median", "Selectivity", "mean_diff", "q_value", "p_t2", "q_t", "cohens_d", "auc_lower"]]
 S9.columns = ["Gene_symbol", "Gene", "Lineage", "n_target", "Median Chronos", "Selectivity (diff. medians)", "Difference in means", "q (MWU, BH)", "p (two-tailed t)", "q (BH, t-test, full family)", "Cohen's d", "AUC (target lower)"]
-with pd.ExcelWriter(OUT + "S9_Table.xlsx") as w: S9.to_excel(w, index=False, sheet_name="Alternative measures")
+with pd.ExcelWriter(OUT + "S9_Table.xlsx") as w:
+    S9.to_excel(w, index=False, sheet_name="Alternative measures")
+    HL = pd.read_csv(O + "hodges_lehmann_significant_pairs.csv")
+    with open(O + "hodges_lehmann_matched.json") as f:
+        threshold = float(json.load(f)["matched_threshold"])
+    HL["Original median rule"] = (HL.Chronos_median < -1) & (HL.Selectivity_median_diff < -0.5)
+    HL["HL rule, same threshold"] = (HL.Chronos_median < -1) & (HL.Selectivity_HL < -0.5)
+    HL["HL rule, post hoc matched threshold"] = (HL.Chronos_median < -1) & (HL.Selectivity_HL < threshold)
+    HL["HL minus median difference"] = HL.Selectivity_HL - HL.Selectivity_median_diff
+    HL.to_excel(w, index=False, sheet_name="HL sensitivity all significant")
 
 # ---- S10 (post-selection diagnostics of the 94 prioritised pairs)
 G = pd.read_csv(O + "growth_confound_pairs.csv")

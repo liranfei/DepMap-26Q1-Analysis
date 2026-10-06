@@ -1,0 +1,12 @@
+{
+ "n_significant_pairs": 9805,
+ "n_prioritised_median_rule": 94,
+ "n_prioritised_HL_rule_same_threshold": 68,
+ "overlap": 65,
+ "only_median_rule": 29,
+ "only_HL_rule": 3,
+ "spearman_median_vs_HL": 0.9604417779571486,
+ "pearson_median_vs_HL": 0.9775067168179857,
+ "median_abs_difference": 0.008859817671516279,
+ "HL_posthoc_quantile_matched_threshold": -0.4523606852304229
+}

@@ -26,6 +26,7 @@ $PY part3_tcga_enrich.py                                                        
 $PY kirc_paired.py
 $PY cross_check.py; $PY cohort_stats.py; $PY batch_composition.py; $PY data_description.py
 $PY benchmark_metrics.py                                                                                 # Table 3, S9 Table
+$PY hodges_lehmann.py                                                                                  # HL sensitivity analysis and S9 Table extension
 $PY revision2_checks.py                                                                                  # co-dependency, restricted enrichment background, RCC subsets, subsampling
 $PY growth_confound.py                                                                                   # culture-format checks (S10 Table)
 $PY revision3_checks.py                                                                                  # MDM2 without TP53 variant, co-dependency null, split-half reference, BH for growth models
