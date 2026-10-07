@@ -1,0 +1,1193 @@
+DepMap_ID,med_CE,sd_CE,q10,lineage,disease,growth
+ACH-000029,-1.0421013,0.6191885,-0.5477497,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000030,-1.0452888,0.6968685,-0.5201151,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000074,-1.0072966,0.68851167,-0.5268105,myeloid,Myeloproliferative Neoplasms,Adherent
+ACH-000090,-0.9732831,0.6705302,-0.5383403,prostate,Prostate Adenocarcinoma,Adherent
+ACH-000093,-0.9425594,0.67841405,-0.5233029,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000103,-0.93265545,0.7878321,-0.50922,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000118,-1.0511318,0.6721666,-0.59895957,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000155,-0.93931454,0.77638406,-0.4621873,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000164,-0.98380095,0.6806589,-0.45526105,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000200,-1.0019294,0.70879287,-0.5419087,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000247,-0.97244215,0.6808514,-0.5420049,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000261,-0.9936493,0.6698298,-0.43996808,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000262,-0.97317123,0.6676535,-0.54173917,kidney,Renal Cell Carcinoma,Adherent
+ACH-000307,-0.9889912,0.65770626,-0.49922404,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000332,-1.0479016,0.6562098,-0.49137473,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000352,-0.99844986,0.6765035,-0.49390295,breast,Invasive Breast Carcinoma,Adherent
+ACH-000383,-0.90257335,0.78574616,-0.46346018,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000424,-1.008362,0.7494422,-0.53829837,bone,Ewing Sarcoma,Adherent
+ACH-000476,-0.9760785,0.68002605,-0.48830023,liver,Hepatocellular Carcinoma,Adherent
+ACH-000480,-0.99104476,0.6692197,-0.5358697,liver,Hepatocellular Carcinoma,Adherent
+ACH-000493,-0.9752767,0.6631971,-0.49603704,liver,Hepatocellular Carcinoma,Adherent
+ACH-000507,-1.0222028,0.6542884,-0.56761986,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000518,-1.0516213,0.6894084,-0.5418879,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000524,-0.9862402,0.76302564,-0.44221142,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000525,-1.0471698,0.69552743,-0.44283342,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000545,-0.9871022,0.64556783,-0.5034478,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000552,-0.9865159,0.78904945,-0.4925874,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000563,-0.953844,0.6823427,-0.58537143,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000579,-0.9500569,0.6957334,-0.50639933,skin,Melanoma,Adherent
+ACH-000595,-1.0127726,0.7529184,-0.46954426,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000618,-1.0345601,0.66406727,-0.5397409,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000639,-1.0558704,0.6455889,-0.5858713,lung,Lung Neuroendocrine Tumor,Mixed
+ACH-000648,-0.9634253,0.69993657,-0.5304148,pleura,Pleural Mesothelioma,Adherent
+ACH-000652,-0.9352039,0.74434716,-0.46629882,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000694,-0.99535763,0.6911377,-0.5137928,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000697,-0.98940134,0.6711364,-0.57397145,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000698,-1.0039284,0.66155887,-0.5418749,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000702,-0.9595179,0.6930241,-0.47243282,lymphoid,Hodgkin Lymphoma,Suspension
+ACH-000706,-1.0104052,0.65930754,-0.5060244,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000717,-0.9705963,0.69986,-0.50464666,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000739,-0.99198186,0.6917161,-0.5150693,liver,Hepatoblastoma,Adherent
+ACH-000791,-0.9912456,0.68145204,-0.4571237,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000834,-1.0056865,0.6584091,-0.56169456,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000876,-0.91967237,0.8341287,-0.47298923,breast,Invasive Breast Carcinoma,Adherent
+ACH-000884,-0.98645216,0.63622546,-0.51957214,skin,Melanoma,Adherent
+ACH-000894,-0.92699707,0.8043593,-0.4651687,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000928,-0.972032,0.69758916,-0.5831044,uterus,Endometrial Carcinoma,Adherent
+ACH-000936,-0.94328797,0.7029455,-0.49635512,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000944,-0.9953534,0.6498258,-0.5633084,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000946,-1.0067948,0.6386912,-0.5266717,uterus,Endometrial Carcinoma,Adherent
+ACH-000953,-0.92161494,0.708581,-0.48567045,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-000958,-1.0135796,0.7071926,-0.50636387,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-000981,-0.8837701,0.7421842,-0.43088758,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-001050,-0.997394,0.68392545,-0.52624065,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001061,-1.0649234,0.6553428,-0.57132953,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001099,-1.0118122,0.679348,-0.5788838,soft tissue,Rhabdoid Cancer,Adherent
+ACH-001119,-0.9487119,0.69693273,-0.52911717,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-001164,-0.983146,0.67926544,-0.5606016,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Adherent
+ACH-001193,-1.0031118,0.7076748,-0.5071433,bone,Ewing Sarcoma,Adherent
+ACH-001211,-1.0120322,0.6704262,-0.5450408,soft tissue,Rhabdoid Cancer,Adherent
+ACH-001275,-1.0090487,0.6615994,-0.54477763,bone,Osteosarcoma,Adherent
+ACH-001349,-1.0131656,0.69580275,-0.5439253,cns/brain,Embryonal Tumor,Adherent
+ACH-001353,-0.9563136,0.6695065,-0.49186978,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001354,-0.976504,0.6880677,-0.5196974,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001374,-1.0242081,0.67821276,-0.5340483,ovary/fallopian tube,Ovarian Germ Cell Tumor,Adherent
+ACH-001386,-1.0182993,0.6780526,-0.4655317,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-001392,-0.9971193,0.66880804,-0.5341364,breast,Invasive Breast Carcinoma,Adherent
+ACH-001393,-0.9836296,0.7052657,-0.5099773,breast,Invasive Breast Carcinoma,Suspension
+ACH-001396,-0.85013837,0.7923144,-0.50064063,breast,Invasive Breast Carcinoma,Adherent
+ACH-001539,-0.9836371,0.6888958,-0.5423365,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001551,-0.9782185,0.637722,-0.5547925,skin,Merkel Cell Carcinoma,Adherent
+ACH-001566,-0.968122,0.6661949,-0.48097628,skin,Melanoma,Adherent
+ACH-001607,-0.9166899,0.70949274,-0.48112166,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-001610,-0.9628948,0.67193526,-0.52509135,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001642,-0.99515706,0.68786997,-0.5332666,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-001676,-1.0126455,0.6652759,-0.508076,head and neck,"Head and Neck Carcinoma, Other",Suspension
+ACH-001719,-0.96606284,0.7042344,-0.42919582,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001862,-0.9371682,0.69189584,-0.49666527,ampulla of vater,Ampullary Carcinoma,Adherent
+ACH-001992,-1.0173473,0.6269708,-0.55601704,pleura,Pleural Mesothelioma,Adherent
+ACH-002021,-0.9882389,0.71224296,-0.53681076,uterus,Gestational Trophoblastic Disease,Adherent
+ACH-002059,-1.0001495,0.64768565,-0.55882335,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-002105,-1.010386,0.712285,-0.5447246,bone,Ewing Sarcoma,Unknown
+ACH-002202,-0.9821321,0.7322078,-0.58691365,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-002249,-0.99771166,0.7082864,-0.5198701,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002282,-0.9774016,0.7334722,-0.54073167,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002470,-1.0249674,0.7036399,-0.553126,bone,Osteosarcoma,Adherent
+ACH-002471,-1.0124489,0.6809223,-0.528966,bone,Osteosarcoma,Adherent
+ACH-002528,-0.9649679,0.69256586,-0.48427823,kidney,Renal Cell Carcinoma,Adherent
+ACH-002647,-0.98764217,0.6824462,-0.53518486,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-002669,-0.9626162,0.66521746,-0.50123847,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002778,-0.9669144,0.73185664,-0.5067838,bone,Osteosarcoma,Adherent
+ACH-003590,-1.1983943,0.6917596,-0.67774355,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000019,-0.98924786,0.7259879,-0.57579935,breast,Invasive Breast Carcinoma,Adherent
+ACH-000095,-0.99255604,0.66375214,-0.51995677,cns/brain,Embryonal Tumor,Mixed
+ACH-000100,-0.9615083,0.66346455,-0.51412994,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-000108,-0.99991775,0.71759593,-0.47769067,pancreas,Adenosquamous Carcinoma of the Pancreas,Adherent
+ACH-000143,-0.97564673,0.65671635,-0.53610307,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000148,-0.96932125,0.7119213,-0.47706586,breast,Invasive Breast Carcinoma,Adherent
+ACH-000159,-0.97109884,0.6966369,-0.44414803,kidney,Renal Cell Carcinoma,Adherent
+ACH-000176,-0.9099574,0.8442896,-0.44171998,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000190,-0.9771324,0.6682538,-0.539808,myeloid,Acute Myeloid Leukemia,Adherent
+ACH-000228,-0.9764462,0.70973104,-0.4827913,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000234,-0.99541634,0.70575774,-0.48056048,kidney,Renal Cell Carcinoma,Adherent
+ACH-000250,-1.0003927,0.66897136,-0.4825303,kidney,Renal Cell Carcinoma,Adherent
+ACH-000279,-0.98419267,0.7064858,-0.47986042,bone,Ewing Sarcoma,Adherent
+ACH-000281,-0.92915004,0.6760053,-0.5233512,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000295,-0.98426783,0.6819324,-0.53584504,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000304,-0.9640141,0.6988434,-0.5192175,skin,Melanoma,Adherent
+ACH-000322,-0.9786286,0.6900262,-0.5705133,skin,Melanoma,Adherent
+ACH-000354,-0.9563383,0.78096306,-0.50892043,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000366,-0.9967256,0.71820366,-0.4745584,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000390,-0.9378949,0.70947325,-0.46260655,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000395,-0.9486667,0.6835756,-0.49800617,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000401,-0.99247694,0.66800165,-0.55732286,skin,Melanoma,Adherent
+ACH-000402,-1.0146979,0.69445246,-0.5197323,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000403,-0.9402503,0.7151082,-0.4647231,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000448,-0.965017,0.6671238,-0.46968144,lung,Non-Small Cell Lung Cancer,Mixed
+ACH-000454,-0.95979816,0.6716175,-0.5387563,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000460,-1.0404148,0.6204922,-0.59654087,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000461,-0.9636193,0.6844966,-0.5102487,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-000485,-0.9488663,0.6625643,-0.52202666,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000488,-1.0655919,0.62737113,-0.591367,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000569,-0.9432657,0.67999655,-0.5488477,pleura,Pleural Mesothelioma,Adherent
+ACH-000580,-0.97969013,0.710275,-0.5112617,skin,Melanoma,Adherent
+ACH-000583,-1.0822229,0.6855564,-0.6060122,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-000584,-0.9896946,0.71584326,-0.49168268,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000591,-0.9620131,0.6801922,-0.49140626,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000596,-0.96889055,0.67434484,-0.5428758,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000602,-1.0159324,0.6871419,-0.51253444,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000604,-0.95851487,0.69708127,-0.56310534,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000608,-0.844544,0.84877706,-0.3879632,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000616,-0.9628679,0.648637,-0.4954422,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000630,-1.0357922,0.6506916,-0.567639,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000660,-1.0201983,0.75787175,-0.6241539,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000666,-0.9725796,0.730153,-0.54473674,lung,Non-Small Cell Lung Cancer,Suspension
+ACH-000693,-1.047956,0.64715636,-0.5457176,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000719,-0.9828776,0.7416093,-0.49568892,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000732,-0.9674364,0.66210705,-0.53065205,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000749,-1.0166104,0.6762812,-0.49077812,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000763,-0.9698391,0.7108258,-0.54210526,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000767,-0.9461973,0.7123363,-0.48165694,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000841,-0.94890016,0.68857855,-0.49584773,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000910,-0.9727748,0.7541916,-0.529275,breast,Invasive Breast Carcinoma,Adherent
+ACH-000959,-1.0044315,0.66478896,-0.53762215,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000965,-1.0595664,0.7084903,-0.56157154,uterus,Endometrial Carcinoma,Adherent
+ACH-000978,-1.0003426,0.68539494,-0.5005067,uterus,Endometrial Carcinoma,Adherent
+ACH-000986,-1.0160276,0.6481673,-0.5547117,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000993,-0.99572545,0.69589376,-0.53610635,uterus,Endometrial Carcinoma,Adherent
+ACH-001020,-0.9843703,0.6807554,-0.54001004,cns/brain,Embryonal Tumor,Adherent
+ACH-001128,-0.9430809,0.7010076,-0.55424917,soft tissue,Rhabdoid Cancer,Adherent
+ACH-001318,-0.9864418,0.64991635,-0.51659673,liver,Hepatocellular Carcinoma,Adherent
+ACH-001376,-1.0069922,0.6865021,-0.5685168,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001415,-0.9054455,0.7664257,-0.46211803,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001431,-0.9975756,0.6652559,-0.5132429,bone,Ewing Sarcoma,Adherent
+ACH-001511,-0.97786057,0.67830944,-0.46969694,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001530,-0.98139507,0.6908835,-0.52731407,uterus,Gestational Trophoblastic Disease,Adherent
+ACH-001543,-0.9776941,0.67791533,-0.5287876,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001549,-0.99046636,0.72342765,-0.43393978,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-001624,-0.92580724,0.68829,-0.5179276,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001630,-1.0330175,0.66620916,-0.5495705,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001690,-1.0048594,0.64406466,-0.531933,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001694,-1.0781896,0.6337977,-0.5499765,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001707,-0.9210159,0.6954475,-0.5463487,lymphoid,Mature B-Cell Neoplasms,Adherent
+ACH-001750,-0.9860748,0.6469408,-0.5307473,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001850,-0.9769381,0.68292433,-0.5046745,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-001853,-0.9257372,0.65889835,-0.5048007,liver,Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma,Adherent
+ACH-001857,-0.9578566,0.65043896,-0.5306773,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001863,-0.93956554,0.7096229,-0.4924997,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001960,-0.9869377,0.64856285,-0.49268153,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-002035,-0.9702987,0.6564898,-0.5506221,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002040,-0.9693095,0.72648996,-0.46933383,vulva/vagina,Mucosal Melanoma of the Vulva/Vagina,Adherent
+ACH-002052,-0.93240243,0.70156515,-0.45703134,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-002109,-1.0106387,0.7526123,-0.5057455,bone,Ewing Sarcoma,Unknown
+ACH-002110,-1.0301815,0.7245385,-0.51837814,bone,Ewing Sarcoma,Unknown
+ACH-002160,-1.0154314,0.7315928,-0.528068,bone,Ewing Sarcoma,Adherent
+ACH-002215,-0.9761915,0.67920864,-0.5757537,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002234,-0.9463753,0.74363136,-0.5852896,head and neck,"Head and Neck Carcinoma, Other",Adherent
+ACH-002280,-1.0033417,0.7404377,-0.55693173,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002284,-0.9809164,0.73097336,-0.51135695,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002295,-0.9743506,0.7701199,-0.43556732,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002523,-1.001052,0.70763355,-0.45257473,liver,Hepatocellular Carcinoma,Adherent
+ACH-002681,-1.0010455,0.6835257,-0.44820175,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-002706,-1.0576172,0.63671345,-0.54885185,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-002847,-1.0347537,0.69725275,-0.47429612,skin,Melanoma,Adherent
+ACH-000028,-1.0071725,0.65044767,-0.57371604,breast,Invasive Breast Carcinoma,Adherent
+ACH-000106,-0.9542713,0.6696062,-0.49751866,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000123,-1.0251238,0.63189906,-0.59040695,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000124,-0.98763275,0.77100855,-0.60724336,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000146,-0.9636675,0.77408576,-0.439941,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000152,-0.9777298,0.6758577,-0.45440742,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000160,-1.0049714,0.6635279,-0.607222,cns/brain,Embryonal Tumor,Adherent
+ACH-000204,-0.97772384,0.7218782,-0.5787009,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000208,-1.0107646,0.67042774,-0.56029266,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000217,-0.9905593,0.7030077,-0.49035951,liver,Hepatocellular Carcinoma,Adherent
+ACH-000232,-1.0455482,0.6605761,-0.548098,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000242,-0.98838955,0.69662505,-0.5639014,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000243,-1.1155243,0.7185482,-0.5269151,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000273,-1.0384402,0.69010717,-0.52205956,cns/brain,Diffuse Glioma,Adherent
+ACH-000310,-0.9394504,0.7633596,-0.50561124,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000337,-0.95413196,0.7020941,-0.5035523,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000359,-0.94302154,0.69514257,-0.47205827,bone,Osteosarcoma,Adherent
+ACH-000376,-1.0870044,0.7118595,-0.53179985,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000396,-1.0089943,0.66611,-0.5411598,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000404,-0.96067625,0.67464525,-0.50814927,skin,Melanoma,Adherent
+ACH-000421,-1.0346878,0.71638924,-0.4738961,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000430,-1.0261208,0.7195807,-0.55278504,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000437,-0.9958313,0.720761,-0.4574943,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000475,-1.0023212,0.675278,-0.5170293,liver,Hepatocellular Carcinoma,Adherent
+ACH-000484,-0.9182576,0.7422145,-0.46355337,kidney,Renal Cell Carcinoma,Adherent
+ACH-000495,-0.98100865,0.6777308,-0.48525178,kidney,Renal Cell Carcinoma,Adherent
+ACH-000499,-1.0040264,0.6602446,-0.533428,bone,Ewing Sarcoma,Adherent
+ACH-000514,-0.9274296,0.7813561,-0.44870418,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000515,-0.96916467,0.7215228,-0.56401515,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000537,-0.9926313,0.67475355,-0.52231354,liver,Hepatocellular Carcinoma,Adherent
+ACH-000562,-0.9439357,0.7652557,-0.5642092,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000567,-0.9732641,0.65563387,-0.58979553,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000570,-1.0089371,0.6695535,-0.4912601,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000573,-1.0126328,0.7213403,-0.4847874,breast,Invasive Breast Carcinoma,Mixed
+ACH-000638,-0.96934456,0.62993795,-0.5511764,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000673,-1.0004504,0.72249,-0.4546335,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000738,-1.0599935,0.68519515,-0.52667826,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000747,-1.0343429,0.6366082,-0.57344806,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000766,-0.97186935,0.66850317,-0.479297,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000802,-1.0191168,0.6475285,-0.53285694,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000809,-1.042001,0.73352724,-0.52908474,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000811,-0.9247611,0.775649,-0.38398457,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000849,-1.0048563,0.68773806,-0.5068862,breast,Invasive Breast Carcinoma,Adherent
+ACH-000911,-1.0551586,0.65360445,-0.5519101,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000915,-0.9946891,0.68317926,-0.4980059,skin,Melanoma,Adherent
+ACH-000932,-1.0075327,0.696788,-0.5447185,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-000934,-0.7125188,1.0942823,-0.4203277,breast,Invasive Breast Carcinoma,Adherent
+ACH-000939,-1.0160795,0.6924411,-0.49581242,uterus,Uterine Sarcoma/Mesenchymal,Adherent
+ACH-000943,-1.1322322,0.6996363,-0.6223796,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000963,-0.95757467,0.79980755,-0.54127145,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000973,-0.9937063,0.66746795,-0.46085712,bladder/urinary tract,Urethral Cancer,Adherent
+ACH-000980,-1.0924329,0.72472525,-0.4816133,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000988,-1.0302147,0.7235899,-0.47181016,uterus,Endometrial Carcinoma,Adherent
+ACH-001001,-1.0108379,0.6657902,-0.50214607,bone,Osteosarcoma,Adherent
+ACH-001111,-1.000138,0.6884081,-0.55064374,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-001183,-1.003827,0.6610456,-0.51658124,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001239,-0.99868006,0.6639268,-0.5286077,skin,Melanoma,Adherent
+ACH-001385,-1.0337418,0.6363175,-0.56629604,head and neck,"Head and Neck Carcinoma, Other",Adherent
+ACH-001398,-1.0071,0.68651813,-0.5295755,kidney,Renal Cell Carcinoma,Adherent
+ACH-001399,-0.9650967,0.75388306,-0.48386163,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001403,-0.901869,0.7712839,-0.4172422,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001413,-0.9721134,0.63292164,-0.53564125,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001433,-0.9553088,0.6269191,-0.47364154,soft tissue,Epithelioid Sarcoma,Adherent
+ACH-001443,-0.9847868,0.670494,-0.46400023,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-001460,-0.956038,0.66462153,-0.5387146,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-001496,-1.0411505,0.74752545,-0.46669844,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-001498,-0.9750359,0.69702107,-0.56319404,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001515,-0.95709515,0.6670126,-0.44823426,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001522,-1.0015914,0.668477,-0.5004115,skin,Melanoma,Adherent
+ACH-001547,-0.9788142,0.6694829,-0.5144597,pleura,Pleural Mesothelioma,Adherent
+ACH-001556,-0.9690868,0.6297026,-0.5095848,pleura,Pleural Mesothelioma,Adherent
+ACH-001613,-0.9431884,0.69281644,-0.59315926,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001616,-1.0389904,0.6939891,-0.61605537,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001641,-1.0032867,0.65129507,-0.50677514,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001643,-0.99108016,0.67415166,-0.5410762,bone,Ewing Sarcoma,Adherent
+ACH-001711,-0.9362702,0.7124653,-0.5446007,cns/brain,Embryonal Tumor,Adherent
+ACH-001786,-0.95287234,0.7255442,-0.55460095,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001836,-0.94188076,0.6583908,-0.48138073,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-002001,-1.0077009,0.650245,-0.5719837,skin,Melanoma,Adherent
+ACH-002019,-0.98622656,0.6775941,-0.44698802,cervix,Glassy Cell Carcinoma of the Cervix,Adherent
+ACH-002186,-0.9588102,0.73734933,-0.54667383,pancreas,Pancreatic Adenocarcinoma,Unknown
+ACH-002269,-0.96963656,0.72217536,-0.51363426,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-002285,-1.039566,0.7772188,-0.54921496,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002294,-0.98745894,0.7207874,-0.51431704,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002458,-0.97608584,0.6788553,-0.57177377,skin,Melanoma,Adherent
+ACH-002478,-0.96513987,0.665961,-0.54711497,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002485,-0.97926337,0.66256034,-0.5527919,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002510,-0.98420775,0.6996192,-0.5308222,skin,Melanoma,Adherent
+ACH-002544,-0.97604847,0.69676906,-0.5365205,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-002680,-0.9818906,0.68907815,-0.45041734,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-002801,-0.9397948,0.71536756,-0.4695301,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-002834,-0.9651209,0.7107784,-0.4888388,bone,Osteosarcoma,Adherent
+ACH-003185,-0.95280594,0.6781605,-0.48344278,bone,Osteosarcoma,Mixed
+ACH-000024,-1.0076693,0.7320561,-0.5256883,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000025,-0.9951173,0.66535205,-0.5084682,cns/brain,Meningothelial Tumor,Mixed
+ACH-000026,-0.9431232,0.6060354,-0.47446474,bladder/urinary tract,Bladder Urothelial Carcinoma,Mixed
+ACH-000048,-1.0245199,0.68305826,-0.5590373,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000053,-1.0556906,0.7312189,-0.46858546,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000054,-1.0012412,0.65864915,-0.49903372,soft tissue,Fibrosarcoma,Adherent
+ACH-000092,-0.94877857,0.68919605,-0.45281047,pleura,Pleural Mesothelioma,Adherent
+ACH-000141,-0.9440569,0.7161724,-0.47862232,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-000144,-0.87784475,0.8811594,-0.496868,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000163,-0.9845934,0.7101425,-0.4896942,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000188,-0.9646952,0.639821,-0.5070509,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000203,-1.0327593,0.6650128,-0.54839176,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000213,-0.9371982,0.7653762,-0.537713,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000216,-0.99737763,0.698611,-0.48615098,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000231,-0.9856679,0.68794274,-0.44937742,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000251,-0.983842,0.70133144,-0.54530513,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000252,-0.9691901,0.74835443,-0.5234847,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000256,-0.94781905,0.66192544,-0.4752006,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000259,-1.078762,0.66466814,-0.58259565,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000320,-1.0363994,0.7220507,-0.49418983,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000334,-0.94688123,0.75232965,-0.48705265,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000370,-1.0188597,0.6964753,-0.5415524,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000391,-1.0260962,0.7198911,-0.49421692,bone,Ewing Sarcoma,Adherent
+ACH-000398,-0.9549949,0.67543143,-0.5615753,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000416,-1.0407791,0.66399163,-0.45959035,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000426,-0.94621974,0.7474274,-0.51962,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000441,-0.99913603,0.6587488,-0.5434245,skin,Melanoma,Adherent
+ACH-000455,-1.0083086,0.67944777,-0.48844045,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000470,-0.9353633,0.7278451,-0.49110332,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000472,-1.022974,0.7696361,-0.46543574,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000490,-1.0126525,0.647178,-0.5236513,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-000512,-0.9516605,0.68721235,-0.54014945,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000528,-1.0958132,0.6417233,-0.5750143,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000621,-0.8942557,0.7846069,-0.41306487,breast,Invasive Breast Carcinoma,Adherent
+ACH-000637,-1.0088391,0.6741278,-0.49009508,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000653,-0.9739475,0.6617784,-0.5239961,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000683,-0.9437771,0.77864313,-0.4433465,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000696,-1.2185771,0.7376718,-0.5430225,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000718,-0.91398233,0.68321484,-0.4834602,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000753,-1.0244013,0.70087445,-0.53500855,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000760,-1.0067246,0.68736416,-0.45891243,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000771,-1.0243008,0.6490655,-0.57870716,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000796,-0.94491637,0.7044437,-0.49043587,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000827,-1.0630872,0.6489031,-0.5063329,skin,Melanoma,Adherent
+ACH-000843,-1.0272369,0.7101657,-0.52355254,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000848,-1.0254347,0.6584168,-0.5391775,liver,Hepatocellular Carcinoma,Adherent
+ACH-000853,-1.0262672,0.6325443,-0.5558318,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000865,-1.0714264,0.68880385,-0.48762828,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000900,-1.0383173,0.65903836,-0.6125588,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000907,-0.96832925,0.7153826,-0.48329154,kidney,Renal Cell Carcinoma,Adherent
+ACH-000920,-1.0216732,0.6805872,-0.5388324,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000926,-0.9620143,0.7176788,-0.50482434,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000929,-1.0041811,0.6660943,-0.5292401,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000979,-0.96237826,0.7303475,-0.51048946,prostate,Prostate Adenocarcinoma,Adherent
+ACH-001028,-1.0147197,0.7315397,-0.48389155,cns/brain,Embryonal Tumor,Mixed
+ACH-001038,-0.98998773,0.6844833,-0.48246118,bone,Ewing Sarcoma,Mixed
+ACH-001075,-0.98977244,0.6466814,-0.5251937,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-001172,-1.0842806,0.6372849,-0.53889817,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001190,-1.0391434,0.71064395,-0.48608503,skin,Melanoma,Adherent
+ACH-001331,-1.0806962,0.73606855,-0.54140025,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001332,-0.9581852,0.6871594,-0.52506745,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001344,-1.053512,0.67109275,-0.57130194,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001370,-0.9721669,0.6234925,-0.5332587,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001379,-0.9778779,0.64374846,-0.53055805,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001481,-0.98771775,0.6675133,-0.5308427,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001484,-0.9706165,0.67678416,-0.5625095,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001495,-0.9311479,0.68174374,-0.48242912,uterus,Endometrial Carcinoma,Adherent
+ACH-001502,-1.0267634,0.6723126,-0.52853644,testis,Non-Seminomatous Germ Cell Tumor,Adherent
+ACH-001513,-0.9033264,0.75897926,-0.41236714,cervix,Cervical Adenocarcinoma,Adherent
+ACH-001517,-0.88938236,0.8024457,-0.42223564,uterus,Endometrial Carcinoma,Adherent
+ACH-001525,-0.95571303,0.65821815,-0.53012854,cervix,Cervical Adenocarcinoma,Adherent
+ACH-001528,-1.0055892,0.62142295,-0.57699686,thyroid,Well-Differentiated Thyroid Cancer,Adherent
+ACH-001533,-0.99335504,0.65191996,-0.5641046,lymphoid,Mature B-Cell Neoplasms,Adherent
+ACH-001559,-0.92728275,0.6768667,-0.5230646,pleura,Pleural Mesothelioma,Adherent
+ACH-001577,-0.936564,0.69134897,-0.53762835,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001608,-0.9827168,0.68804324,-0.4864172,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001650,-1.0281804,0.66267335,-0.5135758,cervix,Cervical Adenocarcinoma,Adherent
+ACH-001653,-0.99778634,0.6324754,-0.50620687,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-001841,-1.0465728,0.62047243,-0.510475,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001861,-0.9557256,0.68178856,-0.5453419,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-002069,-0.9890192,0.6921773,-0.48392013,bone,Osteosarcoma,Adherent
+ACH-002156,-0.9550184,0.7485635,-0.5070438,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002198,-0.97975516,0.7035458,-0.5623677,other,Extra Gonadal Germ Cell Tumor,Unknown
+ACH-002212,-0.9871627,0.70111704,-0.51878625,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002305,-0.98461473,0.7025656,-0.58408576,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002499,-0.9261378,0.77651405,-0.46281266,breast,Invasive Breast Carcinoma,Adherent
+ACH-002664,-1.031503,0.67116016,-0.49844387,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002677,-1.0166019,0.66427505,-0.6072545,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002705,-0.9779815,0.6637811,-0.48338726,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-002709,-1.0224681,0.6840035,-0.51440793,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-002922,-1.0120008,0.6373403,-0.5211013,peripheral nervous system,Neuroblastoma,Adherent
+ACH-002923,-1.0563228,0.67390645,-0.49706033,peripheral nervous system,Neuroblastoma,Adherent
+ACH-003065,-1.0282224,0.74833584,-0.51123184,cns/brain,Embryonal Tumor,Adherent
+ACH-000004,-0.9926361,0.6877484,-0.5355207,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000039,-0.99238664,0.6867211,-0.5300371,bone,Ewing Sarcoma,Adherent
+ACH-000086,-0.9952111,0.6441018,-0.4916492,pleura,Pleural Mesothelioma,Adherent
+ACH-000096,-0.9559615,0.6732244,-0.5487629,kidney,Rhabdoid Cancer,Adherent
+ACH-000111,-0.99507964,0.75457644,-0.56228966,breast,Invasive Breast Carcinoma,Mixed
+ACH-000128,-0.9757266,0.68228316,-0.50283825,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000137,-1.0481815,0.719356,-0.46363622,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000197,-0.9850783,0.677043,-0.52220863,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-000219,-1.1461277,0.6840165,-0.66470915,skin,Melanoma,Adherent
+ACH-000248,-0.99940526,0.70914173,-0.5349609,breast,Invasive Breast Carcinoma,Adherent
+ACH-000249,-0.94972444,0.7157656,-0.54490983,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000266,-1.0233887,0.7391205,-0.43585294,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000286,-0.942933,0.67707175,-0.53380245,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000299,-1.072887,0.6827463,-0.6029881,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000318,-1.0208468,0.69728523,-0.508221,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000339,-1.0206509,0.6523131,-0.4976475,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000355,-0.94757235,0.78094715,-0.5387824,lung,Lung Neuroendocrine Tumor,Mixed
+ACH-000361,-0.9585216,0.6756034,-0.52661306,liver,Hepatocellular Carcinoma,Adherent
+ACH-000364,-1.0080376,0.65323806,-0.5347421,bone,Osteosarcoma,Adherent
+ACH-000368,-0.9749501,0.6835247,-0.49445206,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000408,-1.0126921,0.69457716,-0.5427762,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000410,-1.0238347,0.6469436,-0.48424864,bone,Osteosarcoma,Adherent
+ACH-000420,-0.98464924,0.6679712,-0.4938886,liver,Hepatocellular Carcinoma,Adherent
+ACH-000444,-1.0177957,0.65330034,-0.51419365,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000446,-1.0364108,0.76053643,-0.6168927,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000456,-1.0451077,0.6779159,-0.5202522,thyroid,Poorly Differentiated Thyroid Cancer,Adherent
+ACH-000479,-0.9511597,0.68467176,-0.53737116,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000501,-0.9583204,0.694542,-0.55468297,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000502,-1.0351497,0.64896107,-0.51525414,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000546,-1.0322677,0.7215789,-0.5297643,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000599,-0.9515578,0.7280064,-0.49792895,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000622,-0.9228946,0.7629645,-0.45261055,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000624,-1.1114771,0.72801375,-0.5086199,breast,Breast Ductal Carcinoma In Situ,Adherent
+ACH-000633,-0.96753776,0.71820486,-0.50803685,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000682,-0.98953587,0.65814215,-0.5068453,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000770,-1.0762379,0.6495437,-0.5744592,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000774,-0.9534802,0.7287962,-0.48161423,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000790,-1.0073383,0.6687001,-0.5263871,lung,Lung Neuroendocrine Tumor,Mixed
+ACH-000793,-0.9952383,0.7035767,-0.541416,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000832,-1.0518881,0.6895445,-0.555558,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000837,-1.0531427,0.6510545,-0.5292652,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000847,-1.0277736,0.7571556,-0.52783835,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000859,-0.9597764,0.71265537,-0.51708865,breast,Invasive Breast Carcinoma,Adherent
+ACH-000862,-0.97331274,0.68448335,-0.48780763,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000922,-0.98284024,0.6895806,-0.6011038,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000937,-0.95965147,0.69988316,-0.504875,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-000957,-1.0054356,0.6854669,-0.54549056,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000960,-0.95707715,0.68511236,-0.5418841,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-001126,-0.9851849,0.7167228,-0.5578437,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001196,-1.0037154,0.6643105,-0.5429949,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001205,-0.98063064,0.6798398,-0.5372289,bone,Ewing Sarcoma,Adherent
+ACH-001301,-0.98841834,0.67123735,-0.51014256,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001322,-0.96816295,0.6734986,-0.5447444,soft tissue,Synovial Sarcoma,Adherent
+ACH-001335,-1.0038986,0.7060958,-0.48890674,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001360,-0.85123396,0.8579401,-0.3739,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001367,-0.94112694,0.6839239,-0.5509219,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001377,-0.9912567,0.64512914,-0.532155,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001382,-1.0105677,0.6687458,-0.53639215,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001390,-0.9491615,0.6720107,-0.5324608,breast,Invasive Breast Carcinoma,Adherent
+ACH-001402,-0.9746658,0.68507,-0.49381527,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001408,-1.0106431,0.6791512,-0.52721703,bladder/urinary tract,Urethral Cancer,Adherent
+ACH-001461,-0.9623697,0.73125154,-0.5098968,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001510,-0.954845,0.6650951,-0.48360434,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001542,-1.0674536,0.6389158,-0.56376874,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001557,-0.9308316,0.65828377,-0.48510826,pleura,Pleural Mesothelioma,Adherent
+ACH-001568,-0.9894996,0.64730597,-0.4822602,skin,Melanoma,Adherent
+ACH-001574,-0.9532676,0.6814774,-0.5960618,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001634,-0.97166,0.6824478,-0.5323672,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001645,-0.96185863,0.6746901,-0.48855436,skin,Melanoma,Suspension
+ACH-001651,-0.83790547,0.7774746,-0.43274742,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001669,-1.0517259,0.6398032,-0.57345325,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-001670,-0.9972379,0.67099226,-0.4931337,cns/brain,Embryonal Tumor,Suspension
+ACH-001673,-1.0264667,0.6452301,-0.5404176,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001715,-0.972553,0.7396036,-0.52219164,bone,Osteosarcoma,Adherent
+ACH-001740,-1.0076643,0.69656265,-0.49677694,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001793,-0.9355168,0.71994287,-0.43643108,soft tissue,Liposarcoma,Adherent
+ACH-001802,-0.9891238,0.6580234,-0.51870453,soft tissue,Liposarcoma,Adherent
+ACH-001839,-0.92804253,0.6601326,-0.49081814,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001842,-0.99842244,0.6880462,-0.5466069,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001856,-0.9558716,0.6433298,-0.5123059,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001986,-1.0071026,0.68439853,-0.55523944,skin,Melanoma,Adherent
+ACH-002005,-0.9807349,0.7004349,-0.5571821,skin,Melanoma,Adherent
+ACH-002023,-0.99747235,0.6469068,-0.5119606,ampulla of vater,Ampullary Carcinoma,Adherent
+ACH-002026,-1.0027366,0.643892,-0.50959206,uterus,Endometrial Carcinoma,Adherent
+ACH-002029,-1.1554246,0.6713435,-0.60623384,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002116,-0.97047377,0.78682834,-0.48052108,bone,Ewing Sarcoma,Unknown
+ACH-002143,-0.86929655,0.8262582,-0.47669336,skin,Melanoma,Adherent
+ACH-002283,-1.0698216,0.6688118,-0.4821837,peripheral nervous system,Neuroblastoma,Adherent
+ACH-002524,-0.96508944,0.6710339,-0.50057745,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-002785,-0.9144811,0.7349434,-0.41434363,soft tissue,Leiomyosarcoma,Adherent
+ACH-002792,-0.97064036,0.72271055,-0.5212406,soft tissue,Clear Cell Sarcoma,Adherent
+ACH-002799,-0.9920996,0.69374895,-0.47519475,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-002928,-0.96136296,0.72130114,-0.45591232,skin,Melanoma,Unknown
+ACH-000005,-0.99331725,0.7027559,-0.5348464,myeloid,Acute Myeloid Leukemia,Mixed
+ACH-000041,-0.94382906,0.6591199,-0.47669083,bone,Ewing Sarcoma,Mixed
+ACH-000075,-0.9775635,0.7431324,-0.46596777,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000078,-0.9616,0.67798877,-0.5120563,peripheral nervous system,Neuroblastoma,Mixed
+ACH-000101,-0.9514399,0.6833057,-0.5402636,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-000113,-1.1037819,0.69446,-0.6654769,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000127,-1.0021572,0.65356535,-0.5240455,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000147,-0.9707194,0.6924352,-0.46929166,breast,Invasive Breast Carcinoma,Adherent
+ACH-000182,-0.98377365,0.672045,-0.481578,ampulla of vater,Ampullary Carcinoma,Mixed
+ACH-000210,-1.0401512,0.66624296,-0.5471987,bone,Ewing Sarcoma,Suspension
+ACH-000215,-0.9835579,0.7117229,-0.46672207,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000221,-0.99596405,0.6729733,-0.5208985,liver,Hepatocellular Carcinoma,Adherent
+ACH-000223,-0.9459958,0.75287235,-0.47038296,breast,Invasive Breast Carcinoma,Adherent
+ACH-000233,-1.0314076,0.6719525,-0.55099064,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000255,-0.9919628,0.62544584,-0.5160027,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000258,-0.96171045,0.7296753,-0.53670955,breast,Invasive Breast Carcinoma,Suspension
+ACH-000288,-0.97201264,0.6825909,-0.4905772,breast,Invasive Breast Carcinoma,Adherent
+ACH-000290,-1.0177835,0.7144389,-0.47341007,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000311,-1.0090473,0.66691786,-0.5340406,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000356,-0.9748092,0.65316004,-0.5142553,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000365,-1.0207225,0.6713235,-0.5779353,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000371,-1.0045745,0.64968324,-0.5719648,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000377,-0.95627,0.6523248,-0.522455,ampulla of vater,Ampullary Carcinoma,Adherent
+ACH-000389,-0.9848237,0.6565431,-0.52980906,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000405,-1.0158917,0.6863758,-0.5469581,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000406,-1.0862756,0.7203012,-0.5855073,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000427,-0.98542446,0.73415345,-0.53684974,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000434,-0.952261,0.7205867,-0.48485908,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000436,-0.9802497,0.6832709,-0.53419226,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000445,-0.95534563,0.6747589,-0.49753594,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000463,-1.0138009,0.6528194,-0.5000844,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000481,-0.9648595,0.7464245,-0.4306718,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000496,-1.031598,0.6786294,-0.501579,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000541,-0.9328425,0.6859599,-0.5268526,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000565,-0.9385009,0.74262977,-0.54131466,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000587,-0.9921932,0.6916241,-0.50110805,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000651,-1.0648625,0.74015415,-0.5394284,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-000672,-1.0612074,0.6636083,-0.5503718,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000676,-0.99467635,0.69480366,-0.5045812,skin,Melanoma,Adherent
+ACH-000681,-0.9992509,0.6577853,-0.52255434,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000709,-0.9338685,0.6861319,-0.48306364,kidney,Renal Cell Carcinoma,Adherent
+ACH-000724,-0.9574532,0.7327064,-0.5026707,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000735,-0.9661111,0.6754496,-0.48549458,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000741,-0.9779009,0.6556221,-0.5088958,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000768,-0.9706104,0.66614074,-0.5002221,breast,Invasive Breast Carcinoma,Adherent
+ACH-000794,-0.99765813,0.6725834,-0.53980106,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000800,-0.9871803,0.7057406,-0.513803,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000820,-1.0092102,0.6637893,-0.54339725,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000824,-0.9717723,0.72934157,-0.46841753,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000831,-1.0383195,0.645757,-0.53268975,uterus,Endometrial Carcinoma,Adherent
+ACH-000840,-0.9658331,0.6860012,-0.5226938,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000874,-1.0062265,0.7065525,-0.5322922,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000887,-1.0000387,0.6593832,-0.46129212,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000890,-0.9595845,0.67824364,-0.4820581,lung,SMARCA4-deficient undifferentiated tumor,Adherent
+ACH-000947,-1.0958421,0.6660596,-0.6045471,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000972,-1.0055106,0.67846406,-0.53972423,uterus,Endometrial Carcinoma,Adherent
+ACH-000996,-0.97991496,0.65923727,-0.5189879,uterus,Endometrial Carcinoma,Adherent
+ACH-001033,-0.9686143,0.69018185,-0.5318576,cns/brain,Embryonal Tumor,Suspension
+ACH-001053,-0.98208225,0.6951219,-0.5428662,cns/brain,Embryonal Tumor,Mixed
+ACH-001098,-0.95275,0.6414604,-0.53400224,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001283,-1.0112801,0.66343755,-0.52010953,bone,Ewing Sarcoma,Adherent
+ACH-001380,-1.0205677,0.62367404,-0.54080534,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001391,-0.9217381,0.70828843,-0.4465044,breast,Invasive Breast Carcinoma,Adherent
+ACH-001500,-0.9909636,0.6716535,-0.53580683,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-001508,-0.9732301,0.68143064,-0.4936169,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001536,-0.98022294,0.6505193,-0.5554091,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001605,-1.0033603,0.7424271,-0.48502535,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001619,-0.91865474,0.7189839,-0.4788461,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-001623,-0.97972906,0.7038728,-0.49178252,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001625,-0.921519,0.76349294,-0.5469187,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001639,-0.94656235,0.7667421,-0.5429422,lymphoid,Mature B-Cell Neoplasms,Adherent
+ACH-001647,-0.99808586,0.6703295,-0.5642472,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001668,-0.9719414,0.6539341,-0.49260715,testis,Non-Seminomatous Germ Cell Tumor,Adherent
+ACH-001685,-0.96250945,0.7016804,-0.4692386,lymphoid,Hodgkin Lymphoma,Suspension
+ACH-001814,-1.0002583,0.6856791,-0.52008,bone,Osteosarcoma,Adherent
+ACH-001864,-0.98636687,0.6908381,-0.50599796,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001999,-0.96775335,0.6590344,-0.5127751,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-002048,-1.0175451,0.64196116,-0.56622636,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-002051,-0.9169171,0.73009294,-0.43990445,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-002055,-0.980538,0.6874043,-0.57923895,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002070,-0.9594923,0.6756185,-0.48670036,cns/brain,Meningothelial Tumor,Adherent
+ACH-002080,-1.0387226,0.6716218,-0.50773454,peripheral nervous system,Neuroblastoma,Adherent
+ACH-002140,-0.9813436,0.7514771,-0.4929633,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-002142,-0.9113004,0.70263386,-0.40170398,bone,Osteosarcoma,Adherent
+ACH-002161,-0.99118435,0.732296,-0.52509713,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-002183,-1.0101274,0.6920223,-0.5609493,ovary/fallopian tube,Ovarian Epithelial Tumor,Unknown
+ACH-002189,-0.8951031,0.84481597,-0.43219,kidney,Renal Cell Carcinoma,Adherent
+ACH-002296,-1.0100137,0.6998884,-0.5553689,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002687,-0.9649959,0.68662107,-0.5396734,eye,Ocular Melanoma,Adherent
+ACH-002800,-0.95168245,0.6899106,-0.44833392,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-003410,-0.9959818,0.6865075,-0.49197114,bone,Chordoma,Adherent
+ACH-000022,-0.9759785,0.70332396,-0.48264277,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000023,-0.98116744,0.7979554,-0.4521738,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000037,-0.8436652,0.84352183,-0.44273886,soft tissue,"Sarcoma, NOS",Adherent
+ACH-000077,-0.98984194,0.7362047,-0.5640778,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-000094,-0.9061979,0.77356404,-0.528463,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000098,-0.95678914,0.7267365,-0.45508775,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000114,-0.96849406,0.74726135,-0.48501623,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000120,-0.99973714,0.684015,-0.52896804,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000168,-0.96505463,0.7137097,-0.496258,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000174,-0.98979557,0.6367606,-0.49378404,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-000181,-1.0262058,0.71089715,-0.55630547,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000195,-0.9909486,0.7022942,-0.53519356,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000202,-0.9968479,0.67939955,-0.5571399,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000235,-1.0213863,0.70585686,-0.5071132,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000253,-1.010181,0.66240364,-0.5064227,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-000268,-0.95064557,0.69837075,-0.56671494,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-000294,-0.9756471,0.7512469,-0.5454126,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000317,-0.94089246,0.7160575,-0.5432813,kidney,Renal Cell Carcinoma,Adherent
+ACH-000363,-0.9581086,0.7357044,-0.45824423,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000373,-0.99437845,0.67351305,-0.49629843,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000393,-0.9636233,0.70343894,-0.45132768,liver,Hepatocellular Carcinoma,Adherent
+ACH-000415,-0.9823483,0.68959564,-0.50545895,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000452,-1.0208882,0.73515594,-0.45594484,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000458,-0.9895125,0.6372984,-0.5179646,skin,Melanoma,Adherent
+ACH-000468,-0.8841114,0.74875313,-0.45312786,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000477,-0.94598204,0.7509474,-0.5050077,skin,Melanoma,Adherent
+ACH-000486,-1.0026499,0.6447076,-0.5284035,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000510,-0.996382,0.7285407,-0.47332802,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000527,-1.1011357,0.6898225,-0.53322136,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000532,-1.0055401,0.71026736,-0.502722,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000533,-0.9921946,0.6683581,-0.5759259,kidney,Rhabdoid Cancer,Adherent
+ACH-000549,-0.9460415,0.64983493,-0.50223666,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000557,-0.911089,0.7820495,-0.43182415,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000614,-0.9692537,0.7443677,-0.5513441,skin,Melanoma,Adherent
+ACH-000623,-0.96318465,0.7061968,-0.4369499,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000646,-0.8696597,0.75183535,-0.51248735,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000647,-0.98288673,0.6885452,-0.43171883,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000654,-0.98589903,0.6907795,-0.5359733,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-000663,-0.96235377,0.70951813,-0.52367467,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000668,-0.8825026,0.83380806,-0.51065934,breast,Invasive Breast Carcinoma,Adherent
+ACH-000711,-1.0507295,0.6978437,-0.5383255,breast,Invasive Breast Carcinoma,Adherent
+ACH-000773,-0.98892593,0.6835684,-0.5579367,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000783,-0.89875513,0.7663961,-0.50486636,breast,Invasive Breast Carcinoma,Adherent
+ACH-000785,-0.9167851,0.72738284,-0.4638468,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000801,-0.9705895,0.66756916,-0.52108806,skin,Melanoma,Adherent
+ACH-000805,-0.97499263,0.6569745,-0.5345231,skin,Melanoma,Adherent
+ACH-000839,-0.9707564,0.6657902,-0.5310867,bladder/urinary tract,Bladder Squamous Cell Carcinoma,Adherent
+ACH-000846,-1.0553672,0.67676127,-0.5508378,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000855,-1.0102109,0.70400786,-0.5071033,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000880,-1.0363786,0.68464446,-0.5870307,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000969,-0.9514902,0.71658015,-0.51224303,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-001054,-0.9953616,0.68037057,-0.53979343,cns/brain,Embryonal Tumor,Mixed
+ACH-001096,-1.0316916,0.6585489,-0.5658308,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001134,-0.9796513,0.66256326,-0.53501076,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-001163,-0.95641774,0.6908209,-0.4829406,kidney,Renal Cell Carcinoma,Adherent
+ACH-001192,-0.9967706,0.6712213,-0.49997464,bone,Ewing Sarcoma,Suspension
+ACH-001300,-1.0256414,0.6639186,-0.541757,peripheral nervous system,Neuroblastoma,Mixed
+ACH-001347,-0.9631797,0.6581766,-0.49782795,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001411,-0.96317667,0.65307575,-0.53090274,bladder/urinary tract,Bladder Squamous Cell Carcinoma,Adherent
+ACH-001418,-0.9586992,0.70826256,-0.50793403,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001428,-0.96763384,0.71934426,-0.4911669,bone,Ewing Sarcoma,Adherent
+ACH-001494,-0.99471605,0.6846537,-0.49475202,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001538,-0.98037136,0.6325817,-0.5280064,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001567,-0.9472403,0.6713247,-0.52613837,skin,Melanoma,Adherent
+ACH-001609,-1.020633,0.65049917,-0.49804,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001654,-1.0026598,0.69314426,-0.48927686,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-001664,-1.0356874,0.66216195,-0.5806917,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-001674,-1.0083375,0.6992473,-0.53425276,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001675,-1.0034668,0.7052555,-0.48966813,head and neck,Head and Neck Squamous Cell Carcinoma,Suspension
+ACH-001683,-0.9692337,0.7385991,-0.5029597,breast,Invasive Breast Carcinoma,Adherent
+ACH-001702,-0.97085595,0.6512775,-0.47623113,soft tissue,Epithelioid Sarcoma,Adherent
+ACH-001795,-0.9895459,0.66289914,-0.5300836,soft tissue,Liposarcoma,Adherent
+ACH-001804,-0.93373597,0.6970131,-0.49953184,soft tissue,Liposarcoma,Suspension
+ACH-001820,-0.9707107,0.7636157,-0.5050155,breast,"Breast Neoplasm, NOS",Adherent
+ACH-001843,-0.9174046,0.64298004,-0.42600584,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001961,-0.9200582,0.68657744,-0.47046673,biliary tract,Intracholecystic Papillary Neoplasm,Adherent
+ACH-001973,-0.990827,0.6568372,-0.5423285,skin,Melanoma,Adherent
+ACH-001975,-1.051077,0.7593452,-0.55818003,skin,Melanoma,Adherent
+ACH-001977,-1.0028422,0.6428446,-0.5572168,pleura,Pleural Mesothelioma,Adherent
+ACH-002002,-1.0233427,0.647871,-0.59803426,skin,Melanoma,Adherent
+ACH-002018,-1.003728,0.6905454,-0.4759421,eye,Ocular Melanoma,Adherent
+ACH-002061,-0.96820277,0.68538415,-0.5348552,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-002263,-0.9807261,0.7332758,-0.4971799,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-002298,-0.97452927,0.7338234,-0.5515854,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002460,-0.9903324,0.6471383,-0.53926057,skin,Melanoma,Adherent
+ACH-002486,-0.9881421,0.65535104,-0.5206662,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-002662,-1.0047379,0.71393067,-0.5518929,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002678,-1.0200721,0.6729032,-0.53287023,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002690,-0.968964,0.69733167,-0.47649458,bone,Osteosarcoma,Adherent
+ACH-002711,-1.0426505,0.73761475,-0.5042048,head and neck,Salivary Carcinoma,Adherent
+ACH-002806,-0.9053675,0.8026278,-0.36798802,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-003191,-0.93769455,0.6915537,-0.47733292,bone,Giant Cell Tumor of Bone,Mixed
+ACH-000007,-1.0246196,0.690644,-0.56489754,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000017,-0.9951985,0.7072754,-0.507905,breast,Invasive Breast Carcinoma,Mixed
+ACH-000021,-0.992502,0.6935305,-0.4668829,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000085,-0.9737484,0.6457418,-0.5140913,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000239,-1.0057772,0.6498314,-0.56281996,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000257,-0.93312186,0.67577684,-0.50686514,lung,Lung Neuroendocrine Tumor,Mixed
+ACH-000271,-1.0296726,0.79199445,-0.62534654,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000276,-0.944612,0.75054723,-0.51155806,breast,Invasive Breast Carcinoma,Adherent
+ACH-000278,-0.99497676,0.7058099,-0.49130857,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000291,-1.0183303,0.7159844,-0.48567763,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000292,-1.0420655,0.6540844,-0.52670884,lung,SMARCA4-deficient undifferentiated tumor,Adherent
+ACH-000313,-0.93023044,0.7192715,-0.432856,kidney,Renal Cell Carcinoma,Adherent
+ACH-000344,-0.98438525,0.66856325,-0.52580047,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000367,-0.89196694,0.8584678,-0.54965323,pleura,Pleural Mesothelioma,Adherent
+ACH-000375,-0.9662073,0.68772596,-0.5531597,kidney,Rhabdoid Cancer,Adherent
+ACH-000425,-0.99708277,0.68448675,-0.49045372,skin,Melanoma,Adherent
+ACH-000483,-0.96578705,0.73178625,-0.47804192,liver,Hepatocellular Carcinoma,Adherent
+ACH-000503,-0.97655505,0.6978943,-0.5415089,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000511,-1.017617,0.66049486,-0.46811473,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000516,-0.961661,0.71937454,-0.42046607,bone,Chondrosarcoma,Adherent
+ACH-000519,-1.004125,0.6824531,-0.5438299,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-000520,-0.9731053,0.64656276,-0.4923583,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000522,-0.9744728,0.67838126,-0.49505964,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000535,-0.99427474,0.6821754,-0.50093156,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000548,-0.9796818,0.71863186,-0.4906306,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000558,-0.95571864,0.7547696,-0.5210623,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000607,-0.975699,0.6764598,-0.53756404,kidney,Rhabdoid Cancer,Suspension
+ACH-000609,-1.0266328,0.7600124,-0.44970578,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000661,-1.0028579,0.69918156,-0.52072823,skin,Melanoma,Adherent
+ACH-000664,-1.0390195,0.6906138,-0.5599373,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000685,-0.9832125,0.7076834,-0.48221448,pancreas,Adenosquamous Carcinoma of the Pancreas,Mixed
+ACH-000736,-0.9998456,0.65867656,-0.5575237,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000748,-1.1141741,0.77404547,-0.41871545,bone,Osteosarcoma,Adherent
+ACH-000754,-0.94346297,0.7063317,-0.48950997,lymphoid,Hodgkin Lymphoma,Suspension
+ACH-000758,-0.9915399,0.6417089,-0.53625095,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000787,-1.0544513,0.6877808,-0.54694366,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000821,-0.9514604,0.7375257,-0.5270012,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000856,-1.081341,0.67995006,-0.6287425,breast,Invasive Breast Carcinoma,Adherent
+ACH-000860,-0.9320288,0.68431234,-0.50117505,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000869,-0.90022236,0.7752101,-0.46048072,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000899,-0.9601904,0.6693463,-0.55086446,skin,Melanoma,Unknown
+ACH-000901,-0.88274467,0.7041386,-0.42177263,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000906,-1.0839261,0.7229102,-0.5375901,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000912,-1.0384568,0.6252229,-0.55795485,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000914,-1.0256351,0.6822553,-0.59491843,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000919,-0.96195436,0.6963532,-0.5248977,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000970,-0.9887647,0.7478143,-0.4933592,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000971,-0.96989965,0.75133985,-0.48928946,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000991,-0.97168976,0.75783366,-0.5441811,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000995,-0.94386876,0.7150006,-0.52866864,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Adherent
+ACH-001016,-0.9798223,0.72827536,-0.5360606,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001029,-1.0660604,0.68405086,-0.52589625,bone,Ewing Sarcoma,Adherent
+ACH-001137,-0.9059426,0.827097,-0.501849,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-001188,-1.0278674,0.6825734,-0.51500475,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001197,-0.9444874,0.67379385,-0.5536561,lymphoid,Non-Hodgkin Lymphoma,Suspension
+ACH-001280,-0.9793857,0.73923844,-0.50622594,soft tissue,Synovial Sarcoma,Adherent
+ACH-001295,-1.0012735,0.68289024,-0.48894542,eye,Retinoblastoma,Suspension
+ACH-001302,-0.95676816,0.6746588,-0.522856,peripheral nervous system,Neuroblastoma,Mixed
+ACH-001388,-0.9763875,0.74934906,-0.39684278,breast,Invasive Breast Carcinoma,Suspension
+ACH-001389,-0.96712816,0.6494191,-0.5176328,breast,Invasive Breast Carcinoma,Adherent
+ACH-001416,-0.9584414,0.6838787,-0.52735513,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001430,-0.9946275,0.68733907,-0.5346063,bone,Ewing Sarcoma,Mixed
+ACH-001465,-1.0161343,0.6504762,-0.5625697,peripheral nervous system,Neuroblastoma,Suspension
+ACH-001509,-0.9972683,0.6860643,-0.5468724,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001523,-0.9899692,0.6374364,-0.5410352,skin,Cutaneous Squamous Cell Carcinoma,Adherent
+ACH-001606,-0.9792421,0.7197895,-0.45612058,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001626,-0.9081859,0.77780545,-0.4515069,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001655,-0.99479634,0.66607356,-0.52684236,uterus,Uterine Sarcoma/Mesenchymal,Adherent
+ACH-001677,-1.0015544,0.68030804,-0.5664687,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001695,-1.0205288,0.658332,-0.5118635,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001858,-1.0059938,0.7028477,-0.4724951,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001991,-0.97552776,0.72907096,-0.587837,ovary/fallopian tube,Ovarian Epithelial Tumor,Mixed
+ACH-002024,-1.02827,0.66047925,-0.5454226,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002027,-1.0006994,0.6415626,-0.5316284,uterus,Endometrial Carcinoma,Adherent
+ACH-002060,-1.010481,0.65597254,-0.54912746,myeloid,Acute Leukemias of Ambiguous Lineage,Suspension
+ACH-002062,-0.94766253,0.6782862,-0.5346675,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002067,-1.0051887,0.67266005,-0.53638434,bone,Osteosarcoma,Adherent
+ACH-002141,-1.0170727,0.74481857,-0.6061359,esophagus/stomach,Esophagogastric Adenocarcinoma,Unknown
+ACH-002229,-0.9649116,0.7068631,-0.54266506,cns/brain,Adult-Type Diffuse Glioma,Unknown
+ACH-002251,-1.0047628,0.7250348,-0.5067119,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002265,-0.915052,0.78645426,-0.50615454,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002291,-1.0103256,0.7029266,-0.5573583,testis,Non-Seminomatous Germ Cell Tumor,Adherent
+ACH-002297,-0.98643154,0.7017764,-0.55021334,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002401,-1.0139468,0.630172,-0.52842766,breast,Invasive Breast Carcinoma,Adherent
+ACH-002461,-0.9384364,0.7164511,-0.45383197,skin,Melanoma,Adherent
+ACH-002538,-0.9927326,0.64444065,-0.53146106,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002708,-0.9867433,0.67423785,-0.49697176,soft tissue,Liposarcoma,Adherent
+ACH-002710,-1.0155892,0.6797744,-0.4621657,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-002784,-1.0108058,0.6923115,-0.43849504,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Adherent
+ACH-003012,-0.9971573,0.64337146,-0.52520263,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-003177,-1.0160685,0.7094982,-0.50811803,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Mixed
+ACH-003189,-1.0784564,0.6888881,-0.49125588,soft tissue,Liposarcoma,Mixed
+ACH-000015,-1.0179749,0.6488194,-0.53914005,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000018,-0.9587714,0.6523272,-0.53831786,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000035,-0.9532137,0.6757588,-0.51136553,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000036,-0.98060256,0.6504608,-0.5316084,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000055,-0.9962529,0.6702491,-0.54079515,cns/brain,Embryonal Tumor,Mixed
+ACH-000067,-0.9937394,0.71472436,-0.4505496,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000076,-1.0150232,0.7084754,-0.5641582,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000082,-0.9850888,0.7342088,-0.42298076,bone,Osteosarcoma,Adherent
+ACH-000087,-1.0142856,0.66822916,-0.5130983,bone,Ewing Sarcoma,Mixed
+ACH-000142,-0.9359873,0.6645628,-0.49697563,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000178,-1.0129306,0.6305076,-0.52809715,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000183,-1.0350311,0.6789696,-0.58030844,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000192,-0.9080169,0.8872889,-0.56058025,uterus,Endometrial Carcinoma,Adherent
+ACH-000207,-0.9219685,0.72952396,-0.51592517,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000209,-0.90362483,0.67011565,-0.5247762,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-000227,-0.93453604,0.79228234,-0.48948836,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000244,-0.9660385,0.76262015,-0.504055,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000265,-1.0988884,0.6840371,-0.5427993,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000274,-0.8903578,0.73460114,-0.43858504,skin,Melanoma,Adherent
+ACH-000305,-0.9982786,0.7093469,-0.47574592,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000315,-0.9862279,0.70892286,-0.5493739,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000316,-0.9570208,0.68977475,-0.48538646,liver,Hepatocellular Carcinoma,Adherent
+ACH-000323,-0.9577537,0.7061372,-0.48845476,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000329,-0.9543977,0.72209966,-0.44946435,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000336,-1.045135,0.7494927,-0.57390684,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000341,-1.0121807,0.7792552,-0.452844,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000346,-0.9573869,0.68426496,-0.5557386,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000350,-0.93238604,0.73743707,-0.48088506,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000387,-1.0037243,0.6867706,-0.53096426,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000397,-1.0174614,0.6764103,-0.500435,uterus,Endometrial Carcinoma,Adherent
+ACH-000414,-1.0313623,0.6722015,-0.53737,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000433,-0.9392745,0.6598471,-0.5315669,kidney,Renal Cell Carcinoma,Adherent
+ACH-000467,-0.99783003,0.65577054,-0.5380912,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000478,-0.96397865,0.6902316,-0.46677122,liver,Hepatocellular Carcinoma,Adherent
+ACH-000487,-1.0167713,0.6575747,-0.579797,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000489,-0.9551819,0.70074886,-0.47096023,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000571,-0.8897178,0.80574346,-0.39185897,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000577,-0.9241503,0.7104706,-0.4761322,liver,Hepatocellular Carcinoma,Adherent
+ACH-000592,-0.997363,0.70295525,-0.4454962,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000631,-1.0246339,0.68625987,-0.5674445,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000656,-0.9941009,0.790261,-0.561983,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000657,-1.0343845,0.63399565,-0.5732631,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000688,-0.89505726,0.75967807,-0.49014518,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000720,-1.0153869,0.6709715,-0.4899726,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000764,-0.9941273,0.65720385,-0.5261736,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000782,-0.96593285,0.6621975,-0.56092453,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000792,-1.0242627,0.70625603,-0.48087892,kidney,Renal Cell Carcinoma,Adherent
+ACH-000799,-0.99636406,0.6855423,-0.5704193,skin,Melanoma,Adherent
+ACH-000817,-1.0309436,0.68866616,-0.5619829,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000826,-0.98917997,0.66671044,-0.54501677,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000829,-0.97936106,0.67494607,-0.58724976,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000836,-0.9605809,0.65614116,-0.52757895,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000867,-1.011063,0.6945412,-0.4333114,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000872,-1.0020498,0.6657663,-0.50334185,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000886,-1.0160024,0.6418345,-0.49339068,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000924,-1.0279979,0.6770945,-0.5055354,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000938,-0.9927146,0.68228996,-0.5753575,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-001041,-0.9939952,0.67315346,-0.5235772,skin,Melanoma,Adherent
+ACH-001065,-0.99386626,0.77339286,-0.5631724,breast,Invasive Breast Carcinoma,Adherent
+ACH-001194,-0.89169145,0.7193614,-0.4139033,kidney,Renal Cell Carcinoma,Adherent
+ACH-001229,-1.0338649,0.6362806,-0.49383473,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001277,-1.0057528,0.67335904,-0.5311018,soft tissue,Synovial Sarcoma,Adherent
+ACH-001289,-0.99754596,0.6656885,-0.5214514,cns/brain,Embryonal Tumor,Suspension
+ACH-001303,-0.96198475,0.69199514,-0.5306297,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001329,-1.0385543,0.7040717,-0.4341515,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001334,-1.0607251,0.6234428,-0.59045583,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001336,-1.0140077,0.645489,-0.49744144,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001338,-0.9725448,0.67544585,-0.5366599,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001366,-1.0039653,0.6732858,-0.50512254,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001368,-0.9919678,0.6972526,-0.5150915,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-001407,-0.9759405,0.69733,-0.5266625,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001409,-0.9963815,0.6906116,-0.53779846,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001412,-0.97280854,0.6911759,-0.44952038,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001419,-0.9870991,0.6688151,-0.48546815,breast,Invasive Breast Carcinoma,Adherent
+ACH-001618,-0.95255834,0.69645095,-0.57161266,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001698,-0.98045766,0.6652505,-0.53388786,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001745,-1.0115048,0.7052997,-0.51720124,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001794,-0.95287555,0.7235108,-0.44199562,soft tissue,Liposarcoma,Adherent
+ACH-001799,-0.9854816,0.7073966,-0.4848691,soft tissue,Liposarcoma,Adherent
+ACH-001834,-0.9355623,0.6732747,-0.488377,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-002033,-0.8749861,0.7537992,-0.44631,pleura,Pleural Mesothelioma,Adherent
+ACH-002044,-1.0642564,0.6471377,-0.5761636,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002119,-1.0552955,0.7257993,-0.5681065,bone,Ewing Sarcoma,Unknown
+ACH-002500,-1.0186837,0.7088441,-0.5590149,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002512,-1.0108416,0.68838894,-0.5428318,skin,Melanoma,Adherent
+ACH-002522,-0.9376494,0.6934063,-0.5078764,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002533,-1.0117024,0.65178,-0.53524697,kidney,Renal Cell Carcinoma,Adherent
+ACH-002926,-0.99675137,0.6372678,-0.5590626,eye,Ocular Melanoma,Unknown
+ACH-003171,-0.9003091,0.7049042,-0.4209108,bone,Osteosarcoma,Mixed
+ACH-003186,-0.95745337,0.68608105,-0.45026076,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Mixed
+ACH-003587,-1.0092742,0.66866547,-0.47847277,bone,Osteosarcoma,Adherent
+ACH-000047,-1.0425146,0.65054953,-0.5803966,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000115,-0.9019602,0.8096851,-0.46898228,prostate,Prostate Adenocarcinoma,Adherent
+ACH-000138,-0.9885008,0.64523184,-0.51647496,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000145,-0.98489314,0.7105766,-0.41558856,soft tissue,Leiomyosarcoma,Adherent
+ACH-000149,-0.9728069,0.6748106,-0.51421195,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000161,-0.9736012,0.6525253,-0.5142176,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000169,-1.0261726,0.6389791,-0.52836466,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-000187,-0.9696641,0.6940579,-0.50028473,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000189,-0.9968176,0.6896664,-0.5431704,kidney,Renal Cell Carcinoma,Adherent
+ACH-000212,-0.94629335,0.6801233,-0.51533973,breast,Invasive Breast Carcinoma,Adherent
+ACH-000222,-0.87936604,0.82681096,-0.4679425,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000238,-0.97707623,0.7259675,-0.5116451,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000263,-0.96366894,0.70730036,-0.5130862,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000280,-0.96382815,0.69205874,-0.54321826,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000302,-0.9715923,0.7073518,-0.45359832,uterus,Endometrial Carcinoma,Adherent
+ACH-000308,-0.93750834,0.7675002,-0.43664637,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000312,-1.0300175,0.65758055,-0.5059718,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000331,-1.0194702,0.6209041,-0.53504974,pleura,Pleural Mesothelioma,Adherent
+ACH-000335,-0.96059805,0.6510429,-0.52505624,pleura,Pleural Mesothelioma,Adherent
+ACH-000343,-0.9779311,0.68745166,-0.4741732,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000381,-1.0143845,0.68879,-0.5356557,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000385,-0.9593481,0.6905451,-0.5154109,kidney,Renal Cell Carcinoma,Adherent
+ACH-000407,-0.9651946,0.66194135,-0.48508853,uterus,Endometrial Carcinoma,Adherent
+ACH-000435,-1.0118585,0.68455726,-0.5392502,uterus,Endometrial Carcinoma,Adherent
+ACH-000459,-0.8261856,0.8262873,-0.48686123,kidney,Renal Cell Carcinoma,Adherent
+ACH-000464,-0.9582581,0.75518894,-0.4722334,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000469,-1.0125504,0.68055403,-0.52656996,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000542,-0.9826818,0.663427,-0.51274055,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000547,-1.0037129,0.69649273,-0.55156976,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000550,-0.9735233,0.73020333,-0.44429353,skin,Melanoma,Adherent
+ACH-000576,-1.0067554,0.6667229,-0.5367745,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000585,-1.0058398,0.7409794,-0.49388656,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000597,-0.98639315,0.67226,-0.51968825,soft tissue,Rhabdoid Cancer,Adherent
+ACH-000601,-1.1227822,0.6737075,-0.5891739,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000620,-0.98967236,0.66777235,-0.5210474,liver,Hepatocellular Carcinoma,Adherent
+ACH-000632,-0.9962132,0.66351527,-0.4869548,skin,Melanoma,Adherent
+ACH-000667,-0.9749175,0.6693929,-0.51364774,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000776,-0.9795723,0.65214133,-0.51806915,cns/brain,Embryonal Tumor,Adherent
+ACH-000784,-1.0385435,0.6869273,-0.50671065,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000804,-0.9359748,0.6935501,-0.50265443,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000807,-0.97144085,0.65034294,-0.49627498,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000819,-1.0292645,0.6502759,-0.48907772,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000823,-1.0156024,0.6903878,-0.51593953,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000845,-0.9391507,0.6301833,-0.5057729,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000858,-1.0017195,0.7141216,-0.4799922,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000863,-0.994788,0.71017927,-0.51409763,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000889,-0.9695283,0.71534693,-0.5610676,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000903,-1.0003462,0.65386915,-0.49653465,thyroid,Well-Differentiated Thyroid Cancer,Adherent
+ACH-000921,-1.0099092,0.651547,-0.5264179,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000962,-0.9621867,0.71594197,-0.5278075,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000966,-0.97133696,0.71747625,-0.53882647,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000994,-0.9848483,0.69892967,-0.50318056,uterus,Endometrial Carcinoma,Adherent
+ACH-001039,-0.9981468,0.78221846,-0.56563723,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-001081,-0.961168,0.7933765,-0.5282233,bowel,Colorectal Adenocarcinoma,Unknown
+ACH-001184,-0.9747686,0.679152,-0.5611614,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001270,-1.004273,0.6782212,-0.5415996,soft tissue,Synovial Sarcoma,Adherent
+ACH-001307,-0.9375259,0.6861103,-0.48085108,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-001345,-0.99795455,0.78426296,-0.5217475,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001394,-0.9133815,0.67561054,-0.47612742,breast,Invasive Breast Carcinoma,Adherent
+ACH-001401,-1.0161948,0.70940274,-0.4945425,adrenal gland,Adrenocortical Carcinoma,Adherent
+ACH-001414,-0.9910833,0.6466531,-0.55686545,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-001436,-0.9977183,0.6692299,-0.48401734,testis,Non-Seminomatous Germ Cell Tumor,Adherent
+ACH-001458,-0.9539199,0.6859861,-0.5506686,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001524,-0.98823154,0.66928655,-0.47971153,skin,Cutaneous Squamous Cell Carcinoma,Adherent
+ACH-001526,-1.0107207,0.7097256,-0.5265378,bone,Osteosarcoma,Adherent
+ACH-001532,-1.0109072,0.62716246,-0.6088279,kidney,Rhabdoid Cancer,Adherent
+ACH-001544,-0.9441757,0.7592744,-0.5913248,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-001550,-0.99687505,0.6749115,-0.49538144,skin,Merkel Cell Carcinoma,Adherent
+ACH-001555,-0.9566371,0.6648775,-0.539702,pleura,Pleural Mesothelioma,Adherent
+ACH-001562,-0.9989801,0.64352316,-0.582008,pleura,Pleural Mesothelioma,Adherent
+ACH-001611,-0.9783152,0.6507228,-0.51645136,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001622,-0.97310233,0.68762594,-0.46055096,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-001662,-0.9759864,0.7097261,-0.519829,breast,Invasive Breast Carcinoma,Adherent
+ACH-001709,-1.038612,0.6596137,-0.64276993,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-001791,-0.97064704,0.72771156,-0.52774006,soft tissue,Liposarcoma,Adherent
+ACH-001796,-0.95875907,0.68401396,-0.50507116,soft tissue,Liposarcoma,Adherent
+ACH-001835,-0.9730638,0.6494491,-0.49070343,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001849,-0.97362393,0.6566236,-0.5078327,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001959,-1.0136,0.64657724,-0.60270494,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001997,-1.0030547,0.65180933,-0.5291542,ampulla of vater,Ampullary Carcinoma,Adherent
+ACH-002014,-0.95032424,0.7576156,-0.5876229,eye,Ocular Melanoma,Adherent
+ACH-002066,-1.0233506,0.66807324,-0.51210403,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-002083,-1.0008295,0.73898375,-0.56037045,peripheral nervous system,Neuroblastoma,Adherent
+ACH-002239,-0.99845654,0.7574858,-0.5349764,head and neck,Salivary Carcinoma,Unknown
+ACH-002261,-0.9983835,0.73813874,-0.53387666,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002400,-0.94097406,0.66459876,-0.4773883,breast,Invasive Breast Carcinoma,Adherent
+ACH-002446,-0.92397964,0.749718,-0.5051522,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-002490,-1.055974,0.71683466,-0.5584265,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-002526,-0.9623848,0.6774054,-0.5245308,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002654,-0.8999818,0.7112758,-0.5089754,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002782,-1.0001132,0.6771504,-0.47639468,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Adherent
+ACH-003176,-1.0490857,0.681811,-0.53682655,bone,Osteosarcoma,Mixed
+ACH-003190,-0.89558285,0.7011647,-0.43514097,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Mixed
+ACH-000012,-1.0059736,0.6303737,-0.5477332,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000013,-1.0434924,0.68573326,-0.5161696,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000132,-0.9932009,0.6977089,-0.4889778,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000151,-1.014328,0.6976658,-0.5557823,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000246,-1.0051907,0.64328724,-0.54149765,kidney,Renal Cell Carcinoma,Adherent
+ACH-000264,-0.96341306,0.73989224,-0.4191582,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000272,-0.94325566,0.69047815,-0.46476954,kidney,Renal Cell Carcinoma,Adherent
+ACH-000293,-0.91866416,0.7867504,-0.52468985,uterus,Endometrial Carcinoma,Adherent
+ACH-000296,-0.9725804,0.66942644,-0.5424421,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000303,-0.96375155,0.65213597,-0.5205713,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-000345,-0.9790741,0.69827753,-0.5302289,peripheral nervous system,Neuroblastoma,Mixed
+ACH-000374,-0.9780444,0.7146436,-0.53027576,breast,Invasive Breast Carcinoma,Adherent
+ACH-000417,-0.93500125,0.7395291,-0.51460016,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000431,-1.0029761,0.6851174,-0.47553658,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000442,-0.9428841,0.7517363,-0.48838356,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000450,-0.973037,0.6924831,-0.56121844,skin,Melanoma,Adherent
+ACH-000504,-0.97647643,0.7376988,-0.46123424,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000505,-0.93722385,0.7834038,-0.41768533,soft tissue,Leiomyosarcoma,Adherent
+ACH-000517,-0.98161834,0.7267146,-0.42354012,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000521,-0.9420963,0.68073803,-0.48862594,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000551,-0.9717975,0.68125623,-0.529833,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000554,-0.8295827,0.9460397,-0.49732408,breast,Invasive Breast Carcinoma,Adherent
+ACH-000559,-0.9236129,0.75976527,-0.46428207,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000619,-1.0746392,0.7023719,-0.54481375,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000634,-0.98158526,0.6665443,-0.5223006,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000645,-0.9804831,0.6817835,-0.46498588,pleura,Pleural Mesothelioma,Adherent
+ACH-000649,-1.0148672,0.68820846,-0.510672,kidney,Renal Cell Carcinoma,Adherent
+ACH-000699,-0.95295584,0.8027489,-0.46266234,breast,Invasive Breast Carcinoma,Adherent
+ACH-000700,-0.98988897,0.6830958,-0.538841,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000713,-0.9377069,0.6434026,-0.5323497,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000722,-0.9581585,0.7713929,-0.5759898,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-000734,-0.9996846,0.6846459,-0.5168306,liver,Hepatocellular Carcinoma,Adherent
+ACH-000740,-1.0035625,0.67983645,-0.50198036,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000746,-0.94975877,0.7092219,-0.49970755,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-000757,-0.94152796,0.6862432,-0.50171435,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000775,-1.0255226,0.6709365,-0.48816732,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000777,-0.9606454,0.6596245,-0.52665794,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000788,-1.0507748,0.7168774,-0.48855683,skin,Melanoma,Adherent
+ACH-000835,-1.0237175,0.6556085,-0.5054383,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Adherent
+ACH-000851,-0.9674282,0.63705605,-0.54022264,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000861,-1.0073959,0.69280195,-0.5185495,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000878,-0.91724837,0.72103095,-0.5073963,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000881,-1.0224323,0.6904711,-0.5391694,skin,Melanoma,Adherent
+ACH-000882,-1.02016,0.6594374,-0.5561808,skin,Melanoma,Adherent
+ACH-000885,-1.0633663,0.6569772,-0.5883307,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000896,-1.0004836,0.66403365,-0.49100626,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000917,-1.0427817,0.6781562,-0.5265372,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000935,-0.98287594,0.6927195,-0.5503366,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000956,-0.94900537,0.8002381,-0.57154274,prostate,Prostate Adenocarcinoma,Adherent
+ACH-000976,-0.95070386,0.65497607,-0.5023885,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-000997,-0.98149335,0.838374,-0.49733156,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001031,-1.0092007,0.66406125,-0.5547029,cns/brain,Embryonal Tumor,Adherent
+ACH-001036,-0.96845317,0.66771495,-0.5458417,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001067,-0.98313683,0.6575856,-0.5689718,cns/brain,Meningothelial Tumor,Adherent
+ACH-001107,-0.9497748,0.74479586,-0.46037337,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001129,-1.0130491,0.6759552,-0.5291587,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001151,-1.0962038,0.7255738,-0.47942644,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001233,-0.9858155,0.7954549,-0.44403103,lung,Non-Small Cell Lung Cancer,Mixed
+ACH-001278,-0.9967408,0.6614073,-0.5680703,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001333,-0.99319154,0.6690834,-0.5218092,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001400,-1.0016439,0.6781842,-0.5144623,vulva/vagina,Squamous Cell Carcinoma of the Vulva/Vagina,Adherent
+ACH-001421,-1.008404,0.7051225,-0.48874754,eye,Retinoblastoma,Suspension
+ACH-001451,-0.9856625,0.6588034,-0.4789079,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001459,-0.95330465,0.6701761,-0.5422543,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001497,-0.95148766,0.6983696,-0.52136,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-001521,-0.931257,0.70693773,-0.49242204,skin,Cutaneous Squamous Cell Carcinoma,Adherent
+ACH-001529,-0.99827045,0.67476875,-0.55931777,uterus,Gestational Trophoblastic Disease,Adherent
+ACH-001554,-1.0184375,0.6252356,-0.52610964,eye,Ocular Melanoma,Adherent
+ACH-001570,-1.0008701,0.65376544,-0.54015833,skin,Melanoma,Adherent
+ACH-001578,-1.0253503,0.6617807,-0.52672964,testis,Non-Seminomatous Germ Cell Tumor,Adherent
+ACH-001652,-0.9872702,0.6471819,-0.4628873,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-001688,-0.89388067,0.75092626,-0.4900563,kidney,Renal Cell Carcinoma,Adherent
+ACH-001765,-1.0139192,0.6749498,-0.51613545,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-001838,-0.89438987,0.73689944,-0.44591036,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001844,-0.9746576,0.6607645,-0.50748396,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001972,-1.0386107,0.6631444,-0.57621807,skin,Melanoma,Adherent
+ACH-002003,-0.95991784,0.663257,-0.54507786,skin,Melanoma,Adherent
+ACH-002004,-0.97323734,0.68113065,-0.55725837,skin,Melanoma,Adherent
+ACH-002042,-1.0043808,0.6748023,-0.50126106,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002077,-1.0016555,0.6588579,-0.4981482,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-002084,-0.9590209,0.68844974,-0.46254575,skin,Melanoma,Adherent
+ACH-002250,-0.964301,0.77543527,-0.50860584,head and neck,Head and Neck Squamous Cell Carcinoma,Unknown
+ACH-002278,-0.95993125,0.7420279,-0.54577214,peripheral nervous system,Neuroblastoma,Unknown
+ACH-002399,-0.9470225,0.6687099,-0.4933046,breast,Invasive Breast Carcinoma,Adherent
+ACH-002511,-0.91343725,0.755962,-0.42632908,skin,Melanoma,Adherent
+ACH-002650,-0.968956,0.7089636,-0.45601037,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002672,-0.98442096,0.6789125,-0.49792477,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-002780,-1.0175613,0.66301286,-0.54075205,bone,Ewing Sarcoma,Suspension
+ACH-003273,-1.0686623,0.7011959,-0.57352877,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-003573,-1.0009131,0.67741925,-0.46452957,bone,Osteosarcoma,Adherent
+ACH-000001,-0.9375341,0.77127796,-0.5256731,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000009,-1.0117501,0.7197965,-0.4839183,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000014,-0.963715,0.65801,-0.5318151,skin,Melanoma,Adherent
+ACH-000040,-1.003504,0.6898782,-0.4831722,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000097,-0.9606006,0.6815742,-0.48916215,breast,Invasive Breast Carcinoma,Adherent
+ACH-000099,-0.9873456,0.6594862,-0.5401615,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000116,-1.0263323,0.66423786,-0.50373816,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000153,-0.9478554,0.7074964,-0.5153809,pleura,Pleural Mesothelioma,Adherent
+ACH-000167,-0.9353033,0.67609066,-0.5532111,lymphoid,Mature B-Cell Neoplasms,Mixed
+ACH-000172,-0.96979165,0.69836074,-0.54206306,soft tissue,Rhabdoid Cancer,Adherent
+ACH-000191,-0.97334546,0.6583534,-0.5484759,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-000226,-1.0274792,0.6582866,-0.5692137,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000237,-1.0205225,0.7259672,-0.46937546,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000260,-1.1015639,0.71949035,-0.4883177,peripheral nervous system,Neuroblastoma,Adherent
+ACH-000319,-1.0181345,0.65849024,-0.46952924,pleura,Pleural Mesothelioma,Adherent
+ACH-000325,-0.99094164,0.7083144,-0.53854626,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-000326,-1.0317674,0.67374533,-0.55286855,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000330,-0.9596224,0.68507904,-0.51953655,breast,Invasive Breast Carcinoma,Adherent
+ACH-000338,-0.97202903,0.6816337,-0.49127313,lymphoid,Mature T and NK Neoplasms,Suspension
+ACH-000348,-0.96240234,0.7192838,-0.43180996,skin,Melanoma,Adherent
+ACH-000362,-1.0376887,0.684707,-0.59486353,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000411,-1.0518832,0.677496,-0.52352524,kidney,Renal Cell Carcinoma,Adherent
+ACH-000471,-0.9616508,0.6868377,-0.4796407,liver,Hepatocellular Carcinoma,Adherent
+ACH-000473,-0.99076706,0.68865657,-0.49852708,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000498,-1.0262495,0.67805815,-0.5364374,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000500,-0.9901132,0.67104036,-0.5283662,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000627,-0.9748445,0.68383145,-0.48451766,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000665,-0.9751897,0.70725036,-0.44166556,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000671,-1.0017337,0.69513756,-0.54801744,liver,Hepatoblastoma,Adherent
+ACH-000695,-0.9835984,0.6809797,-0.49527514,lung,Lung Neuroendocrine Tumor,Suspension
+ACH-000701,-0.94355154,0.72039294,-0.48710343,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000704,-1.0139711,0.7170337,-0.5732639,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000721,-0.9900464,0.67171115,-0.5130129,breast,Invasive Breast Carcinoma,Adherent
+ACH-000725,-0.88681084,0.77251256,-0.46505725,breast,Breast Ductal Carcinoma In Situ,Adherent
+ACH-000762,-0.95281976,0.66849744,-0.53013253,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000769,-1.0318533,0.68921995,-0.5240262,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000778,-0.9844456,0.7252583,-0.4996458,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000781,-1.1137869,0.71016955,-0.5045515,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000798,-0.9806089,0.6770757,-0.54344815,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000810,-0.96027446,0.6989029,-0.5265882,skin,Melanoma,Adherent
+ACH-000822,-0.8596302,0.7879375,-0.41736466,skin,Melanoma,Adherent
+ACH-000833,-0.9791327,0.692238,-0.51036876,soft tissue,Rhabdomyosarcoma,Adherent
+ACH-000871,-0.9903765,0.7387464,-0.52755433,lung,Lung Neuroendocrine Tumor,Mixed
+ACH-000879,-1.0064969,0.7534824,-0.60419714,uterus,Endometrial Carcinoma,Adherent
+ACH-000898,-1.0223922,0.6780427,-0.5067596,esophagus/stomach,Esophagogastric Adenocarcinoma,Mixed
+ACH-000905,-1.0017546,0.6370285,-0.5185099,bladder/urinary tract,Bladder Urothelial Carcinoma,Mixed
+ACH-000941,-0.92814237,0.7360987,-0.4511204,uterus,Endometrial Carcinoma,Adherent
+ACH-000945,-0.8923367,0.78969586,-0.50773436,lung,Non-Small Cell Lung Cancer,Suspension
+ACH-000950,-0.9857017,0.7163986,-0.5213367,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-000968,-0.9996659,0.6721163,-0.54642177,skin,Melanoma,Adherent
+ACH-000974,-1.0273094,0.67327064,-0.5325235,uterus,Endometrial Carcinoma,Adherent
+ACH-000977,-1.0173379,0.6762327,-0.5645601,prostate,Prostate Adenocarcinoma,Adherent
+ACH-000983,-1.0215052,0.67277575,-0.5669469,myeloid,Myeloproliferative Neoplasms,Suspension
+ACH-000985,-0.9571824,0.791707,-0.54666775,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001048,-0.97584194,0.6500586,-0.47894275,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001228,-0.98527944,0.6877498,-0.48005313,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001232,-0.99947727,0.6646993,-0.45964327,cns/brain,Embryonal Tumor,Adherent
+ACH-001279,-0.9828904,0.67773926,-0.57468444,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001306,-0.9938886,0.6795646,-0.458568,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-001328,-0.99901134,0.6366213,-0.5339035,skin,Cutaneous Squamous Cell Carcinoma,Adherent
+ACH-001375,-0.9809851,0.67465407,-0.47746736,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-001442,-0.99050665,0.66230875,-0.5015607,skin,Cutaneous Squamous Cell Carcinoma,Adherent
+ACH-001450,-0.9846628,0.6891772,-0.5656112,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-001560,-0.9579024,0.6555842,-0.5152153,pleura,Pleural Mesothelioma,Adherent
+ACH-001603,-0.9642557,0.7857216,-0.52054054,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001656,-1.0011758,0.63648987,-0.5687311,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-001692,-1.0081289,0.6687372,-0.49848247,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001696,-0.97924703,0.6758037,-0.47234994,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001701,-0.94587326,0.66203564,-0.53082234,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001735,-1.0261055,0.65643793,-0.52294797,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-001736,-1.0116386,0.70132345,-0.59577525,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-001737,-1.0004921,0.7179652,-0.5401468,lymphoid,T-Lymphoblastic Leukemia/Lymphoma,Suspension
+ACH-001819,-1.0192602,0.7355227,-0.4857487,breast,Invasive Breast Carcinoma,Adherent
+ACH-001993,-1.0177757,0.7187228,-0.4964413,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-002016,-1.0040371,0.69724625,-0.48181224,eye,Ocular Melanoma,Adherent
+ACH-002025,-0.9950915,0.66484463,-0.5536152,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002043,-1.069215,0.66982365,-0.52387244,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002045,-1.0582919,0.6956003,-0.5593223,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002046,-0.97949743,0.7130827,-0.41957706,uterus,Endometrial Carcinoma,Adherent
+ACH-002106,-0.96707636,0.7675511,-0.48361164,bone,Ewing Sarcoma,Unknown
+ACH-002114,-1.0100472,0.7230925,-0.48732346,bone,Ewing Sarcoma,Unknown
+ACH-002150,-0.9938545,0.6874652,-0.52981293,kidney,Renal Cell Carcinoma,Unknown
+ACH-002179,-0.9629215,0.8144203,-0.57218814,breast,Invasive Breast Carcinoma,Adherent
+ACH-002230,-0.91271126,0.79480904,-0.45323268,cns/brain,Adult-Type Diffuse Glioma,Unknown
+ACH-002475,-1.0013455,0.6667778,-0.54511875,myeloid,Myeloproliferative Neoplasms,Adherent
+ACH-002530,-0.9643393,0.6710345,-0.53538364,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002660,-0.95649546,0.7003284,-0.5577027,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002925,-0.97368574,0.73354983,-0.5167064,eye,Ocular Melanoma,Adherent
+ACH-003064,-0.9759052,0.6393524,-0.46707818,bone,Other,Adherent
+ACH-003184,-0.88577783,0.7561778,-0.40161258,soft tissue,Leiomyosarcoma,Mixed
+ACH-000011,-0.96550435,0.64650893,-0.5244674,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000042,-0.9649102,0.70228046,-0.49245775,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000045,-0.9977166,0.66305697,-0.58166945,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000052,-0.98908985,0.66316473,-0.53406835,bone,Ewing Sarcoma,Adherent
+ACH-000060,-0.96941113,0.6843201,-0.50081307,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000070,-1.0052685,0.68189114,-0.5868724,lymphoid,B-Cell Acute Lymphoblastic Leukemia,Suspension
+ACH-000139,-0.92846847,0.7479645,-0.55206144,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-000198,-1.0345958,0.650519,-0.66226435,myeloid,Acute Myeloid Leukemia,Suspension
+ACH-000211,-0.9992957,0.6805921,-0.46714824,cns/brain,Embryonal Tumor,Adherent
+ACH-000269,-0.9632114,0.70452005,-0.51965415,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000277,-0.96717095,0.70531017,-0.50635046,breast,Invasive Breast Carcinoma,Adherent
+ACH-000324,-1.019631,0.6443601,-0.5349289,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-000378,-0.97421014,0.66699743,-0.5258086,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000422,-1.0043348,0.7066907,-0.50402087,liver,Hepatocellular Carcinoma,Adherent
+ACH-000438,-0.9598497,0.69920665,-0.5008634,lung,Non-Small Cell Lung Cancer,Mixed
+ACH-000466,-0.9838201,0.7052512,-0.51879805,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000491,-0.90932274,0.7039726,-0.5015919,bowel,Colorectal Adenocarcinoma,Mixed
+ACH-000544,-1.0364647,0.6851245,-0.5390482,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000556,-0.98688513,0.6746958,-0.473171,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-000561,-0.9665699,0.7398007,-0.50999194,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000581,-0.9578984,0.8088537,-0.5108222,esophagus/stomach,Esophagogastric Adenocarcinoma,Suspension
+ACH-000588,-0.9863374,0.684006,-0.5755086,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000589,-1.0266234,0.653291,-0.52411205,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000593,-0.96036744,0.68622726,-0.47864014,bladder/urinary tract,Bladder Urothelial Carcinoma,Adherent
+ACH-000605,-1.0158311,0.6769319,-0.5025564,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000606,-1.0082475,0.6328049,-0.53870124,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-000655,-1.0151478,0.64272875,-0.4857587,cns/brain,Adult-Type Diffuse Glioma,Adherent
+ACH-000662,-0.9504397,0.7175333,-0.53331876,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000677,-0.9787921,0.7598991,-0.4559159,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000684,-0.94495374,0.6641111,-0.52369666,kidney,Renal Cell Carcinoma,Adherent
+ACH-000714,-0.97359955,0.7234337,-0.54225063,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000716,-1.0011356,0.6378274,-0.551286,thyroid,Well-Differentiated Thyroid Cancer,Adherent
+ACH-000756,-0.9895754,0.73078436,-0.47947684,cns/brain,Diffuse Glioma,Adherent
+ACH-000765,-0.9777177,0.6714063,-0.47924474,skin,Melanoma,Adherent
+ACH-000838,-0.9710162,0.70987254,-0.50129116,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-000864,-0.9906664,0.7472094,-0.55142397,uterus,Endometrial Carcinoma,Suspension
+ACH-000866,-1.0207251,0.6450835,-0.5314691,lung,Lung Neuroendocrine Tumor,Adherent
+ACH-000873,-0.94678295,0.67093325,-0.5301809,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Adherent
+ACH-000888,-1.0053666,0.65463734,-0.4959719,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000913,-1.0126226,0.72223103,-0.5052346,uterus,Uterine Sarcoma/Mesenchymal,Adherent
+ACH-000916,-0.91775674,0.7414434,-0.5786795,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000948,-1.0504147,0.65158737,-0.58125734,esophagus/stomach,Esophagogastric Adenocarcinoma,Adherent
+ACH-000961,-0.99853975,0.6717601,-0.54299563,uterus,Endometrial Carcinoma,Unknown
+ACH-000975,-0.9796065,0.7031098,-0.46170887,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-000984,-0.9381081,0.68577313,-0.48388517,uterus,Endometrial Carcinoma,Adherent
+ACH-001021,-1.1242621,0.68866,-0.51329136,liver,Hepatoblastoma,Adherent
+ACH-001145,-0.9862564,0.65131056,-0.52821666,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001227,-0.9112505,0.8122604,-0.5024161,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001274,-0.97056454,0.67874485,-0.54542005,soft tissue,Synovial Sarcoma,Adherent
+ACH-001340,-1.0404537,0.6272088,-0.5166471,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001341,-0.9680653,0.72600067,-0.42822823,cervix,Mixed Cervical Carcinoma,Adherent
+ACH-001346,-0.9987857,0.650651,-0.50637853,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001356,-0.93382376,0.71411264,-0.44924444,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-001454,-0.90844804,0.6681249,-0.5061957,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-001518,-0.90202457,0.76535183,-0.41479933,uterus,Endometrial Carcinoma,Adherent
+ACH-001548,-1.0071473,0.68802357,-0.546627,peripheral nervous system,Neuroblastoma,Adherent
+ACH-001552,-1.0037988,0.6811123,-0.488841,skin,Merkel Cell Carcinoma,Adherent
+ACH-001558,-0.9224014,0.6417759,-0.4921365,pleura,Pleural Mesothelioma,Adherent
+ACH-001563,-0.9786898,0.6757359,-0.5129429,skin,Melanoma,Adherent
+ACH-001628,-0.9566203,0.6712607,-0.5302395,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001632,-0.80677724,0.929568,-0.43691495,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-001687,-0.97885174,0.65925145,-0.5175887,kidney,Renal Cell Carcinoma,Adherent
+ACH-001691,-0.936107,0.7281503,-0.44525418,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001699,-0.99473065,0.66563094,-0.53019047,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-001848,-0.96961796,0.67187214,-0.5069492,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001852,-1.0467173,0.6526743,-0.5449853,biliary tract,Intraductal Papillary Neoplasm of the Bile Duct,Adherent
+ACH-001970,-0.9528764,0.73928493,-0.520633,skin,Melanoma,Adherent
+ACH-001982,-0.9840694,0.70090187,-0.48348308,skin,Melanoma,Adherent
+ACH-001990,-1.0433246,0.6729299,-0.5484984,skin,Melanoma,Adherent
+ACH-002015,-0.9633973,0.63624495,-0.51547706,eye,Ocular Melanoma,Adherent
+ACH-002020,-0.98530734,0.72686434,-0.42905074,cervix,Cervical Squamous Cell Carcinoma,Adherent
+ACH-002030,-0.9985038,0.6609181,-0.54447263,head and neck,Head and Neck Squamous Cell Carcinoma,Adherent
+ACH-002039,-0.97000855,0.6715849,-0.5096111,pancreas,Pancreatic Adenocarcinoma,Adherent
+ACH-002041,-0.9632815,0.7097023,-0.40115482,thyroid,Anaplastic Thyroid Cancer,Adherent
+ACH-002181,-0.9343549,0.8160693,-0.46326151,ovary/fallopian tube,Ovarian Epithelial Tumor,Adherent
+ACH-002214,-1.0076123,0.6628511,-0.5708858,lymphoid,Mature B-Cell Neoplasms,Suspension
+ACH-002228,-1.0158353,0.7495261,-0.5411017,cns/brain,Adult-Type Diffuse Glioma,Unknown
+ACH-002233,-0.9028485,0.799198,-0.53900546,bowel,Colorectal Adenocarcinoma,Unknown
+ACH-002243,-0.9942131,0.6937828,-0.5814304,esophagus/stomach,Esophageal Squamous Cell Carcinoma,Unknown
+ACH-002257,-0.99521637,0.7550103,-0.4839421,cns/brain,Adult-Type Diffuse Glioma,Unknown
+ACH-002304,-0.9942579,0.7121879,-0.5065498,cns/brain,Adult-Type Diffuse Glioma,Unknown
+ACH-002433,-1.0308003,0.70821816,-0.6083285,bone,Osteosarcoma,Adherent
+ACH-002508,-0.9894468,0.7049757,-0.4987181,skin,Melanoma,Adherent
+ACH-002531,-0.9312267,0.65134466,-0.51932716,lung,Non-Small Cell Lung Cancer,Adherent
+ACH-002535,-0.9326139,0.70815355,-0.48379844,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002659,-1.002081,0.6525139,-0.5251506,bowel,Colorectal Adenocarcinoma,Adherent
+ACH-002688,-0.9737411,0.71036303,-0.5668371,bone,Osteosarcoma,Adherent
+ACH-002693,-0.9567634,0.69248575,-0.5012973,peripheral nervous system,Nerve Sheath Tumor,Adherent
+ACH-003178,-0.97913516,0.6745368,-0.4846462,bone,Osteosarcoma,Mixed
+ACH-003180,-0.9795264,0.7247804,-0.45578286,soft tissue,Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,Mixed

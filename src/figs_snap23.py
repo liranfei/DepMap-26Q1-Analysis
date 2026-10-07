@@ -67,7 +67,7 @@ rho, prho = spearmanr(e.SNAP25, e[GENE])
 
 mw = lambda a, b: float(mannwhitneyu(a, b, alternative="less", method="asymptotic")[1])
 def pstr(p):
-    m, e = f"{p:.0e}".split("e"); return f"{m} \u00d7 10$^{{{int(e)}}}$"
+    m, e = f"{p:.1e}".split("e"); return f"{m} \u00d7 10$^{{{int(e)}}}$"
 BOX = dict(facecolor="white", edgecolor="none", alpha=1.0, pad=1.5)
 
 # ---------------- figure ----------------
