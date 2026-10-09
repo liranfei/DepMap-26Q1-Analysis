@@ -1,0 +1,104 @@
+{
+ "n_pairs": 17,
+ "n_reproduced": 7,
+ "reproduced": [
+  [
+   "FERMT2 (10979)",
+   "cns/brain"
+  ],
+  [
+   "CFLAR (8837)",
+   "pancreas"
+  ],
+  [
+   "KRAS (3845)",
+   "pancreas"
+  ],
+  [
+   "CTNNB1 (1499)",
+   "bowel"
+  ],
+  [
+   "BCL2L1 (598)",
+   "bowel"
+  ],
+  [
+   "SNAP23 (8773)",
+   "esophagus/stomach"
+  ],
+  [
+   "KRAS (3845)",
+   "bowel"
+  ]
+ ],
+ "screen_formats": {
+  "Ampulla of Vater": {
+   "2DN": 0,
+   "2DO": 2,
+   "3DN": 0,
+   "3DO": 2
+  },
+  "Biliary Tract": {
+   "2DN": 0,
+   "2DO": 0,
+   "3DN": 0,
+   "3DO": 2
+  },
+  "Bowel": {
+   "2DN": 0,
+   "2DO": 4,
+   "3DN": 0,
+   "3DO": 18
+  },
+  "Breast": {
+   "2DN": 0,
+   "2DO": 0,
+   "3DN": 0,
+   "3DO": 14
+  },
+  "CNS/Brain": {
+   "2DN": 25,
+   "2DO": 0,
+   "3DN": 14,
+   "3DO": 0
+  },
+  "Esophagus/Stomach": {
+   "2DN": 0,
+   "2DO": 3,
+   "3DN": 0,
+   "3DO": 24
+  },
+  "Ovary/Fallopian Tube": {
+   "2DN": 0,
+   "2DO": 1,
+   "3DN": 0,
+   "3DO": 2
+  },
+  "Pancreas": {
+   "2DN": 0,
+   "2DO": 0,
+   "3DN": 0,
+   "3DO": 23
+  },
+  "Prostate": {
+   "2DN": 0,
+   "2DO": 2,
+   "3DN": 0,
+   "3DO": 7
+  },
+  "Uterus": {
+   "2DN": 0,
+   "2DO": 2,
+   "3DN": 0,
+   "3DO": 2
+  }
+ },
+ "cflar_pancreas_kras_adjustment": {
+  "coef_unadj": -0.43629881907332246,
+  "coef_adj_KRAS": -0.16829547699066327,
+  "ratio": 0.38573443161756593,
+  "p_adj": 0.08813000341191163,
+  "KRAS_coef": -0.32530060832102226,
+  "KRAS_p": 6.080771639723769e-08
+ }
+}

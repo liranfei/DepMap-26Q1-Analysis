@@ -1,0 +1,104 @@
+{
+ "gene": "FERMT2 (10979)",
+ "status": "post hoc; chosen after the next-generation, Project Score and RNAi results were known",
+ "nextgen_screen_files_sha256": {
+  "screen_gene_effect.csv": "8691885812d1d128d98f6151a6df924ead8dc97f1d61011637eda0dcf57ec17f",
+  "screen_metadata.csv": "d73c5775413b42bc44fb4e55b43f19453f0172dc85720395fda15f03b336f9e8"
+ },
+ "consistency_with_published_summaries": {
+  "max_abs_mean_difference": 4.849805002038465e-10,
+  "all_counts_match": true,
+  "n_screens": 147
+ },
+ "nextgen_format_matched": {
+  "2DN_vs_2DO": {
+   "n_target": 25,
+   "n_other": 14,
+   "median_target": -0.5965651762503077,
+   "median_other": -0.20529499898997589,
+   "median_difference": -0.3912701772603318,
+   "mean_target": -0.5880105702915632,
+   "mean_other": -0.22347093309690383,
+   "p_one_sided": 0.00026088416433522443
+  },
+  "3DN_vs_3DO": {
+   "n_target": 14,
+   "n_other": 94,
+   "median_target": -0.3789182294980829,
+   "median_other": -0.2537066647738549,
+   "median_difference": -0.125211564724228,
+   "mean_target": -0.4182049004787739,
+   "mean_other": -0.26959824575382957,
+   "p_one_sided": 0.030082540564969666,
+   "bootstrap_95ci_median_difference": [
+    -0.35890810272267804,
+    0.021924440863630185
+   ]
+  },
+  "CNS_3DN_vs_2DN": {
+   "median_3DN": -0.3789182294980829,
+   "median_2DN": -0.5965651762503077,
+   "p_two_sided": 0.13927704339239982,
+   "models_screened_in_both_formats": 0
+  },
+  "organoid_vs_2D_adherent_published": {
+   "organoid_mean": -0.2695982457538294,
+   "n_organoid": 94,
+   "adherent_2D_mean": -0.6015025339184668,
+   "n_adherent": 433,
+   "fdr": 1.6219414383213434e-07
+  }
+ },
+ "three_d_only_calibration": {
+  "pairs_testable": 17,
+  "reproduced_pairs": 7,
+  "reproduced_with_p_lt_0.05_3D_only": 3,
+  "reproduced_pairs_p": {
+   "FERMT2 cns/brain": 0.030082540564969666,
+   "CFLAR pancreas": 0.017776443451857592,
+   "KRAS pancreas": 0.009210150750601644,
+   "CTNNB1 bowel": 0.16232684885886706,
+   "BCL2L1 bowel": 0.12345146365537024,
+   "SNAP23 esophagus/stomach": 0.05877580563246313,
+   "KRAS bowel": 0.22245482782959525
+  }
+ },
+ "rnai": {
+  "cns_brain_all": {
+   "n": 32,
+   "median": -0.24725232458949997,
+   "median_rest": -0.107326395391,
+   "selectivity": -0.13992592919849997,
+   "p_one_sided": 0.004280353680028322,
+   "q_value_primary_family": 0.1005173119275306
+  },
+  "diffuse_glioma": {
+   "n": 22,
+   "median": -0.30762689193299997,
+   "median_rest": -0.107326395391,
+   "selectivity": -0.20030049654199997,
+   "p_one_sided": 0.0005539992605194954
+  },
+  "embryonal_and_other": {
+   "n": 10,
+   "median": -0.11616775649965,
+   "median_rest": -0.107326395391,
+   "selectivity": -0.008841361108649998,
+   "p_one_sided": 0.5383321125732088
+  },
+  "crispr_rnai_concordance": {
+   "n_lines": 462,
+   "spearman_rho": 0.6662006116052395,
+   "p": 1.3947614929331625e-60
+  }
+ },
+ "project_score_separated_design": {
+  "discovery_selectivity": -0.4553564992755945,
+  "discovery_q": 0.0367731878910947,
+  "discovery_candidate": false,
+  "sanger_n": 33,
+  "sanger_selectivity": -0.4812993642776172,
+  "sanger_median": -0.7301700948940817,
+  "sanger_q": 2.6040352132174017e-06
+ }
+}

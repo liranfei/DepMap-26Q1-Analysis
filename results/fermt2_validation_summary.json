@@ -1,0 +1,179 @@
+{
+ "plan_sha256": "5278f46ba887774359608f50bf5764c34834771d20c97b4ee379b2b9d187dcba",
+ "CNS/Brain": {
+  "n_target": 91,
+  "selectivity_all": -0.6206097910328806,
+  "p_all": 1.8708334961203204e-11,
+  "c1_adherent": {
+   "n_other": 846,
+   "selectivity": -0.48179347162789754,
+   "p": 3.5987409011345045e-07
+  },
+  "c1_pass": true,
+  "c2_genotype": {
+   "coef_unadj": -0.4186818758168973,
+   "coef_adj": -0.39504516577090626,
+   "ratio": 0.9435449408936724,
+   "p_adj": 7.0435117255858825e-09
+  },
+  "c2_pass": true,
+  "c3_subtypes": {
+   "Adult-Type Diffuse Glioma": {
+    "n": 69,
+    "selectivity": -0.7141044320516016,
+    "p": 1.764156659093415e-14
+   },
+   "Embryonal Tumor": {
+    "n": 17,
+    "selectivity": 0.06944277635132351,
+    "p": 0.8819122209501187
+   }
+  },
+  "c3_pass": false,
+  "c4_carcinoma": {
+   "n_other": 661,
+   "selectivity": -0.6611023057792199,
+   "p": 8.447565420764129e-14
+  },
+  "c4_pass": true
+ },
+ "Skin": {
+  "n_target": 75,
+  "selectivity_all": -0.7414481496365699,
+  "p_all": 2.2636027534785676e-15,
+  "c1_adherent": {
+   "n_other": 851,
+   "selectivity": -0.6084736820451923,
+   "p": 2.385846842426767e-11
+  },
+  "c1_pass": true,
+  "c2_genotype": {
+   "coef_unadj": -0.6108555875005487,
+   "coef_adj": -0.5820985880931845,
+   "ratio": 0.952923407764788,
+   "p_adj": 3.1100509936299904e-13
+  },
+  "c2_pass": true,
+  "c3_subtypes": {
+   "Cutaneous Squamous Cell Carcinoma": {
+    "n": 5,
+    "selectivity": 0.28421454005649893,
+    "p": 0.9681939629697943
+   },
+   "Melanoma": {
+    "n": 67,
+    "selectivity": -0.7654948745041397,
+    "p": 1.7954480435990728e-17
+   }
+  },
+  "c3_pass": false,
+  "c4_carcinoma": {
+   "n_other": 661,
+   "selectivity": -0.7866979702830647,
+   "p": 1.5188420109282665e-17
+  },
+  "c4_pass": true
+ },
+ "Kidney": {
+  "n_target": 34,
+  "selectivity_all": -0.9199615822261475,
+  "p_all": 3.494829494744146e-09,
+  "c1_adherent": {
+   "n_other": 891,
+   "selectivity": -0.7785534884072509,
+   "p": 3.5020652586853917e-07
+  },
+  "c1_pass": true,
+  "c2_genotype": {
+   "coef_unadj": -0.6619440867604847,
+   "coef_adj": -0.6225385396312562,
+   "ratio": 0.9404699763660147,
+   "p_adj": 1.846625207418465e-07
+  },
+  "c2_pass": true,
+  "c3_subtypes": {
+   "Renal Cell Carcinoma": {
+    "n": 29,
+    "selectivity": -1.0659613400513481,
+    "p": 2.687474000490477e-09
+   },
+   "Rhabdoid Cancer": {
+    "n": 5,
+    "selectivity": -0.19532350768833906,
+    "p": 0.13767078516389702
+   }
+  },
+  "c3_pass": false,
+  "c4_carcinoma": {
+   "n_other": 661,
+   "selectivity": -0.97820599277481,
+   "p": 7.395385275051547e-11
+  },
+  "c4_pass": true
+ },
+ "c5_paralogue": {
+  "FERMT1": {
+   "n": 1126,
+   "rho": 0.32492191709460777,
+   "p": 4.259566232035702e-29,
+   "rho_within_lineage": 0.3152152974285153,
+   "p_within_lineage": 2.147984907394182e-27
+  },
+  "FERMT3": {
+   "n": 1126,
+   "rho": 0.26704206160215666,
+   "p": 7.726501075203668e-20,
+   "rho_within_lineage": 0.03963683806043245,
+   "p_within_lineage": 0.18381638721728452
+  }
+ },
+ "c5_pass_FERMT1": true,
+ "c5_FERMT1_median": {
+  "CNS/Brain": 1.8082941,
+  "Skin": 0.519222705,
+  "Kidney": 1.1785808,
+  "Bowel": 5.2014847,
+  "Lung": 3.3703163,
+  "Breast": 1.9927576
+ },
+ "c6_top20": {
+  "ITGAV": 0.592,
+  "PTK2": 0.563,
+  "TLN1": 0.457,
+  "ELMO2": 0.438,
+  "BCAR1": 0.423,
+  "VCL": 0.401,
+  "ITGB5": 0.4,
+  "CRKL": 0.398,
+  "ILK": 0.39,
+  "RAC1": 0.389,
+  "PKN2": 0.355,
+  "TP53BP2": 0.317,
+  "PDCL": 0.311,
+  "NCKAP1": 0.309,
+  "TRIO": 0.301,
+  "MARK3": 0.294,
+  "WWTR1": 0.29,
+  "ATRN": 0.289,
+  "PXN": 0.288,
+  "RSU1": 0.285
+ },
+ "c6_partner_ranks": {
+  "ITGB1": 9887,
+  "ITGAV": 1,
+  "ITGB5": 7,
+  "ITGA3": 17678,
+  "ITGA5": 5725,
+  "ILK": 9,
+  "LIMS1": 54,
+  "PARVA": 86,
+  "TLN1": 3,
+  "PTK2": 2,
+  "PXN": 19,
+  "VCL": 6,
+  "FERMT1": 17111
+ },
+ "c6_n_genes": 17931,
+ "c6_pass": true,
+ "decision_use_as_example": true
+}

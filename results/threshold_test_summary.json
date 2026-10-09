@@ -1,0 +1,196 @@
+{
+ "validation": {
+  "n_tests": 467091,
+  "n_ref": 467091,
+  "n_matched": 467091,
+  "max_abs_log10p_diff": 4.2232883856740955e-13,
+  "max_abs_selectivity_diff": 2.220446049250313e-16,
+  "max_abs_median_diff": 4.440892098500626e-16,
+  "shifted_checked_pairs": 394,
+  "shifted_max_abs_log10p_diff": 0.0
+ },
+ "shift": 0.5,
+ "n_tests": 467091,
+ "shift_test_q_lt_0_05": 10,
+ "shift_test_q_lt_0_05_and_median_lt_minus1": 9,
+ "formal_rule_BH": 0,
+ "formal_rule_BY": 0,
+ "formal_rule_genes": 0,
+ "formal_rule_lineages": 0,
+ "formal_rule_in_prioritised": 0,
+ "formal_rule_not_prioritised": 0,
+ "formal_rule_not_prioritised_pairs": [],
+ "prioritised_passing_shift_test": 9,
+ "prioritised_not_formal_binding_test": {
+  "selectivity_threshold": 65,
+  "median_threshold": 29
+ },
+ "formal_rule_by_lineage": {},
+ "formal_rule_blood": 0,
+ "prioritised_by_tier_formal": {
+  "high": {
+   "sum": 0,
+   "count": 20
+  },
+  "low": {
+   "sum": 0,
+   "count": 34
+  },
+  "medium": {
+   "sum": 0,
+   "count": 40
+  }
+ },
+ "boot_ci_below_threshold_among_prioritised": 29,
+ "formal_vs_bootstrap_crosstab": {
+  "false": {
+   "false": 65
+  },
+  "true": {
+   "false": 29
+  }
+ },
+ "min_n_target_formal": null,
+ "bonferroni_level_first_rejection": 1.0704552217876174e-07,
+ "shift_test_q_lt_0_05_BY": 7,
+ "shift_test_pairs": [
+  {
+   "Gene": "CTNNB1 (1499)",
+   "Lineage": "bowel",
+   "n_target": 63,
+   "Chronos_median": -1.2553,
+   "Selectivity": -1.1224,
+   "q_shift": 0.001,
+   "prioritised": true,
+   "tier": "medium",
+   "sel_ci_high": -0.8165
+  },
+  {
+   "Gene": "ATP1B3 (483)",
+   "Lineage": "lymphoid",
+   "n_target": 94,
+   "Chronos_median": -1.1103,
+   "Selectivity": -0.8129,
+   "q_shift": 0.0,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -0.7089
+  },
+  {
+   "Gene": "CBFB (865)",
+   "Lineage": "lymphoid",
+   "n_target": 94,
+   "Chronos_median": -0.9251,
+   "Selectivity": -0.7891,
+   "q_shift": 0.0453,
+   "prioritised": false,
+   "tier": NaN,
+   "sel_ci_high": NaN
+  },
+  {
+   "Gene": "NAMPT (10135)",
+   "Lineage": "lymphoid",
+   "n_target": 94,
+   "Chronos_median": -1.0821,
+   "Selectivity": -0.7852,
+   "q_shift": 0.022,
+   "prioritised": true,
+   "tier": "medium",
+   "sel_ci_high": -0.7287
+  },
+  {
+   "Gene": "NMNAT1 (64802)",
+   "Lineage": "lymphoid",
+   "n_target": 94,
+   "Chronos_median": -1.2002,
+   "Selectivity": -0.9559,
+   "q_shift": 0.0,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -0.8723
+  },
+  {
+   "Gene": "UMPS (7372)",
+   "Lineage": "lymphoid",
+   "n_target": 94,
+   "Chronos_median": -1.1961,
+   "Selectivity": -0.7718,
+   "q_shift": 0.0114,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -0.6918
+  },
+  {
+   "Gene": "CBFB (865)",
+   "Lineage": "myeloid",
+   "n_target": 43,
+   "Chronos_median": -1.2088,
+   "Selectivity": -1.0631,
+   "q_shift": 0.0001,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -0.8513
+  },
+  {
+   "Gene": "MYB (4602)",
+   "Lineage": "myeloid",
+   "n_target": 43,
+   "Chronos_median": -1.357,
+   "Selectivity": -1.0639,
+   "q_shift": 0.0,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -0.9912
+  },
+  {
+   "Gene": "KRAS (3845)",
+   "Lineage": "pancreas",
+   "n_target": 48,
+   "Chronos_median": -2.0867,
+   "Selectivity": -1.5839,
+   "q_shift": 0.0,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -1.364
+  },
+  {
+   "Gene": "SOX10 (6663)",
+   "Lineage": "skin",
+   "n_target": 75,
+   "Chronos_median": -1.6702,
+   "Selectivity": -1.3748,
+   "q_shift": 0.0,
+   "prioritised": true,
+   "tier": "high",
+   "sel_ci_high": -1.1266
+  }
+ ],
+ "prioritised_unadjusted_p_shift_lt_0_05": 33,
+ "prioritised_unadjusted_p_sign_lt_0_05": 54,
+ "prioritised_unadjusted_p_iut_lt_0_05": 21,
+ "prioritised_unadjusted_shift_vs_bootstrap": {
+  "false": {
+   "false": 60,
+   "true": 5
+  },
+  "true": {
+   "false": 1,
+   "true": 28
+  }
+ },
+ "min_q_iut": 0.3859650831189843,
+ "min_q_iut_pairs": [
+  {
+   "Gene": "UMPS (7372)",
+   "Lineage": "lymphoid",
+   "p_iut": 1.1013799157751243e-06,
+   "q_iut": 0.3859650831189843
+  },
+  {
+   "Gene": "KRAS (3845)",
+   "Lineage": "pancreas",
+   "p_iut": 1.6526333546096341e-06,
+   "q_iut": 0.3859650831189843
+  }
+ ]
+}

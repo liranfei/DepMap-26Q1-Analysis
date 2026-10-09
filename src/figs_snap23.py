@@ -71,7 +71,7 @@ def pstr(p):
 BOX = dict(facecolor="white", edgecolor="none", alpha=1.0, pad=1.5)
 
 # ---------------- figure ----------------
-fig, ax = plt.subplots(2, 3, figsize=(7.2, 5.0))
+fig, ax = plt.subplots(2, 3, figsize=(7.2, 6.6), gridspec_kw=dict(height_ratios=[1, 1.45]))   # taller lower row: 20 legible labels in panel E
 def box(a, groups, labels, colours, ylab):
     bp = a.boxplot(groups, widths=0.6, showfliers=False, patch_artist=True, medianprops=dict(color="black", lw=1.0))
     for p, c in zip(bp["boxes"], colours): p.set(facecolor=c, alpha=0.35, edgecolor=c, lw=0.8)
@@ -127,7 +127,7 @@ E.barh(range(len(top)), top.values, color=cols, height=0.7)
 E.set_yticks(range(len(top))); E.set_yticklabels(syms, fontsize=8)
 E.set_xlabel("Pearson r with SNAP23\n(after removing lineage means)")
 E.tick_params(axis="y", length=0)
-E.text(0.97, 0.03, f"top 20 of {len(r):,} genes", transform=E.transAxes, fontsize=8, ha="right", bbox=BOX, zorder=5)
+E.text(0.97, 0.45, f"top 20 of\n{len(r):,} genes", transform=E.transAxes, fontsize=8, ha="right", va="center", bbox=BOX, zorder=5)
 
 # F: paralogue buffering
 F = ax[1, 2]
@@ -142,7 +142,7 @@ F.text(0.97, 0.97, f"Spearman $\\rho$ = {rho:.2f}\np = {pstr(prho)}", transform=
        fontsize=8, va="top", ha="right", bbox=BOX, zorder=5)
 
 for a, lab in zip(ax.ravel(), "ABCDEF"):
-    a.text(-0.22, 1.06, lab, transform=a.transAxes, fontsize=10, fontweight="bold", va="top")
+    a.text(-0.30, 1.04, lab, transform=a.transAxes, fontsize=10, fontweight="bold", va="bottom")
 fig.tight_layout(w_pad=1.6, h_pad=1.4)
 fl.save(fig, "Fig13")
 

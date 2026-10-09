@@ -4,3 +4,5 @@ __pycache__/
 results/all_tests.csv
 results/*.log
 results/part3_summary_tcga_only.json
+results/nextgen_figshare/
+results/fermt2_3d_spheroid_exploratory.json

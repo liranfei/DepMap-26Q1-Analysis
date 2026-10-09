@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Reproduce all results, tables and figures, in dependency order.
 # Required: DEPMAP_DIR (DepMap 26Q1 files), TCGA_DIR (Xena TCGA-KIRC/PAAD star_counts and survival files, unzipped).
-# Optional: DEPMAP22_DIR (22Q1 CRISPR_gene_effect.csv), SANGER_DIR (Project Score Chronos gene_effect.csv), RNAI_DIR (DEMETER2 D2_combined_gene_dep_scores.csv), TCGA_CDR (TCGA-CDR table),
+# Optional: DEPMAP22_DIR (22Q1 CRISPR_gene_effect.csv), SANGER_DIR (Project Score Chronos gene_effect.csv), RNAI_DIR (DEMETER2 D2_combined_gene_dep_scores.csv), NEXTGEN_SCREEN_DIR (screen_gene_effect.csv, screen_metadata.csv), TCGA_CDR (TCGA-CDR table),
 #           PAAD_S1 (Table S1 of Raphael et al. 2017), RUN_ANNOTATION=1 (re-query PubMed/DGIdb; otherwise the stored results/annotation_* files are used),
 #           RESULTS_DIR, FIG_DIR.  Internet access is needed for the Enrichr gene-set libraries.
 set -euo pipefail
@@ -52,7 +52,13 @@ fi
 
 if [ -n "${SANGER_DIR:-}" ] && [ -n "${DEPMAP22_DIR:-}" ]; then
     $PY revision5_checks.py; $PY revision6_checks.py; $PY confidence_tiers.py; $PY robust_se_checks.py     # need the 22Q1 and Project Score outputs above
+    $PY threshold_test.py --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --exclude-noncancerous; $PY make_table_s12.py   # formal test of the thresholds (S12 Table)
+    $PY nextgen_check.py                                        # NextGen organoid/spheroid screens (S13 Table; needs results/nextgen_figshare from figshare 10.6084/m9.figshare.29472362)
     if [ -n "${RNAI_DIR:-}" ]; then export RNAI_DIR="$(cd "$RNAI_DIR" && pwd)"; $PY rnai_validation.py; fi   # DEMETER2 RNAi check
+    $PY fermt2_validation.py                                    # pre-specified FERMT2 checks (prespecified_plan_fermt2.md)
+    if [ -n "${NEXTGEN_SCREEN_DIR:-}" ] && [ -n "${RNAI_DIR:-}" ]; then   # post hoc FERMT2 follow-up; per-screen NextGen files from the DepMap portal release "NextGen Model Manuscript 2026"
+        export NEXTGEN_SCREEN_DIR="$(cd "$NEXTGEN_SCREEN_DIR" && pwd)"; $PY fermt2_followup.py; $PY make_table_s14.py   # S14 Table
+    fi
 fi
 
 # 4. literature annotation (date-dependent; stored versions are used unless RUN_ANNOTATION=1)

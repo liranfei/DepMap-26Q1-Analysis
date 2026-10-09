@@ -2,6 +2,16 @@
 
 Code, intermediate results and figures for the manuscript *"A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data"*.
 
+## Formal threshold test, next-generation models and FERMT2 (added in version 2.4.0)
+
+`src/threshold_test.py` and `src/make_table_s12.py` formally test the two effect thresholds instead of applying them only after the original significance test. The intersection-union p-value is the larger of the one-sided shift and target-median p-values; BH is applied over all 467,091 gene-lineage comparisons. **No pair passes both formally tested thresholds at q < 0.05.** S12 reports this limitation of the original prioritisation rule; it does not replace the primary analysis.
+
+`src/nextgen_check.py` compares the prioritised pairs with published NextGen model screens and writes S13. Seven of 17 testable pairs have the same direction with q < 0.05 across those 17 tests. These screens include 3D cultures and coated 2D cultures, so the seven-pair result must not be described as 3D-only replication. `src/fermt2_followup.py` separates the formats for FERMT2 and the 17 pairs and writes S14 via `src/make_table_s14.py`. The FERMT2 3D spheroid comparison is directionally consistent but smaller and uncertain (bootstrap interval includes zero). The FERMT2 analyses are exploratory: FERMT2 was selected after other results were known; `prespecified_plan_fermt2.md` records criteria before its six checks were run, while the later per-screen follow-up is post hoc. These are computational analyses, not wet-lab validation.
+
+The four unmodified Figshare source files belong in `results/nextgen_figshare/` and are intentionally excluded from Git. Download the files `README.txt`, `model_metadata.csv`, `next_gen_dependency_lineage_tests.csv` and `organoids_vs_2d_gene_dependency_tests_full.csv` from [Neiswender et al. Figshare](https://doi.org/10.6084/m9.figshare.29472362). Download `screen_gene_effect.csv` and `screen_metadata.csv` from the DepMap portal release [NextGen Model Manuscript 2026](https://depmap.org/portal/data_page/?tab=allData&releasename=NextGen+Model+Manuscript+2026), and set `NEXTGEN_SCREEN_DIR` to their directory. Their exact SHA-256 hashes are listed in `checksums/input_files_sha256.txt`. The superseded local `results/fermt2_3d_spheroid_exploratory.json` is also excluded; `results/fermt2_followup_summary.json` is the maintained result.
+
+The manuscript also cites `paralog_dependency_tests_full.csv` from the same Neiswender et al. Figshare record for the reported SNAP25 correlation (r = 0.32). That value is taken from the published table, not calculated by this repository's scripts. This file is therefore a cited source rather than an input to the reproducible pipeline and is not in the input checksum list.
+
 ## Important note on versions
 
 Version 1 of this repository (scripts `01_*` to `23_*`, now in `legacy_v1/`) produced the results of the first manuscript version. While revising the manuscript we found that the gene-effect matrix and the sample annotation had been merged with an inner join that silently dropped 348 of the 1,208 cell lines (the analysis used 860 lines), and that the multiple-testing correction had been applied only to pairs that had already passed an effect-size filter. **The scripts in `legacy_v1/` are superseded and must not be used to reproduce the current results; they are kept only for transparency.** Version 2 (`src/`) analyses all 1,208 models, excludes 16 models annotated as non-cancerous (1,192 cancer cell lines), tests every gene in every eligible lineage and applies Benjamini-Hochberg adjustment over the whole test family before the effect-size rule is applied. The merge in `src/run_pipeline.py` stops with an error if any cell line is lost or lacks a lineage annotation.
@@ -42,6 +52,8 @@ DEPMAP_DIR=/path/to/depmap_files TCGA_DIR=/path/to/xena_files \
   bash run_all.sh
 ```
 
+For S12–S14, also set `RNAI_DIR` to the DEMETER2 file directory and `NEXTGEN_SCREEN_DIR` to the two per-screen files directory. Place the four Figshare files at `results/nextgen_figshare/` before running `run_all.sh`. These steps also require `DEPMAP22_DIR` and `SANGER_DIR`; `S12` uses the existing primary output and confidence tiers, and `S14` uses the RNAi and separated Project Score outputs. `src/fermt2_validation.py` additionally reads the 26Q1 expression file named in the SNAP23 section above.
+
 Outputs are written to `results/` (tables, JSON summaries) and `figures/` (TIFF files and supporting tables). On a laptop the main analysis takes roughly 5 minutes, each of the five permutation schemes roughly 10 minutes, and the complete run about 1 to 1.5 hours. `results/` in this repository contains the results reported in the manuscript.
 
 ## Verification
@@ -58,6 +70,8 @@ Downstream analyses were cross-checked with a second implementation (`src/cross_
 | `src/genome_perm.py` | fast genome-wide permutation test (validated against `run_pipeline.py`) |
 | `src/sens_primary.py`, `src/ttest_alt.py` | multiplicity, threshold, top-N, minimum-n sensitivity; Student t-test screen |
 | `src/hodges_lehmann.py` | exact Hodges-Lehmann sensitivity analysis of all significant pairs; fixed and post hoc matched thresholds |
+| `src/threshold_test.py`, `src/make_table_s12.py` | formal threshold tests and S12 Table |
+| `src/nextgen_check.py`, `src/fermt2_validation.py`, `src/fermt2_followup.py`, `src/make_table_s14.py` | NextGen comparison, FERMT2 checks and S13–S14 Tables |
 | `src/part2_depmap.py`, `src/part3_tcga_enrich.py` | genotype, TP53-MDM2, batch/library, co-dependency, subsampling, subtypes; TCGA and enrichment |
 | `src/cross_check.py` | second implementation of the downstream analyses |
 | `src/sanger_disjoint.py`, `src/figs_sanger_disjoint.py` | separated Broad/Sanger replication (Fig 12, S7 Table) |
