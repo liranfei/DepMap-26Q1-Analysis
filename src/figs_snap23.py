@@ -109,14 +109,15 @@ for i, (c, lo, hi) in enumerate(coefs):
 C.set_xticks(xs); C.set_xticklabels(["Lineage\nonly", "Adjusted for\nKRAS, APC, TP53,\nBRAF, PIK3CA"])
 C.set_xlim(-0.5, 1.5); C.axhline(0, lw=0.8, color="black")
 C.set_ylabel("Bowel coefficient (Chronos)")
-C.text(0.5, 0.04, f"{100*coefs[1][0]/coefs[0][0]:.0f}% of the\nunadjusted effect retained",
-       transform=C.transAxes, fontsize=8, ha="center", bbox=BOX, zorder=5)
+# placed above the error bars so that the box does not hide the lower CI limits
+C.text(0.5, 0.80, f"{100*coefs[1][0]/coefs[0][0]:.0f}% of the\nunadjusted effect retained",
+       transform=C.transAxes, fontsize=8, ha="center", va="top", bbox=BOX, zorder=5)
 
 # D: Sanger
 D = ax[1, 0]
 box(D, [sb, so], [f"Bowel\n(n = {len(sb)})", f"All other\n(n = {len(so)})"], [fl.VERM, fl.GREY],
     "SNAP23 Chronos (Project Score)")
-D.text(0.03, 0.97, f"selectivity = {np.median(sb)-np.median(so):.2f}\nq = 5.8 × 10$^{{-4}}$",
+D.text(0.03, 0.97, f"selectivity = {np.median(sb)-np.median(so):.2f}".replace("-", "−") + "\nq = 5.8 × 10$^{{-4}}$",
        transform=D.transAxes, fontsize=8, va="top", bbox=BOX, zorder=5)
 
 # E: co-dependency
@@ -127,7 +128,7 @@ E.barh(range(len(top)), top.values, color=cols, height=0.7)
 E.set_yticks(range(len(top))); E.set_yticklabels(syms, fontsize=8)
 E.set_xlabel("Pearson r with SNAP23\n(after removing lineage means)")
 E.tick_params(axis="y", length=0)
-E.text(0.97, 0.45, f"top 20 of\n{len(r):,} genes", transform=E.transAxes, fontsize=8, ha="right", va="center", bbox=BOX, zorder=5)
+E.text(0.97, 0.45, f"top 20 of\n{len(r):,} genes\nwith data in\n≥300 lines", transform=E.transAxes, fontsize=8, ha="right", va="center", bbox=BOX, zorder=5)
 
 # F: paralogue buffering
 F = ax[1, 2]
@@ -138,8 +139,9 @@ F.set_xlabel("SNAP25 expression (log$_2$[TPM + 1])"); F.set_ylabel("SNAP23 Chron
 F.axhline(-1, ls=":", lw=0.8, color=fl.GREY)
 F.legend(loc="lower right", handletextpad=0.2, markerscale=2.5, framealpha=0.85,
          edgecolor="none", facecolor="white")
-F.text(0.97, 0.97, f"Spearman $\\rho$ = {rho:.2f}\np = {pstr(prho)}", transform=F.transAxes,
-       fontsize=8, va="top", ha="right", bbox=BOX, zorder=5)
+# placed above the axes so that it does not hide data points
+F.text(1.0, 1.01, f"Spearman $\\rho$ = {rho:.2f}, p = {pstr(prho)}", transform=F.transAxes,
+       fontsize=8, va="bottom", ha="right")
 
 for a, lab in zip(ax.ravel(), "ABCDEF"):
     a.text(-0.30, 1.04, lab, transform=a.transAxes, fontsize=10, fontweight="bold", va="bottom")

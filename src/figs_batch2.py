@@ -6,6 +6,8 @@ import run_pipeline as rp
 F,T,lc=load_all(); SS=json.load(open(O+"sensitivity_summary.json")); TT=json.load(open(O+"ttest_alt_summary.json")); D=os.environ.get("DEPMAP_DIR","."); TD=os.environ.get("TCGA_DIR",".")
 def letters(axs,dx=-0.02,dy=1.02):
     for a,l in zip(axs,"ABCDEFGH"): a.text(dx,dy,l,transform=a.transAxes,fontsize=12,fontweight="bold",va="bottom",ha="right")
+def pstr(p):  # same "m × 10^e" style as the other figures
+    m,e=f"{p:.1e}".split("e"); return f"{m} × 10$^{{{int(e)}}}$"
 def bars(ax,labels,vals,colors,ylabel,fmt="{:,}"):
     x=np.arange(len(vals)); ax.bar(x,vals,color=colors,width=0.7); ax.set_xticks(x); ax.set_xticklabels(labels); ax.set_ylabel(ylabel)
     for i,v in enumerate(vals): ax.text(i,v+max(vals)*0.02,fmt.format(v),ha="center",va="bottom",fontsize=8)
@@ -54,10 +56,10 @@ def box(ax,data,labels,colors,ylabel=None,pos=None):
 fig,axs=plt.subplots(1,3,figsize=(7.3,3.6)); P2=json.load(open(O+"part2_summary.json"))
 for ax,sym in zip(axs[:2],["KRAS","CTNNB1"]):
     y=pd.to_numeric(df[col(sym)],errors="coerce"); g=grp(sym); names=["Hotspot","Other\nprotein-altering","None"]; dat=[y[(g==n)&y.notna()].values for n in names]
-    box(ax,dat,[f"{n}\n(n = {len(v)})" for n,v in zip(names,dat)],[VERM,ORANGE,GREY],f"{sym} Chronos" if sym=="KRAS" else None); ax.set_title(f"{sym}\nHotspot vs. none: p = {P2[sym+'_genotype']['hotspot_vs_none_p']:.1e}",fontsize=9); ax.tick_params(axis="x",labelsize=8)
+    box(ax,dat,[f"{n}\n(n = {len(v)})" for n,v in zip(names,dat)],[VERM,ORANGE,GREY],f"{sym} Chronos" if sym=="KRAS" else None); ax.set_title(f"{sym}\nHotspot vs. none: p = {pstr(P2[sym+'_genotype']['hotspot_vs_none_p'])}",fontsize=9); ax.tick_params(axis="x",labelsize=8)
 axs[0].set_ylabel("Chronos gene effect")
 t53=set(mut[(mut.HugoSymbol=="TP53")&mut.VepImpact.isin(["HIGH","MODERATE"])].ModelID); yy=pd.to_numeric(df[col("MDM2")],errors="coerce"); mm=df.DepMap_ID.isin(t53)
-dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"No TP53\nvariant\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nNo variant vs. mutant: p = {P2['MDM2_TP53_protein_altering']['p_one_sided']:.1e}",fontsize=9)
+dat=[yy[(~mm)&yy.notna()].values,yy[mm&yy.notna()].values]; box(axs[2],dat,[f"No TP53\nvariant\n(n = {len(dat[0])})",f"TP53\nmutant\n(n = {len(dat[1])})"],[BLUE,VERM]); axs[2].set_title(f"MDM2\nNo variant vs. mutant: p = {pstr(P2['MDM2_TP53_protein_altering']['p_one_sided'])}",fontsize=9)
 letters(axs,-0.05); fig.tight_layout(pad=0.6,w_pad=0.8); save(fig,"Fig8")
 # ================= Fig 9 TCGA + DepMap
 P3=json.load(open(O+"part3_summary.json")); HAVE_TCGA=all(os.path.exists(O+f"tcga_{c}_expression_samples.csv") for c in ("KIRC_HNF1B","PAAD_KRAS"))
@@ -76,8 +78,8 @@ def km(ax,tab,label,key):
 for row,(sym,lin,ens,path,tabf,key) in enumerate([] if not HAVE_TCGA else [("HNF1B","kidney","ENSG00000275410",TD+"/TCGA-KIRC.star_counts.tsv","tcga_KIRC_HNF1B_survival_table.csv","TCGA_KIRC_HNF1B"),("KRAS","pancreas","ENSG00000133703",TD+"/TCGA-PAAD.star_counts.tsv","tcga_PAAD_KRAS_survival_table.csv","TCGA_PAAD_KRAS")]):
     y=pd.to_numeric(df[col(sym)],errors="coerce"); a=y[(df.lineage==lin)&y.notna()].values; o=y[(df.lineage!=lin)&y.notna()].values
     box(axs[row,0],[o,a],[f"Other\nlineages\n(n = {len(o):,})",f"{nm(lin)}\n(n = {len(a)})"],[GREY,VERM],f"{sym} Chronos"); axs[row,0].axhline(-1,color="#555555",ls="--",lw=0.8)
-    t,nrm=expr_groups(tabf.replace("tcga_","").replace("_survival_table.csv","")); r=P3[key]; box(axs[row,1],[nrm,t],[f"Normal\n(n = {len(nrm)})",f"Tumor\n(n = {len(t)})"],[BLUE,VERM],f"{sym} log$_2$(CPM + 1)")
-    if row==0: KP=json.load(open(O+"kirc_paired.json")); axs[row,1].set_title(f"TCGA-KIRC\npaired p = {KP['wilcoxon_p_two_sided']:.3f} (MW p = {r['p_tumor_vs_normal_two_sided']:.1e})",fontsize=8)
+    t,nrm=expr_groups(tabf.replace("tcga_","").replace("_survival_table.csv","")); r=P3[key]; box(axs[row,1],[nrm,t],[f"Normal\n(n = {len(nrm)})",f"Tumour\n(n = {len(t)})"],[BLUE,VERM],f"{sym} log$_2$(CPM + 1)")
+    if row==0: KP=json.load(open(O+"kirc_paired.json")); axs[row,1].set_title(f"TCGA-KIRC\npaired p = {KP['wilcoxon_p_two_sided']:.3f} (MW p = {pstr(r['p_tumor_vs_normal_two_sided'])})",fontsize=8)
     else: axs[row,1].set_title("TCGA-PAAD\n4 normal samples (descriptive)",fontsize=9)
     km(axs[row,2],pd.read_csv(O+tabf),sym,key)
 axs[0,0].set_title("DepMap",fontsize=9); axs[0,2].set_title("TCGA-KIRC",fontsize=9); axs[1,2].set_title("TCGA-PAAD",fontsize=9); axs[1,0].set_title("DepMap",fontsize=9)

@@ -49,7 +49,7 @@ ax.set_xlim(-1.75,0.7); ax.set_xlabel("Selectivity (median Chronos, target linea
 fig.tight_layout(pad=0.6); save(fig,"Fig3")
 # ================= Fig 4 efficacy vs selectivity
 fig,ax=plt.subplots(figsize=(7.3,5.3)); h=F[F.Lineage.isin(HEME)]; s=F[~F.Lineage.isin(HEME)]
-ax.scatter(s.Selectivity,s.Chronos_median,s=22,c=BLUE,edgecolor="white",linewidth=0.3,label="Solid-tumor lineages")
+ax.scatter(s.Selectivity,s.Chronos_median,s=22,c=BLUE,edgecolor="white",linewidth=0.3,label="Solid-tumour lineages")
 ax.scatter(h.Selectivity,h.Chronos_median,s=22,c=VERM,edgecolor="white",linewidth=0.3,label="Lymphoid / myeloid")
 lo=F[F.n_target<10]; ax.scatter(lo.Selectivity,lo.Chronos_median,s=60,facecolors="none",edgecolors="black",linewidth=0.8,label="Pair with < 10 target observations")
 ax.axvline(-0.5,color="#555555",ls="--",lw=0.9); ax.axhline(-1,color="#555555",ls="--",lw=0.9)
@@ -69,5 +69,5 @@ ax.set_yticks(y); ax.set_yticklabels([f"{a} ({nm(b)})"+(" *" if n<10 else "") fo
 for i,(s_,q_) in enumerate(zip(t.Selectivity,t.q_value)): ax.text(-s_+0.02,i,f"{s_:.2f}".replace("-","−"),va="center",fontsize=8)
 ax.set_xlabel("−Selectivity (larger = more lineage-selective)"); ax.set_xlim(0,1.9)
 from matplotlib.patches import Patch
-ax.legend(handles=[Patch(color=BLUE,label="Solid-tumor lineage"),Patch(color=VERM,label="Lymphoid / myeloid")],frameon=False,loc="lower right")
+ax.legend(handles=[Patch(color=BLUE,label="Solid-tumour lineage"),Patch(color=VERM,label="Lymphoid / myeloid")],frameon=False,loc="lower right")
 fig.tight_layout(pad=0.6); save(fig,"Fig5")

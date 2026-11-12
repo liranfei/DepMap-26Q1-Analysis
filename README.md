@@ -2,6 +2,10 @@
 
 Code, intermediate results and figures for the manuscript *"A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data"*.
 
+## Figure presentation fixes (version 2.4.1)
+
+Version 2.4.1 changes figure presentation only; no number, table or result changed (`results/Fig13_values.json` is identical, and Figs 1–3, 6, 7 and 10 are pixel-identical to version 2.4.0). In Fig 13 the text box in panel C no longer hides the lower 95% confidence limits, the Spearman statistics in panel F were moved above the axes so that they no longer hide data points, and panel E states that the co-dependency analysis used the 17,930 genes with data in at least 300 cell lines (the lineage tests used 18,435 genes). p-values in Figs 8 and 9 now use the "m × 10^e" notation of the other figures, the minus sign in Fig 13D is a true minus, and "tumor" in figure labels is spelled "tumour" as in the manuscript.
+
 ## Formal threshold test, next-generation models and FERMT2 (added in version 2.4.0)
 
 `src/threshold_test.py` and `src/make_table_s12.py` formally test the two effect thresholds instead of applying them only after the original significance test. The intersection-union p-value is the larger of the one-sided shift and target-median p-values; BH is applied over all 467,091 gene-lineage comparisons. **No pair passes both formally tested thresholds at q < 0.05.** S12 reports this limitation of the original prioritisation rule; it does not replace the primary analysis.
