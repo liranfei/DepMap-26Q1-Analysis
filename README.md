@@ -2,6 +2,10 @@
 
 Code, intermediate results and figures for the manuscript *"A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data"*.
 
+## Scripts for previously untraced manuscript numbers (version 2.4.2)
+
+Version 2.4.2 adds four scripts so that the numbers in the manuscript that come from these analyses (not those quoted from the literature) can be traced to a result file: `src/snap23_paralogue_restriction.py` (post hoc SNAP23 bowel contrast among lines with low SNAP25 and SNAP29 expression), `src/hl_discrepancies.py`, `src/fermt2_fermt1_expression.py` and `src/manuscript_extra_numbers.py` (described in the sections below). The full pipeline was rerun from the raw input files (checksums as in `checksums/`) and reproduced all stored results, supplementary tables and figures; no existing number, table or figure changed.
+
 ## Figure presentation fixes (version 2.4.1)
 
 Version 2.4.1 changes figure presentation only; no number, table or result changed (`results/Fig13_values.json` is identical, and Figs 1–3, 6, 7 and 10 are pixel-identical to version 2.4.0). In Fig 13 the text box in panel C no longer hides the lower 95% confidence limits, the Spearman statistics in panel F were moved above the axes so that they no longer hide data points, and panel E states that the co-dependency analysis used the 17,930 genes with data in at least 300 cell lines (the lineage tests used 18,435 genes). p-values in Figs 8 and 9 now use the "m × 10^e" notation of the other figures, the minus sign in Fig 13D is a true minus, and "tumor" in figure labels is spelled "tumour" as in the manuscript.
