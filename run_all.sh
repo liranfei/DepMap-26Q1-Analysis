@@ -26,7 +26,7 @@ $PY part3_tcga_enrich.py                                                        
 $PY kirc_paired.py
 $PY cross_check.py; $PY cohort_stats.py; $PY batch_composition.py; $PY data_description.py
 $PY benchmark_metrics.py                                                                                 # Table 3, S9 Table
-$PY hodges_lehmann.py                                                                                  # HL sensitivity analysis and S9 Table extension
+$PY hodges_lehmann.py; $PY hl_discrepancies.py                                                                                  # HL sensitivity analysis and S9 Table extension
 $PY screen_quality_confound.py                                                                          # screen dynamic range as a confounder
 $PY revision2_checks.py                                                                                  # co-dependency, restricted enrichment background, RCC subsets, subsampling
 $PY growth_confound.py                                                                                   # culture-format checks (S10 Table)
@@ -39,7 +39,7 @@ fi
 # 3. comparisons with other data sets
 if [ -n "${DEPMAP22_DIR:-}" ]; then
     export DEPMAP22_DIR="$(cd "$DEPMAP22_DIR" && pwd)"
-    $PY cross_release.py; $PY cross_release_decomp.py; $PY figs_crossrelease.py                          # Fig 11, S6 Table
+    $PY cross_release.py; $PY cross_release_decomp.py; $PY manuscript_extra_numbers.py; $PY figs_crossrelease.py                          # Fig 11, S6 Table
 fi
 if [ -n "${SANGER_DIR:-}" ]; then
     export SANGER_DIR="$(cd "$SANGER_DIR" && pwd)"
@@ -55,7 +55,7 @@ if [ -n "${SANGER_DIR:-}" ] && [ -n "${DEPMAP22_DIR:-}" ]; then
     $PY threshold_test.py --data-dir "$DEPMAP_DIR" --out "$RESULTS_DIR" --exclude-noncancerous; $PY make_table_s12.py   # formal test of the thresholds (S12 Table)
     $PY nextgen_check.py                                        # NextGen organoid/spheroid screens (S13 Table; needs results/nextgen_figshare from figshare 10.6084/m9.figshare.29472362)
     if [ -n "${RNAI_DIR:-}" ]; then export RNAI_DIR="$(cd "$RNAI_DIR" && pwd)"; $PY rnai_validation.py; fi   # DEMETER2 RNAi check
-    $PY fermt2_validation.py                                    # pre-specified FERMT2 checks (prespecified_plan_fermt2.md)
+    $PY fermt2_validation.py; $PY fermt2_fermt1_expression.py                                    # pre-specified FERMT2 checks (prespecified_plan_fermt2.md)
     if [ -n "${NEXTGEN_SCREEN_DIR:-}" ] && [ -n "${RNAI_DIR:-}" ]; then   # post hoc FERMT2 follow-up; per-screen NextGen files from the DepMap portal release "NextGen Model Manuscript 2026"
         export NEXTGEN_SCREEN_DIR="$(cd "$NEXTGEN_SCREEN_DIR" && pwd)"; $PY fermt2_followup.py; $PY make_table_s14.py   # S14 Table
     fi
@@ -72,7 +72,7 @@ $PY figs_batch1.py; $PY figs_batch2.py; $PY figs_supp.py                        
 # 6. focused validation of one candidate (SNAP23 in bowel); needs SANGER_DIR and RNAI_DIR and the
 #    DepMap expression file. Criteria were fixed in prespecified_plan_snap23.md before these were run.
 if [ -n "${SANGER_DIR:-}" ] && [ -n "${RNAI_DIR:-}" ]; then
-    $PY snap23_validation.py; $PY snap23_posthoc.py; $PY make_table_s11.py; $PY figs_snap23.py       # Fig 13, S11 Table
+    $PY snap23_validation.py; $PY snap23_posthoc.py; $PY snap23_paralogue_restriction.py; $PY make_table_s11.py; $PY figs_snap23.py       # Fig 13, S11 Table
 fi
 
 echo "ALL DONE"

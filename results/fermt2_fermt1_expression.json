@@ -1,0 +1,31 @@
+{
+ "n_lines_with_CRISPR_and_expression": 1126,
+ "FERMT1_median_log2TPM1": {
+  "CNS/Brain": 1.8082941,
+  "carcinoma lineages (check 4)": 3.6597075500000003,
+  "all other cancer lines": 2.560625
+ },
+ "n": {
+  "CNS/Brain": 84,
+  "carcinoma lineages (check 4)": 626,
+  "all other cancer lines": 1042
+ },
+ "p_one_sided_CNS_lower_than_carcinoma": 4.2569450189672743e-17,
+ "FERMT1_median_by_carcinoma_lineage": {
+  "Ovary/Fallopian Tube": 1.8731038500000001,
+  "Liver": 1.8990867,
+  "Breast": 1.9927576,
+  "Uterus": 2.27086815,
+  "Thyroid": 3.1176918,
+  "Lung": 3.3703163,
+  "Prostate": 3.4111278,
+  "Biliary Tract": 3.699401,
+  "Cervix": 3.7062021,
+  "Pancreas": 4.33767055,
+  "Esophagus/Stomach": 4.35351585,
+  "Head and Neck": 4.533931,
+  "Bladder/Urinary Tract": 4.63912235,
+  "Ampulla of Vater": 4.993072,
+  "Bowel": 5.2014847
+ }
+}

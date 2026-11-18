@@ -1,0 +1,106 @@
+{
+ "n_prioritised": 94,
+ "median_abs_difference": 0.07768633439363143,
+ "top10": [
+  {
+   "Gene": "MDM2 (4193)",
+   "Lineage": "skin",
+   "Selectivity_median_diff": -0.8153544382751436,
+   "Selectivity_HL": -0.4682519852958104,
+   "abs_difference": 0.34710245297933323
+  },
+  {
+   "Gene": "MDM2 (4193)",
+   "Lineage": "pleura",
+   "Selectivity_median_diff": -0.859724945439347,
+   "Selectivity_HL": -0.5253225121507492,
+   "abs_difference": 0.33440243328859776
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "bowel",
+   "Selectivity_median_diff": -0.6723645529129287,
+   "Selectivity_HL": -0.3405668417084668,
+   "abs_difference": 0.33179771120446194
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "bladder/urinary tract",
+   "Selectivity_median_diff": -0.6048176517875055,
+   "Selectivity_HL": -0.2849358977852907,
+   "abs_difference": 0.31988175400221475
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "lymphoid",
+   "Selectivity_median_diff": -0.6524538990645462,
+   "Selectivity_HL": -0.3788091885361965,
+   "abs_difference": 0.2736447105283497
+  },
+  {
+   "Gene": "FERMT2 (10979)",
+   "Lineage": "kidney",
+   "Selectivity_median_diff": -0.9199615822261475,
+   "Selectivity_HL": -0.6524827520512541,
+   "abs_difference": 0.2674788301748935
+  },
+  {
+   "Gene": "TYMS (7298)",
+   "Lineage": "myeloid",
+   "Selectivity_median_diff": -0.6592989816798756,
+   "Selectivity_HL": -0.4012643534218723,
+   "abs_difference": 0.2580346282580033
+  },
+  {
+   "Gene": "SEPHS2 (22928)",
+   "Lineage": "kidney",
+   "Selectivity_median_diff": -0.7626036972388782,
+   "Selectivity_HL": -0.511771089871464,
+   "abs_difference": 0.2508326073674142
+  },
+  {
+   "Gene": "CCND1 (595)",
+   "Lineage": "peripheral nervous system",
+   "Selectivity_median_diff": -0.932400838571928,
+   "Selectivity_HL": -0.7384107330023078,
+   "abs_difference": 0.19399010556962026
+  },
+  {
+   "Gene": "FERMT2 (10979)",
+   "Lineage": "soft tissue",
+   "Selectivity_median_diff": -0.6574983477696956,
+   "Selectivity_HL": -0.4748967404649194,
+   "abs_difference": 0.1826016073047762
+  }
+ ],
+ "FAM50A_all_lineages": [
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "bowel",
+   "Selectivity_median_diff": -0.6723645529129287,
+   "Selectivity_HL": -0.3405668417084668,
+   "abs_difference": 0.33179771120446194
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "bladder/urinary tract",
+   "Selectivity_median_diff": -0.6048176517875055,
+   "Selectivity_HL": -0.2849358977852907,
+   "abs_difference": 0.31988175400221475
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "lymphoid",
+   "Selectivity_median_diff": -0.6524538990645462,
+   "Selectivity_HL": -0.3788091885361965,
+   "abs_difference": 0.2736447105283497
+  },
+  {
+   "Gene": "FAM50A (9130)",
+   "Lineage": "myeloid",
+   "Selectivity_median_diff": -0.5591713967910519,
+   "Selectivity_HL": -0.3807566062451138,
+   "abs_difference": 0.17841479054593806
+  }
+ ]
+}

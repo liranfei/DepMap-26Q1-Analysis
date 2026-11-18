@@ -1,0 +1,32 @@
+{
+ "cohort": {
+  "models_in_crispr_matrix": 1208,
+  "genes_in_crispr_matrix": 18531,
+  "non_cancerous_removed": 16,
+  "cancer_lines": 1192,
+  "lineages": 29,
+  "lineages_with_ge5": 26,
+  "models_in_lineages_with_ge5": 1188,
+  "lineage_size_range_ge5": [
+   5,
+   126
+  ]
+ },
+ "growth_pattern": {
+  "suspension": 163,
+  "suspension_lymphoid_or_myeloid": 122,
+  "suspension_other": 41
+ },
+ "SNAP23_bowel_2D": {
+  "n": 63,
+  "mean": -1.4853480622059756
+ },
+ "reverse_22Q1_candidates_in_26Q1": {
+  "n_22Q1_candidates": 34,
+  "testable_in_26Q1": 34,
+  "q_lt_0_05_negative_in_26Q1": 27,
+  "meet_rule_in_26Q1": 23,
+  "median_selectivity_22Q1": -0.6413128259302099,
+  "median_selectivity_26Q1": -0.7214888561509654
+ }
+}

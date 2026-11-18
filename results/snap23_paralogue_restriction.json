@@ -1,0 +1,125 @@
+{
+ "label": "post hoc (added after the pre-specified SNAP23 checks)",
+ "n_lines_with_CRISPR_and_expression": 1126,
+ "check_V5_spearman_rho_all_lines": {
+  "SNAP25": 0.5092332349979953,
+  "SNAP29": 0.32647874576504465
+ },
+ "paralogue_expression_median_bowel_vs_other": {
+  "SNAP25": [
+   0.056812398,
+   0.51418185
+  ],
+  "SNAP29": [
+   3.907102,
+   4.18459
+  ]
+ },
+ "unrestricted_same_lines": {
+  "n_bowel": 59,
+  "n_other": 1067,
+  "median_bowel": -1.4778975205202949,
+  "median_other": -0.7467219551869528,
+  "selectivity": -0.731175565333342,
+  "p_one_sided": 1.0866183514695962e-09,
+  "bootstrap_95CI": [
+   -0.9525131176297071,
+   -0.5077591794598092
+  ]
+ },
+ "primary_definition": "both SNAP25 and SNAP29 below the cohort median; bowel and comparison lines restricted",
+ "primary": {
+  "n_bowel": 37,
+  "n_other": 287,
+  "median_bowel": -1.626648815106076,
+  "median_other": -1.2573126136464396,
+  "selectivity": -0.3693362014596364,
+  "p_one_sided": 0.00013442118925976662,
+  "bootstrap_95CI": [
+   -0.5930797450124341,
+   -0.1854420635781381
+  ]
+ },
+ "sensitivity": {
+  "both below median": {
+   "n_bowel": 37,
+   "n_other": 287,
+   "median_bowel": -1.626648815106076,
+   "median_other": -1.2573126136464396,
+   "selectivity": -0.3693362014596364,
+   "p_one_sided": 0.00013442118925976662
+  },
+  "SNAP25 only below median": {
+   "n_bowel": 51,
+   "n_other": 512,
+   "median_bowel": -1.557216777351776,
+   "median_other": -1.1050351431480059,
+   "selectivity": -0.4521816342037701,
+   "p_one_sided": 2.46220564551715e-06
+  },
+  "SNAP29 only below median": {
+   "n_bowel": 40,
+   "n_other": 523,
+   "median_bowel": -1.590401962886825,
+   "median_other": -0.9874113029587492,
+   "selectivity": -0.6029906599280757,
+   "p_one_sided": 1.962261684538771e-06
+  },
+  "both below lower third": {
+   "n_bowel": 22,
+   "n_other": 131,
+   "median_bowel": -1.6261479450256897,
+   "median_other": -1.3389155157067545,
+   "selectivity": -0.2872324293189352,
+   "p_one_sided": 0.0008810330183798531
+  },
+  "SNAP25 only below lower third": {
+   "n_bowel": 36,
+   "n_other": 339,
+   "median_bowel": -1.6261479450256897,
+   "median_other": -1.119677351176315,
+   "selectivity": -0.5064705938493748,
+   "p_one_sided": 5.140931107815214e-07
+  },
+  "SNAP29 only below lower third": {
+   "n_bowel": 30,
+   "n_other": 345,
+   "median_bowel": -1.5394725464302925,
+   "median_other": -1.1039456084484065,
+   "selectivity": -0.435526937981886,
+   "p_one_sided": 0.00016302595610119026
+  },
+  "both below lower quarter": {
+   "n_bowel": 15,
+   "n_other": 69,
+   "median_bowel": -1.5563534774833725,
+   "median_other": -1.2466588915004757,
+   "selectivity": -0.3096945859828968,
+   "p_one_sided": 0.011036420653776444
+  },
+  "SNAP25 only below lower quarter": {
+   "n_bowel": 28,
+   "n_other": 254,
+   "median_bowel": -1.5954957471656699,
+   "median_other": -1.1044977508232081,
+   "selectivity": -0.4909979963424618,
+   "p_one_sided": 2.330380925393613e-06
+  },
+  "SNAP29 only below lower quarter": {
+   "n_bowel": 23,
+   "n_other": 259,
+   "median_bowel": -1.5563534774833725,
+   "median_other": -1.1429220142733827,
+   "selectivity": -0.4134314632099898,
+   "p_one_sided": 0.00024662991141225616
+  },
+  "both below median, comparison lines only restricted": {
+   "n_bowel": 59,
+   "n_other": 287,
+   "median_bowel": -1.4778975205202949,
+   "median_other": -1.2573126136464396,
+   "selectivity": -0.22058490687385524,
+   "p_one_sided": 0.027295130104137692
+  }
+ }
+}
