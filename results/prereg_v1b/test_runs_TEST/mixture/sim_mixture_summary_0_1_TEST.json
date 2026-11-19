@@ -1,0 +1,33 @@
+{
+ "plan_A_sha256": "18d523afc382b8915a5ff4bfa4768f43770236d3376bcefd39e0b51c1a281a00",
+ "inputs_sha256": "bcc100d409c4ca8f9b604d9a70466618ffa5778e99b94abe4d21bda470579a5d",
+ "coef_sha256": null,
+ "test_mode": true,
+ "summary": [
+  {
+   "method": "M1",
+   "FDR_T1_mean": 0.027364348726036172,
+   "FDR_T2_mean": 0.07194076191414914,
+   "n_prioritised_mean": 201.5,
+   "reps_with_none": 0
+  },
+  {
+   "method": "M2",
+   "FDR_T1_mean": 0.012971885423836503,
+   "FDR_T2_mean": 0.061391433260973155,
+   "n_prioritised_mean": 194.5,
+   "reps_with_none": 0
+  },
+  {
+   "method": "M3",
+   "FDR_T1_mean": 0.020209675382089176,
+   "FDR_T2_mean": 0.06791714033093343,
+   "n_prioritised_mean": 199.0,
+   "reps_with_none": 0
+  }
+ ],
+ "runtimes_s": [
+  15.7,
+  15.7
+ ]
+}

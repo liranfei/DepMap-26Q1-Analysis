@@ -1,0 +1,122 @@
+{
+ "plan_A_sha256": "18d523afc382b8915a5ff4bfa4768f43770236d3376bcefd39e0b51c1a281a00",
+ "environment": {
+  "versions": {
+   "python": "3.13.12",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "scipy": "1.17.1",
+   "statsmodels": "0.14.6"
+  },
+  "expected": {
+   "python": "3.13.12",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "scipy": "1.17.1",
+   "statsmodels": "0.14.6"
+  },
+  "matches_plan": true,
+  "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+  "executable_name": "python3"
+ },
+ "test_mode_permute_seed": 7,
+ "v2_doi": null,
+ "M2": {
+  "n_family": 448354,
+  "n_q05": 0,
+  "n_prioritised": 0,
+  "n_prioritised_blood": 0,
+  "n_prioritised_heterogeneous": 0,
+  "n_flagged_partial_lineage_pairs": 37000
+ },
+ "M3": {
+  "n_family": 448354,
+  "n_q05": 152,
+  "n_prioritised": 2
+ },
+ "M2_vs_M3": {
+  "both": 0,
+  "M2_only": 0,
+  "M3_only": 2
+ },
+ "untestable_lineages": [
+  "adrenal gland",
+  "other",
+  "prostate",
+  "vulva/vagina"
+ ],
+ "M4": {
+  "n_comparator_lines": 142,
+  "n_genes": 18078,
+  "n_q05": 914,
+  "n_supported": 4
+ },
+ "sensitivity": {
+  "culture_x_library": {
+   "n_family": 411549,
+   "n_prioritised": 0,
+   "overlap_main": 0,
+   "only_here": 0,
+   "only_main": 0
+  },
+  "min5_per_stratum": {
+   "n_family": 448354,
+   "n_prioritised": 0,
+   "overlap_main": 0,
+   "only_here": 0,
+   "only_main": 0
+  },
+  "other_excluded": {
+   "n_family": 448354,
+   "n_prioritised": 0,
+   "overlap_main": 0,
+   "only_here": 0,
+   "only_main": 0
+  },
+  "culture_x_library_target_lines_dropped_model_level": {
+   "adrenal gland": 1,
+   "ampulla of vater": 2,
+   "biliary tract": 5,
+   "bladder/urinary tract": 4,
+   "bone": 6,
+   "bowel": 3,
+   "breast": 6,
+   "cervix": 9,
+   "cns/brain": 7,
+   "esophagus/stomach": 7,
+   "eye": 4,
+   "head and neck": 10,
+   "kidney": 5,
+   "liver": 3,
+   "lung": 3,
+   "lymphoid": 4,
+   "myeloid": 6,
+   "other": 1,
+   "ovary/fallopian tube": 10,
+   "pancreas": 4,
+   "peripheral nervous system": 4,
+   "pleura": 3,
+   "prostate": 2,
+   "skin": 3,
+   "soft tissue": 4,
+   "testis": 1,
+   "thyroid": 6,
+   "uterus": 7,
+   "vulva/vagina": 2
+  }
+ },
+ "one_model_per_patient": {
+  "n_models": 1146,
+  "n_prioritised": 0,
+  "overlap_main": 0
+ },
+ "calibration": {
+  "n_permutations": 2,
+  "mean_prioritised": 0.0,
+  "max_prioritised": 0,
+  "mean_q05": 0.0,
+  "expectation": "mean <= 1",
+  "exceeded": false
+ },
+ "runtime_s": 38.5
+}

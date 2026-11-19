@@ -1,0 +1,13 @@
+{
+ "plan_A_sha256": "18d523afc382b8915a5ff4bfa4768f43770236d3376bcefd39e0b51c1a281a00",
+ "inputs_sha256": "bcc100d409c4ca8f9b604d9a70466618ffa5778e99b94abe4d21bda470579a5d",
+ "cells": "0-3",
+ "test_mode": true,
+ "runtime_s": 1.1,
+ "cell_runtimes_s": [
+  0.3,
+  0.3,
+  0.3,
+  0.3
+ ]
+}

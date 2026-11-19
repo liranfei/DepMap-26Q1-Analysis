@@ -1,0 +1,2278 @@
+{
+ "plan_A_sha256": "18d523afc382b8915a5ff4bfa4768f43770236d3376bcefd39e0b51c1a281a00",
+ "results_sha256": "4668a401e7d3f86cd7e26a1653cafe5054aaeb64a922fe1279265af69c1d5d18",
+ "E1": {
+  "cells": [
+   {
+    "cell": 4,
+    "scenario": "single:lymphoid",
+    "c_delta": -0.25,
+    "noise": "t5",
+    "M1_rate": 0.6381909547738693,
+    "ok": true
+   },
+   {
+    "cell": 6,
+    "scenario": "single:lymphoid",
+    "c_delta": -0.25,
+    "noise": "lognormal",
+    "M1_rate": 0.7070707070707071,
+    "ok": true
+   },
+   {
+    "cell": 8,
+    "scenario": "single:lymphoid",
+    "c_delta": -0.5,
+    "noise": "t5",
+    "M1_rate": 0.9748743718592964,
+    "ok": true
+   },
+   {
+    "cell": 10,
+    "scenario": "single:lymphoid",
+    "c_delta": -0.5,
+    "noise": "lognormal",
+    "M1_rate": 0.9698492462311558,
+    "ok": true
+   },
+   {
+    "cell": 12,
+    "scenario": "single:lymphoid",
+    "c_delta": -1.0,
+    "noise": "t5",
+    "M1_rate": 0.9949748743718592,
+    "ok": true
+   },
+   {
+    "cell": 14,
+    "scenario": "single:lymphoid",
+    "c_delta": -1.0,
+    "noise": "lognormal",
+    "M1_rate": 1.0,
+    "ok": true
+   },
+   {
+    "cell": 84,
+    "scenario": "single:myeloid",
+    "c_delta": -0.25,
+    "noise": "t5",
+    "M1_rate": 0.405,
+    "ok": true
+   },
+   {
+    "cell": 86,
+    "scenario": "single:myeloid",
+    "c_delta": -0.25,
+    "noise": "lognormal",
+    "M1_rate": 0.4874371859296482,
+    "ok": true
+   },
+   {
+    "cell": 88,
+    "scenario": "single:myeloid",
+    "c_delta": -0.5,
+    "noise": "t5",
+    "M1_rate": 0.8442211055276382,
+    "ok": true
+   },
+   {
+    "cell": 90,
+    "scenario": "single:myeloid",
+    "c_delta": -0.5,
+    "noise": "lognormal",
+    "M1_rate": 0.9045226130653268,
+    "ok": true
+   },
+   {
+    "cell": 92,
+    "scenario": "single:myeloid",
+    "c_delta": -1.0,
+    "noise": "t5",
+    "M1_rate": 0.9949238578680204,
+    "ok": true
+   },
+   {
+    "cell": 94,
+    "scenario": "single:myeloid",
+    "c_delta": -1.0,
+    "noise": "lognormal",
+    "M1_rate": 0.9898477157360406,
+    "ok": true
+   }
+  ],
+  "met": true
+ },
+ "E2": {
+  "M2": {
+   "cells": [
+    {
+     "cell": 0,
+     "scenario": "single:lymphoid",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0653266331658291,
+     "cp_hi": 0.1091199459696853,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 2,
+     "scenario": "single:lymphoid",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0603015075376884,
+     "cp_hi": 0.1029648740905019,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 4,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0402010050251256,
+     "cp_hi": 0.0776727015748137,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 6,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0252525252525252,
+     "cp_hi": 0.0579440746425837,
+     "n": 198,
+     "ok": true
+    },
+    {
+     "cell": 8,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0653266331658291,
+     "cp_hi": 0.1091199459696853,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 10,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.050251256281407,
+     "cp_hi": 0.0904702409126747,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 12,
+     "scenario": "single:lymphoid",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0753768844221105,
+     "cp_hi": 0.1212754135553893,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 14,
+     "scenario": "single:lymphoid",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0351758793969849,
+     "cp_hi": 0.0711299817543794,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 80,
+     "scenario": "single:myeloid",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0606060606060606,
+     "cp_hi": 0.1034728779599011,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 82,
+     "scenario": "single:myeloid",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0505050505050505,
+     "cp_hi": 0.0909173176421509,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 84,
+     "scenario": "single:myeloid",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.045,
+     "cp_hi": 0.083702688075854,
+     "n": 200,
+     "ok": false
+    },
+    {
+     "cell": 86,
+     "scenario": "single:myeloid",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0653266331658291,
+     "cp_hi": 0.1091199459696853,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 88,
+     "scenario": "single:myeloid",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0452261306532663,
+     "cp_hi": 0.084114637001735,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 90,
+     "scenario": "single:myeloid",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.1055276381909547,
+     "cp_hi": 0.1567798953376366,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 92,
+     "scenario": "single:myeloid",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0558375634517766,
+     "cp_hi": 0.0977108802159899,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 94,
+     "scenario": "single:myeloid",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0710659898477157,
+     "cp_hi": 0.1163626672337311,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 160,
+     "scenario": "single:skin",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0320855614973262,
+     "cp_hi": 0.0685254792148783,
+     "n": 187,
+     "ok": false
+    },
+    {
+     "cell": 162,
+     "scenario": "single:skin",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0725388601036269,
+     "cp_hi": 0.1187134650284014,
+     "n": 193,
+     "ok": false
+    },
+    {
+     "cell": 164,
+     "scenario": "single:skin",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0418848167539267,
+     "cp_hi": 0.0808590902962935,
+     "n": 191,
+     "ok": false
+    },
+    {
+     "cell": 166,
+     "scenario": "single:skin",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0461538461538461,
+     "cp_hi": 0.0858037793044034,
+     "n": 195,
+     "ok": false
+    },
+    {
+     "cell": 168,
+     "scenario": "single:skin",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0569948186528497,
+     "cp_hi": 0.0996895485669002,
+     "n": 193,
+     "ok": false
+    },
+    {
+     "cell": 170,
+     "scenario": "single:skin",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.0309278350515463,
+     "cp_hi": 0.0660982877290916,
+     "n": 194,
+     "ok": false
+    },
+    {
+     "cell": 172,
+     "scenario": "single:skin",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0307692307692307,
+     "cp_hi": 0.0657655081190714,
+     "n": 195,
+     "ok": false
+    },
+    {
+     "cell": 174,
+     "scenario": "single:skin",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0520833333333333,
+     "cp_hi": 0.0936953602695078,
+     "n": 192,
+     "ok": false
+    },
+    {
+     "cell": 240,
+     "scenario": "single:lung",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0552763819095477,
+     "cp_hi": 0.0967506972740429,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 242,
+     "scenario": "single:lung",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0558375634517766,
+     "cp_hi": 0.0977108802159899,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 244,
+     "scenario": "single:lung",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0456852791878172,
+     "cp_hi": 0.0849508156240029,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 246,
+     "scenario": "single:lung",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0402010050251256,
+     "cp_hi": 0.0776727015748137,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 248,
+     "scenario": "single:lung",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0505050505050505,
+     "cp_hi": 0.0909173176421509,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 250,
+     "scenario": "single:lung",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.035,
+     "cp_hi": 0.0707809983509772,
+     "n": 200,
+     "ok": false
+    },
+    {
+     "cell": 252,
+     "scenario": "single:lung",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0402010050251256,
+     "cp_hi": 0.0776727015748137,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 254,
+     "scenario": "single:lung",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.05,
+     "cp_hi": 0.0900275377013513,
+     "n": 200,
+     "ok": false
+    }
+   ],
+   "met": false
+  },
+  "M3": {
+   "cells": [
+    {
+     "cell": 0,
+     "scenario": "single:lymphoid",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0653266331658291,
+     "cp_hi": 0.1091199459696853,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 2,
+     "scenario": "single:lymphoid",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0603015075376884,
+     "cp_hi": 0.1029648740905019,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 4,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0351758793969849,
+     "cp_hi": 0.0711299817543794,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 6,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0353535353535353,
+     "cp_hi": 0.0714824225151917,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 8,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0653266331658291,
+     "cp_hi": 0.1091199459696853,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 10,
+     "scenario": "single:lymphoid",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.0452261306532663,
+     "cp_hi": 0.084114637001735,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 12,
+     "scenario": "single:lymphoid",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0603015075376884,
+     "cp_hi": 0.1029648740905019,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 14,
+     "scenario": "single:lymphoid",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0452261306532663,
+     "cp_hi": 0.084114637001735,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 80,
+     "scenario": "single:myeloid",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0303030303030303,
+     "cp_hi": 0.0647869703340023,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 82,
+     "scenario": "single:myeloid",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0353535353535353,
+     "cp_hi": 0.0714824225151917,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 84,
+     "scenario": "single:myeloid",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.035,
+     "cp_hi": 0.0707809983509772,
+     "n": 200,
+     "ok": false
+    },
+    {
+     "cell": 86,
+     "scenario": "single:myeloid",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0301507537688442,
+     "cp_hi": 0.064467228629633,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 88,
+     "scenario": "single:myeloid",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0301507537688442,
+     "cp_hi": 0.064467228629633,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 90,
+     "scenario": "single:myeloid",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.0753768844221105,
+     "cp_hi": 0.1212754135553893,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 92,
+     "scenario": "single:myeloid",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0507614213197969,
+     "cp_hi": 0.0913688329910477,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 94,
+     "scenario": "single:myeloid",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0609137055837563,
+     "cp_hi": 0.1039859166274862,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 160,
+     "scenario": "single:skin",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.0481283422459893,
+     "cp_hi": 0.0893940106856214,
+     "n": 187,
+     "ok": false
+    },
+    {
+     "cell": 162,
+     "scenario": "single:skin",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0569948186528497,
+     "cp_hi": 0.0996895485669002,
+     "n": 193,
+     "ok": false
+    },
+    {
+     "cell": 164,
+     "scenario": "single:skin",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0261780104712041,
+     "cp_hi": 0.0600303979971419,
+     "n": 191,
+     "ok": false
+    },
+    {
+     "cell": 166,
+     "scenario": "single:skin",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0307692307692307,
+     "cp_hi": 0.0657655081190714,
+     "n": 195,
+     "ok": false
+    },
+    {
+     "cell": 168,
+     "scenario": "single:skin",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0414507772020725,
+     "cp_hi": 0.0800382412378689,
+     "n": 193,
+     "ok": false
+    },
+    {
+     "cell": 170,
+     "scenario": "single:skin",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.0257731958762886,
+     "cp_hi": 0.0591181461048938,
+     "n": 194,
+     "ok": true
+    },
+    {
+     "cell": 172,
+     "scenario": "single:skin",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0461538461538461,
+     "cp_hi": 0.0858037793044034,
+     "n": 195,
+     "ok": false
+    },
+    {
+     "cell": 174,
+     "scenario": "single:skin",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.0364583333333333,
+     "cp_hi": 0.0736726359261867,
+     "n": 192,
+     "ok": false
+    },
+    {
+     "cell": 240,
+     "scenario": "single:lung",
+     "c_delta": 0.0,
+     "noise": "t5",
+     "rate": 0.050251256281407,
+     "cp_hi": 0.0904702409126747,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 242,
+     "scenario": "single:lung",
+     "c_delta": 0.0,
+     "noise": "lognormal",
+     "rate": 0.0558375634517766,
+     "cp_hi": 0.0977108802159899,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 244,
+     "scenario": "single:lung",
+     "c_delta": -0.25,
+     "noise": "t5",
+     "rate": 0.0355329949238578,
+     "cp_hi": 0.0718383722513121,
+     "n": 197,
+     "ok": false
+    },
+    {
+     "cell": 246,
+     "scenario": "single:lung",
+     "c_delta": -0.25,
+     "noise": "lognormal",
+     "rate": 0.0703517587939698,
+     "cp_hi": 0.1152218164362698,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 248,
+     "scenario": "single:lung",
+     "c_delta": -0.5,
+     "noise": "t5",
+     "rate": 0.0454545454545454,
+     "cp_hi": 0.0845306592872316,
+     "n": 198,
+     "ok": false
+    },
+    {
+     "cell": 250,
+     "scenario": "single:lung",
+     "c_delta": -0.5,
+     "noise": "lognormal",
+     "rate": 0.03,
+     "cp_hi": 0.064150626705027,
+     "n": 200,
+     "ok": false
+    },
+    {
+     "cell": 252,
+     "scenario": "single:lung",
+     "c_delta": -1.0,
+     "noise": "t5",
+     "rate": 0.0452261306532663,
+     "cp_hi": 0.084114637001735,
+     "n": 199,
+     "ok": false
+    },
+    {
+     "cell": 254,
+     "scenario": "single:lung",
+     "c_delta": -1.0,
+     "noise": "lognormal",
+     "rate": 0.025,
+     "cp_hi": 0.0573743511268458,
+     "n": 200,
+     "ok": true
+    }
+   ],
+   "met": false
+  }
+ },
+ "E3": {
+  "M2_vs_M1": {
+   "per_lineage": {
+    "skin": {
+     "cells": [
+      {
+       "cell": 176,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.1813471502590673,
+       "comparator_power": 0.1836734693877551,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 178,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.2244897959183673,
+       "comparator_power": 0.2462311557788944,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 180,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.1804123711340206,
+       "comparator_power": 0.1457286432160804,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 182,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.25,
+       "comparator_power": 0.1319796954314721,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 184,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.2421052631578947,
+       "comparator_power": 0.1237113402061855,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 186,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.2486772486772486,
+       "comparator_power": 0.1065989847715736,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 188,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.2284263959390862,
+       "comparator_power": 0.0100502512562814,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 190,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.2577319587628865,
+       "comparator_power": 0.0303030303030303,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 192,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.5076142131979695,
+       "comparator_power": 0.542713567839196,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 194,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.6855670103092784,
+       "comparator_power": 0.6989795918367347,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 196,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.5561224489795918,
+       "comparator_power": 0.4898989898989899,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 198,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.6530612244897959,
+       "comparator_power": 0.5202020202020202,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 200,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.5185185185185185,
+       "comparator_power": 0.299492385786802,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 202,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.6884422110552764,
+       "comparator_power": 0.465,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 204,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.5309278350515464,
+       "comparator_power": 0.1472081218274111,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 206,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.717948717948718,
+       "comparator_power": 0.2030456852791878,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 208,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.923469387755102,
+       "comparator_power": 0.9343434343434344,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 210,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.9948186528497408,
+       "comparator_power": 0.9744897959183674,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 212,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.9378238341968912,
+       "comparator_power": 0.9086294416243654,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 214,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.9842931937172776,
+       "comparator_power": 0.9387755102040816,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 216,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.9278350515463918,
+       "comparator_power": 0.841025641025641,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 218,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.9794871794871794,
+       "comparator_power": 0.904040404040404,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 220,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.9123711340206184,
+       "comparator_power": 0.5989847715736041,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 222,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.9897435897435898,
+       "comparator_power": 0.7738693467336684,
+       "in_range": true,
+       "ok": true
+      }
+     ],
+     "cells_used": [
+      178,
+      192,
+      194,
+      196,
+      198,
+      200,
+      202,
+      206,
+      216,
+      220,
+      222
+     ],
+     "fallback": false,
+     "met": true
+    },
+    "lung": {
+     "cells": [
+      {
+       "cell": 256,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.3618090452261306,
+       "comparator_power": 0.3668341708542713,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 258,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.3919597989949748,
+       "comparator_power": 0.4120603015075377,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 260,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.34,
+       "comparator_power": 0.32,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 262,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.3585858585858585,
+       "comparator_power": 0.3282828282828283,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 264,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.365,
+       "comparator_power": 0.345,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 266,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.3517587939698492,
+       "comparator_power": 0.3316582914572864,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 268,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.3668341708542713,
+       "comparator_power": 0.2613065326633166,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 270,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.3668341708542713,
+       "comparator_power": 0.2663316582914573,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 272,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.7437185929648241,
+       "comparator_power": 0.7336683417085427,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 274,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.855,
+       "comparator_power": 0.845,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 276,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.7386934673366834,
+       "comparator_power": 0.7286432160804021,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 278,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.8291457286432161,
+       "comparator_power": 0.8190954773869347,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 280,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.7236180904522613,
+       "comparator_power": 0.6984924623115578,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 282,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.7587939698492462,
+       "comparator_power": 0.7336683417085427,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 284,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.6954314720812182,
+       "comparator_power": 0.6294416243654822,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 286,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.864321608040201,
+       "comparator_power": 0.7437185929648241,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 288,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.9447236180904522,
+       "comparator_power": 0.9396984924623116,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 290,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.9747474747474748,
+       "comparator_power": 0.9747474747474748,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 292,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.9597989949748744,
+       "comparator_power": 0.9597989949748744,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 294,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.9747474747474748,
+       "comparator_power": 0.9696969696969696,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 296,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.9646464646464646,
+       "comparator_power": 0.9595959595959596,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 298,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.9698492462311558,
+       "comparator_power": 0.9698492462311558,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 300,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.9545454545454546,
+       "comparator_power": 0.9343434343434344,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 302,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.9646464646464646,
+       "comparator_power": 0.9646464646464646,
+       "in_range": false,
+       "ok": true
+      }
+     ],
+     "cells_used": [
+      256,
+      258,
+      260,
+      262,
+      264,
+      266,
+      268,
+      270,
+      272,
+      274,
+      276,
+      278,
+      280,
+      282,
+      284,
+      286
+     ],
+     "fallback": false,
+     "met": true
+    }
+   },
+   "met": true
+  },
+  "M3_vs_M3u": {
+   "per_lineage": {
+    "skin": {
+     "cells": [
+      {
+       "cell": 176,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.2020725388601036,
+       "comparator_power": 0.2193877551020408,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 178,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.1428571428571428,
+       "comparator_power": 0.1306532663316583,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 180,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.1855670103092783,
+       "comparator_power": 0.1206030150753768,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 182,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.1377551020408163,
+       "comparator_power": 0.0964467005076142,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 184,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.2421052631578947,
+       "comparator_power": 0.0773195876288659,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 186,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.1693121693121693,
+       "comparator_power": 0.065989847715736,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 188,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.1979695431472081,
+       "comparator_power": 0.0150753768844221,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 190,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.1443298969072164,
+       "comparator_power": 0.0202020202020202,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 192,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.482233502538071,
+       "comparator_power": 0.4723618090452261,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 194,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.520618556701031,
+       "comparator_power": 0.5510204081632653,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 196,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.5255102040816326,
+       "comparator_power": 0.4292929292929293,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 198,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.4642857142857143,
+       "comparator_power": 0.3434343434343434,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 200,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.4708994708994709,
+       "comparator_power": 0.2791878172588832,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 202,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.5477386934673367,
+       "comparator_power": 0.31,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 204,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.5154639175257731,
+       "comparator_power": 0.1065989847715736,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 206,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.5487179487179488,
+       "comparator_power": 0.1370558375634517,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 208,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.8928571428571429,
+       "comparator_power": 0.898989898989899,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 210,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.9481865284974094,
+       "comparator_power": 0.9438775510204082,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 212,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.9067357512953368,
+       "comparator_power": 0.8781725888324873,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 214,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.9214659685863874,
+       "comparator_power": 0.8622448979591837,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 216,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.8814432989690721,
+       "comparator_power": 0.7692307692307693,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 218,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.9435897435897436,
+       "comparator_power": 0.7777777777777778,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 220,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.865979381443299,
+       "comparator_power": 0.5025380710659898,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 222,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.953846153846154,
+       "comparator_power": 0.5577889447236181,
+       "in_range": true,
+       "ok": true
+      }
+     ],
+     "cells_used": [
+      176,
+      192,
+      194,
+      196,
+      198,
+      200,
+      202,
+      208,
+      212,
+      214,
+      216,
+      218,
+      220,
+      222
+     ],
+     "fallback": false,
+     "met": true
+    },
+    "lung": {
+     "cells": [
+      {
+       "cell": 256,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.3316582914572864,
+       "comparator_power": 0.3366834170854271,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 258,
+       "c_beta": -0.1,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.236180904522613,
+       "comparator_power": 0.2412060301507537,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 260,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.35,
+       "comparator_power": 0.345,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 262,
+       "c_beta": -0.1,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.2828282828282828,
+       "comparator_power": 0.2626262626262626,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 264,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.31,
+       "comparator_power": 0.275,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 266,
+       "c_beta": -0.1,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.2663316582914573,
+       "comparator_power": 0.2110552763819095,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 268,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.3115577889447236,
+       "comparator_power": 0.236180904522613,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 270,
+       "c_beta": -0.1,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.2211055276381909,
+       "comparator_power": 0.185929648241206,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 272,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.628140703517588,
+       "comparator_power": 0.628140703517588,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 274,
+       "c_beta": -0.2,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.735,
+       "comparator_power": 0.745,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 276,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.6683417085427136,
+       "comparator_power": 0.6482412060301508,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 278,
+       "c_beta": -0.2,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.6432160804020101,
+       "comparator_power": 0.6331658291457286,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 280,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.6834170854271356,
+       "comparator_power": 0.6482412060301508,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 282,
+       "c_beta": -0.2,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.6582914572864321,
+       "comparator_power": 0.6331658291457286,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 284,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.6598984771573604,
+       "comparator_power": 0.5431472081218274,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 286,
+       "c_beta": -0.2,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.6884422110552764,
+       "comparator_power": 0.5778894472361809,
+       "in_range": true,
+       "ok": true
+      },
+      {
+       "cell": 288,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "t5",
+       "power": 0.9195979899497488,
+       "comparator_power": 0.9246231155778896,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 290,
+       "c_beta": -0.35,
+       "c_delta": 0.0,
+       "noise": "lognormal",
+       "power": 0.9595959595959596,
+       "comparator_power": 0.9646464646464646,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 292,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "t5",
+       "power": 0.9296482412060302,
+       "comparator_power": 0.9195979899497488,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 294,
+       "c_beta": -0.35,
+       "c_delta": -0.25,
+       "noise": "lognormal",
+       "power": 0.9545454545454546,
+       "comparator_power": 0.9494949494949496,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 296,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "t5",
+       "power": 0.9393939393939394,
+       "comparator_power": 0.9393939393939394,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 298,
+       "c_beta": -0.35,
+       "c_delta": -0.5,
+       "noise": "lognormal",
+       "power": 0.9547738693467336,
+       "comparator_power": 0.949748743718593,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 300,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "t5",
+       "power": 0.9444444444444444,
+       "comparator_power": 0.9090909090909092,
+       "in_range": false,
+       "ok": true
+      },
+      {
+       "cell": 302,
+       "c_beta": -0.35,
+       "c_delta": -1.0,
+       "noise": "lognormal",
+       "power": 0.9444444444444444,
+       "comparator_power": 0.9292929292929292,
+       "in_range": false,
+       "ok": true
+      }
+     ],
+     "cells_used": [
+      256,
+      258,
+      260,
+      262,
+      264,
+      266,
+      268,
+      272,
+      274,
+      276,
+      278,
+      280,
+      282,
+      284,
+      286
+     ],
+     "fallback": false,
+     "met": true
+    }
+   },
+   "met": true
+  }
+ },
+ "decision": {
+  "M2_meets_E2_E3": false,
+  "M3_meets_E2_E3": false,
+  "recommended": "M2",
+  "label": "not recommended by the simulation",
+  "M3_agrees": null
+ },
+ "M4_complement": {
+  "cells": [
+   {
+    "cell": 336,
+    "lineage": "lymphoid",
+    "M1": 0.271356783919598,
+    "M2": 0.1306532663316583,
+    "ratio": 0.4814814814814815
+   },
+   {
+    "cell": 336,
+    "lineage": "myeloid",
+    "M1": 0.1758793969849246,
+    "M2": 0.0904522613065326,
+    "ratio": 0.5142857142857139
+   },
+   {
+    "cell": 338,
+    "lineage": "lymphoid",
+    "M1": 0.295,
+    "M2": 0.145,
+    "ratio": 0.4915254237288135
+   },
+   {
+    "cell": 338,
+    "lineage": "myeloid",
+    "M1": 0.15,
+    "M2": 0.065,
+    "ratio": 0.43333333333333335
+   },
+   {
+    "cell": 340,
+    "lineage": "lymphoid",
+    "M1": 0.9238578680203046,
+    "M2": 0.1319796954314721,
+    "ratio": 0.14285714285714288
+   },
+   {
+    "cell": 340,
+    "lineage": "myeloid",
+    "M1": 0.7258883248730964,
+    "M2": 0.0761421319796954,
+    "ratio": 0.10489510489510485
+   },
+   {
+    "cell": 342,
+    "lineage": "lymphoid",
+    "M1": 0.9597989949748744,
+    "M2": 0.1407035175879397,
+    "ratio": 0.14659685863874344
+   },
+   {
+    "cell": 342,
+    "lineage": "myeloid",
+    "M1": 0.7537688442211056,
+    "M2": 0.0603015075376884,
+    "ratio": 0.07999999999999993
+   },
+   {
+    "cell": 344,
+    "lineage": "lymphoid",
+    "M1": 0.9797979797979798,
+    "M2": 0.106060606060606,
+    "ratio": 0.1082474226804123
+   },
+   {
+    "cell": 344,
+    "lineage": "myeloid",
+    "M1": 0.9595959595959596,
+    "M2": 0.0808080808080808,
+    "ratio": 0.08421052631578947
+   },
+   {
+    "cell": 346,
+    "lineage": "lymphoid",
+    "M1": 0.9798994974874372,
+    "M2": 0.1306532663316583,
+    "ratio": 0.13333333333333333
+   },
+   {
+    "cell": 346,
+    "lineage": "myeloid",
+    "M1": 0.964824120603015,
+    "M2": 0.100502512562814,
+    "ratio": 0.1041666666666666
+   },
+   {
+    "cell": 348,
+    "lineage": "lymphoid",
+    "M1": 0.9949748743718592,
+    "M2": 0.1105527638190954,
+    "ratio": 0.11111111111111105
+   },
+   {
+    "cell": 348,
+    "lineage": "myeloid",
+    "M1": 0.984924623115578,
+    "M2": 0.1055276381909547,
+    "ratio": 0.10714285714285705
+   },
+   {
+    "cell": 350,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.13,
+    "ratio": 0.13
+   },
+   {
+    "cell": 350,
+    "lineage": "myeloid",
+    "M1": 0.985,
+    "M2": 0.085,
+    "ratio": 0.08629441624365483
+   },
+   {
+    "cell": 352,
+    "lineage": "lymphoid",
+    "M1": 0.68,
+    "M2": 0.255,
+    "ratio": 0.375
+   },
+   {
+    "cell": 352,
+    "lineage": "myeloid",
+    "M1": 0.345,
+    "M2": 0.125,
+    "ratio": 0.3623188405797102
+   },
+   {
+    "cell": 354,
+    "lineage": "lymphoid",
+    "M1": 0.7386934673366834,
+    "M2": 0.2763819095477386,
+    "ratio": 0.3741496598639455
+   },
+   {
+    "cell": 354,
+    "lineage": "myeloid",
+    "M1": 0.3939393939393939,
+    "M2": 0.1414141414141414,
+    "ratio": 0.358974358974359
+   },
+   {
+    "cell": 356,
+    "lineage": "lymphoid",
+    "M1": 0.98,
+    "M2": 0.22,
+    "ratio": 0.22448979591836735
+   },
+   {
+    "cell": 356,
+    "lineage": "myeloid",
+    "M1": 0.805,
+    "M2": 0.075,
+    "ratio": 0.09316770186335403
+   },
+   {
+    "cell": 358,
+    "lineage": "lymphoid",
+    "M1": 0.9746192893401016,
+    "M2": 0.2741116751269035,
+    "ratio": 0.28124999999999994
+   },
+   {
+    "cell": 358,
+    "lineage": "myeloid",
+    "M1": 0.934010152284264,
+    "M2": 0.1065989847715736,
+    "ratio": 0.11413043478260869
+   },
+   {
+    "cell": 360,
+    "lineage": "lymphoid",
+    "M1": 0.99,
+    "M2": 0.3,
+    "ratio": 0.30303030303030304
+   },
+   {
+    "cell": 360,
+    "lineage": "myeloid",
+    "M1": 0.985,
+    "M2": 0.13,
+    "ratio": 0.1319796954314721
+   },
+   {
+    "cell": 362,
+    "lineage": "lymphoid",
+    "M1": 0.9949748743718592,
+    "M2": 0.3165829145728643,
+    "ratio": 0.31818181818181823
+   },
+   {
+    "cell": 362,
+    "lineage": "myeloid",
+    "M1": 0.9798994974874372,
+    "M2": 0.1206030150753768,
+    "ratio": 0.12307692307692299
+   },
+   {
+    "cell": 364,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.295,
+    "ratio": 0.295
+   },
+   {
+    "cell": 364,
+    "lineage": "myeloid",
+    "M1": 0.98,
+    "M2": 0.125,
+    "ratio": 0.12755102040816327
+   },
+   {
+    "cell": 366,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.2562814070351759,
+    "ratio": 0.2562814070351759
+   },
+   {
+    "cell": 366,
+    "lineage": "myeloid",
+    "M1": 1.0,
+    "M2": 0.1758793969849246,
+    "ratio": 0.1758793969849246
+   },
+   {
+    "cell": 368,
+    "lineage": "lymphoid",
+    "M1": 0.9296482412060302,
+    "M2": 0.457286432160804,
+    "ratio": 0.49189189189189186
+   },
+   {
+    "cell": 368,
+    "lineage": "myeloid",
+    "M1": 0.7185929648241206,
+    "M2": 0.236180904522613,
+    "ratio": 0.3286713286713286
+   },
+   {
+    "cell": 370,
+    "lineage": "lymphoid",
+    "M1": 0.964824120603015,
+    "M2": 0.5678391959798995,
+    "ratio": 0.5885416666666667
+   },
+   {
+    "cell": 370,
+    "lineage": "myeloid",
+    "M1": 0.8542713567839196,
+    "M2": 0.2311557788944723,
+    "ratio": 0.2705882352941176
+   },
+   {
+    "cell": 372,
+    "lineage": "lymphoid",
+    "M1": 0.97,
+    "M2": 0.43,
+    "ratio": 0.44329896907216493
+   },
+   {
+    "cell": 372,
+    "lineage": "myeloid",
+    "M1": 0.965,
+    "M2": 0.275,
+    "ratio": 0.2849740932642487
+   },
+   {
+    "cell": 374,
+    "lineage": "lymphoid",
+    "M1": 0.985,
+    "M2": 0.55,
+    "ratio": 0.5583756345177665
+   },
+   {
+    "cell": 374,
+    "lineage": "myeloid",
+    "M1": 0.99,
+    "M2": 0.25,
+    "ratio": 0.25252525252525254
+   },
+   {
+    "cell": 376,
+    "lineage": "lymphoid",
+    "M1": 0.9949748743718592,
+    "M2": 0.4673366834170854,
+    "ratio": 0.4696969696969697
+   },
+   {
+    "cell": 376,
+    "lineage": "myeloid",
+    "M1": 0.9899497487437184,
+    "M2": 0.1758793969849246,
+    "ratio": 0.17766497461928935
+   },
+   {
+    "cell": 378,
+    "lineage": "lymphoid",
+    "M1": 0.9848484848484848,
+    "M2": 0.5252525252525253,
+    "ratio": 0.5333333333333334
+   },
+   {
+    "cell": 378,
+    "lineage": "myeloid",
+    "M1": 0.9747474747474748,
+    "M2": 0.2121212121212121,
+    "ratio": 0.2176165803108808
+   },
+   {
+    "cell": 380,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.5025125628140703,
+    "ratio": 0.5025125628140703
+   },
+   {
+    "cell": 380,
+    "lineage": "myeloid",
+    "M1": 0.9899497487437184,
+    "M2": 0.2060301507537688,
+    "ratio": 0.2081218274111675
+   },
+   {
+    "cell": 382,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.5477386934673367,
+    "ratio": 0.5477386934673367
+   },
+   {
+    "cell": 382,
+    "lineage": "myeloid",
+    "M1": 1.0,
+    "M2": 0.2261306532663316,
+    "ratio": 0.2261306532663316
+   },
+   {
+    "cell": 384,
+    "lineage": "lymphoid",
+    "M1": 0.9899497487437184,
+    "M2": 0.7286432160804021,
+    "ratio": 0.736040609137056
+   },
+   {
+    "cell": 384,
+    "lineage": "myeloid",
+    "M1": 0.934010152284264,
+    "M2": 0.299492385786802,
+    "ratio": 0.3206521739130434
+   },
+   {
+    "cell": 386,
+    "lineage": "lymphoid",
+    "M1": 0.9748743718592964,
+    "M2": 0.7989949748743719,
+    "ratio": 0.8195876288659795
+   },
+   {
+    "cell": 386,
+    "lineage": "myeloid",
+    "M1": 0.9798994974874372,
+    "M2": 0.4020100502512563,
+    "ratio": 0.41025641025641024
+   },
+   {
+    "cell": 388,
+    "lineage": "lymphoid",
+    "M1": 0.995,
+    "M2": 0.81,
+    "ratio": 0.814070351758794
+   },
+   {
+    "cell": 388,
+    "lineage": "myeloid",
+    "M1": 0.98,
+    "M2": 0.36,
+    "ratio": 0.3673469387755102
+   },
+   {
+    "cell": 390,
+    "lineage": "lymphoid",
+    "M1": 0.995,
+    "M2": 0.82,
+    "ratio": 0.8241206030150753
+   },
+   {
+    "cell": 390,
+    "lineage": "myeloid",
+    "M1": 0.98,
+    "M2": 0.395,
+    "ratio": 0.4030612244897959
+   },
+   {
+    "cell": 392,
+    "lineage": "lymphoid",
+    "M1": 0.984924623115578,
+    "M2": 0.678391959798995,
+    "ratio": 0.6887755102040816
+   },
+   {
+    "cell": 392,
+    "lineage": "myeloid",
+    "M1": 0.9798994974874372,
+    "M2": 0.3517587939698492,
+    "ratio": 0.3589743589743589
+   },
+   {
+    "cell": 394,
+    "lineage": "lymphoid",
+    "M1": 0.9949748743718592,
+    "M2": 0.8291457286432161,
+    "ratio": 0.8333333333333335
+   },
+   {
+    "cell": 394,
+    "lineage": "myeloid",
+    "M1": 0.9899497487437184,
+    "M2": 0.3618090452261306,
+    "ratio": 0.3654822335025381
+   },
+   {
+    "cell": 396,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.7537688442211056,
+    "ratio": 0.7537688442211056
+   },
+   {
+    "cell": 396,
+    "lineage": "myeloid",
+    "M1": 1.0,
+    "M2": 0.321608040201005,
+    "ratio": 0.321608040201005
+   },
+   {
+    "cell": 398,
+    "lineage": "lymphoid",
+    "M1": 1.0,
+    "M2": 0.8241206030150754,
+    "ratio": 0.8241206030150754
+   },
+   {
+    "cell": 398,
+    "lineage": "myeloid",
+    "M1": 0.9949748743718592,
+    "M2": 0.3366834170854271,
+    "ratio": 0.3383838383838384
+   }
+  ],
+  "median_ratio": 0.32113010705702416,
+  "m2_loses_most_power": true
+ }
+}

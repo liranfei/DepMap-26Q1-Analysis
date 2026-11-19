@@ -1,0 +1,907 @@
+{
+ "plan_A_sha256": "18d523afc382b8915a5ff4bfa4768f43770236d3376bcefd39e0b51c1a281a00",
+ "environment": {
+  "versions": {
+   "python": "3.13.12",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "scipy": "1.17.1",
+   "statsmodels": "0.14.6"
+  },
+  "expected": {
+   "python": "3.13.12",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "scipy": "1.17.1",
+   "statsmodels": "0.14.6"
+  },
+  "matches_plan": true,
+  "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+  "executable_name": "python3"
+ },
+ "seed_checks": 50261119,
+ "C1_single_stratum": {
+  "n_genes_compared": 991,
+  "max_abs_diff_M2": 8.881784197001252e-16,
+  "max_abs_diff_M1": 0.0,
+  "max_abs_diff_M4": 0.0,
+  "criterion": "< 1e-12",
+  "passed": true
+ },
+ "C2_independent_implementation": {
+  "n_pairs_compared": 1320,
+  "testable_mismatches": 0,
+  "max_abs_diff_p": 0.0,
+  "criterion": "< 1e-10 and no testability mismatch",
+  "passed": true
+ },
+ "C3_exact_permutation": {
+  "examples": [
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.06457145147621338,
+    "p_normal_c0": 0.06378688658119755,
+    "p_normal_c0_core": 0.06378688658119755,
+    "abs_diff": 0.0007845648950158268,
+    "rel_diff": 0.012150336984523917,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.6035403989949445,
+    "p_normal_c0": 0.6042796085172374,
+    "p_normal_c0_core": 0.6042796085172374,
+    "abs_diff": 0.000739209522292894,
+    "rel_diff": 0.0012247888020816416,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 0.10363413754107086,
+    "p_normal_c0": 0.1019634015421636,
+    "p_normal_c0_core": 0.1019634015421636,
+    "abs_diff": 0.001670735998907255,
+    "rel_diff": 0.016121483118872217,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.004490963581872673,
+    "p_normal_c0": 0.005352123153696452,
+    "p_normal_c0_core": 0.005352123153696452,
+    "abs_diff": 0.0008611595718237787,
+    "rel_diff": 0.19175385329325836,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.5512504580956962,
+    "p_normal_c0": 0.5518506265227052,
+    "p_normal_c0_core": 0.5518506265227052,
+    "abs_diff": 0.0006001684270090513,
+    "rel_diff": 0.001088740005917352,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.399172040081131,
+    "p_normal_c0": 0.39090366956268513,
+    "p_normal_c0_core": 0.39090366956268513,
+    "abs_diff": 0.008268370518445867,
+    "rel_diff": 0.020713801790238955,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 0.4759450633995095,
+    "p_normal_c0": 0.47524197411592334,
+    "p_normal_c0_core": 0.47524197411592334,
+    "abs_diff": 0.0007030892835861446,
+    "rel_diff": 0.0014772488206185462,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.00021317066771612227,
+    "p_normal_c0": 0.0004522035654212602,
+    "p_normal_c0_core": 0.0004522035654212602,
+    "abs_diff": 0.00023903289770513793,
+    "rel_diff": 1.1213217102807793,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.8142972382555715,
+    "p_normal_c0": 0.8169835316068317,
+    "p_normal_c0_core": 0.8169835316068317,
+    "abs_diff": 0.0026862933512601384,
+    "rel_diff": 0.003298910060182509,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.08041352586807132,
+    "p_normal_c0": 0.07823016054181128,
+    "p_normal_c0_core": 0.07823016054181128,
+    "abs_diff": 0.0021833653262600394,
+    "rel_diff": 0.027151717359615964,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 0.22334236096649543,
+    "p_normal_c0": 0.22033471018467526,
+    "p_normal_c0_core": 0.22033471018467526,
+    "abs_diff": 0.0030076507818201648,
+    "rel_diff": 0.013466548704888795,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.145294856658493,
+    "p_normal_c0": 0.14205872009365206,
+    "p_normal_c0_core": 0.14205872009365206,
+    "abs_diff": 0.0032361365648409524,
+    "rel_diff": 0.022272891410377315,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.10025173790054742,
+    "p_normal_c0": 0.09848092744764964,
+    "p_normal_c0_core": 0.09848092744764964,
+    "abs_diff": 0.0017708104528977864,
+    "rel_diff": 0.017663638456367516,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.31566917930554295,
+    "p_normal_c0": 0.3111488327207409,
+    "p_normal_c0_core": 0.3111488327207409,
+    "abs_diff": 0.0045203465848020485,
+    "rel_diff": 0.014319885757445798,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 7.910477116016474e-05,
+    "p_normal_c0": 0.0001860977899297365,
+    "p_normal_c0_core": 0.0001860977899297365,
+    "abs_diff": 0.00010699301876957176,
+    "rel_diff": 1.3525482369823334,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.03646454555545465,
+    "p_normal_c0": 0.03653426829034119,
+    "p_normal_c0_core": 0.03653426829034119,
+    "abs_diff": 6.972273488654174e-05,
+    "rel_diff": 0.001912069212010571,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.6275620433358529,
+    "p_normal_c0": 0.6293247417164023,
+    "p_normal_c0_core": 0.6293247417164023,
+    "abs_diff": 0.0017626983805494323,
+    "rel_diff": 0.002808803367360584,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.6606544970181334,
+    "p_normal_c0": 0.6618606315250878,
+    "p_normal_c0_core": 0.6618606315250878,
+    "abs_diff": 0.0012061345069543927,
+    "rel_diff": 0.0018256660817390716,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 0.004322634666111343,
+    "p_normal_c0": 0.005018914958199735,
+    "p_normal_c0_core": 0.005018914958199735,
+    "abs_diff": 0.0006962802920883922,
+    "rel_diff": 0.16107775601465954,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.005854751309296764,
+    "p_normal_c0": 0.006792495750026129,
+    "p_normal_c0_core": 0.006792495750026129,
+    "abs_diff": 0.0009377444407293652,
+    "rel_diff": 0.1601681081210606,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      10,
+      4
+     ],
+     [
+      12,
+      5
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": 0.0,
+    "ties": false,
+    "p_exact": 0.9269270081770081,
+    "p_normal_c0": 0.9278517965904708,
+    "p_normal_c0_core": 0.9278517965904708,
+    "abs_diff": 0.0009247884134626627,
+    "rel_diff": 0.0009976928121680786,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      14,
+      5
+     ],
+     [
+      11,
+      4
+     ]
+    ],
+    "shift": -0.4,
+    "ties": true,
+    "p_exact": 0.05477098658916841,
+    "p_normal_c0": 0.05334680310696141,
+    "p_normal_c0_core": 0.05334680310696141,
+    "abs_diff": 0.001424183482206999,
+    "rel_diff": 0.02600251649453851,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      8,
+      3
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      10,
+      4
+     ],
+     [
+      9,
+      3
+     ]
+    ],
+    "shift": -0.8,
+    "ties": false,
+    "p_exact": 0.00048312479753806286,
+    "p_normal_c0": 0.0007733966839676144,
+    "p_normal_c0_core": 0.0007733966839676144,
+    "abs_diff": 0.00029027188642955155,
+    "rel_diff": 0.6008217502159627,
+    "ok": true
+   },
+   {
+    "design": [
+     [
+      16,
+      6
+     ],
+     [
+      12,
+      4
+     ]
+    ],
+    "shift": -1.2,
+    "ties": true,
+    "p_exact": 0.001617826617826618,
+    "p_normal_c0": 0.002221979426687789,
+    "p_normal_c0_core": 0.002221979426687789,
+    "abs_diff": 0.0006041528088611711,
+    "rel_diff": 0.37343483053381066,
+    "ok": true
+   }
+  ],
+  "n_ok": 24,
+  "n": 24,
+  "core_vs_reference_max_diff": 0.0,
+  "criterion": "every example |dp| < 0.01 or relative < 10%",
+  "passed": true
+ },
+ "C4_stratified_HL": {
+  "single_stratum_max_abs_diff": 0.0,
+  "n_single": 60,
+  "multi_stratum_examples": 51,
+  "multi_stratum_mismatches": 0,
+  "exact_half_example": 1.5,
+  "criterion": "single == ordinary HL (0 difference); multi == Fraction brute force (exact); half example 1.5",
+  "passed": true
+ },
+ "C5_OLS_HC3": {
+  "n_compared": 600,
+  "max_abs_diff_coef": 2.7200464103316335e-15,
+  "max_rel_diff_se": 6.339123961046737e-15,
+  "max_abs_diff_p": 2.55351295663786e-15,
+  "criterion": "all < 1e-8, df identical",
+  "passed": true
+ },
+ "C6_secondary_effect": {
+  "n_compared": 200,
+  "max_abs_diff": 0.0,
+  "criterion": "< 1e-12",
+  "passed": true
+ },
+ "C7_cohort_counts": {
+  "n_lines": 1192,
+  "n_genes": 18531,
+  "culture": {
+   "Adherent": 923,
+   "Suspension": 163,
+   "Other": 106
+  },
+  "library": {
+   "Avana": 822,
+   "KY": 116,
+   "Avana+KY": 195,
+   "other": 6,
+   "unknown": 53
+  },
+  "expected_culture": {
+   "Adherent": 923,
+   "Suspension": 163,
+   "Other": 106
+  },
+  "expected_library": {
+   "Avana": 822,
+   "KY": 116,
+   "Avana+KY": 195,
+   "other": 6,
+   "unknown": 53
+  },
+  "passed": true
+ },
+ "C8_coverage_model_level": {
+  "per_lineage": {
+   "adrenal gland": {
+    "n": 1,
+    "n_in_informative": 0,
+    "frac": 0.0,
+    "testable": false
+   },
+   "ampulla of vater": {
+    "n": 5,
+    "n_in_informative": 4,
+    "frac": 0.8,
+    "testable": false
+   },
+   "biliary tract": {
+    "n": 34,
+    "n_in_informative": 34,
+    "frac": 1.0,
+    "testable": true
+   },
+   "bladder/urinary tract": {
+    "n": 34,
+    "n_in_informative": 32,
+    "frac": 0.9411764705882353,
+    "testable": true
+   },
+   "bone": {
+    "n": 58,
+    "n_in_informative": 58,
+    "frac": 1.0,
+    "testable": true
+   },
+   "bowel": {
+    "n": 63,
+    "n_in_informative": 63,
+    "frac": 1.0,
+    "testable": true
+   },
+   "breast": {
+    "n": 53,
+    "n_in_informative": 53,
+    "frac": 1.0,
+    "testable": true
+   },
+   "cervix": {
+    "n": 18,
+    "n_in_informative": 18,
+    "frac": 1.0,
+    "testable": true
+   },
+   "cns/brain": {
+    "n": 91,
+    "n_in_informative": 91,
+    "frac": 1.0,
+    "testable": true
+   },
+   "esophagus/stomach": {
+    "n": 69,
+    "n_in_informative": 69,
+    "frac": 1.0,
+    "testable": true
+   },
+   "eye": {
+    "n": 10,
+    "n_in_informative": 7,
+    "frac": 0.7,
+    "testable": true
+   },
+   "head and neck": {
+    "n": 77,
+    "n_in_informative": 75,
+    "frac": 0.974025974025974,
+    "testable": true
+   },
+   "kidney": {
+    "n": 34,
+    "n_in_informative": 32,
+    "frac": 0.9411764705882353,
+    "testable": true
+   },
+   "liver": {
+    "n": 25,
+    "n_in_informative": 25,
+    "frac": 1.0,
+    "testable": true
+   },
+   "lung": {
+    "n": 126,
+    "n_in_informative": 126,
+    "frac": 1.0,
+    "testable": true
+   },
+   "lymphoid": {
+    "n": 94,
+    "n_in_informative": 94,
+    "frac": 1.0,
+    "testable": true
+   },
+   "myeloid": {
+    "n": 43,
+    "n_in_informative": 42,
+    "frac": 0.9767441860465116,
+    "testable": true
+   },
+   "other": {
+    "n": 1,
+    "n_in_informative": 0,
+    "frac": 0.0,
+    "testable": false
+   },
+   "ovary/fallopian tube": {
+    "n": 59,
+    "n_in_informative": 57,
+    "frac": 0.9661016949152542,
+    "testable": true
+   },
+   "pancreas": {
+    "n": 48,
+    "n_in_informative": 46,
+    "frac": 0.9583333333333334,
+    "testable": true
+   },
+   "peripheral nervous system": {
+    "n": 47,
+    "n_in_informative": 46,
+    "frac": 0.9787234042553191,
+    "testable": true
+   },
+   "pleura": {
+    "n": 21,
+    "n_in_informative": 21,
+    "frac": 1.0,
+    "testable": true
+   },
+   "prostate": {
+    "n": 5,
+    "n_in_informative": 5,
+    "frac": 1.0,
+    "testable": true
+   },
+   "skin": {
+    "n": 75,
+    "n_in_informative": 72,
+    "frac": 0.96,
+    "testable": true
+   },
+   "soft tissue": {
+    "n": 49,
+    "n_in_informative": 48,
+    "frac": 0.9795918367346939,
+    "testable": true
+   },
+   "testis": {
+    "n": 5,
+    "n_in_informative": 5,
+    "frac": 1.0,
+    "testable": true
+   },
+   "thyroid": {
+    "n": 11,
+    "n_in_informative": 11,
+    "frac": 1.0,
+    "testable": true
+   },
+   "uterus": {
+    "n": 34,
+    "n_in_informative": 32,
+    "frac": 0.9411764705882353,
+    "testable": true
+   },
+   "vulva/vagina": {
+    "n": 2,
+    "n_in_informative": 0,
+    "frac": 0.0,
+    "testable": false
+   }
+  },
+  "eye_frac": 0.7,
+  "ampulla_testable": false,
+  "passed": true
+ },
+ "C9_permuted_real_data": {
+  "permutation_seed": 7,
+  "n_testable_pairs": 448354,
+  "n_pairs_compared": 300,
+  "testability_mismatches": 0,
+  "max_abs_diff_p_M2": 0.0,
+  "n_M3_compared": 140,
+  "max_abs_diff_p_M3": 4.6629367034256575e-15,
+  "criterion": "M2 < 1e-10, M3 < 1e-8, no mismatch",
+  "passed": true
+ },
+ "C10_mixture_truth": {
+  "n_cases": 6,
+  "got": [
+   [
+    true,
+    true
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    true
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    false
+   ]
+  ],
+  "expected": [
+   [
+    true,
+    true
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    true
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    false
+   ]
+  ],
+  "passed": true
+ },
+ "C11_M3_testability": {
+  "n_compared": 1200,
+  "n_untestable_independent": 434,
+  "mismatches": 0,
+  "passed": true
+ },
+ "all_passed": true,
+ "runtime_s": 7.6
+}
