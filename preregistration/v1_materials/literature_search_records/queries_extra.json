@@ -1,0 +1,5 @@
+{
+ "L5": "(DepMap[tiab] OR \"CRISPR screen\"[tiab] OR \"CRISPR screens\"[tiab] OR \"gene effect\"[tiab]) AND (confound*[tiab] OR bias[tiab] OR biases[tiab]) AND (lineage[tiab] OR \"cancer type\"[tiab] OR tissue[tiab]) AND (\"cell line\"[tiab] OR \"cell lines\"[tiab])",
+ "L6": "(\"hematopoietic\"[tiab] OR haematopoietic[tiab] OR blood[tiab] OR leukemia[tiab] OR leukaemia[tiab]) AND (suspension[tiab] OR adherent[tiab]) AND (DepMap[tiab] OR \"CRISPR screen\"[tiab] OR \"CRISPR screens\"[tiab] OR \"gene dependency\"[tiab] OR \"gene dependencies\"[tiab])",
+ "L7": "(\"Hodges-Lehmann\"[tiab] OR \"stratified Wilcoxon\"[tiab] OR \"Van Elteren\"[tiab] OR \"Cochran-Mantel-Haenszel\"[tiab]) AND (CRISPR[tiab] OR DepMap[tiab] OR \"gene dependency\"[tiab] OR \"functional genomic\"[tiab])"
+}

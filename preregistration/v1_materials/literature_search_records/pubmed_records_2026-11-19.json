@@ -1,0 +1,400 @@
+{
+ "L1": [
+  [
+   "43046255",
+   "2026",
+   "World J Surg Oncol",
+   "Unlocking a TP53 mutation-specific vulnerability: the miR-486-3p/CYB561 axis in bladder cancer."
+  ],
+  [
+   "42980035",
+   "2026",
+   "Front Biosci (Landmark Ed)",
+   "Bias-Controlled Computational Prioritisation of Therapeutic Hypotheses From Heterogeneous Molecular Data Identifies PLK1 as the Leading MTX-Combination Candidate in Choriocarcinoma."
+  ],
+  [
+   "42255227",
+   "2026",
+   "Front Oncol",
+   "ACSL4-driven ferroptosis susceptibility as a targetable vulnerability in monocytic acute myeloid leukemia."
+  ],
+  [
+   "42039299",
+   "2026",
+   "Acta Pharm Sin B",
+   "GEMap: A comprehensive gene essentiality map for drug discovery."
+  ],
+  [
+   "41970959",
+   "2026",
+   "Front Cell Dev Biol",
+   "A base editing resource for functional annotation of DNA repair variants in breast-derived cell models."
+  ],
+  [
+   "40935881",
+   "2026",
+   "Nat Rev Drug Discov",
+   "Synthetic lethality in cancer drug discovery: challenges and opportunities."
+  ],
+  [
+   "40475436",
+   "2025",
+   "bioRxiv",
+   "Barcoded monoclonal embryoids are a potential solution to confounding bottlenecks in mosaic organoid screens."
+  ],
+  [
+   "39026794",
+   "2024",
+   "bioRxiv",
+   "Generation of a biliary tract cancer cell line atlas reveals molecular subtypes and therapeutic targets."
+  ],
+  [
+   "31039782",
+   "2019",
+   "BMC Biol",
+   "Inferring cancer dependencies on metabolic genes from large-scale genetic screens."
+  ]
+ ],
+ "L2": [
+  [
+   "43023035",
+   "2026",
+   "Bio Protoc",
+   "Suspension-Based Intracellular Immunofluorescence Staining Coupled With Genome-Wide CRISPR-Cas9 Screening to Identify Regulators of O-GlcNAcylation."
+  ],
+  [
+   "42633254",
+   "2026",
+   "iScience",
+   "A high-throughput co-culture CRISPR array for rapid fitness hypothesis testing and growth engineering in CHO cells."
+  ],
+  [
+   "42557315",
+   "2026",
+   "Nature",
+   "A dependency map enhanced with next-generation 3D cancer models."
+  ],
+  [
+   "41715004",
+   "2026",
+   "BMC Genomics",
+   "Variation in guide RNA library representation results in gene effect score bias in genome-wide CRISPR screens."
+  ],
+  [
+   "41710881",
+   "2026",
+   "Front Immunol",
+   "Single-gene knockout of RNLS or HIVEP2 are insufficient to protect β-cell spheroids from allo- and xeno-rejection."
+  ],
+  [
+   "41545565",
+   "2026",
+   "Nat Metab",
+   "Hexokinase detachment from mitochondria drives the Warburg effect to support compartmentalized ATP production."
+  ],
+  [
+   "40316835",
+   "2025",
+   "Nat Metab",
+   "Cytosolic NADK is conditionally essential for folate-dependent nucleotide synthesis."
+  ],
+  [
+   "39975027",
+   "2025",
+   "bioRxiv",
+   "Hexokinase detachment from mitochondria drives the Warburg effect to support compartmentalized ATP production."
+  ],
+  [
+   "39648412",
+   "2025",
+   "J Pathol",
+   "CRISPR-Cas9 screening identifies the role of FER as a tumor suppressor."
+  ],
+  [
+   "38692273",
+   "2024",
+   "Cell Stem Cell",
+   "Long-term expandable mouse and human-induced nephron progenitor cells enable kidney organoid maturation and modeling of plasticity and disease."
+  ],
+  [
+   "39872545",
+   "2023",
+   "Life Med",
+   "A CRISPR/Cas9-based kinome screen identifies ErbB signaling as a new regulator of human naïve pluripotency and totipotency."
+  ],
+  [
+   "37286821",
+   "2023",
+   "Nat Protoc",
+   "Genome-wide pooled CRISPR screening in neurospheres."
+  ],
+  [
+   "37205704",
+   "2023",
+   "PLoS One",
+   "Identifying essential genes in genome-scale metabolic models of consensus molecular subtypes of colorectal cancer."
+  ],
+  [
+   "37166379",
+   "2023",
+   "Stem Cells Dev",
+   "Parallel Genome-Wide CRISPR Screens to Identify State-Dependent Self-Renewal Regulators of Mouse Embryonic Stem Cells."
+  ],
+  [
+   "36523978",
+   "2022",
+   "Front Oncol",
+   "3D CRISPR screen in prostate cancer cells reveals PARP inhibitor sensitization through TBL1XR1-SMC3 interaction."
+  ],
+  [
+   "35892587",
+   "2022",
+   "Cells",
+   "A Genome-Wide CRISPR Screen Identifies Factors Regulating Pluripotency Exit in Mouse Embryonic Stem Cells."
+  ],
+  [
+   "34709608",
+   "2022",
+   "Methods Mol Biol",
+   "A Method to Map Gene Essentiality of Human Pluripotent Stem Cells by Genome-Scale CRISPR Screens with Inducible Cas9."
+  ],
+  [
+   "33651980",
+   "2021",
+   "Cell Metab",
+   "CRISPR screens in physiologic medium reveal conditionally essential genes in human cells."
+  ],
+  [
+   "31039782",
+   "2019",
+   "BMC Biol",
+   "Inferring cancer dependencies on metabolic genes from large-scale genetic screens."
+  ]
+ ],
+ "L3": [
+  [
+   "42764417",
+   "2026",
+   "J Palliat Med",
+   "Distress Screening and Pediatric Palliative Care Referral: A Retrospective Case-Control Study in Supportive Cancer Care Delivery."
+  ],
+  [
+   "40092735",
+   "2025",
+   "Gynecol Oncol Rep",
+   "Association between time to adjuvant chemotherapy and survival in ovarian cancer patients treated with cytoreductive surgery and hyperthermic intraperitoneal chemotherapy."
+  ],
+  [
+   "34232885",
+   "2021",
+   "IEEE/ACM Trans Comput Biol Bioinform",
+   "Stratified Test Accurately Identifies Differentially Expressed Genes Under Batch Effects in Single-Cell Data."
+  ],
+  [
+   "30880658",
+   "2019",
+   "Palliat Support Care",
+   "Quality of life improves after palliative placement of percutaneous tunneled drainage catheter for refractory ascites in prospective study of patients with end-stage cancer."
+  ],
+  [
+   "24594506",
+   "2014",
+   "J Neurol Neurosurg Psychiatry",
+   "Assessment of cancer risk with β-interferon treatment for multiple sclerosis."
+  ],
+  [
+   "22730559",
+   "2012",
+   "Brain",
+   "Cancer risk in multiple sclerosis: findings from British Columbia, Canada."
+  ],
+  [
+   "9640214",
+   "1998",
+   "Eur J Cancer",
+   "Quality of life of early-stage breast cancer patients treated with radical mastectomy or breast-conserving procedures: results of EORTC Trial 10801. The European Organization for Research and Treatment of Cancer (EORTC), Breast Cancer Co-operative Group (BCCG)."
+  ],
+  [
+   "2218185",
+   "1990",
+   "Stat Med",
+   "A stratified Wilcoxon-type test for trend."
+  ]
+ ],
+ "L4": [
+  [
+   "43008946",
+   "2026",
+   "J Hepatol",
+   "Senescence induces clonal failure of hepatocyte plasticity and reshapes regenerative lineages."
+  ],
+  [
+   "42990365",
+   "2026",
+   "bioRxiv",
+   "Systematic analysis of genetic vulnerabilities caused by chromosome loss events in cancer."
+  ],
+  [
+   "42906825",
+   "2026",
+   "Gastroenterology",
+   "Mevalonate Biosynthesis is a Metabolic Vulnerability of Gemcitabine-Resistant Pancreatic Cancer."
+  ],
+  [
+   "42727625",
+   "2026",
+   "Drug Discov Today",
+   "Synthetic lethality and context-selective DNA-damage response dependencies: from genetic vulnerability to pharmacological translation."
+  ],
+  [
+   "42677456",
+   "2026",
+   "ACS Chem Biol",
+   "Evaluation of HDAC8 as a Druggable Target in STAG2-Mutant Ewing Sarcoma."
+  ],
+  [
+   "42647139",
+   "2026",
+   "Cancer Res Commun",
+   "Spindle Assembly Checkpoint Competency Determines Sensitivity to KIF18A Inhibition in Small Cell Lung Cancer."
+  ],
+  [
+   "42619900",
+   "2026",
+   "bioRxiv",
+   "Spindle Assembly Checkpoint Competency Determines Sensitivity to KIF18A Inhibition in Small-Cell Lung Cancer."
+  ],
+  [
+   "42567394",
+   "2026",
+   "Exp Cell Res",
+   "Ferroptosis in vitiligo and melanoma: Opposing susceptibilities, shared mechanisms, and therapeutic targets."
+  ],
+  [
+   "42559234",
+   "2026",
+   "Theranostics",
+   "CTPS1 is an unexplored vulnerability in breast and ovarian cancer."
+  ],
+  [
+   "42432708",
+   "2026",
+   "J Neuroinflammation",
+   "Phosphorylated TYK2 orchestrates the pathogenic program of CD4 + T cells in the development of CNS autoimmunity."
+  ],
+  [
+   "42351295",
+   "2026",
+   "Neuro Oncol",
+   "Selective histone deacetylase inhibition as a therapeutically relevant strategy in H3K27M-glioma."
+  ],
+  [
+   "42280256",
+   "2026",
+   "Molecules",
+   "Integrative Pan-Cancer Mapping of Proteasome Dependency Prioritizes PSMB5 and PSMB6 as Context-Dependent Vulnerability Biomarkers Linked to Immune Context."
+  ],
+  [
+   "41847032",
+   "2026",
+   "bioRxiv",
+   "Tabular foundation model predicts alternative lengthening of telomeres (ALT) and identifies SMARCAL1 as a target in ALT-driven cancers."
+  ],
+  [
+   "41499431",
+   "2026",
+   "Neuro Oncol",
+   "MBD3 deficiency decommissions the nucleosome remodeling and deacetylase complex and orchestrates the epigenetic regulation of gene expression to suppress neuroblastoma progression."
+  ],
+  [
+   "41382155",
+   "2025",
+   "Genome Med",
+   "Collateral metabolic vulnerabilities unveiled by loss of isozyme diversity in breast cancer."
+  ],
+  [
+   "40236139",
+   "2025",
+   "bioRxiv",
+   "A statistical framework for inferring genetic requirements from embryo-scale single-cell sequencing experiments."
+  ],
+  [
+   "39484513",
+   "2024",
+   "bioRxiv",
+   "A framework for target discovery in rare cancers."
+  ],
+  [
+   "38350716",
+   "2025",
+   "J Clin Pathol",
+   "Clinicopathological characterisation of MTAP alterations in gastrointestinal cancers."
+  ],
+  [
+   "37612728",
+   "2023",
+   "Genome Biol",
+   "Partial gene suppression improves identification of cancer vulnerabilities when CRISPR-Cas9 knockout is pan-lethal."
+  ],
+  [
+   "36900182",
+   "2023",
+   "Cancers (Basel)",
+   "PD-1(+)CD8(+) T Cells Proximal to PD-L1(+)CD68(+) Macrophages Are Associated with Poor Prognosis in Pancreatic Ductal Adenocarcinoma Patients."
+  ],
+  [
+   "36263775",
+   "2022",
+   "Circ Res",
+   "GATA4 Regulates Developing Endocardium Through Interaction With ETS1."
+  ],
+  [
+   "33816997",
+   "2021",
+   "PeerJ Comput Sci",
+   "A supervised scheme for aspect extraction in sentiment analysis using the hybrid feature set of word dependency relations and lemmas."
+  ],
+  [
+   "32325090",
+   "2020",
+   "Immunol Lett",
+   "Notch receptors and ligands in inflammatory arthritis - a systematic review."
+  ],
+  [
+   "28121289",
+   "2017",
+   "Elife",
+   "Mapping cell type-specific transcriptional enhancers using high affinity, lineage-specific Ep300 bioChIP-seq."
+  ],
+  [
+   "24823962",
+   "2014",
+   "Infect Genet Evol",
+   "Human papillomavirus type 16 long control region and E6 variants stratified by cervical disease stage."
+  ],
+  [
+   "21435232",
+   "2011",
+   "Arthritis Res Ther",
+   "TWEAK and Fn14 expression in the pathogenesis of joint inflammation and bone erosion in rheumatoid arthritis."
+  ],
+  [
+   "17069009",
+   "2006",
+   "J Investig Dermatol Symp Proc",
+   "Analysis of immune cell infiltrates during squamous carcinoma development."
+  ],
+  [
+   "11376105",
+   "2001",
+   "Mol Endocrinol",
+   "Programmed cell death in the ovary: insights and future prospects using genetic technologies."
+  ],
+  [
+   "9233806",
+   "1997",
+   "EMBO J",
+   "A lineage-selective knockout establishes the critical role of transcription factor GATA-1 in megakaryocyte growth and platelet development."
+  ]
+ ]
+}

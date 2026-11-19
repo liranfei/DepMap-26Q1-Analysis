@@ -1,0 +1,72 @@
+cancer_type_in_paper,OncotreeLineage,note
+ampullary carcinoma / cancer of the ampulla of Vater,Ampulla of Vater,
+intrahepatic or extrahepatic cholangiocarcinoma,Biliary Tract,
+gallbladder carcinoma,Biliary Tract,
+combined hepatocellular-cholangiocarcinoma,Liver,
+bladder / urothelial carcinoma (incl. upper tract),Bladder/Urinary Tract,
+urethral carcinoma,Bladder/Urinary Tract,
+Ewing sarcoma (bone or soft tissue),Bone,all Ewing sarcoma lines in DepMap 26Q1 are in Bone
+osteosarcoma,Bone,
+chondrosarcoma,Bone,
+chordoma,Bone,
+giant cell tumour of bone,Bone,as in Model.csv
+colorectal / colon / rectal carcinoma,Bowel,
+breast carcinoma (any subtype),Breast,
+glioma / glioblastoma / astrocytoma / oligodendroglioma / ependymoma,CNS/Brain,
+medulloblastoma / other CNS embryonal tumour,CNS/Brain,
+atypical teratoid rhabdoid tumour (CNS),CNS/Brain,
+meningioma,CNS/Brain,
+cervical carcinoma (any subtype),Cervix,
+oesophageal carcinoma (squamous or adenocarcinoma),Esophagus/Stomach,
+gastric / stomach / gastro-oesophageal junction carcinoma,Esophagus/Stomach,
+uveal / ocular melanoma,Eye,
+retinoblastoma,Eye,
+cutaneous melanoma,Skin,
+melanoma with site not stated,Skin,
+mucosal melanoma (any site),not mapped,listed only
+head and neck squamous cell carcinoma (oral cavity / pharynx / larynx),Head and Neck,
+nasopharyngeal carcinoma,Head and Neck,
+salivary gland carcinoma,Head and Neck,
+renal cell carcinoma (any subtype),Kidney,
+rhabdoid tumour of the kidney,Kidney,
+extrarenal (soft tissue) rhabdoid tumour,Soft Tissue,
+rhabdoid tumour with site not stated,not mapped,listed only
+hepatocellular carcinoma / hepatoma,Liver,
+hepatoblastoma,Liver,
+non-small cell lung cancer (adenocarcinoma / squamous / large cell),Lung,
+small cell lung cancer / lung neuroendocrine tumour,Lung,26 lung neuroendocrine lines in cohort
+B-cell lymphoma / B-cell neoplasm (incl. CLL),Lymphoid,
+lymphoma with type not stated,Lymphoid,
+B-cell or T-cell acute lymphoblastic leukaemia,Lymphoid,
+T-cell / NK-cell lymphoma or leukaemia,Lymphoid,
+Hodgkin lymphoma,Lymphoid,
+multiple myeloma / plasma cell neoplasm,Lymphoid,Oncotree: mature B-cell neoplasm
+acute myeloid leukaemia,Myeloid,
+chronic myeloid leukaemia / myeloproliferative neoplasm,Myeloid,
+myelodysplastic syndrome / neoplasm,Myeloid,
+mixed-phenotype or ambiguous-lineage acute leukaemia,Myeloid,as in Model.csv
+ovarian carcinoma (any epithelial subtype) / fallopian tube carcinoma,Ovary/Fallopian Tube,
+ovarian germ cell tumour,Ovary/Fallopian Tube,as in Model.csv
+pancreatic ductal adenocarcinoma / pancreatic carcinoma,Pancreas,
+pancreatic neuroendocrine tumour,not mapped,subtype not represented in the cohort; listed only
+neuroblastoma,Peripheral Nervous System,
+malignant peripheral nerve sheath tumour,Peripheral Nervous System,
+pleural mesothelioma / mesothelioma with site not stated,Pleura,
+peritoneal mesothelioma,not mapped,listed only
+prostate carcinoma,Prostate,
+cutaneous squamous cell carcinoma,Skin,
+Merkel cell carcinoma,Skin,
+rhabdomyosarcoma,Soft Tissue,
+liposarcoma,Soft Tissue,
+synovial sarcoma,Soft Tissue,
+leiomyosarcoma (non-uterine or site not stated),Soft Tissue,
+uterine leiomyosarcoma / uterine sarcoma,Uterus,
+undifferentiated pleomorphic sarcoma / other soft tissue sarcoma,Soft Tissue,
+testicular germ cell tumour (non-seminoma / embryonal carcinoma),Testis,
+thyroid carcinoma (any subtype),Thyroid,
+endometrial carcinoma,Uterus,
+gestational trophoblastic disease / choriocarcinoma,Uterus,as in Model.csv
+vulvar or vaginal cancer,not mapped,lineage has fewer than 5 lines; listed only
+adrenal cancer,not mapped,lineage has fewer than 5 lines; listed only
+seminoma,not mapped,no seminoma lines in cohort; listed only
+extragonadal germ cell tumour,not mapped,listed only

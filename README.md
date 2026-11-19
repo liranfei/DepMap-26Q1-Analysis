@@ -2,6 +2,10 @@
 
 Code, intermediate results and figures for the manuscript *"A selectivity-based analytical strategy for identifying lineage-selective cancer dependencies from DepMap data"*.
 
+## Preregistration of the next analyses (version 2.5.0-prereg)
+
+The folder `preregistration/` holds two analysis plans frozen on 19 November 2026, before any of the analyses they describe were run: `plan_A_stratified_procedure.md` (a culture-format-stratified Van Elteren procedure for lineage-dependency testing, with a pre-specified simulation study and decision rules) and `plan_B_positive_controls.md` (an external positive-control benchmark built from the literature by two independent AI screeners). `preregistration/v1_materials/` contains the screening prompts, search queries, lineage-mapping table, environment lock file and a documented literature search on prior procedures; `preregistration/audits/` contains seven audit reports on the drafts (in Chinese), produced by an AI model (Claude, Anthropic) in a session separate from the one that drafted the plans; they are not independent human review. In the plans, "Zenodo v1" is this release; v1b, v2 and v3 will be the releases `v2.5.1-prereg-v1b`, `v2.5.2-prereg-v2` and `v2.5.3-prereg-v3`. SHA-256 checksums of every file are in `preregistration/SHA256SUMS.txt`. This version adds no code and changes no existing result, table or figure.
+
 ## Scripts for previously untraced manuscript numbers (version 2.4.2)
 
 Version 2.4.2 adds four scripts so that the numbers in the manuscript that come from these analyses (not those quoted from the literature) can be traced to a result file: `src/snap23_paralogue_restriction.py` (post hoc SNAP23 bowel contrast among lines with low SNAP25 and SNAP29 expression), `src/hl_discrepancies.py`, `src/fermt2_fermt1_expression.py` and `src/manuscript_extra_numbers.py` (described in the sections below). The full pipeline was rerun from the raw input files (checksums as in `checksums/`) and reproduced all stored results, supplementary tables and figures; no existing number, table or figure changed.

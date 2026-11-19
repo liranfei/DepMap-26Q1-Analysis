@@ -1,0 +1,4 @@
+{
+ "L8": "(DepMap[tiab] OR \"CRISPR screen\"[tiab] OR \"CRISPR screens\"[tiab] OR \"gene effect\"[tiab] OR \"gene dependency\"[tiab] OR \"gene dependencies\"[tiab]) AND (limma[tiab] OR \"linear model\"[tiab] OR \"linear models\"[tiab] OR \"linear regression\"[tiab] OR \"mixed model\"[tiab] OR \"mixed-effects\"[tiab]) AND (lineage[tiab] OR tissue[tiab] OR \"cancer type\"[tiab] OR \"cancer types\"[tiab])",
+ "L9": "(DepMap[tiab] OR \"CRISPR screen\"[tiab] OR \"CRISPR screens\"[tiab] OR \"gene effect\"[tiab] OR \"gene dependency\"[tiab]) AND (\"growth rate\"[tiab] OR \"doubling time\"[tiab] OR \"proliferation rate\"[tiab]) AND (confound*[tiab] OR covariate*[tiab] OR adjust*[tiab] OR bias[tiab])"
+}

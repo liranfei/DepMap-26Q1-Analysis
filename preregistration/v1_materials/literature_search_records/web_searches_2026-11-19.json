@@ -1,0 +1,38 @@
+{
+ "W1": {"query": "DepMap lineage-selective dependencies confounding culture condition suspension adherent growth pattern statistical adjustment",
+  "results": [
+   ["Lineage-Selective Dependencies in Pediatric Cancers - PMC","https://pmc.ncbi.nlm.nih.gov/articles/PMC11882016/"],
+   ["scientific-agent-skills/skills/depmap/SKILL.md (GitHub)","https://github.com/k-dense-ai/scientific-agent-skills/blob/main/skills/depmap/SKILL.md"],
+   ["Building a translational cancer dependency map for The Cancer Genome Atlas","https://www.nature.com/articles/s43018-024-00789-y"],
+   ["TCGADEPMAP (bioRxiv)","https://www.biorxiv.org/content/10.1101/2022.03.24.485544v2.full.pdf"],
+   ["Building a translational cancer dependency map for The Cancer Genome Atlas - PMC","https://pmc.ncbi.nlm.nih.gov/articles/PMC11358024"],
+   ["A dependency map enhanced with next-generation 3D cancer models","https://www.nature.com/articles/s41586-026-10843-7"],
+   ["Cancer type-specific prioritization strategy for targetable dependencies developed from the DepMap profile of head and neck cancer (bioRxiv)","https://www.biorxiv.org/content/10.1101/2022.06.12.495566.full.pdf"],
+   ["shinyDepMap, a tool to identify targetable cancer genes ...","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924953/"],
+   ["Cancer Dependency Map now includes next-generation 3D cancer models (news)","https://medicalxpress.com/news/2026-08-cancer-generation-3d.html"]]},
+ "W2": {"query": "bioRxiv 2025 2026 CRISPR screen cancer cell lines \"culture conditions\" confound gene essentiality tissue-specific dependencies stratified analysis",
+  "results": [
+   ["CRISPR screens in physiologic medium reveal conditionally essential genes in human cells","https://www.biorxiv.org/content/10.1101/2020.08.31.275107v1.full"],
+   ["Computational correction of copy-number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells","https://www.biorxiv.org/content/10.1101/160861v1.full"],
+   ["CRISPR screens in physiologic medium reveal ... (pdf)","https://www.biorxiv.org/content/10.1101/2020.08.31.275107v1.full.pdf"],
+   ["CRISPR-enabled genetic screens identify synthetic lethal targets across frequently altered cancer drivers","https://www.biorxiv.org/content/10.64898/2026.01.25.701589v1.full"],
+   ["Quantitative analysis of genetic interactions in human cells from ...","https://www.biorxiv.org/content/10.1101/2025.06.30.662330v1.full.pdf"],
+   ["Multiple-gene targeting and mismatch tolerance can confound analysis of genome-wide pooled CRISPR screens","https://www.biorxiv.org/content/10.1101/387258.full.pdf"],
+   ["Inferring cancer dependencies on metabolic genes from large-scale genetic screens","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6489231/"],
+   ["CRISPR screens in physiologic medium ... (pdf)","https://www.biorxiv.org/content/10.1101/2020.08.31.275107.full.pdf"],
+   ["Computational correction of copy-number effect ... (pdf)","https://www.biorxiv.org/content/10.1101/160861.full.pdf"],
+   ["Guide RNA library representation results in gene essentiality prediction bias in genome-wide CRISPR screens","https://www.biorxiv.org/content/10.1101/2025.09.07.673082v1.full"]]},
+ "W3": {"query": "DepMap portal Context Explorer methods in-context out-of-context t-test comparison group selective dependency documentation",
+  "results": [
+   ["Context dependencies enriched in.... how analysed? (DepMap forum, 2021)","https://forum.depmap.org/t/context-dependencies-enriched-in-how-analysed/898"],
+   ["Announcing the 25Q3 Release (DepMap forum)","https://forum.depmap.org/t/announcing-the-25q3-release/4476"],
+   ["Cancer type specific dependencies (DepMap forum)","https://forum.depmap.org/t/cancer-type-specific-dependencies/209"],
+   ["DepMap gene page (not opened)","https://depmap.org/portal/gene/C6"],
+   ["DepMap cell line page (not opened)","https://depmap.org/portal/cell_line/ACH-000939"],
+   ["DepMap portal tools overview (DepMap forum)","https://forum.depmap.org/t/depmap-portal-tools-overview/3566"],
+   ["rasdepmapcornet.cancer.gov (not opened)","https://rasdepmapcornet.cancer.gov/"],
+   ["DepMap gene page (not opened)","https://depmap.org/portal/gene/TDRP"],
+   ["DepMap gene page (not opened)","https://depmap.org/portal/gene/BLVRB"],
+   ["Announcing the 26Q1 Release (DepMap forum)","https://forum.depmap.org/t/announcing-the-26q1-release/4606"]]},
+ "notes": "Result lists as returned on 2026-11-19 by the assistant's web-search tool (top results, in order). Gene and cell-line pages returned by W3 were not opened. The DepMap Context Explorer page itself returned a browser verification page and could not be read."
+}
